@@ -25,6 +25,7 @@ import sys
 import time
 import urllib.parse
 import urllib.request
+from datetime import date
 from pathlib import Path
 
 try:
@@ -120,7 +121,10 @@ def wind_season(year, force=False):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--years", type=int, nargs="+", default=[2022, 2023, 2024, 2025, 2026])
+    # Statcast's public era starts in 2015; 2016 is the first season with
+    # complete batted-ball tracking, and matches the window these charts cite.
+    ap.add_argument("--years", type=int, nargs="+",
+                    default=list(range(2016, date.today().year + 1)))
     ap.add_argument("--force", action="store_true")
     a = ap.parse_args()
     CACHE.mkdir(exist_ok=True)

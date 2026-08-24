@@ -1,3 +1,5 @@
 .cache/
 index.html
+daily.html
 public/
+__pycache__/

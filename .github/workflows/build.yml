@@ -40,10 +40,14 @@ jobs:
       - name: Refresh current season
         run: python3 fetch.py --years 2026 --force
 
-      - name: Build page
+      - name: Fit park orientations
+        run: python3 orient.py
+
+      - name: Build pages
         run: |
           mkdir -p public
           python3 wind.py --out public/index.html
+          python3 daily.py --out public/daily.html
 
       - uses: actions/upload-pages-artifact@v3
         with:

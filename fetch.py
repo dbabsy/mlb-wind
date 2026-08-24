@@ -108,12 +108,18 @@ def wind_season(year, force=False):
             if not w.get("wind"):
                 continue
             ven = g.get("venue") or {}
+            crd = ((ven.get("location") or {}).get("defaultCoordinates") or {})
             games[str(g["gamePk"])] = {
                 "wind": w.get("wind", ""),
                 "temp": w.get("temp", ""),
                 "cond": w.get("condition", ""),
                 "venue": ven.get("name", ""),
                 "venue_id": ven.get("id"),
+                # first-pitch time (UTC) and park location, both needed to line
+                # a game up against an hourly weather series
+                "start": g.get("gameDate", ""),
+                "lat": crd.get("latitude"),
+                "lon": crd.get("longitude"),
             }
     out.write_text(json.dumps(games, separators=(",", ":")))
     return len(games)

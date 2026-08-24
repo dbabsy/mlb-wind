@@ -268,6 +268,7 @@ footer b{color:var(--dim);font-weight:600}
   <select id="from"></select>
   <span class="lbl">TO</span>
   <select id="to"></select>
+  <a class="pill" href="daily.html" style="text-decoration:none;margin-left:auto">Today's report &rarr;</a>
   <button class="pill" id="shot" type="button">Save image</button>
 </div>
 <div class="board" id="board"></div>

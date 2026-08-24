@@ -89,11 +89,24 @@ def statcast_month(year, start, end, force=False):
     return len(rows)
 
 
+# Fields a cached wind file must carry. A file written by an older version of
+# this script is silently re-fetched rather than quietly missing a column —
+# the CI cache outlives the code that filled it.
+WIND_SCHEMA = ("wind", "temp", "venue_id", "start", "lat")
+
+
 def wind_season(year, force=False):
     """Every regular-season game's wind for one year, in one request."""
     out = CACHE / f"wind_{year}.json"
     if out.exists() and not force:
-        return len(json.loads(out.read_text()))
+        try:
+            have = json.loads(out.read_text())
+            sample = next(iter(have.values()), None)
+            if sample is None or all(k in sample for k in WIND_SCHEMA):
+                return len(have)
+            print(f"      wind_{year}.json predates the current schema; refetching", flush=True)
+        except (ValueError, StopIteration):
+            pass  # unreadable cache: fall through and refetch
 
     q = urllib.parse.urlencode({
         "sportId": 1, "gameType": "R",

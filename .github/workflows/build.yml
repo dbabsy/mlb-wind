@@ -1,0 +1,60 @@
+name: Build and deploy
+
+on:
+  schedule:
+    - cron: "30 13 * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      # The Statcast pull is the slow part and only the current season can
+      # change, so prior years are restored from cache and skipped.
+      - name: Restore Statcast cache
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: statcast-${{ github.run_id }}
+          restore-keys: statcast-
+
+      - name: Fetch data
+        run: python3 fetch.py
+
+      - name: Refresh current season
+        run: python3 fetch.py --years 2026 --force
+
+      - name: Build page
+        run: |
+          mkdir -p public
+          python3 wind.py --out public/index.html
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

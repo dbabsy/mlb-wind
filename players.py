@@ -271,9 +271,7 @@ def main():
 
     # Park and weather, straight from the wind model already in this repo.
     print("building park/weather model …", flush=True)
-    winds, rows = Dl.load_history()
-    park_delta, _pc, temp_delta, fb_per_game = Dl.build_model(rows)
-    domes = Dl.dome_parks(winds)
+    park_delta, _pc, temp_delta, fb_per_game, domes = Dl.load_model()
     orient = json.loads((CACHE / "orient.json").read_text()) if (CACHE / "orient.json").exists() else {}
 
     sched = q("schedule", sportId=1, date=a.date,
@@ -349,7 +347,10 @@ def main():
             for slot, pid in enumerate(ids[:9]):
                 s, r = h_season.get(pid), h_recent.get(pid)
                 if not s or s.get("plateAppearances", 0) < 30:
-                    continue
+                    # A callup with no track record still bats. Dropping the
+                    # slot silently reweights the lineup toward its regulars,
+                    # so stand a league-average hitter there instead.
+                    s, r = {k: 0.0 for k in HIT_KEYS}, None
                 pa = SLOT_PA[slot]
                 sp_tbl = splits.get(sp_hand, {})
                 srow = sp_tbl.get(pid)
@@ -510,7 +511,8 @@ footer b{color:var(--dim)}
   <div class="stamps" id="stamps"></div>
 </header>
 <div class="nav">
-  <a class="pill" href="daily.html">&larr; Stadium report</a>
+  <a class="pill" href="games.html">Matchups</a>
+  <a class="pill" href="daily.html">Stadium report</a>
   <a class="pill" href="index.html">Wind profile</a>
   <button class="pill on" id="sortBy" data-k="h1">Sort: 1+ Hit</button>
   <button class="pill" id="expand" type="button">Expand all</button>

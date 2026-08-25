@@ -24,6 +24,7 @@ Domed parks are reported as weather-neutral: the roof is the whole point.
 
 import argparse
 import csv
+import hashlib
 import json
 import math
 import ssl
@@ -155,6 +156,43 @@ def build_model(rows):
     return park_delta, park_cnt, temp_delta, fb_per_game
 
 
+def cache_fingerprint():
+    """Identity of the underlying data pull, so a stale model is never reused."""
+    parts = []
+    for f in sorted(CACHE.glob("sc_*.csv")) + sorted(CACHE.glob("wind_*.json")):
+        st = f.stat()
+        parts.append(f"{f.name}:{st.st_size}")
+    return hashlib.sha1("|".join(parts).encode()).hexdigest()[:16]
+
+
+def load_model():
+    """Park/wind/temperature model, memoised to disk.
+
+    Rebuilding means re-reading 285k batted balls, and three separate pages
+    were each paying that cost on every build. The inputs only change when
+    fetch.py pulls new games, so the fingerprint above is enough to know when
+    the cached copy is still good."""
+    fp = cache_fingerprint()
+    path = CACHE / "model.json"
+    if path.exists():
+        try:
+            d = json.loads(path.read_text())
+            if d.get("fp") == fp:
+                return (d["park"], d["cnt"],
+                        {int(k): v for k, v in d["temp"].items()},
+                        {int(k): v for k, v in d["fb"].items()},
+                        set(d["domes"]))
+        except (ValueError, KeyError):
+            pass  # unreadable or older layout: rebuild
+    winds, rows = load_history()
+    park, cnt, temp, fb = build_model(rows)
+    domes = dome_parks(winds)
+    path.write_text(json.dumps({"fp": fp, "park": park, "cnt": cnt, "temp": temp,
+                                "fb": fb, "domes": sorted(domes)},
+                               separators=(",", ":")))
+    return park, cnt, temp, fb, domes
+
+
 def dome_parks(winds):
     """Parks whose games are overwhelmingly logged as roofed."""
     tot, domed = defaultdict(int), defaultdict(int)
@@ -231,11 +269,8 @@ def main():
     ap.add_argument("--out", default="daily.html")
     a = ap.parse_args()
 
-    winds, rows = load_history()
-    print(f"{len(rows):,} historical fly balls", flush=True)
-    park_delta, park_cnt, temp_delta, fb_per_game = build_model(rows)
+    park_delta, park_cnt, temp_delta, fb_per_game, domes = load_model()
     print(f"{len(park_delta)} park/wind cells, {len(temp_delta)} temperature bins", flush=True)
-    domes = dome_parks(winds)
     orient = json.loads((CACHE / "orient.json").read_text()) if (CACHE / "orient.json").exists() else {}
 
     sched = get(f"{STATS}?" + urllib.parse.urlencode({
@@ -365,7 +400,8 @@ footer b{color:var(--dim);font-weight:600}
   </div>
   <div style="display:flex;gap:8px;align-items:center">
     <a class="pill" href="index.html" style="text-decoration:none">Wind profile</a>
-    <a class="pill" href="players.html" style="text-decoration:none">Players &rarr;</a>
+    <a class="pill" href="players.html" style="text-decoration:none">Players</a>
+    <a class="pill" href="games.html" style="text-decoration:none">Matchups &rarr;</a>
     <button class="pill" id="shot" type="button">Save image</button>
   </div>
 </header>

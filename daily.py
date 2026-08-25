@@ -58,6 +58,15 @@ OUTCOMES = ("hr", "x3", "x2", "x1")
 ROW_BEARING = {"out_cf": 0, "out_lf": -35, "out_rf": 35,
                "in_cf": 180, "in_lf": 145, "in_rf": 215}
 CALM_MPH = 5
+# A breeze and a gale from the same quarter are not the same event. League
+# median wind is 8 mph and the 90th percentile is 14, so this splits roughly
+# three-to-one — fine enough to matter, coarse enough to keep cells populated.
+STRONG_MPH = 12
+MIN_CELL = 150
+
+
+def speed_band(mph):
+    return "B" if (mph or 0) > STRONG_MPH else "A"
 
 
 def get(url, timeout=60):
@@ -105,10 +114,16 @@ def build_model(rows):
         o = HIT.get(e, "out")
         vid = g.get("venue_id")
         speed, label = W.parse_wind(g.get("wind"))
-        key = (vid, W.wind_row(speed, label))
-        for k2 in OUTCOMES:
-            park[key][k2] += (1.0 if o == k2 else 0.0) - b[k2]
-        park_n[key] += 1
+        row = W.wind_row(speed, label)
+        # Accumulate the speed-banded cell and the pooled one together, so a
+        # thin band can fall back to every speed from the same quarter.
+        keys = [(vid, row, "*")]
+        if row != "light":
+            keys.append((vid, row, speed_band(speed)))
+        for key in keys:
+            for k2 in OUTCOMES:
+                park[key][k2] += (1.0 if o == k2 else 0.0) - b[k2]
+            park_n[key] += 1
         games_at[vid].add(pk)
         balls_at[vid] += 1
 
@@ -119,9 +134,10 @@ def build_model(rows):
                 temp[tb][k2] += (1.0 if o == k2 else 0.0) - b[k2]
             temp_n[tb] += 1
 
-    park_delta = {f"{v}|{r}": {k: park[(v, r)][k] / park_n[(v, r)] for k in OUTCOMES}
-                  for (v, r) in park_n if park_n[(v, r)] >= 150}
-    park_cnt = {f"{v}|{r}": park_n[(v, r)] for (v, r) in park_n if park_n[(v, r)] >= 150}
+    park_delta = {f"{v}|{r}|{b}": {k: park[(v, r, b)][k] / park_n[(v, r, b)] for k in OUTCOMES}
+                  for (v, r, b) in park_n if park_n[(v, r, b)] >= MIN_CELL}
+    park_cnt = {f"{v}|{r}|{b}": park_n[(v, r, b)]
+                for (v, r, b) in park_n if park_n[(v, r, b)] >= MIN_CELL}
     # Temperature curve, centred so a league-average night contributes nothing.
     temp_delta = {tb: {k: temp[tb][k] / temp_n[tb] for k in OUTCOMES}
                   for tb in temp_n if temp_n[tb] >= 400}
@@ -212,8 +228,12 @@ def main():
         row = "light" if (is_dome or rel is None or (wx.get("mph") or 0) <= CALM_MPH) \
             else row_for(rel)
 
-        d = dict(park_delta.get(f"{vid}|{row}") or park_delta.get(f"{vid}|light") or
-                 {k: 0.0 for k in OUTCOMES})
+        # Most specific cell that still has enough fly balls behind it:
+        # this park at this wind and strength, then any strength, then calm.
+        band = speed_band((wx or {}).get("mph"))
+        chain = [f"{vid}|{row}|{band}", f"{vid}|{row}|*", f"{vid}|light|*"]
+        src = next((c for c in chain if c in park_delta), None)
+        d = dict(park_delta.get(src) or {k: 0.0 for k in OUTCOMES})
         if wx and not is_dome:
             tb = int((wx["temp"] or 70) // 5) * 5
             for k in OUTCOMES:
@@ -239,7 +259,9 @@ def main():
             "b1": round(counts["x1"], 2),
             "runs": round(runs, 2),
             "pct": round(pct, 0),
-            "n": park_cnt.get(f"{vid}|{row}", 0),
+            "n": park_cnt.get(src, 0),
+            "cell": src,
+            "band": None if (is_dome or row == "light") else band,
         })
     out.sort(key=lambda r: -r["runs"])
 

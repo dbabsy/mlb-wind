@@ -3,15 +3,14 @@ name: Build and deploy
 on:
   schedule:
     # Lineups post two to four hours before first pitch, so this needs to run
-    # through the afternoon and evening — 15:00-02:00 UTC is about 11am-10pm
-    # Eastern.
+    # through the afternoon and evening.
     #
     # Twice an hour, and deliberately NOT on the hour. GitHub treats schedules
     # as best-effort and ":00" is the most contended minute on the platform;
     # runs there are routinely delayed by an hour or dropped entirely. Odd
     # minutes are far less contested, and the second slot covers the first if
     # it gets skipped.
-    # 13:00-03:00 UTC is roughly 9am-11pm Eastern: early enough that a morning
+    # 13:00-03:00 UTC is roughly 8am-10pm Central: early enough that a morning
     # visit already shows today's card rather than last night's, late enough to
     # cover the end of a west-coast game.
     - cron: "17,47 13-23,0-3 * * *"

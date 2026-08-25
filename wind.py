@@ -350,8 +350,8 @@ function render(){
   document.getElementById("meta").innerHTML =
     `${D.seasons[lo]}\u2013${D.seasons[hi]} regular seasons \u00b7 ${D.parks.length} parks`
     + ` \u00b7 <b style="color:var(--dim)">rebuilt</b> `
-    + built.toLocaleString("en-US",{timeZone:"America/New_York",month:"short",day:"numeric",
-        hour:"numeric",minute:"2-digit",hour12:true}) + " ET";
+    + built.toLocaleString("en-US",{timeZone:"America/Chicago",month:"short",day:"numeric",
+        hour:"numeric",minute:"2-digit",hour12:true}) + " CT";
 }
 
 document.getElementById("mc").textContent = D.minCell;

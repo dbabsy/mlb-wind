@@ -69,9 +69,11 @@ SLOT_PA = [4.65, 4.54, 4.43, 4.32, 4.21, 4.10, 3.99, 3.88, 3.77]
 
 
 def baseball_today():
-    """MLB's day runs on Eastern time. A build at 00:30 UTC is still the
-    previous evening's slate in the States, so never key off UTC."""
-    tz = ZoneInfo("America/New_York") if ZoneInfo else timezone.utc
+    """Roll the slate on Central time. A build at 00:30 UTC is still the
+    previous evening's games in the States, so never key off UTC — and
+    Central holds the day open an hour longer than Eastern, which keeps a
+    late west-coast game on the date it started."""
+    tz = ZoneInfo("America/Chicago") if ZoneInfo else timezone.utc
     return datetime.now(tz).date()
 
 
@@ -556,11 +558,11 @@ function side(s){
 }
 // ---- header stamp: what day is shown, and how fresh the pull is ----
 function etTime(iso){
-  return new Date(iso).toLocaleString("en-US",{timeZone:"America/New_York",
-    hour:"numeric",minute:"2-digit",hour12:true}) + " ET";
+  return new Date(iso).toLocaleString("en-US",{timeZone:"America/Chicago",
+    hour:"numeric",minute:"2-digit",hour12:true}) + " CT";
 }
 function etDateShort(iso){
-  return new Date(iso).toLocaleDateString("en-US",{timeZone:"America/New_York",
+  return new Date(iso).toLocaleDateString("en-US",{timeZone:"America/Chicago",
     month:"short",day:"numeric"});
 }
 function ago(iso){
@@ -590,8 +592,8 @@ function startStampTicker(fn){ fn(); setInterval(fn, 60000); }
 const openSet = new Set();
 function gameTime(iso){
   if(!iso) return "";
-  return new Date(iso).toLocaleTimeString("en-US",{timeZone:"America/New_York",
-    hour:"numeric",minute:"2-digit"}) + " ET";
+  return new Date(iso).toLocaleTimeString("en-US",{timeZone:"America/Chicago",
+    hour:"numeric",minute:"2-digit"}) + " CT";
 }
 function summaryOf(g){
   const away=g.sides[0]||{}, home=g.sides[1]||{};

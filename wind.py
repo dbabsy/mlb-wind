@@ -26,7 +26,7 @@ import csv
 import json
 import math
 from collections import defaultdict
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 CACHE = Path(__file__).parent / ".cache"
@@ -191,7 +191,7 @@ def main():
         "parks": parks,
         "winds": [[k, lab] for k, lab, _ in WIND_ROWS],
         "seasons": years,
-        "built": date.today().isoformat(),
+        "built": datetime.now(timezone.utc).isoformat(timespec="minutes"),
         "minCell": a.min_cell,
     }
     html = TEMPLATE.replace("__DATA__", json.dumps(payload, separators=(",", ":")))
@@ -346,8 +346,12 @@ function render(){
   const pa=D.parks.find(p=>p.id===ida), pb=D.parks.find(p=>p.id===idb);
   document.getElementById("board").innerHTML=
     [pa,pb].filter(Boolean).map(p=>table(p,lo,hi)).join("");
-  document.getElementById("meta").textContent =
-    `${D.seasons[lo]}–${D.seasons[hi]} regular seasons · ${D.parks.length} parks · built ${D.built}`;
+  const built = new Date(D.built);
+  document.getElementById("meta").innerHTML =
+    `${D.seasons[lo]}\u2013${D.seasons[hi]} regular seasons \u00b7 ${D.parks.length} parks`
+    + ` \u00b7 <b style="color:var(--dim)">rebuilt</b> `
+    + built.toLocaleString("en-US",{timeZone:"America/New_York",month:"short",day:"numeric",
+        hour:"numeric",minute:"2-digit",hour12:true}) + " ET";
 }
 
 document.getElementById("mc").textContent = D.minCell;

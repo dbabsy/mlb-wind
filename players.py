@@ -404,7 +404,9 @@ def main():
         out.append(game_rows)
 
     payload = {"games": out, "date": a.date,
-               "built": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")}
+               "built": datetime.now(timezone.utc).isoformat(timespec="minutes"),
+               "confirmed": sum(1 for g in out for si in g["sides"] if si["confirmed"]),
+               "sides": sum(len(g["sides"]) for g in out)}
     Path(a.out).write_text(
         TEMPLATE.replace("__DATA__", json.dumps(payload, separators=(",", ":"))),
         encoding="utf-8")
@@ -434,6 +436,13 @@ header{padding:20px 20px 10px}
 .eyebrow{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.12em;color:var(--amber)}
 h1{margin:2px 0 0;font-size:26px;font-weight:800;letter-spacing:-.035em}
 .meta{font-family:var(--mono);font-size:10px;color:var(--faint);margin-top:5px}
+.slate{font-size:13px;font-weight:600;color:var(--text);margin-top:4px;letter-spacing:-.01em}
+.stamps{display:flex;gap:6px 14px;flex-wrap:wrap;margin-top:4px}
+.stamp{font-family:var(--mono);font-size:10px;color:var(--faint);letter-spacing:.03em}
+.stamp b{color:var(--dim);font-weight:600}
+.stamp.stale{color:var(--amber)}
+.stamp.stale b{color:var(--amber)}
+
 .nav{padding:0 20px 12px;display:flex;gap:8px;flex-wrap:wrap}
 .pill{padding:6px 12px;font-family:var(--mono);font-size:11px;font-weight:600;color:var(--amber);
   background:var(--panel);border:1px solid var(--amberDim);border-radius:100px;cursor:pointer;
@@ -470,7 +479,8 @@ footer b{color:var(--dim)}
 <header>
   <div class="eyebrow">MLB · DAILY PROJECTIONS</div>
   <h1>Player Projections</h1>
-  <div class="meta" id="meta"></div>
+  <div class="slate" id="slate"></div>
+  <div class="stamps" id="stamps"></div>
 </header>
 <div class="nav">
   <a class="pill" href="daily.html">&larr; Stadium report</a>
@@ -527,8 +537,45 @@ function render(){
       ${g.sides.map(side).join("")}
     </div>`).join("") || `<div class="game"><div class="gh">No games scheduled.</div></div>`;
 }
-document.getElementById("meta").textContent =
-  `${D.date} · ${D.games.length} games · built ${D.built}`;
+
+// ---- header stamp: what day is shown, and how fresh the pull is ----
+function etTime(iso){
+  return new Date(iso).toLocaleString("en-US",{timeZone:"America/New_York",
+    hour:"numeric",minute:"2-digit",hour12:true}) + " ET";
+}
+function etDateShort(iso){
+  return new Date(iso).toLocaleDateString("en-US",{timeZone:"America/New_York",
+    month:"short",day:"numeric"});
+}
+function ago(iso){
+  const s=(Date.now()-new Date(iso).getTime())/1000;
+  if(s<0) return "just now";
+  if(s<90) return "just now";
+  if(s<5400) return Math.round(s/60)+" min ago";
+  if(s<172800) return Math.round(s/3600)+" hr ago";
+  return Math.round(s/86400)+" days ago";
+}
+function dayLabel(ymd){
+  const [y,m,d]=ymd.split("-").map(Number);
+  return new Date(Date.UTC(y,m-1,d)).toLocaleDateString("en-US",
+    {timeZone:"UTC",weekday:"long",month:"long",day:"numeric"});
+}
+// Anything older than this probably means a build failed rather than a quiet day.
+const STALE_HRS = 4;
+function stampHTML(iso, extra){
+  const hrs=(Date.now()-new Date(iso).getTime())/3.6e6;
+  const stale = hrs > STALE_HRS;
+  return `<span class="stamp${stale?" stale":""}" title="${new Date(iso).toString()}">
+    <b>Updated</b> ${etTime(iso)} on ${etDateShort(iso)} · ${ago(iso)}${stale?" — may be out of date":""}
+  </span>${extra?`<span class="stamp">${extra}</span>`:""}`;
+}
+function startStampTicker(fn){ fn(); setInterval(fn, 60000); }
+
+document.getElementById("slate").textContent =
+  `${dayLabel(D.date)} · ${D.games.length} game${D.games.length===1?"":"s"}`;
+startStampTicker(()=>{ document.getElementById("stamps").innerHTML =
+  stampHTML(D.built, `${D.confirmed}/${D.sides} lineups confirmed`); });
+
 const btn=document.getElementById("sortBy");
 btn.onclick=()=>{ const i=COLS.findIndex(c=>c[0]===sortK);
   const nx=COLS[(i+1)%COLS.length]; sortK=nx[0]; btn.textContent="Sort: "+nx[1]; render(); };

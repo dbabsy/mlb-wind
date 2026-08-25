@@ -176,6 +176,41 @@ def row_for(rel):
     return best if gap <= 45 else "light"
 
 
+def forecast_at(lat, lon, when):
+    """Hourly forecast for one park at first pitch. {} if unavailable."""
+    hour = when.astimezone(timezone.utc)
+    try:
+        j = get(f"{FORECAST}?" + urllib.parse.urlencode({
+            "latitude": round(lat, 4), "longitude": round(lon, 4),
+            "hourly": "temperature_2m,wind_speed_10m,wind_direction_10m",
+            "start_date": hour.date().isoformat(), "end_date": hour.date().isoformat(),
+            "wind_speed_unit": "mph", "temperature_unit": "fahrenheit",
+            "timezone": "UTC"}))
+        h = j["hourly"]
+        i = h["time"].index(hour.strftime("%Y-%m-%dT%H:00"))
+        return {"temp": h["temperature_2m"][i], "mph": h["wind_speed_10m"][i],
+                "from": h["wind_direction_10m"][i]}
+    except Exception:  # noqa: BLE001
+        return {}
+
+
+def forecast_cell(game, vid, coords, domes, orient):
+    """Tonight's weather for a game, and which model cell it selects."""
+    lat, lon = coords.get("latitude"), coords.get("longitude")
+    start = game.get("gameDate", "")
+    if not (lat and start):
+        return {}, "light", "A"
+    wx = forecast_at(lat, lon, datetime.fromisoformat(start.replace("Z", "+00:00")))
+    is_dome = vid in domes
+    info = orient.get(str(vid))
+    rel = None
+    if wx and info and not is_dome:
+        rel = rel_bearing(wx["from"], info["bearing"])
+    row = ("light" if (is_dome or rel is None or (wx.get("mph") or 0) <= CALM_MPH)
+           else row_for(rel))
+    return wx, row, speed_band(wx.get("mph"))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=date.today().isoformat())
@@ -204,33 +239,11 @@ def main():
         if not (vid and lat and start):
             continue
 
-        hour = datetime.fromisoformat(start.replace("Z", "+00:00")).astimezone(timezone.utc)
-        wx = {}
-        try:
-            j = get(f"{FORECAST}?" + urllib.parse.urlencode({
-                "latitude": round(lat, 4), "longitude": round(lon, 4),
-                "hourly": "temperature_2m,wind_speed_10m,wind_direction_10m",
-                "start_date": hour.date().isoformat(), "end_date": hour.date().isoformat(),
-                "wind_speed_unit": "mph", "temperature_unit": "fahrenheit", "timezone": "UTC"}))
-            h = j["hourly"]
-            idx = h["time"].index(hour.strftime("%Y-%m-%dT%H:00"))
-            wx = {"temp": h["temperature_2m"][idx],
-                  "mph": h["wind_speed_10m"][idx],
-                  "from": h["wind_direction_10m"][idx]}
-        except Exception as e:  # noqa: BLE001
-            print(f"  forecast miss for {ven.get('name')}: {type(e).__name__}", flush=True)
-
+        wx, row, band = forecast_cell(g, vid, crd, domes, orient)
         is_dome = vid in domes
-        info = orient.get(str(vid))
         rel = None
-        if wx and info and not is_dome:
-            rel = rel_bearing(wx["from"], info["bearing"])
-        row = "light" if (is_dome or rel is None or (wx.get("mph") or 0) <= CALM_MPH) \
-            else row_for(rel)
-
-        # Most specific cell that still has enough fly balls behind it:
-        # this park at this wind and strength, then any strength, then calm.
-        band = speed_band((wx or {}).get("mph"))
+        if wx and orient.get(str(vid)) and not is_dome:
+            rel = rel_bearing(wx["from"], orient[str(vid)]["bearing"])
         chain = [f"{vid}|{row}|{band}", f"{vid}|{row}|*", f"{vid}|light|*"]
         src = next((c for c in chain if c in park_delta), None)
         d = dict(park_delta.get(src) or {k: 0.0 for k in OUTCOMES})
@@ -253,7 +266,7 @@ def main():
             "wx": wx,
             "rel": None if rel is None else round(rel, 0),
             "row": row,
-            "conf": (info or {}).get("agree"),
+            "conf": (orient.get(str(vid)) or {}).get("agree"),
             "hr": round(counts["hr"], 2),
             "xb": round(counts["x2"] + counts["x3"], 2),
             "b1": round(counts["x1"], 2),
@@ -328,7 +341,8 @@ footer b{color:var(--dim);font-weight:600}
     <div class="meta" id="meta"></div>
   </div>
   <div style="display:flex;gap:8px;align-items:center">
-    <a class="pill" href="index.html" style="text-decoration:none">Wind profile &rarr;</a>
+    <a class="pill" href="index.html" style="text-decoration:none">Wind profile</a>
+    <a class="pill" href="players.html" style="text-decoration:none">Players &rarr;</a>
     <button class="pill" id="shot" type="button">Save image</button>
   </div>
 </header>

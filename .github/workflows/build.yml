@@ -2,7 +2,10 @@ name: Build and deploy
 
 on:
   schedule:
-    - cron: "30 13 * * *"
+    # Hourly through the window that matters: lineups post two to four hours
+    # before first pitch, so a once-a-day build would always show a projected
+    # card. 15:00-02:00 UTC is roughly 11am-10pm Eastern.
+    - cron: "0 15-23,0-2 * * *"
   workflow_dispatch: {}
   push:
     branches: [main]
@@ -48,6 +51,7 @@ jobs:
           mkdir -p public
           python3 wind.py --out public/index.html
           python3 daily.py --out public/daily.html
+          python3 players.py --out public/players.html
 
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -33,6 +33,11 @@ from collections import defaultdict
 from datetime import date, datetime, timezone
 from pathlib import Path
 
+try:
+    from zoneinfo import ZoneInfo
+except ImportError:  # no tzdata
+    ZoneInfo = None
+
 import wind as W
 
 try:
@@ -176,6 +181,13 @@ def row_for(rel):
     return best if gap <= 45 else "light"
 
 
+def baseball_today():
+    """MLB's day runs on Eastern time. A build at 00:30 UTC is still the
+    previous evening's slate in the States, so never key off UTC."""
+    tz = ZoneInfo("America/New_York") if ZoneInfo else timezone.utc
+    return datetime.now(tz).date()
+
+
 def forecast_at(lat, lon, when):
     """Hourly forecast for one park at first pitch. {} if unavailable."""
     hour = when.astimezone(timezone.utc)
@@ -213,7 +225,7 @@ def forecast_cell(game, vid, coords, domes, orient):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--date", default=date.today().isoformat())
+    ap.add_argument("--date", default=baseball_today().isoformat())
     ap.add_argument("--out", default="daily.html")
     a = ap.parse_args()
 

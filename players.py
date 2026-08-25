@@ -38,6 +38,11 @@ from collections import defaultdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
+try:
+    from zoneinfo import ZoneInfo
+except ImportError:  # no tzdata
+    ZoneInfo = None
+
 import daily as Dl
 import wind as W
 
@@ -61,6 +66,13 @@ FLY_PER_PA = 0.14         # qualifying fly balls per plate appearance, league-wi
 
 # Plate appearances by batting order slot, leadoff down to ninth.
 SLOT_PA = [4.65, 4.54, 4.43, 4.32, 4.21, 4.10, 3.99, 3.88, 3.77]
+
+
+def baseball_today():
+    """MLB's day runs on Eastern time. A build at 00:30 UTC is still the
+    previous evening's slate in the States, so never key off UTC."""
+    tz = ZoneInfo("America/New_York") if ZoneInfo else timezone.utc
+    return datetime.now(tz).date()
 
 
 def get(url, timeout=90, tries=3):
@@ -210,7 +222,7 @@ def recent_lineups(day):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--date", default=date.today().isoformat())
+    ap.add_argument("--date", default=baseball_today().isoformat())
     ap.add_argument("--out", default="players.html")
     a = ap.parse_args()
     day = date.fromisoformat(a.date)

@@ -403,6 +403,7 @@ def main():
             })
         out.append(game_rows)
 
+    out.sort(key=lambda g: g.get("start") or "")  # chronological, like a schedule
     payload = {"games": out, "date": a.date,
                "built": datetime.now(timezone.utc).isoformat(timespec="minutes"),
                "confirmed": sum(1 for g in out for si in g["sides"] if si["confirmed"]),
@@ -449,7 +450,31 @@ h1{margin:2px 0 0;font-size:26px;font-weight:800;letter-spacing:-.035em}
   text-decoration:none;display:inline-block}
 .pill:hover{border-color:var(--amber);background:rgba(255,176,0,.08)}
 .pill.on{background:var(--amber);color:var(--ink);border-color:var(--amber)}
-.game{margin:0 20px 14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.game{margin:0 20px 8px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.game[open]{border-color:var(--line2)}
+summary.gh{list-style:none;cursor:pointer;user-select:none;padding:10px 14px;
+  display:grid;grid-template-columns:12px minmax(96px,auto) 78px minmax(0,1fr) auto auto;
+  gap:2px 12px;align-items:center}
+summary.gh::-webkit-details-marker{display:none}
+summary.gh:hover{background:rgba(53,74,148,.18)}
+.game[open] summary.gh{border-bottom:1px solid var(--line)}
+.caret{color:var(--faint);font-size:10px;transition:transform .12s;display:inline-block}
+.game[open] .caret{transform:rotate(90deg)}
+.mu{font-size:15px;font-weight:700;letter-spacing:-.015em;white-space:nowrap}
+.gt{font-family:var(--mono);font-size:10px;color:var(--dim);white-space:nowrap}
+.vn{font-family:var(--mono);font-size:10px;color:var(--faint);overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+.gwx{font-family:var(--mono);font-size:10px;color:var(--faint);white-space:nowrap;text-align:right}
+.lu{font-family:var(--mono);font-size:9px;padding:1px 6px;border-radius:100px;
+  border:1px solid var(--line2);color:var(--faint);white-space:nowrap}
+.lu.ok{border-color:#1F7A4C;color:var(--hot)}
+@media(max-width:680px){
+  summary.gh{grid-template-columns:12px 1fr auto;row-gap:3px}
+  .gt{text-align:right}
+  .vn{grid-column:2/4}
+  .gwx{grid-column:2/4;text-align:left}
+  .lu{grid-column:2/4;justify-self:start}
+}
 .gh{padding:10px 14px;border-bottom:1px solid var(--line);display:flex;
   justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline}
 .gh b{font-size:14px;letter-spacing:-.01em}
@@ -486,6 +511,7 @@ footer b{color:var(--dim)}
   <a class="pill" href="daily.html">&larr; Stadium report</a>
   <a class="pill" href="index.html">Wind profile</a>
   <button class="pill on" id="sortBy" data-k="h1">Sort: 1+ Hit</button>
+  <button class="pill" id="expand" type="button">Expand all</button>
 </div>
 <div id="board"></div>
 <footer>
@@ -528,16 +554,6 @@ function side(s){
       &middot; ${p.er} ER</div>`:""}
   </div>`;
 }
-function render(){
-  document.getElementById("board").innerHTML = D.games.map(g=>`
-    <div class="game">
-      <div class="gh"><b>${g.venue}</b>
-        <span>${g.dome?"roof":(g.wx&&g.wx.mph!=null?`${Math.round(g.wx.mph)}mph ${g.row.replace("_"," ")} · ${Math.round(g.wx.temp)}°`:"")}
-        · HR x${g.hrMult.toFixed(2)}</span></div>
-      ${g.sides.map(side).join("")}
-    </div>`).join("") || `<div class="game"><div class="gh">No games scheduled.</div></div>`;
-}
-
 // ---- header stamp: what day is shown, and how fresh the pull is ----
 function etTime(iso){
   return new Date(iso).toLocaleString("en-US",{timeZone:"America/New_York",
@@ -549,7 +565,6 @@ function etDateShort(iso){
 }
 function ago(iso){
   const s=(Date.now()-new Date(iso).getTime())/1000;
-  if(s<0) return "just now";
   if(s<90) return "just now";
   if(s<5400) return Math.round(s/60)+" min ago";
   if(s<172800) return Math.round(s/3600)+" hr ago";
@@ -571,11 +586,61 @@ function stampHTML(iso, extra){
 }
 function startStampTicker(fn){ fn(); setInterval(fn, 60000); }
 
+// Open panels are tracked by index so re-sorting doesn't collapse them.
+const openSet = new Set();
+function gameTime(iso){
+  if(!iso) return "";
+  return new Date(iso).toLocaleTimeString("en-US",{timeZone:"America/New_York",
+    hour:"numeric",minute:"2-digit"}) + " ET";
+}
+function summaryOf(g){
+  const away=g.sides[0]||{}, home=g.sides[1]||{};
+  const mu = (away.team||"?") + " @ " + (home.team||"?");
+  const conf = g.sides.filter(s=>s.confirmed).length;
+  const wx = g.dome ? "roof"
+    : (g.wx && g.wx.mph!=null
+        ? `${Math.round(g.wx.mph)}mph ${g.row.replace(/_/g," ")} · ${Math.round(g.wx.temp)}°`
+        : "no forecast");
+  return `<summary class="gh">
+    <span class="caret">&#9654;</span>
+    <span class="mu">${mu}</span>
+    <span class="gt">${gameTime(g.start)}</span>
+    <span class="vn">${g.venue}</span>
+    <span class="gwx">${wx} · HR &times;${g.hrMult.toFixed(2)}</span>
+    <span class="lu ${conf===2?"ok":""}">${conf}/2 lineups</span>
+  </summary>`;
+}
+function render(){
+  const board=document.getElementById("board");
+  board.innerHTML = D.games.length ? D.games.map((g,i)=>
+    `<details class="game" data-i="${i}"${openSet.has(i)?" open":""}>
+       ${summaryOf(g)}${g.sides.map(side).join("")}
+     </details>`).join("")
+    : `<div class="game"><div style="padding:14px">No games scheduled.</div></div>`;
+  board.querySelectorAll("details.game").forEach(d=>{
+    d.addEventListener("toggle",()=>{
+      const i=+d.dataset.i;
+      d.open ? openSet.add(i) : openSet.delete(i);
+      syncExpandLabel();
+    });
+  });
+  syncExpandLabel();
+}
+function syncExpandLabel(){
+  const btn=document.getElementById("expand");
+  if(btn) btn.textContent = openSet.size >= D.games.length && D.games.length
+    ? "Collapse all" : "Expand all";
+}
 document.getElementById("slate").textContent =
   `${dayLabel(D.date)} · ${D.games.length} game${D.games.length===1?"":"s"}`;
 startStampTicker(()=>{ document.getElementById("stamps").innerHTML =
   stampHTML(D.built, `${D.confirmed}/${D.sides} lineups confirmed`); });
 
+document.getElementById("expand").onclick=()=>{
+  if(openSet.size >= D.games.length){ openSet.clear(); }
+  else { D.games.forEach((_,i)=>openSet.add(i)); }
+  render();
+};
 const btn=document.getElementById("sortBy");
 btn.onclick=()=>{ const i=COLS.findIndex(c=>c[0]===sortK);
   const nx=COLS[(i+1)%COLS.length]; sortK=nx[0]; btn.textContent="Sort: "+nx[1]; render(); };

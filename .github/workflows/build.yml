@@ -2,10 +2,19 @@ name: Build and deploy
 
 on:
   schedule:
-    # Hourly through the window that matters: lineups post two to four hours
-    # before first pitch, so a once-a-day build would always show a projected
-    # card. 15:00-02:00 UTC is roughly 11am-10pm Eastern.
-    - cron: "0 15-23,0-2 * * *"
+    # Lineups post two to four hours before first pitch, so this needs to run
+    # through the afternoon and evening — 15:00-02:00 UTC is about 11am-10pm
+    # Eastern.
+    #
+    # Twice an hour, and deliberately NOT on the hour. GitHub treats schedules
+    # as best-effort and ":00" is the most contended minute on the platform;
+    # runs there are routinely delayed by an hour or dropped entirely. Odd
+    # minutes are far less contested, and the second slot covers the first if
+    # it gets skipped.
+    # 13:00-03:00 UTC is roughly 9am-11pm Eastern: early enough that a morning
+    # visit already shows today's card rather than last night's, late enough to
+    # cover the end of a west-coast game.
+    - cron: "17,47 13-23,0-3 * * *"
   workflow_dispatch: {}
   push:
     branches: [main]

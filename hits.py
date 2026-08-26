@@ -29,6 +29,15 @@ far too early. That is the main reason this disagrees with the players page.
 Facing pitching is 59% the starter and 41% the bullpen, the league's real
 split. Park and weather move home runs and balls in play separately.
 
+Statcast expected batting average enters as a talent correction at the
+batting-average level — half weight against this model's own estimate. That
+split was measured, not assumed: across 213 hitters with 250+ PA in back-to-
+back seasons, observed BA predicted the next year at r=.458, xBA at .495,
+this decomposition at .484, and an even blend of the last two at .514. It is
+applied to BA and not to BABIP on purpose; pushing it into BABIP measured
+*worse* than doing nothing, because BABIP rides on speed and spray that exit
+velocity cannot see.
+
 Sprint speed enters as the BABIP *prior*, never as a bonus: a hitter's own
 BABIP already contains his legs, so adding speed on top would count them
 twice. What speed changes is what a thin sample regresses toward — measured
@@ -121,6 +130,62 @@ def fit_speed_prior(h_season, speed, lg_babip):
     slope = sum((x - mx) * (y - my) for x, y in zip(xs, ys)) / var
     # Keep the adjustment bounded; this is a nudge, not a headline effect.
     return max(0.0, min(0.012, slope)), mx
+
+
+SAVANT_XSTATS = ("https://baseballsavant.mlb.com/leaderboard/expected_statistics"
+                 "?type=batter&year={year}&position=&team=&min=100&csv=true")
+
+# How much weight the quality-of-contact estimate gets against this model's own
+# talent estimate. Fitted on 213 hitters with 250+ PA in consecutive seasons:
+# observed BA predicted the next year at r=.458, Savant xBA at .495, this
+# model's decomposition at .484, and an even blend at .514. The two see
+# partly different things, so half and half beats either alone.
+XBA_WEIGHT = 0.50
+XBA_CLAMP = 0.12     # never let the correction move a hitter more than this
+
+
+def expected_stats(season):
+    """Statcast expected batting average by player id, cached for the day."""
+    path = CACHE / f"xstats_{season}.json"
+    if path.exists():
+        try:
+            return {int(k): v for k, v in json.loads(path.read_text()).items()}
+        except ValueError:
+            pass
+    out = {}
+    try:
+        req = urllib.request.Request(SAVANT_XSTATS.format(year=season),
+                                     headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=90, context=P.SSL_CTX) as r:
+            raw = r.read().decode("utf-8-sig")
+        for row in csv.DictReader(io.StringIO(raw)):
+            try:
+                out[int(row["player_id"])] = {"xba": float(row["est_ba"]),
+                                              "ba": float(row["ba"]),
+                                              "pa": float(row["pa"])}
+            except (ValueError, KeyError):
+                continue
+        path.write_text(json.dumps(out))
+    except Exception as e:  # noqa: BLE001 - a refinement, not a requirement
+        print(f"  expected stats unavailable ({type(e).__name__}); "
+              f"using outcomes only", flush=True)
+    return out
+
+
+def xba_adjust(p_hit, ab_share, xrow):
+    """Nudge a hit rate toward what the batted-ball quality says it should be.
+
+    Applied at the batting-average level, deliberately. Pushing it into BABIP
+    instead measured *worse* than doing nothing (r .315 vs .414): BABIP leans
+    on speed and spray, which exit velocity and launch angle cannot see."""
+    if not xrow or ab_share <= 0 or p_hit <= 0:
+        return p_hit, None
+    model_ba = p_hit / ab_share
+    if model_ba <= 0:
+        return p_hit, None
+    talent = XBA_WEIGHT * xrow["xba"] + (1 - XBA_WEIGHT) * model_ba
+    ratio = max(1 - XBA_CLAMP, min(1 + XBA_CLAMP, talent / model_ba))
+    return p_hit * ratio, round(ratio, 4)
 
 
 def rate_of(row, key, denom):
@@ -251,8 +316,10 @@ def main():
     print(f"  league: K {lg['k']:.3f}  BB {lg['bb']:.3f}  HR {lg['hr']:.4f}  "
           f"BABIP {lg['babip']:.3f}", flush=True)
 
+    xstats = expected_stats(season)
     speed = sprint_speed(season)
     spd_slope, spd_mean = fit_speed_prior(h_season, speed, lg["babip"])
+    print(f"  expected stats: {len(xstats)} players", flush=True)
     print(f"  sprint speed: {len(speed)} players · {spd_slope:+.5f} BABIP per ft/s "
           f"(mean {spd_mean:.2f})", flush=True)
 
@@ -348,7 +415,10 @@ def main():
                 babip = odds_ratio(babip_b, staff.get("babip"), lg["babip"]) * babip_mult
 
                 bip = max(0.0, 1 - k - bb - hbp_b - hr)
-                p_hit = min(0.95, hr + bip * babip)
+                p_hit = hr + bip * babip
+                ab_share = 1 - bb - hbp_b          # PAs that end as at-bats
+                p_hit, xr = xba_adjust(p_hit, ab_share, xstats.get(pid))
+                p_hit = min(0.95, p_hit)
                 pa_exp = P.SLOT_PA[slot]
                 cands.append({
                     "id": pid, "team": team.get("abbreviation", ""),
@@ -359,6 +429,7 @@ def main():
                     "perPA": round(p_hit, 4),
                     "k": round(k, 3), "babip": round(babip, 3),
                     "spd": round(spd, 1) if spd else None,
+                    "xadj": xr,
                     "vs": osp.get("fullName", "TBD"), "hand": sp_hand,
                     "confirmed": confirmed,
                 })

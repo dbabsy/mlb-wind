@@ -283,7 +283,7 @@ def main():
             "dome": vid in domes, "wx": wx, "row": row,
         })
 
-    out.sort(key=lambda r: -abs(r["wpHome"] - 0.5))
+    out.sort(key=lambda r: r.get("start") or "")  # first pitch order, like a schedule
     payload = {"games": out, "date": a.date,
                "built": datetime.now(timezone.utc).isoformat(timespec="minutes"),
                "hfa": round(hfa, 4), "hfaRate": hfa_rate, "hfaN": hfa_n,

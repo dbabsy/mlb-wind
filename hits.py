@@ -373,7 +373,7 @@ def main():
             "picks": cands[:a.picks], "n": len(cands),
         })
 
-    out.sort(key=lambda g: -(g["picks"][0]["p"] if g["picks"] else 0))
+    out.sort(key=lambda g: g.get("start") or "")  # first pitch order, like a schedule
     payload = {"games": out, "date": a.date, "picks": a.picks,
                "built": datetime.now(timezone.utc).isoformat(timespec="minutes"),
                "lgHit": round(lg["babip"], 3)}

@@ -29,12 +29,20 @@ far too early. That is the main reason this disagrees with the players page.
 Facing pitching is 59% the starter and 41% the bullpen, the league's real
 split. Park and weather move home runs and balls in play separately.
 
+Sprint speed enters as the BABIP *prior*, never as a bonus: a hitter's own
+BABIP already contains his legs, so adding speed on top would count them
+twice. What speed changes is what a thin sample regresses toward — measured
+at about +0.006 BABIP per foot per second this season.
+
     python3 hits.py                  # today
     python3 hits.py --date 2026-08-25 --picks 3
 """
 
 import argparse
+import csv
+import io
 import json
+import urllib.request
 from collections import defaultdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
@@ -56,6 +64,63 @@ REG = {"k": 60, "bb": 120, "hbp": 200, "hr": 170, "babip": 400}
 # balls — used to scale the wind model's per-fly-ball effect onto BABIP.
 BIP_PER_PA = 0.68
 FLY_PER_BIP = 0.21
+
+
+SAVANT_SPEED = ("https://baseballsavant.mlb.com/leaderboard/sprint_speed"
+                "?year={year}&position=&team=&min=10&csv=true")
+
+
+def sprint_speed(season):
+    """Statcast sprint speed by player id, cached for the day."""
+    path = CACHE / f"speed_{season}.json"
+    if path.exists():
+        try:
+            return {int(k): v for k, v in json.loads(path.read_text()).items()}
+        except ValueError:
+            pass
+    out = {}
+    try:
+        req = urllib.request.Request(SAVANT_SPEED.format(year=season),
+                                     headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=90, context=P.SSL_CTX) as r:
+            raw = r.read().decode("utf-8-sig")
+        for row in csv.DictReader(io.StringIO(raw)):
+            try:
+                out[int(row["player_id"])] = float(row["sprint_speed"])
+            except (ValueError, KeyError):
+                continue
+        path.write_text(json.dumps(out))
+    except Exception as e:  # noqa: BLE001 - speed is an refinement, not a requirement
+        print(f"  sprint speed unavailable ({type(e).__name__}); using flat BABIP prior",
+              flush=True)
+    return out
+
+
+def fit_speed_prior(h_season, speed, lg_babip):
+    """How much BABIP a foot per second is worth, fitted on this season.
+
+    Speed is not added as a bonus — the hitter's own BABIP already contains
+    his legs. It is used to set what his BABIP regresses *toward*, so a fast
+    player with few balls in play is no longer dragged to a league mean that
+    was never his to begin with."""
+    xs, ys = [], []
+    for pid, row in h_season.items():
+        bip = row["atBats"] - row["strikeOuts"] - row["homeRuns"] + row["sacFlies"]
+        spd = speed.get(pid)
+        if bip < 150 or spd is None:
+            continue
+        xs.append(spd)
+        ys.append((row["hits"] - row["homeRuns"]) / bip)
+    if len(xs) < 60:
+        return 0.0, 0.0
+    mx = sum(xs) / len(xs)
+    my = sum(ys) / len(ys)
+    var = sum((x - mx) ** 2 for x in xs)
+    if var <= 0:
+        return 0.0, mx
+    slope = sum((x - mx) * (y - my) for x, y in zip(xs, ys)) / var
+    # Keep the adjustment bounded; this is a nudge, not a headline effect.
+    return max(0.0, min(0.012, slope)), mx
 
 
 def rate_of(row, key, denom):
@@ -186,6 +251,11 @@ def main():
     print(f"  league: K {lg['k']:.3f}  BB {lg['bb']:.3f}  HR {lg['hr']:.4f}  "
           f"BABIP {lg['babip']:.3f}", flush=True)
 
+    speed = sprint_speed(season)
+    spd_slope, spd_mean = fit_speed_prior(h_season, speed, lg["babip"])
+    print(f"  sprint speed: {len(speed)} players · {spd_slope:+.5f} BABIP per ft/s "
+          f"(mean {spd_mean:.2f})", flush=True)
+
     park_delta, _pc, _td, _fb, domes = Dl.load_model()
     orient = json.loads((CACHE / "orient.json").read_text()) \
         if (CACHE / "orient.json").exists() else {}
@@ -263,8 +333,12 @@ def main():
                 hbp_b = comp("hbp", "hitByPitch")
                 hr_b = comp("hr", "homeRuns")
                 bb_raw, bip_n = batter_babip(s)
-                babip_b = ((bip_n * bb_raw + REG["babip"] * lg["babip"])
-                           / (bip_n + REG["babip"])) if bb_raw is not None else lg["babip"]
+                # Regress toward what a hitter with THIS player's legs runs,
+                # not toward the league's average pair of legs.
+                spd = speed.get(pid)
+                prior = lg["babip"] + (spd_slope * (spd - spd_mean) if spd else 0.0)
+                babip_b = ((bip_n * bb_raw + REG["babip"] * prior)
+                           / (bip_n + REG["babip"])) if bb_raw is not None else prior
                 babip_b *= sh.get("babip", 1.0)
 
                 # Combine with the pitching he'll actually face.
@@ -284,6 +358,7 @@ def main():
                     "p": round(P.p_at_least_one(p_hit, pa_exp), 4),
                     "perPA": round(p_hit, 4),
                     "k": round(k, 3), "babip": round(babip, 3),
+                    "spd": round(spd, 1) if spd else None,
                     "vs": osp.get("fullName", "TBD"), "hand": sp_hand,
                     "confirmed": confirmed,
                 })
@@ -410,7 +485,8 @@ function pick(c,i){
       c.slot===1?"st":c.slot===2?"nd":c.slot===3?"rd":"th"}</small></div>
     <div class="big">${(c.p*100).toFixed(0)}%</div>
     <div class="sub"><span>${c.pa} PA</span><span>vs ${c.vs} (${c.hand})</span>
-      <span>${(c.perPA*100).toFixed(0)}% per PA</span></div>
+      <span>${(c.perPA*100).toFixed(0)}% per PA</span>${
+        c.spd?`<span>${c.spd} ft/s</span>`:""}</div>
     <span class="bar"><i style="width:${(c.p*100).toFixed(0)}%"></i></span>
   </div>`;
 }

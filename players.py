@@ -512,6 +512,7 @@ footer b{color:var(--dim)}
 </header>
 <div class="nav">
   <a class="pill" href="games.html">Matchups</a>
+  <a class="pill" href="hits.html">Hit picks</a>
   <a class="pill" href="daily.html">Stadium report</a>
   <a class="pill" href="index.html">Wind profile</a>
   <button class="pill on" id="sortBy" data-k="h1">Sort: 1+ Hit</button>

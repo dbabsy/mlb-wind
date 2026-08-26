@@ -355,6 +355,7 @@ footer b{color:var(--dim)}
   <div id="stamps" style="margin-top:3px"></div>
 </header>
 <div class="nav">
+  <a class="pill" href="hits.html">Hit picks</a>
   <a class="pill" href="players.html">Players</a>
   <a class="pill" href="daily.html">Stadium report</a>
   <a class="pill" href="index.html">Wind profile</a>

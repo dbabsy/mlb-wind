@@ -61,6 +61,7 @@ jobs:
           python3 daily.py --out public/daily.html
           python3 players.py --out public/players.html
           python3 games.py --out public/games.html
+          python3 hits.py --out public/hits.html
 
       - uses: actions/upload-pages-artifact@v3
         with:

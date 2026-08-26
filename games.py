@@ -277,6 +277,7 @@ def main():
         # Home advantage as a logit shift: batting last, not extra scoring.
         wp_home = 1 / (1 + math.exp(-(math.log(pyth / (1 - pyth)) + hfa)))
         out.append({
+            "gamePk": g.get("gamePk"),
             "venue": ven.get("name", ""), "start": g.get("gameDate", ""),
             "home": sides["home"], "away": sides["away"],
             "wpHome": round(wp_home, 4), "total": round(rh + ra, 2),
@@ -356,6 +357,7 @@ footer b{color:var(--dim)}
 </header>
 <div class="nav">
   <a class="pill" href="hits.html">Hit picks</a>
+  <a class="pill" href="accuracy.html">Accuracy</a>
   <a class="pill" href="players.html">Players</a>
   <a class="pill" href="daily.html">Stadium report</a>
   <a class="pill" href="index.html">Wind profile</a>

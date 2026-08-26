@@ -19,7 +19,7 @@ on:
     branches: [main]
 
 permissions:
-  contents: read
+  contents: write        # the ledger is committed back to the repo
   pages: write
   id-token: write
 
@@ -62,6 +62,29 @@ jobs:
           python3 players.py --out public/players.html
           python3 games.py --out public/games.html
           python3 hits.py --out public/hits.html
+
+      # Freeze today's pre-game predictions, settle any that have finished,
+      # then publish the running record.
+      - name: Update accuracy ledger
+        run: |
+          python3 ledger.py --all \
+            --hits-html public/hits.html \
+            --games-html public/games.html \
+            --out public/accuracy.html
+
+      - name: Commit ledger
+        run: |
+          if [ -n "$(git status --porcelain ledger/)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add ledger/
+            # [skip ci] stops this commit from triggering another build, which
+            # would otherwise loop forever.
+            git commit -m "Update accuracy ledger [skip ci]"
+            git push
+          else
+            echo "ledger unchanged"
+          fi
 
       - uses: actions/upload-pages-artifact@v3
         with:

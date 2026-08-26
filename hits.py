@@ -436,6 +436,7 @@ def main():
 
         cands.sort(key=lambda c: -c["p"])
         out.append({
+            "gamePk": g.get("gamePk"),
             "venue": ven.get("name", ""), "start": g.get("gameDate", ""),
             "away": g["teams"]["away"]["team"].get("abbreviation", ""),
             "home": g["teams"]["home"]["team"].get("abbreviation", ""),
@@ -516,6 +517,7 @@ footer b{color:var(--dim)}
 </header>
 <div class="nav">
   <a class="pill" href="games.html">Matchups</a>
+  <a class="pill" href="accuracy.html">Accuracy</a>
   <a class="pill" href="players.html">Players</a>
   <a class="pill" href="daily.html">Stadium report</a>
   <button class="pill on" id="mode">By game</button>

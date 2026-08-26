@@ -7,7 +7,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7836,
+"p":0.7837,
 "result":null
 },
 {
@@ -17,7 +17,7 @@
 "name":"CJ Abrams",
 "team":"WSH",
 "slot":1,
-"p":0.7469,
+"p":0.747,
 "result":null
 },
 {
@@ -97,7 +97,7 @@
 "name":"Trea Turner",
 "team":"PHI",
 "slot":2,
-"p":0.6876,
+"p":0.6877,
 "result":null
 },
 {
@@ -157,7 +157,7 @@
 "name":"Brandon Lowe",
 "team":"PIT",
 "slot":2,
-"p":0.6769,
+"p":0.677,
 "result":null
 },
 {
@@ -207,7 +207,7 @@
 "name":"Luis Garc\u00eda Jr.",
 "team":"NYY",
 "slot":3,
-"p":0.7123,
+"p":0.7124,
 "result":null
 },
 {
@@ -217,7 +217,7 @@
 "name":"Bo Bichette",
 "team":"NYM",
 "slot":2,
-"p":0.7169,
+"p":0.717,
 "result":null
 },
 {
@@ -337,7 +337,7 @@
 "name":"Randal Grichuk",
 "team":"CWS",
 "slot":3,
-"p":0.7122,
+"p":0.7123,
 "result":null
 },
 {
@@ -347,7 +347,7 @@
 "name":"Miguel Vargas",
 "team":"CWS",
 "slot":1,
-"p":0.6842,
+"p":0.6843,
 "result":null
 },
 {
@@ -357,7 +357,7 @@
 "name":"Justin Foscue",
 "team":"TEX",
 "slot":1,
-"p":0.6784,
+"p":0.6785,
 "result":null
 },
 {
@@ -367,7 +367,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":2,
-"p":0.7166,
+"p":0.7165,
 "result":null
 },
 {
@@ -387,7 +387,7 @@
 "name":"Drake Baldwin",
 "team":"ATL",
 "slot":1,
-"p":0.6983,
+"p":0.6982,
 "result":null
 },
 {
@@ -477,8 +477,8 @@
 "gamePk":823015,
 "home":"STL",
 "away":"BAL",
-"wpHome":0.5056,
-"rHome":4.42,
+"wpHome":0.5223,
+"rHome":4.58,
 "rAway":4.63,
 "result":null
 },
@@ -507,8 +507,8 @@
 "gamePk":823255,
 "home":"SD",
 "away":"PIT",
-"wpHome":0.4584,
-"rHome":4.25,
+"wpHome":0.4595,
+"rHome":4.26,
 "rAway":4.92,
 "result":null
 },

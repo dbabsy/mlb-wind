@@ -7,7 +7,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7836,
+"p":0.7834,
 "result":null
 },
 {
@@ -17,7 +17,7 @@
 "name":"CJ Abrams",
 "team":"WSH",
 "slot":1,
-"p":0.7469,
+"p":0.747,
 "result":null
 },
 {
@@ -37,7 +37,7 @@
 "name":"Nathan Lukes",
 "team":"TOR",
 "slot":2,
-"p":0.7144,
+"p":0.7148,
 "result":null
 },
 {
@@ -47,7 +47,7 @@
 "name":"Vladimir Guerrero Jr.",
 "team":"TOR",
 "slot":3,
-"p":0.7201,
+"p":0.7206,
 "result":null
 },
 {
@@ -57,7 +57,7 @@
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
-"p":0.7257,
+"p":0.7261,
 "result":null
 },
 {
@@ -237,7 +237,7 @@
 "name":"Carson Benge",
 "team":"NYM",
 "slot":3,
-"p":0.7236,
+"p":0.7237,
 "result":null
 },
 {
@@ -307,7 +307,7 @@
 "name":"Yandy D\u00edaz",
 "team":"TB",
 "slot":1,
-"p":0.7202,
+"p":0.7215,
 "result":null
 },
 {
@@ -317,7 +317,7 @@
 "name":"Colt Keith",
 "team":"DET",
 "slot":4,
-"p":0.6939,
+"p":0.6952,
 "result":null
 },
 {
@@ -327,7 +327,7 @@
 "name":"Kevin McGonigle",
 "team":"DET",
 "slot":2,
-"p":0.7095,
+"p":0.711,
 "result":null
 },
 {
@@ -407,7 +407,7 @@
 "name":"Tommy White",
 "team":"ATH",
 "slot":5,
-"p":0.6932,
+"p":0.693,
 "result":null
 },
 {
@@ -417,7 +417,7 @@
 "name":"Henry Bolte",
 "team":"ATH",
 "slot":1,
-"p":0.6987,
+"p":0.6979,
 "result":null
 },
 {
@@ -457,9 +457,9 @@
 "gamePk":822692,
 "home":"WSH",
 "away":"COL",
-"wpHome":0.4466,
-"rHome":5.33,
-"rAway":6.26,
+"wpHome":0.4467,
+"rHome":5.34,
+"rAway":6.27,
 "result":null
 },
 {
@@ -467,9 +467,9 @@
 "gamePk":822772,
 "home":"TOR",
 "away":"KC",
-"wpHome":0.6365,
-"rHome":4.65,
-"rAway":3.64,
+"wpHome":0.6361,
+"rHome":4.67,
+"rAway":3.66,
 "result":null
 },
 {
@@ -557,9 +557,9 @@
 "gamePk":824234,
 "home":"DET",
 "away":"TB",
-"wpHome":0.6353,
-"rHome":4.97,
-"rAway":3.92,
+"wpHome":0.6351,
+"rHome":4.98,
+"rAway":3.93,
 "result":null
 },
 {

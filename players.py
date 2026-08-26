@@ -43,6 +43,7 @@ try:
 except ImportError:  # no tzdata
     ZoneInfo = None
 
+from orient import load_orientations
 import daily as Dl
 import wind as W
 
@@ -272,7 +273,7 @@ def main():
     # Park and weather, straight from the wind model already in this repo.
     print("building park/weather model …", flush=True)
     park_delta, _pc, temp_delta, fb_per_game, domes = Dl.load_model()
-    orient = json.loads((CACHE / "orient.json").read_text()) if (CACHE / "orient.json").exists() else {}
+    orient = load_orientations()
 
     sched = q("schedule", sportId=1, date=a.date,
               hydrate="probablePitcher,lineups,team,venue(location)")

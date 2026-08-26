@@ -73,7 +73,7 @@ def not_started(iso):
 
 def record(led, hits_html, games_html):
     """Freeze predictions for games that have not begun."""
-    added = updated = skipped = 0
+    added = updated = skipped = dropped = 0
 
     H = embedded(hits_html)
     if H:
@@ -85,6 +85,18 @@ def record(led, hits_html, games_html):
             if not not_started(g.get("start", "")):
                 skipped += 1
                 continue
+            live = {c["id"] for c in g["picks"]}
+            # A late lineup change can shuffle who the top picks are. Drop the
+            # players who are no longer picked, or the ledger would grade us on
+            # selections we would not have made — but only while the game is
+            # still ahead of us, and never a row that already has a result.
+            before = len(led["hits"])
+            led["hits"] = [r for r in led["hits"]
+                           if not (r["date"] == H["date"] and r["gamePk"] == gp
+                                   and r["result"] is None and r["pid"] not in live)]
+            dropped += before - len(led["hits"])
+            idx = {(r["date"], r["gamePk"], r["pid"]): r for r in led["hits"]}
+
             for c in g["picks"]:
                 key = (H["date"], gp, c["id"])
                 row = idx.get(key)
@@ -124,7 +136,8 @@ def record(led, hits_html, games_html):
                 idx[key] = payload
                 added += 1
 
-    print(f"  recorded: {added} new, {updated} refreshed, {skipped} games already under way")
+    print(f"  recorded: {added} new, {updated} refreshed, {dropped} superseded, "
+          f"{skipped} games already under way")
     return led
 
 

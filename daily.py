@@ -39,6 +39,7 @@ try:
 except ImportError:  # no tzdata
     ZoneInfo = None
 
+from orient import load_orientations
 import wind as W
 
 try:
@@ -271,7 +272,7 @@ def main():
 
     park_delta, park_cnt, temp_delta, fb_per_game, domes = load_model()
     print(f"{len(park_delta)} park/wind cells, {len(temp_delta)} temperature bins", flush=True)
-    orient = json.loads((CACHE / "orient.json").read_text()) if (CACHE / "orient.json").exists() else {}
+    orient = load_orientations()
 
     sched = get(f"{STATS}?" + urllib.parse.urlencode({
         "sportId": 1, "date": a.date, "hydrate": "venue(location),team"}))

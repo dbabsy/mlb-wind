@@ -1,0 +1,191 @@
+{
+ "1": {
+  "acc": 0.161,
+  "agree": 0.67,
+  "bearing": 65.0,
+  "n": 192,
+  "name": "Angel Stadium"
+ },
+ "10": {
+  "acc": 0.745,
+  "agree": 0.917,
+  "bearing": 44.1,
+  "n": 161,
+  "name": "Oakland Coliseum"
+ },
+ "14": {
+  "acc": 0.434,
+  "agree": 0.536,
+  "bearing": 1.9,
+  "n": 129,
+  "name": "Rogers Centre"
+ },
+ "17": {
+  "acc": 0.564,
+  "agree": 0.86,
+  "bearing": 36.1,
+  "n": 202,
+  "name": "Wrigley Field"
+ },
+ "19": {
+  "acc": 0.293,
+  "agree": 0.521,
+  "bearing": 350.9,
+  "n": 92,
+  "name": "Coors Field"
+ },
+ "2": {
+  "acc": 0.562,
+  "agree": 0.744,
+  "bearing": 30.4,
+  "n": 96,
+  "name": "Oriole Park at Camden Yards"
+ },
+ "22": {
+  "acc": 0.53,
+  "agree": 0.827,
+  "bearing": 8.7,
+  "n": 66,
+  "name": "Dodger Stadium"
+ },
+ "2394": {
+  "acc": 0.44,
+  "agree": 0.722,
+  "bearing": 141.3,
+  "n": 191,
+  "name": "Comerica Park"
+ },
+ "2395": {
+  "acc": 0.782,
+  "agree": 0.942,
+  "bearing": 73.9,
+  "n": 220,
+  "name": "Oracle Park"
+ },
+ "2523": {
+  "acc": 0.474,
+  "agree": 0.72,
+  "bearing": 47.1,
+  "n": 38,
+  "name": "George M. Steinbrenner Field"
+ },
+ "2529": {
+  "acc": 0.54,
+  "agree": 0.825,
+  "bearing": 32.2,
+  "n": 50,
+  "name": "Sutter Health Park"
+ },
+ "2602": {
+  "acc": 0.655,
+  "agree": 0.827,
+  "bearing": 135.7,
+  "n": 113,
+  "name": "Great American Ball Park"
+ },
+ "2680": {
+  "acc": 0.709,
+  "agree": 0.879,
+  "bearing": 357.6,
+  "n": 223,
+  "name": "Petco Park"
+ },
+ "2681": {
+  "acc": 0.561,
+  "agree": 0.842,
+  "bearing": 17.7,
+  "n": 189,
+  "name": "Citizens Bank Park"
+ },
+ "2889": {
+  "acc": 0.331,
+  "agree": 0.675,
+  "bearing": 70.5,
+  "n": 169,
+  "name": "Busch Stadium"
+ },
+ "3": {
+  "acc": 0.452,
+  "agree": 0.559,
+  "bearing": 46.7,
+  "n": 124,
+  "name": "Fenway Park"
+ },
+ "31": {
+  "acc": 0.479,
+  "agree": 0.719,
+  "bearing": 97.8,
+  "n": 144,
+  "name": "PNC Park"
+ },
+ "32": {
+  "acc": 0.38,
+  "agree": 0.556,
+  "bearing": 132.3,
+  "n": 100,
+  "name": "American Family Field"
+ },
+ "3289": {
+  "acc": 0.715,
+  "agree": 0.91,
+  "bearing": 31.4,
+  "n": 165,
+  "name": "Citi Field"
+ },
+ "3309": {
+  "acc": 0.488,
+  "agree": 0.792,
+  "bearing": 27.6,
+  "n": 82,
+  "name": "Nationals Park"
+ },
+ "3312": {
+  "acc": 0.464,
+  "agree": 0.704,
+  "bearing": 87.2,
+  "n": 179,
+  "name": "Target Field"
+ },
+ "3313": {
+  "acc": 0.4,
+  "agree": 0.58,
+  "bearing": 84.1,
+  "n": 195,
+  "name": "Yankee Stadium"
+ },
+ "4": {
+  "acc": 0.539,
+  "agree": 0.759,
+  "bearing": 127.9,
+  "n": 206,
+  "name": "Guaranteed Rate Field"
+ },
+ "4705": {
+  "acc": 0.407,
+  "agree": 0.68,
+  "bearing": 194.9,
+  "n": 123,
+  "name": "Truist Park"
+ },
+ "5": {
+  "acc": 0.428,
+  "agree": 0.691,
+  "bearing": 4.9,
+  "n": 138,
+  "name": "Progressive Field"
+ },
+ "680": {
+  "acc": 0.426,
+  "agree": 0.737,
+  "bearing": 56.3,
+  "n": 47,
+  "name": "T-Mobile Park"
+ },
+ "7": {
+  "acc": 0.439,
+  "agree": 0.656,
+  "bearing": 70.7,
+  "n": 196,
+  "name": "Kauffman Stadium"
+ }
+}

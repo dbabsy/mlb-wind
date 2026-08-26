@@ -56,6 +56,7 @@ from collections import defaultdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
+from orient import load_orientations
 import daily as Dl
 import players as P
 
@@ -324,8 +325,7 @@ def main():
           f"(mean {spd_mean:.2f})", flush=True)
 
     park_delta, _pc, _td, _fb, domes = Dl.load_model()
-    orient = json.loads((CACHE / "orient.json").read_text()) \
-        if (CACHE / "orient.json").exists() else {}
+    orient = load_orientations()
 
     sched = P.q("schedule", sportId=1, date=a.date,
                 hydrate="probablePitcher,lineups,team,venue(location)")

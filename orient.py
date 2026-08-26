@@ -11,9 +11,11 @@ Averaging that offset over thousands of games pins it down.
 The fit checks itself — once a bearing is known, every game's label can be
 re-derived from the compass and scored against what MLB actually wrote.
 
-    python3 orient.py            # fit, validate, cache to .cache/orient.json
+    python3 orient.py            # fit once, store in data/orient.json
+    python3 orient.py --force    # refit from scratch
 """
 
+import argparse
 import json
 import math
 import ssl
@@ -31,6 +33,11 @@ except ImportError:
     SSL_CTX = ssl.create_default_context()
 
 CACHE = Path(__file__).parent / ".cache"
+# A ballpark's orientation is a fact about the ground it sits on, not a
+# statistic — it does not change between builds. Keeping it in the repository
+# rather than a cache means it is fitted once, survives cache eviction, and is
+# reviewable in the diff.
+STORE = Path(__file__).parent / "data" / "orient.json"
 ARCHIVE = "https://archive-api.open-meteo.com/v1/archive"
 UA = {"User-Agent": "Mozilla/5.0 (wind-profile)"}
 
@@ -104,7 +111,30 @@ def hourly_series(lat, lon, start, end):
             zip(h["time"], h["wind_speed_10m"], h["wind_direction_10m"])}
 
 
+def load_orientations():
+    """Fitted bearings, from the repo first and the old cache location second."""
+    for path in (STORE, CACHE / "orient.json"):
+        if path.exists():
+            try:
+                return json.loads(path.read_text())
+            except ValueError:
+                continue
+    return {}
+
+
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--force", action="store_true",
+                    help="refit even when a stored fit already exists")
+    ap.add_argument("--min-parks", type=int, default=25)
+    a = ap.parse_args()
+
+    have = load_orientations()
+    if have and len(have) >= a.min_parks and not a.force:
+        print(f"{len(have)} parks already fitted in {STORE.name}; skipping "
+              f"(pass --force to refit)")
+        return
+
     by_park = load_games()
     print(f"{len(by_park)} parks with labelled windy games", flush=True)
 
@@ -152,7 +182,9 @@ def main():
         print(f"  {name[:28]:30s} CF bearing {bearing:5.1f}deg  "
               f"n={len(votes):4d} agreement={agree:.2f} relabel={acc:.0%}", flush=True)
 
-    (CACHE / "orient.json").write_text(json.dumps(out, indent=1))
+    STORE.parent.mkdir(parents=True, exist_ok=True)
+    STORE.write_text(json.dumps(out, indent=1, sort_keys=True))
+    (CACHE / "orient.json").write_text(json.dumps(out, indent=1, sort_keys=True))
     if out:
         mean_acc = sum(v["acc"] for v in out.values()) / len(out)
         print(f"\n{len(out)} parks fitted · mean relabel accuracy {mean_acc:.0%}")

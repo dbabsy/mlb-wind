@@ -228,16 +228,29 @@ def summarise(led):
             "pending": sum(1 for r in led["hits"] if r["result"] is None),
         }
     if games:
-        fav = [r for r in games
-               if (r["wpHome"] >= 0.5) == bool(r["result"])]
+        # The model works in home-win probability because that is the natural
+        # frame for Pythagenpat, but nobody bets "the home team". Restate every
+        # row as the side actually projected to win and how confident that was,
+        # so the record answers "when we name a winner, how often are we right".
+        picks = [{"date": r["date"],
+                  "p": max(r["wpHome"], 1 - r["wpHome"]),
+                  "result": (r["wpHome"] >= 0.5) == bool(r["result"]),
+                  "team": r["home"] if r["wpHome"] >= 0.5 else r["away"],
+                  "side": "home" if r["wpHome"] >= 0.5 else "away"}
+                 for r in games]
+        away = [q for q in picks if q["side"] == "away"]
         out["games"] = {
-            "n": len(games),
-            "pred": sum(r["wpHome"] for r in games) / len(games),
-            "actual": sum(1 for r in games if r["result"]) / len(games),
-            "brier": brier(games, "wpHome"),
-            "favAcc": len(fav) / len(games),
-            "buckets": buckets(games, "wpHome"),
-            "daily": daily(games, "wpHome"),
+            "n": len(picks),
+            "pred": sum(q["p"] for q in picks) / len(picks),
+            "actual": sum(1 for q in picks if q["result"]) / len(picks),
+            "brier": brier(picks),
+            "awayShare": len(away) / len(picks),
+            "awayAcc": (sum(1 for q in away if q["result"]) / len(away)) if away else None,
+            "homeAcc": ((sum(1 for q in picks if q["side"] == "home" and q["result"])
+                         / max(1, len(picks) - len(away)))
+                        if len(picks) > len(away) else None),
+            "buckets": buckets(picks, "p"),
+            "daily": daily(picks, "p"),
             "pending": sum(1 for r in led["games"] if r["result"] is None),
         }
     return out
@@ -275,7 +288,8 @@ def main():
                   f"actual {h['actual']:.3f}")
         g = payload.get("games")
         if g:
-            print(f"  games: {g['n']} scored, favourite {g['favAcc']:.1%}")
+            print(f"  games: {g['n']} scored, pick right {g['actual']:.1%} "
+                  f"(predicted {g['pred']:.1%})")
         print(f"wrote {a.out}")
 
 
@@ -348,6 +362,9 @@ footer b{color:var(--dim)}
   Predictions are frozen <b>before first pitch</b> and never revised afterwards, so nothing a
   model got told later can leak into what it said earlier. Results are filled in once a game
   is final. The ledger is committed to the repository, so every entry is auditable.<br>
+  Matchups are scored on <b>the side the model picked</b>, not on the home team — the model
+  reasons in home-win probability, but the record should answer "when it names a winner, how
+  often is it right". The away/home split is shown so a lean toward either would be visible.<br>
   <b>Calibration</b> is the gap between what was predicted and what happened — near zero is the
   goal, and it matters more than the raw hit rate. <b>Brier</b> scores probability quality:
   lower is better, and beating the always-guess-the-base-rate line is the bar.
@@ -377,12 +394,15 @@ function section(key, title, note, predLabel){
     <div class="kpis">
       <div class="kpi"><span>scored</span><b>${s.n.toLocaleString()}</b><small>${s.daily.length} days</small></div>
       <div class="kpi"><span>predicted</span><b>${pc(s.pred)}</b><small>${predLabel}</small></div>
-      <div class="kpi"><span>actual</span><b>${pc(s.actual)}</b><small>what happened</small></div>
+      <div class="kpi"><span>actual</span><b>${pc(s.actual)}</b><small>how often right</small></div>
       <div class="kpi"><span>calibration</span>
         <b style="color:${Math.abs(gap)<0.02?'var(--good)':Math.abs(gap)<0.05?'var(--amber)':'var(--bad)'}">
         ${gap>0?"+":""}${(gap*100).toFixed(1)}</b><small>points off</small></div>
       <div class="kpi"><span>brier</span><b>${s.brier.toFixed(3)}</b><small>lower is better</small></div>
-      ${s.favAcc!==undefined?`<div class="kpi"><span>favourite won</span><b>${pc(s.favAcc,0)}</b><small>pick accuracy</small></div>`:""}
+      ${s.awayShare!==undefined?`<div class="kpi"><span>away picks</span>
+        <b>${pc(s.awayShare,0)}</b><small>${s.awayAcc!==null?pc(s.awayAcc,0)+" right":"—"}</small></div>
+      <div class="kpi"><span>home picks</span>
+        <b>${pc(1-s.awayShare,0)}</b><small>${s.homeAcc!==null?pc(s.homeAcc,0)+" right":"—"}</small></div>`:""}
     </div>
     ${s.buckets.length?`<table><thead><tr><th class="l">Predicted</th><th>N</th><th>Actual</th>
       <th>Reliability</th></tr></thead><tbody>${s.buckets.map(relRow).join("")}</tbody></table>`:""}
@@ -398,7 +418,7 @@ document.getElementById("stamp").textContent =
     month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}) + " CT";
 document.getElementById("board").innerHTML =
   section("hits","Hit picks","did the picked hitter record a hit","model's average")
-  + section("games","Matchup win probabilities","did the home team win","average home win prob");
+  + section("games","Matchup picks","did the projected winner actually win","confidence in the pick");
 </script></body></html>
 """
 

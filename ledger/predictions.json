@@ -457,7 +457,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7416,
+"p":0.742,
 "result":null
 },
 {
@@ -467,7 +467,7 @@
 "name":"CJ Abrams",
 "team":"WSH",
 "slot":1,
-"p":0.7119,
+"p":0.7123,
 "result":null
 },
 {
@@ -477,7 +477,7 @@
 "name":"Daylen Lile",
 "team":"WSH",
 "slot":4,
-"p":0.7087,
+"p":0.709,
 "result":null
 },
 {
@@ -487,7 +487,7 @@
 "name":"Vladimir Guerrero Jr.",
 "team":"TOR",
 "slot":2,
-"p":0.718,
+"p":0.7148,
 "result":null
 },
 {
@@ -497,7 +497,7 @@
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
-"p":0.6959,
+"p":0.6915,
 "result":null
 },
 {
@@ -507,17 +507,17 @@
 "name":"Brett Bateman",
 "team":"TOR",
 "slot":1,
-"p":0.7002,
+"p":0.6967,
 "result":null
 },
 {
 "date":"2026-08-27",
 "gamePk":823014,
-"pid":624413,
-"name":"Pete Alonso",
-"team":"BAL",
-"slot":2,
-"p":0.7016,
+"pid":665877,
+"name":"Jos\u00e9 Ferm\u00edn",
+"team":"STL",
+"slot":1,
+"p":0.7043,
 "result":null
 },
 {
@@ -526,8 +526,8 @@
 "pid":676475,
 "name":"Alec Burleson",
 "team":"STL",
-"slot":3,
-"p":0.7334,
+"slot":4,
+"p":0.726,
 "result":null
 },
 {
@@ -536,8 +536,8 @@
 "pid":691023,
 "name":"Jordan Walker",
 "team":"STL",
-"slot":4,
-"p":0.7132,
+"slot":3,
+"p":0.7237,
 "result":null
 },
 {
@@ -577,7 +577,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.7233,
+"p":0.7271,
 "result":null
 },
 {
@@ -587,7 +587,7 @@
 "name":"Yordan Alvarez",
 "team":"HOU",
 "slot":2,
-"p":0.7131,
+"p":0.7219,
 "result":null
 },
 {
@@ -597,7 +597,7 @@
 "name":"Luis Garc\u00eda Jr.",
 "team":"NYY",
 "slot":3,
-"p":0.7255,
+"p":0.7304,
 "result":null
 },
 {
@@ -817,9 +817,9 @@
 "gamePk":822694,
 "home":"WSH",
 "away":"COL",
-"wpHome":0.4216,
+"wpHome":0.4383,
 "rHome":4.58,
-"rAway":5.7,
+"rAway":5.51,
 "result":null
 },
 {
@@ -827,9 +827,9 @@
 "gamePk":822771,
 "home":"TOR",
 "away":"KC",
-"wpHome":0.4938,
-"rHome":4.43,
-"rAway":4.76,
+"wpHome":0.4972,
+"rHome":4.3,
+"rAway":4.59,
 "result":null
 },
 {
@@ -837,9 +837,9 @@
 "gamePk":823014,
 "home":"STL",
 "away":"BAL",
-"wpHome":0.4403,
-"rHome":3.82,
-"rAway":4.62,
+"wpHome":0.5667,
+"rHome":4.23,
+"rAway":3.88,
 "result":null
 },
 {
@@ -857,9 +857,9 @@
 "gamePk":823503,
 "home":"NYY",
 "away":"HOU",
-"wpHome":0.6019,
-"rHome":4.47,
-"rAway":3.79,
+"wpHome":0.5989,
+"rHome":4.62,
+"rAway":3.95,
 "result":null
 },
 {

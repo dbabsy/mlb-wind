@@ -70,6 +70,7 @@ CALM_MPH = 5
 # three-to-one — fine enough to matter, coarse enough to keep cells populated.
 STRONG_MPH = 12
 MIN_CELL = 150
+MIN_HAND = 250    # fly balls needed before a park/handedness split is trusted
 
 
 def speed_band(mph):
@@ -93,14 +94,15 @@ def load_history():
             g = winds.get(r["game_pk"])
             if ev is None or la is None or la <= 25 or not g:
                 continue
-            rows.append((ev, la, r["events"], g, r["game_pk"]))
+            rows.append((ev, la, r["events"], g, r["game_pk"],
+                         (r.get("stand") or "").strip()))
     return winds, rows
 
 
 def build_model(rows):
     """League baseline, then park/wind and temperature residuals."""
     acc = defaultdict(lambda: defaultdict(int))
-    for ev, la, e, _g, _pk in rows:
+    for ev, la, e, _g, _pk, _st in rows:
         k = (int(ev // 2), int(la // 2))
         acc[k]["n"] += 1
         acc[k][HIT.get(e, "out")] += 1
@@ -113,8 +115,15 @@ def build_model(rows):
     temp_n = defaultdict(int)
     games_at = defaultdict(set)
     balls_at = defaultdict(int)
+    # Park geometry as each side of the plate meets it. Kept separate from the
+    # wind cells rather than splitting them: a wall's distance does not depend
+    # on which way the wind blows, and splitting would halve every sample.
+    hand = defaultdict(lambda: defaultdict(float))
+    hand_n = defaultdict(int)
+    allpark = defaultdict(lambda: defaultdict(float))
+    allpark_n = defaultdict(int)
 
-    for ev, la, e, g, pk in rows:
+    for ev, la, e, g, pk, stand in rows:
         b = base.get((int(ev // 2), int(la // 2)))
         if not b:
             continue
@@ -133,6 +142,13 @@ def build_model(rows):
             park_n[key] += 1
         games_at[vid].add(pk)
         balls_at[vid] += 1
+        for k2 in OUTCOMES:
+            allpark[vid][k2] += (1.0 if o == k2 else 0.0) - b[k2]
+        allpark_n[vid] += 1
+        if stand in ("L", "R"):
+            for k2 in OUTCOMES:
+                hand[(vid, stand)][k2] += (1.0 if o == k2 else 0.0) - b[k2]
+            hand_n[(vid, stand)] += 1
 
         t = W.fnum(g.get("temp"))
         if t is not None:
@@ -153,8 +169,16 @@ def build_model(rows):
         for k in OUTCOMES:
             temp_delta[t][k] -= mid[k]
 
+    # Centred on the park's own mean: the wind cells already carry how the park
+    # plays overall, so what is left here is purely the left/right differential.
+    hand_delta = {}
+    for (v, h), n in hand_n.items():
+        if n < MIN_HAND or not allpark_n.get(v):
+            continue
+        hand_delta[f"{v}|{h}"] = {
+            k: hand[(v, h)][k] / n - allpark[v][k] / allpark_n[v] for k in OUTCOMES}
     fb_per_game = {v: balls_at[v] / len(games_at[v]) for v in games_at if games_at[v]}
-    return park_delta, park_cnt, temp_delta, fb_per_game
+    return park_delta, park_cnt, temp_delta, fb_per_game, hand_delta
 
 
 def cache_fingerprint():
@@ -182,16 +206,16 @@ def load_model():
                 return (d["park"], d["cnt"],
                         {int(k): v for k, v in d["temp"].items()},
                         {int(k): v for k, v in d["fb"].items()},
-                        set(d["domes"]))
+                        set(d["domes"]), d.get("hand", {}))
         except (ValueError, KeyError):
             pass  # unreadable or older layout: rebuild
     winds, rows = load_history()
-    park, cnt, temp, fb = build_model(rows)
+    park, cnt, temp, fb, hand = build_model(rows)
     domes = dome_parks(winds)
     path.write_text(json.dumps({"fp": fp, "park": park, "cnt": cnt, "temp": temp,
-                                "fb": fb, "domes": sorted(domes)},
+                                "fb": fb, "domes": sorted(domes), "hand": hand},
                                separators=(",", ":")))
-    return park, cnt, temp, fb, domes
+    return park, cnt, temp, fb, domes, hand
 
 
 def dome_parks(winds):
@@ -270,7 +294,7 @@ def main():
     ap.add_argument("--out", default="daily.html")
     a = ap.parse_args()
 
-    park_delta, park_cnt, temp_delta, fb_per_game, domes = load_model()
+    park_delta, park_cnt, temp_delta, fb_per_game, domes, _hand = load_model()
     print(f"{len(park_delta)} park/wind cells, {len(temp_delta)} temperature bins", flush=True)
     orient = load_orientations()
 

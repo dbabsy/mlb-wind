@@ -39,6 +39,17 @@ because BABIP rides on speed and spray that exit velocity cannot see. At the
 BA level an even blend of xBA and the model's own estimate beats either alone
 (.514 vs .495 and .484, n=213 hitters over consecutive seasons).
 
+**Park factors are split by batter handedness, and the split is centred.** A
+ballpark is not the same place to the two sides of the plate — measured on
+2016-2026 the mean left/right gap is ~0.010 HR per fly ball and reaches 0.043,
+and the fit rediscovers known geometry unprompted (Fenway favours righties,
+Yankee Stadium and Camden favour lefties, Oracle favours righties). The
+handedness cells are kept *separate* from the wind cells rather than splitting
+them — a wall's distance does not depend on the wind, and splitting would halve
+every sample — and are **centred on each park's own mean**, because the wind
+cells already carry how the park plays overall. Multiplying uncentred cells
+would count the park twice.
+
 **Sprint speed sets the BABIP prior, it is not a bonus.** A hitter's own BABIP
 already contains his legs; adding speed on top double-counts. Speed changes
 what a thin sample regresses *toward*, measured at ~+0.006 BABIP per ft/s.

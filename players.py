@@ -272,7 +272,7 @@ def main():
 
     # Park and weather, straight from the wind model already in this repo.
     print("building park/weather model …", flush=True)
-    park_delta, _pc, temp_delta, fb_per_game, domes = Dl.load_model()
+    park_delta, _pc, temp_delta, fb_per_game, domes, hand_delta = Dl.load_model()
     orient = load_orientations()
 
     sched = q("schedule", sportId=1, date=a.date,
@@ -362,8 +362,11 @@ def main():
                                       k, "plateAppearances")
                     return base * pm
 
+                bat = (who.get(pid, {}) or {}).get("bat", "R")
+                hd = hand_delta.get(f"{vid}|{bat}") if vid not in domes else None
+                hand_hr = 1 + (hd["hr"] * FLY_PER_PA) / LG["homeRuns"] if hd and LG["homeRuns"] else 1.0
                 p_h = rate("hits") * m_hit * hit_mult
-                p_hr = rate("homeRuns") * m_hr * hr_mult
+                p_hr = rate("homeRuns") * m_hr * hr_mult * hand_hr
                 p_2b, p_3b = rate("doubles"), rate("triples")
                 p_1b = max(0.0, p_h - p_2b - p_3b - p_hr)
                 batters.append({

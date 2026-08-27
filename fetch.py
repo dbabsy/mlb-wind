@@ -47,7 +47,11 @@ MONTHS = [(3, "03-01", "03-31"), (4, "04-01", "04-30"), (5, "05-01", "05-31"),
 
 # Only these columns are kept; the raw export is 119 wide and mostly irrelevant.
 KEEP = ["game_pk", "game_date", "game_year", "home_team", "player_name",
-        "launch_speed", "launch_angle", "hit_distance_sc", "hc_x", "hc_y", "events"]
+        "launch_speed", "launch_angle", "hit_distance_sc", "hc_x", "hc_y", "events",
+        # Batter hand. Park effects are strongly handedness-dependent — the
+        # Green Monster and a short right-field porch are not the same park to
+        # the two sides — so this is needed to model geometry at all.
+        "stand"]
 
 
 def fetch(url, tries=3, timeout=240):
@@ -70,7 +74,14 @@ def statcast_month(year, start, end, force=False):
     """One month of fly balls, trimmed to the columns we use."""
     out = CACHE / f"sc_{year}_{start[:2]}.csv"
     if out.exists() and not force:
-        return sum(1 for _ in out.open()) - 1
+        # A file written before a column was added would silently be missing
+        # it, so check the header rather than trusting the filename.
+        with out.open() as fh:
+            header = fh.readline().strip().split(",")
+        if all(k in header for k in KEEP):
+            return sum(1 for _ in out.open()) - 1
+        print(f"      sc_{year}_{start[:2]}.csv predates the current columns; refetching",
+              flush=True)
 
     q = urllib.parse.urlencode({
         "all": "true", "hfGT": "R|", "hfBBT": "fly_ball|",

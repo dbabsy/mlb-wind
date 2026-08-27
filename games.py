@@ -163,7 +163,7 @@ def main():
     lg_p = {"h": LG["hits"], "hr": LG["homeRuns"], "bb": LG["baseOnBalls"]}
 
     print("building park/weather model …", flush=True)
-    park_delta, _pc, _td, _fb, domes = Dl.load_model()
+    park_delta, _pc, _td, _fb, domes, hand_delta = Dl.load_model()
     orient = load_orientations()
 
     sched = P.q("schedule", sportId=1, date=a.date,
@@ -248,7 +248,10 @@ def main():
                                                  k, "plateAppearances")
 
                 pa_w = P.SLOT_PA[slot]
-                hr = rate("homeRuns") * m_hr * hr_mult
+                bat = (who.get(pid, {}) or {}).get("bat", "R")
+                hd = hand_delta.get(f"{vid}|{bat}") if vid not in domes else None
+                hand_hr = 1 + (hd["hr"] * P.FLY_PER_PA) / LG["homeRuns"] if hd and LG["homeRuns"] else 1.0
+                hr = rate("homeRuns") * m_hr * hr_mult * hand_hr
                 d2 = rate("doubles") * m_h * xb_mult
                 d3 = rate("triples") * m_h * xb_mult
                 hits = rate("hits") * m_h

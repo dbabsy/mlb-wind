@@ -324,7 +324,7 @@ def main():
     print(f"  sprint speed: {len(speed)} players · {spd_slope:+.5f} BABIP per ft/s "
           f"(mean {spd_mean:.2f})", flush=True)
 
-    park_delta, _pc, _td, _fb, domes = Dl.load_model()
+    park_delta, _pc, _td, _fb, domes, hand_delta = Dl.load_model()
     orient = load_orientations()
 
     sched = P.q("schedule", sportId=1, date=a.date,
@@ -414,6 +414,15 @@ def main():
                 hr = odds_ratio(hr_b, staff.get("hr"), lg["hr"]) * hr_mult
                 babip = odds_ratio(babip_b, staff.get("babip"), lg["babip"]) * babip_mult
 
+                # Park geometry as this side of the plate meets it — the
+                # short porch or the tall wall, depending which box he stands in.
+                bat = (names.get(pid, {}) or {}).get("bat", "R")
+                hd = hand_delta.get(f"{vid}|{bat}")
+                if hd and not (vid in domes):
+                    hr *= 1 + (hd["hr"] * P.FLY_PER_PA) / lg["hr"] if lg["hr"] else 1.0
+                    babip *= 1 + ((hd["x1"] + hd["x2"] + hd["x3"]) * FLY_PER_BIP) / lg["babip"] \
+                        if lg["babip"] else 1.0
+
                 bip = max(0.0, 1 - k - bb - hbp_b - hr)
                 p_hit = hr + bip * babip
                 ab_share = 1 - bb - hbp_b          # PAs that end as at-bats
@@ -429,6 +438,7 @@ def main():
                     "perPA": round(p_hit, 4),
                     "k": round(k, 3), "babip": round(babip, 3),
                     "spd": round(spd, 1) if spd else None,
+                    "hand_adj": round(hd["hr"], 4) if hd else None,
                     "xadj": xr,
                     "vs": osp.get("fullName", "TBD"), "hand": sp_hand,
                     "confirmed": confirmed,

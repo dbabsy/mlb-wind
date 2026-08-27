@@ -467,7 +467,7 @@
 "name":"CJ Abrams",
 "team":"WSH",
 "slot":1,
-"p":0.7123,
+"p":0.7124,
 "result":null
 },
 {
@@ -497,7 +497,7 @@
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
-"p":0.6899,
+"p":0.6898,
 "result":null
 },
 {
@@ -507,7 +507,7 @@
 "name":"Brett Bateman",
 "team":"TOR",
 "slot":1,
-"p":0.6975,
+"p":0.6974,
 "result":null
 },
 {
@@ -517,7 +517,7 @@
 "name":"Jos\u00e9 Ferm\u00edn",
 "team":"STL",
 "slot":1,
-"p":0.7042,
+"p":0.7044,
 "result":null
 },
 {
@@ -527,7 +527,7 @@
 "name":"Alec Burleson",
 "team":"STL",
 "slot":4,
-"p":0.7256,
+"p":0.7258,
 "result":null
 },
 {
@@ -537,7 +537,7 @@
 "name":"Jordan Walker",
 "team":"STL",
 "slot":3,
-"p":0.7236,
+"p":0.7238,
 "result":null
 },
 {
@@ -577,7 +577,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.7261,
+"p":0.7262,
 "result":null
 },
 {
@@ -657,7 +657,7 @@
 "name":"Shohei Ohtani",
 "team":"LAD",
 "slot":1,
-"p":0.7268,
+"p":0.7267,
 "result":null
 }
 ],
@@ -837,9 +837,9 @@
 "gamePk":823014,
 "home":"STL",
 "away":"BAL",
-"wpHome":0.5667,
+"wpHome":0.5656,
 "rHome":4.22,
-"rAway":3.87,
+"rAway":3.88,
 "result":null
 },
 {
@@ -847,8 +847,8 @@
 "gamePk":823179,
 "home":"SF",
 "away":"AZ",
-"wpHome":0.5377,
-"rHome":4.12,
+"wpHome":0.5388,
+"rHome":4.13,
 "rAway":4.03,
 "result":null
 },

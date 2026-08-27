@@ -2,18 +2,22 @@ name: Build and deploy
 
 on:
   schedule:
-    # Lineups post two to four hours before first pitch, so this needs to run
-    # through the afternoon and evening.
+    # GitHub treats schedules as best-effort, and on this repo it has been
+    # delivering a small fraction of them — 28 requested runs a day was
+    # yielding about four, then none at all for twenty hours. Asking for less,
+    # at uncontended minutes, gives each request a better chance than
+    # spraying requests that get dropped.
     #
-    # Twice an hour, and deliberately NOT on the hour. GitHub treats schedules
-    # as best-effort and ":00" is the most contended minute on the platform;
-    # runs there are routinely delayed by an hour or dropped entirely. Odd
-    # minutes are far less contested, and the second slot covers the first if
-    # it gets skipped.
-    # 13:00-03:00 UTC is roughly 8am-10pm Central: early enough that a morning
-    # visit already shows today's card rather than last night's, late enough to
-    # cover the end of a west-coast game.
-    - cron: "17,47 13-23,0-3 * * *"
+    # Times are chosen for what each pass is for (UTC; CT is UTC-5):
+    #   12:23  7:23am  roll to today's slate, score last night
+    #   16:23 11:23am  midday refresh
+    #   19:23  2:23pm  first lineups appearing
+    #   21:23  4:23pm  most lineups posted
+    #   22:53  5:53pm  last call before the evening games
+    #   03:23 10:23pm  score the early finals
+    - cron: "23 12,16,19,21 * * *"
+    - cron: "53 22 * * *"
+    - cron: "23 3 * * *"
   workflow_dispatch: {}
   push:
     branches: [main]

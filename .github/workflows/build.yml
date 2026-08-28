@@ -76,19 +76,38 @@ jobs:
             --games-html public/games.html \
             --out public/accuracy.html
 
+      # The build takes a couple of minutes, so another push can land on main
+      # while it runs and reject this one. That used to fail the whole job and
+      # skip the deploy — and worse, lose the frozen predictions, which cannot
+      # be re-recorded once those games have started. So: take the newer main,
+      # re-derive the ledger on top of it (record and score are idempotent),
+      # and try again.
       - name: Commit ledger
         run: |
-          if [ -n "$(git status --porcelain ledger/)" ]; then
-            git config user.name  "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            if [ -z "$(git status --porcelain ledger/)" ]; then
+              echo "ledger unchanged"
+              exit 0
+            fi
             git add ledger/
-            # [skip ci] stops this commit from triggering another build, which
-            # would otherwise loop forever.
-            git commit -m "Update accuracy ledger [skip ci]"
-            git push
-          else
-            echo "ledger unchanged"
-          fi
+            # [skip ci] keeps this commit from triggering another build.
+            git commit -m "Update accuracy ledger [skip ci]" || true
+            if git push; then
+              echo "ledger pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "push rejected on attempt $attempt; rebuilding the ledger on top of the newer main"
+            git fetch origin main
+            git reset --hard origin/main
+            python3 ledger.py --all \
+              --hits-html public/hits.html \
+              --games-html public/games.html \
+              --out public/accuracy.html
+          done
+          # Never fail the build for this — the pages should still deploy.
+          echo "::warning::ledger could not be pushed after 3 attempts"
 
       - uses: actions/upload-pages-artifact@v3
         with:

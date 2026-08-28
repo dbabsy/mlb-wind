@@ -106,6 +106,13 @@ the commit triggers another build, forever. Expect to rebase over bot commits
 when pushing; the ledger conflict is normally resolved in favour of whichever
 copy has more `result` values filled in.
 
+**That commit races with any other push.** The build runs for minutes, so a
+push landing meanwhile rejects it. The step retries by taking the newer main
+and re-deriving the ledger on top (record and score are idempotent), and never
+fails the build — the pages must still deploy. Getting this wrong is expensive:
+a lost ledger commit loses that day's frozen predictions, and they cannot be
+re-recorded once the games have started.
+
 ## Open questions
 
 - Whether the xBA correction actually helps. Year-over-year evidence says yes

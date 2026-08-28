@@ -767,7 +767,7 @@
 "name":"Jordan Walker",
 "team":"STL",
 "slot":4,
-"p":0.6922,
+"p":0.6923,
 "result":null
 },
 {
@@ -1087,7 +1087,7 @@
 "name":"Pete Alonso",
 "team":"BAL",
 "slot":2,
-"p":0.7379,
+"p":0.7378,
 "result":null
 },
 {
@@ -1437,9 +1437,9 @@
 "gamePk":824231,
 "home":"DET",
 "away":"LAD",
-"wpHome":0.332,
-"rHome":2.98,
-"rAway":4.68,
+"wpHome":0.3321,
+"rHome":2.93,
+"rAway":4.61,
 "result":null
 },
 {
@@ -1477,9 +1477,9 @@
 "gamePk":824960,
 "home":"ATH",
 "away":"BAL",
-"wpHome":0.4062,
-"rHome":4.43,
-"rAway":5.7,
+"wpHome":0.4088,
+"rHome":4.38,
+"rAway":5.61,
 "result":null
 }
 ]

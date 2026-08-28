@@ -45,18 +45,27 @@ read other repositories, push code, or touch the account.
 
 ## Schedule
 
-Four triggers a day, each placed for a reason:
+Five triggers a day, in `America/Chicago`, as one crontab expression:
 
-| Central | UTC | Why |
-|---|---|---|
-| 7:30am | 12:30 | Roll to today's slate; score last night's games |
-| 2:30pm | 19:30 | First lineups appearing |
-| 5:00pm | 22:00 | Most lineups posted before evening games |
-| 10:30pm | 03:30 | Score the early finals |
+```
+0 7,14,16,17,22 * * *
+```
 
-UTC is what most cron services expect. These are correct for CDT (UTC-5); add
-an hour to the UTC times when Central goes back to standard time in November,
-or set the service's timezone to `America/Chicago` and use the Central column.
+| Central | Why |
+|---|---|
+| 7:00am | Roll to today's slate; score last night's games |
+| 2:00pm | First lineups appearing |
+| 4:00pm | Lineups filling in |
+| 5:00pm | Most lineups posted before the evening games |
+| 10:00pm | Score the early finals |
+
+All five sit on the hour deliberately. cron-job.org builds its schedule as a
+cross product of the minute and hour lists, so mixing `:00` and `:30` times
+would fire at every combination of both — ten runs a day instead of five.
+
+Set the job's timezone to `America/Chicago` and the times hold through the
+daylight-saving change on their own. Using UTC instead would need editing
+twice a year.
 
 ## Checking it works
 

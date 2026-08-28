@@ -45,23 +45,29 @@ read other repositories, push code, or touch the account.
 
 ## Schedule
 
-Five triggers a day, in `America/Chicago`, as one crontab expression:
+Seven triggers a day, in `America/Chicago`, as one crontab expression:
 
 ```
-0 7,14,16,17,22 * * *
+0 7,10,11,14,16,17,22 * * *
 ```
 
 | Central | Why |
 |---|---|
 | 7:00am | Roll to today's slate; score last night's games |
-| 2:00pm | First lineups appearing |
+| 10:00am | Lineups for the early games start appearing |
+| 11:00am | Last pass before a 12:10pm first pitch |
+| 2:00pm | Lineups for the afternoon games |
 | 4:00pm | Lineups filling in |
 | 5:00pm | Most lineups posted before the evening games |
 | 10:00pm | Score the early finals |
 
-All five sit on the hour deliberately. cron-job.org builds its schedule as a
+The 10 and 11am passes exist because early games start around 12:10pm Central
+and their lineups post mid-morning — without them a getaway-day slate would
+still be showing projected lineups at first pitch.
+
+All seven sit on the hour deliberately. cron-job.org builds its schedule as a
 cross product of the minute and hour lists, so mixing `:00` and `:30` times
-would fire at every combination of both — ten runs a day instead of five.
+would fire at every combination of both rather than only the ones wanted.
 
 Set the job's timezone to `America/Chicago` and the times hold through the
 daylight-saving change on their own. Using UTC instead would need editing

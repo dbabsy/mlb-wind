@@ -75,9 +75,13 @@ would otherwise show tomorrow's games while tonight's are still being played.
 
 ## Gotchas that have bitten before
 
-**GitHub's scheduler is unreliable here.** It has delivered as little as 15% of
-requested runs, and once none for 20 hours straight. `workflow_dispatch` has
-never failed. If pages look stale, dispatch manually:
+**GitHub's scheduler does not work on this repo — do not try to fix it with
+cron.** Measured across several days it delivered ~15% of requested runs, then
+none at all for 47 hours, with the workflow active and Actions healthy.
+Reducing the request rate changed nothing. The build is triggered by an
+external cron service hitting the dispatch endpoint instead; see
+`data/SCHEDULING.md`. The `schedule:` block is left in `build.yml` only as a
+free backstop. `workflow_dispatch` has never failed:
 
 ```bash
 gh workflow run "Build and deploy" --ref main

@@ -967,7 +967,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":4,
-"p":0.712,
+"p":0.7102,
 "result":null
 },
 {
@@ -977,7 +977,7 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":3,
-"p":0.7004,
+"p":0.698,
 "result":null
 },
 {
@@ -987,7 +987,7 @@
 "name":"Shohei Ohtani",
 "team":"LAD",
 "slot":1,
-"p":0.7062,
+"p":0.7038,
 "result":null
 },
 {
@@ -1417,9 +1417,9 @@
 "gamePk":823744,
 "home":"MIL",
 "away":"TEX",
-"wpHome":0.6859,
-"rHome":4.61,
-"rAway":3.18,
+"wpHome":0.6832,
+"rHome":4.62,
+"rAway":3.21,
 "result":null
 },
 {

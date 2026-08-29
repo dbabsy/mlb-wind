@@ -1267,7 +1267,7 @@
 "name":"Rafael Devers",
 "team":"SF",
 "slot":2,
-"p":0.6715,
+"p":0.6744,
 "result":null
 },
 {
@@ -1277,7 +1277,7 @@
 "name":"Gabriel Moreno",
 "team":"AZ",
 "slot":3,
-"p":0.7034,
+"p":0.7053,
 "result":null
 },
 {
@@ -1287,7 +1287,7 @@
 "name":"Jung Hoo Lee",
 "team":"SF",
 "slot":5,
-"p":0.7251,
+"p":0.7271,
 "result":null
 },
 {
@@ -1537,7 +1537,7 @@
 "name":"Nico Hoerner",
 "team":"CHC",
 "slot":6,
-"p":0.6992,
+"p":0.7055,
 "result":null
 },
 {
@@ -1547,7 +1547,7 @@
 "name":"Elly De La Cruz",
 "team":"CIN",
 "slot":2,
-"p":0.7064,
+"p":0.7153,
 "result":null
 },
 {
@@ -1557,7 +1557,7 @@
 "name":"Sal Stewart",
 "team":"CIN",
 "slot":3,
-"p":0.7,
+"p":0.7127,
 "result":null
 },
 {
@@ -2047,9 +2047,9 @@
 "gamePk":823177,
 "home":"SF",
 "away":"AZ",
-"wpHome":0.5853,
-"rHome":5.35,
-"rAway":4.74,
+"wpHome":0.5847,
+"rHome":5.3,
+"rAway":4.7,
 "result":null
 },
 {

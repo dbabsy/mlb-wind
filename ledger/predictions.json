@@ -878,7 +878,7 @@
 "team":"MIN",
 "slot":2,
 "p":0.7079,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-28",
@@ -888,7 +888,7 @@
 "team":"CWS",
 "slot":1,
 "p":0.6947,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-28",
@@ -898,7 +898,7 @@
 "team":"MIN",
 "slot":1,
 "p":0.7009,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-28",
@@ -1410,7 +1410,7 @@
 "wpHome":0.4988,
 "rHome":5.38,
 "rAway":5.7,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-28",

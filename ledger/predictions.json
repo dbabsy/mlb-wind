@@ -1237,7 +1237,7 @@
 "name":"Ildemaro Vargas",
 "team":"AZ",
 "slot":1,
-"p":0.7252,
+"p":0.725,
 "result":null
 },
 {
@@ -1257,7 +1257,7 @@
 "name":"Jung Hoo Lee",
 "team":"SF",
 "slot":4,
-"p":0.72,
+"p":0.7206,
 "result":null
 },
 {
@@ -1299,6 +1299,16 @@
 "slot":5,
 "p":0.6702,
 "result":true
+},
+{
+"date":"2026-08-29",
+"gamePk":823501,
+"pid":671277,
+"name":"Luis Garc\u00eda Jr.",
+"team":"NYY",
+"slot":4,
+"p":0.7012,
+"result":false
 },
 {
 "date":"2026-08-29",
@@ -1427,7 +1437,7 @@
 "name":"Brice Turang",
 "team":"MIL",
 "slot":1,
-"p":0.6918,
+"p":0.6919,
 "result":null
 },
 {
@@ -1447,7 +1457,7 @@
 "name":"Trea Turner",
 "team":"PHI",
 "slot":2,
-"p":0.6813,
+"p":0.6807,
 "result":null
 },
 {
@@ -1457,17 +1467,17 @@
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
-"p":0.7447,
+"p":0.744,
 "result":null
 },
 {
 "date":"2026-08-29",
 "gamePk":823986,
-"pid":685133,
-"name":"Wade Meckler",
+"pid":687093,
+"name":"Vaughn Grissom",
 "team":"LAA",
 "slot":3,
-"p":0.6948,
+"p":0.6859,
 "result":null
 },
 {
@@ -1538,7 +1548,7 @@
 "team":"CHC",
 "slot":5,
 "p":0.7141,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-29",
@@ -1548,7 +1558,7 @@
 "team":"CIN",
 "slot":2,
 "p":0.7153,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-29",
@@ -1558,7 +1568,7 @@
 "team":"CIN",
 "slot":3,
 "p":0.7127,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-29",
@@ -1617,7 +1627,7 @@
 "name":"Blaze Alexander",
 "team":"BAL",
 "slot":1,
-"p":0.7733,
+"p":0.7734,
 "result":null
 }
 ],
@@ -2030,15 +2040,15 @@
 "wpHome":0.4472,
 "rHome":3.82,
 "rAway":4.55,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-29",
 "gamePk":823176,
 "home":"SF",
 "away":"AZ",
-"wpHome":0.4741,
-"rHome":4.04,
+"wpHome":0.473,
+"rHome":4.03,
 "rAway":4.53,
 "result":null
 },
@@ -2057,8 +2067,8 @@
 "gamePk":823501,
 "home":"NYY",
 "away":"BOS",
-"wpHome":0.6121,
-"rHome":3.97,
+"wpHome":0.5965,
+"rHome":3.83,
 "rAway":3.26,
 "result":null
 },
@@ -2107,9 +2117,9 @@
 "gamePk":823986,
 "home":"LAA",
 "away":"PHI",
-"wpHome":0.2776,
-"rHome":3.41,
-"rAway":5.97,
+"wpHome":0.3212,
+"rHome":3.84,
+"rAway":5.99,
 "result":null
 },
 {
@@ -2140,7 +2150,7 @@
 "wpHome":0.6474,
 "rHome":6.31,
 "rAway":4.92,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-29",

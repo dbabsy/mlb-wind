@@ -1297,7 +1297,7 @@
 "name":"Cody Bellinger",
 "team":"NYY",
 "slot":5,
-"p":0.6599,
+"p":0.6608,
 "result":null
 },
 {
@@ -1307,7 +1307,7 @@
 "name":"Ceddanne Rafaela",
 "team":"BOS",
 "slot":2,
-"p":0.6885,
+"p":0.6895,
 "result":null
 },
 {
@@ -1317,7 +1317,7 @@
 "name":"Ben Rice",
 "team":"NYY",
 "slot":2,
-"p":0.6586,
+"p":0.6594,
 "result":null
 },
 {
@@ -1327,7 +1327,7 @@
 "name":"Cody Bellinger",
 "team":"NYY",
 "slot":5,
-"p":0.6844,
+"p":0.6834,
 "result":null
 },
 {
@@ -1337,7 +1337,7 @@
 "name":"Ceddanne Rafaela",
 "team":"BOS",
 "slot":2,
-"p":0.6619,
+"p":0.661,
 "result":null
 },
 {
@@ -1347,7 +1347,7 @@
 "name":"Ben Rice",
 "team":"NYY",
 "slot":2,
-"p":0.6735,
+"p":0.6727,
 "result":null
 },
 {
@@ -1363,21 +1363,21 @@
 {
 "date":"2026-08-29",
 "gamePk":823582,
-"pid":666182,
-"name":"Bo Bichette",
+"pid":665742,
+"name":"Juan Soto",
 "team":"NYM",
-"slot":3,
-"p":0.6947,
+"slot":2,
+"p":0.6994,
 "result":null
 },
 {
 "date":"2026-08-29",
 "gamePk":823582,
-"pid":701807,
-"name":"Carson Benge",
+"pid":666182,
+"name":"Bo Bichette",
 "team":"NYM",
-"slot":4,
-"p":0.694,
+"slot":3,
+"p":0.6947,
 "result":null
 },
 {
@@ -1417,7 +1417,7 @@
 "name":"Brandon Nimmo",
 "team":"TEX",
 "slot":4,
-"p":0.7009,
+"p":0.7024,
 "result":null
 },
 {
@@ -1427,7 +1427,7 @@
 "name":"Brice Turang",
 "team":"MIL",
 "slot":1,
-"p":0.6896,
+"p":0.6917,
 "result":null
 },
 {
@@ -1437,7 +1437,7 @@
 "name":"Jackson Chourio",
 "team":"MIL",
 "slot":2,
-"p":0.7069,
+"p":0.7092,
 "result":null
 },
 {
@@ -2067,9 +2067,9 @@
 "gamePk":823539,
 "home":"NYY",
 "away":"BOS",
-"wpHome":0.4698,
-"rHome":3.36,
-"rAway":3.83,
+"wpHome":0.4699,
+"rHome":3.37,
+"rAway":3.84,
 "result":null
 },
 {
@@ -2077,8 +2077,8 @@
 "gamePk":823582,
 "home":"NYM",
 "away":"HOU",
-"wpHome":0.585,
-"rHome":4.21,
+"wpHome":0.5775,
+"rHome":4.14,
 "rAway":3.7,
 "result":null
 },
@@ -2127,9 +2127,9 @@
 "gamePk":824392,
 "home":"CLE",
 "away":"KC",
-"wpHome":0.5058,
+"wpHome":0.4726,
 "rHome":3.62,
-"rAway":3.8,
+"rAway":4.09,
 "result":null
 },
 {

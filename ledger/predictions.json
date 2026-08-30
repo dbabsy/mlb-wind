@@ -1668,7 +1668,7 @@
 "team":"TOR",
 "slot":2,
 "p":0.718,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -1678,7 +1678,7 @@
 "team":"TOR",
 "slot":3,
 "p":0.6897,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -1688,7 +1688,7 @@
 "team":"SEA",
 "slot":2,
 "p":0.7084,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-30",
@@ -1698,7 +1698,7 @@
 "team":"TB",
 "slot":1,
 "p":0.7439,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -1708,7 +1708,7 @@
 "team":"SD",
 "slot":1,
 "p":0.742,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-30",
@@ -1718,7 +1718,7 @@
 "team":"TB",
 "slot":5,
 "p":0.7093,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-30",
@@ -1758,7 +1758,7 @@
 "team":"NYY",
 "slot":2,
 "p":0.7098,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -1768,7 +1768,7 @@
 "team":"NYY",
 "slot":4,
 "p":0.7132,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -1778,7 +1778,7 @@
 "team":"BOS",
 "slot":2,
 "p":0.7234,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-30",
@@ -1818,7 +1818,7 @@
 "team":"CWS",
 "slot":7,
 "p":0.678,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -1828,7 +1828,7 @@
 "team":"MIN",
 "slot":2,
 "p":0.6808,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -1838,7 +1838,7 @@
 "team":"CWS",
 "slot":1,
 "p":0.7064,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -1938,7 +1938,7 @@
 "team":"KC",
 "slot":2,
 "p":0.7253,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-30",
@@ -1948,7 +1948,7 @@
 "team":"CLE",
 "slot":1,
 "p":0.727,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -1958,17 +1958,7 @@
 "team":"CLE",
 "slot":2,
 "p":0.7339,
-"result":null
-},
-{
-"date":"2026-08-30",
-"gamePk":824636,
-"pid":663538,
-"name":"Nico Hoerner",
-"team":"CHC",
-"slot":5,
-"p":0.7023,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -1977,7 +1967,7 @@
 "name":"Elly De La Cruz",
 "team":"CIN",
 "slot":2,
-"p":0.7044,
+"p":0.7181,
 "result":null
 },
 {
@@ -1987,7 +1977,17 @@
 "name":"Pete Crow-Armstrong",
 "team":"CHC",
 "slot":1,
-"p":0.6922,
+"p":0.7088,
+"result":null
+},
+{
+"date":"2026-08-30",
+"gamePk":824636,
+"pid":701398,
+"name":"Sal Stewart",
+"team":"CIN",
+"slot":3,
+"p":0.7088,
 "result":null
 },
 {
@@ -1998,7 +1998,7 @@
 "team":"COL",
 "slot":1,
 "p":0.7416,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -2008,7 +2008,7 @@
 "team":"ATL",
 "slot":4,
 "p":0.7542,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -2018,7 +2018,7 @@
 "team":"ATL",
 "slot":1,
 "p":0.7372,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -2610,7 +2610,7 @@
 "wpHome":0.3701,
 "rHome":3.93,
 "rAway":5.51,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -2640,7 +2640,7 @@
 "wpHome":0.3877,
 "rHome":3.41,
 "rAway":4.66,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -2660,7 +2660,7 @@
 "wpHome":0.4417,
 "rHome":4.62,
 "rAway":5.52,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -2700,16 +2700,16 @@
 "wpHome":0.715,
 "rHome":5.13,
 "rAway":3.31,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
 "gamePk":824636,
 "home":"CHC",
 "away":"CIN",
-"wpHome":0.5214,
-"rHome":5.3,
-"rAway":5.37,
+"wpHome":0.5415,
+"rHome":5.5,
+"rAway":5.36,
 "result":null
 },
 {
@@ -2720,7 +2720,7 @@
 "wpHome":0.4892,
 "rHome":4.64,
 "rAway":5.03,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",

@@ -1677,7 +1677,7 @@
 "name":"Alejandro Kirk",
 "team":"TOR",
 "slot":3,
-"p":0.6898,
+"p":0.6897,
 "result":null
 },
 {
@@ -1717,7 +1717,7 @@
 "name":"Chandler Simpson",
 "team":"TB",
 "slot":5,
-"p":0.7094,
+"p":0.7093,
 "result":null
 },
 {
@@ -1907,7 +1907,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":4,
-"p":0.7139,
+"p":0.7128,
 "result":null
 },
 {
@@ -1917,7 +1917,7 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":3,
-"p":0.7001,
+"p":0.6989,
 "result":null
 },
 {
@@ -1927,7 +1927,7 @@
 "name":"Shohei Ohtani",
 "team":"LAD",
 "slot":1,
-"p":0.7374,
+"p":0.7361,
 "result":null
 },
 {
@@ -1937,7 +1937,7 @@
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
-"p":0.7233,
+"p":0.7253,
 "result":null
 },
 {
@@ -1947,7 +1947,7 @@
 "name":"Steven Kwan",
 "team":"CLE",
 "slot":1,
-"p":0.7254,
+"p":0.727,
 "result":null
 },
 {
@@ -1957,7 +1957,7 @@
 "name":"Chase DeLauter",
 "team":"CLE",
 "slot":2,
-"p":0.7314,
+"p":0.7339,
 "result":null
 },
 {
@@ -2687,9 +2687,9 @@
 "gamePk":824232,
 "home":"DET",
 "away":"LAD",
-"wpHome":0.3234,
-"rHome":2.79,
-"rAway":4.51,
+"wpHome":0.3219,
+"rHome":2.75,
+"rAway":4.47,
 "result":null
 },
 {

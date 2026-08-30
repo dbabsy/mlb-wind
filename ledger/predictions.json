@@ -1638,7 +1638,7 @@
 "team":"MIA",
 "slot":2,
 "p":0.7539,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -1648,7 +1648,7 @@
 "team":"WSH",
 "slot":1,
 "p":0.6933,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-30",
@@ -1658,7 +1658,7 @@
 "team":"WSH",
 "slot":4,
 "p":0.693,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -1967,7 +1967,7 @@
 "name":"Nico Hoerner",
 "team":"CHC",
 "slot":5,
-"p":0.7073,
+"p":0.7023,
 "result":null
 },
 {
@@ -1977,7 +1977,7 @@
 "name":"Elly De La Cruz",
 "team":"CIN",
 "slot":2,
-"p":0.7126,
+"p":0.7044,
 "result":null
 },
 {
@@ -1987,7 +1987,7 @@
 "name":"Pete Crow-Armstrong",
 "team":"CHC",
 "slot":1,
-"p":0.7018,
+"p":0.6922,
 "result":null
 },
 {
@@ -2027,7 +2027,7 @@
 "name":"Pete Alonso",
 "team":"BAL",
 "slot":2,
-"p":0.7498,
+"p":0.7497,
 "result":null
 },
 {
@@ -2600,7 +2600,7 @@
 "wpHome":0.4618,
 "rHome":4.15,
 "rAway":4.78,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-30",
@@ -2707,9 +2707,9 @@
 "gamePk":824636,
 "home":"CHC",
 "away":"CIN",
-"wpHome":0.5632,
-"rHome":5.04,
-"rAway":4.68,
+"wpHome":0.5214,
+"rHome":5.3,
+"rAway":5.37,
 "result":null
 },
 {

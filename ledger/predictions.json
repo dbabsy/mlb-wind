@@ -1728,7 +1728,7 @@
 "team":"PIT",
 "slot":1,
 "p":0.718,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -1738,7 +1738,7 @@
 "team":"STL",
 "slot":3,
 "p":0.7141,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -1748,7 +1748,7 @@
 "team":"STL",
 "slot":4,
 "p":0.6962,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-30",
@@ -1908,7 +1908,7 @@
 "team":"LAD",
 "slot":4,
 "p":0.7128,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -1918,7 +1918,7 @@
 "team":"LAD",
 "slot":3,
 "p":0.6989,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -1928,7 +1928,7 @@
 "team":"LAD",
 "slot":1,
 "p":0.7361,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-30",
@@ -2620,7 +2620,7 @@
 "wpHome":0.6114,
 "rHome":4.22,
 "rAway":3.49,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-30",
@@ -2630,7 +2630,7 @@
 "wpHome":0.3776,
 "rHome":3.73,
 "rAway":5.17,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-30",
@@ -2690,7 +2690,7 @@
 "wpHome":0.3219,
 "rHome":2.75,
 "rAway":4.47,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-30",
@@ -2707,9 +2707,9 @@
 "gamePk":824636,
 "home":"CHC",
 "away":"CIN",
-"wpHome":0.5415,
+"wpHome":0.5403,
 "rHome":5.5,
-"rAway":5.36,
+"rAway":5.37,
 "result":null
 },
 {

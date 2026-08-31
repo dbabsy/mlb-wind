@@ -2327,7 +2327,7 @@
 "name":"Wilyer Abreu",
 "team":"BOS",
 "slot":3,
-"p":0.7162,
+"p":0.7153,
 "result":null
 },
 {
@@ -2337,7 +2337,7 @@
 "name":"Ceddanne Rafaela",
 "team":"BOS",
 "slot":2,
-"p":0.7511,
+"p":0.7502,
 "result":null
 },
 {
@@ -2347,7 +2347,7 @@
 "name":"Roman Anthony",
 "team":"BOS",
 "slot":1,
-"p":0.7139,
+"p":0.7131,
 "result":null
 },
 {
@@ -3187,9 +3187,9 @@
 "gamePk":824719,
 "home":"BOS",
 "away":"SEA",
-"wpHome":0.7173,
-"rHome":4.96,
-"rAway":3.16,
+"wpHome":0.7167,
+"rHome":4.98,
+"rAway":3.18,
 "result":null
 },
 {

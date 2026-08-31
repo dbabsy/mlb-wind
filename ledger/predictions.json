@@ -2267,7 +2267,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7607,
+"p":0.7605,
 "result":null
 },
 {
@@ -2277,7 +2277,7 @@
 "name":"Sal Stewart",
 "team":"CIN",
 "slot":3,
-"p":0.6798,
+"p":0.6795,
 "result":null
 },
 {
@@ -2287,7 +2287,7 @@
 "name":"Jackson Merrill",
 "team":"SD",
 "slot":5,
-"p":0.6799,
+"p":0.6794,
 "result":null
 },
 {
@@ -2357,7 +2357,7 @@
 "name":"Michael Harris II",
 "team":"ATL",
 "slot":4,
-"p":0.7342,
+"p":0.7302,
 "result":null
 },
 {
@@ -2367,7 +2367,7 @@
 "name":"Drake Baldwin",
 "team":"ATL",
 "slot":1,
-"p":0.7101,
+"p":0.7062,
 "result":null
 },
 {
@@ -2377,7 +2377,7 @@
 "name":"Jung Hoo Lee",
 "team":"SF",
 "slot":4,
-"p":0.72,
+"p":0.716,
 "result":null
 },
 {
@@ -3167,9 +3167,9 @@
 "gamePk":824473,
 "home":"CIN",
 "away":"SD",
-"wpHome":0.4052,
-"rHome":4.09,
-"rAway":5.3,
+"wpHome":0.4055,
+"rHome":4.06,
+"rAway":5.26,
 "result":null
 },
 {
@@ -3197,9 +3197,9 @@
 "gamePk":824911,
 "home":"ATL",
 "away":"SF",
-"wpHome":0.5515,
-"rHome":4.51,
-"rAway":4.28,
+"wpHome":0.5538,
+"rHome":4.46,
+"rAway":4.21,
 "result":null
 },
 {

@@ -2147,7 +2147,7 @@
 "name":"Brooks Lee",
 "team":"MIN",
 "slot":2,
-"p":0.6885,
+"p":0.6893,
 "result":null
 },
 {
@@ -2157,7 +2157,7 @@
 "name":"Colt Keith",
 "team":"DET",
 "slot":2,
-"p":0.6958,
+"p":0.6971,
 "result":null
 },
 {
@@ -2167,7 +2167,7 @@
 "name":"Luke Keaschall",
 "team":"MIN",
 "slot":1,
-"p":0.6839,
+"p":0.6851,
 "result":null
 },
 {
@@ -2177,7 +2177,7 @@
 "name":"Cody Bellinger",
 "team":"NYY",
 "slot":2,
-"p":0.6649,
+"p":0.6648,
 "result":null
 },
 {
@@ -2187,7 +2187,7 @@
 "name":"Luis Garc\u00eda Jr.",
 "team":"NYY",
 "slot":4,
-"p":0.693,
+"p":0.6932,
 "result":null
 },
 {
@@ -2197,7 +2197,7 @@
 "name":"Wade Meckler",
 "team":"LAA",
 "slot":1,
-"p":0.678,
+"p":0.6778,
 "result":null
 },
 {
@@ -2237,7 +2237,7 @@
 "name":"Pete Alonso",
 "team":"BAL",
 "slot":2,
-"p":0.7697,
+"p":0.7688,
 "result":null
 },
 {
@@ -2247,7 +2247,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7413,
+"p":0.7409,
 "result":null
 },
 {
@@ -2257,7 +2257,7 @@
 "name":"Blaze Alexander",
 "team":"BAL",
 "slot":1,
-"p":0.8017,
+"p":0.8013,
 "result":null
 },
 {
@@ -2356,8 +2356,8 @@
 "pid":671739,
 "name":"Michael Harris II",
 "team":"ATL",
-"slot":4,
-"p":0.7342,
+"slot":5,
+"p":0.7257,
 "result":null
 },
 {
@@ -3117,8 +3117,8 @@
 "gamePk":822932,
 "home":"TB",
 "away":"NYM",
-"wpHome":0.6506,
-"rHome":5.74,
+"wpHome":0.6693,
+"rHome":5.98,
 "rAway":4.41,
 "result":null
 },
@@ -3127,9 +3127,9 @@
 "gamePk":823663,
 "home":"MIN",
 "away":"DET",
-"wpHome":0.5739,
-"rHome":4.84,
-"rAway":4.38,
+"wpHome":0.5731,
+"rHome":4.81,
+"rAway":4.36,
 "result":null
 },
 {
@@ -3167,9 +3167,9 @@
 "gamePk":824473,
 "home":"CIN",
 "away":"SD",
-"wpHome":0.3946,
+"wpHome":0.3676,
 "rHome":3.96,
-"rAway":5.26,
+"rAway":5.57,
 "result":null
 },
 {
@@ -3187,9 +3187,9 @@
 "gamePk":824719,
 "home":"BOS",
 "away":"SEA",
-"wpHome":0.7294,
-"rHome":5.17,
-"rAway":3.2,
+"wpHome":0.7306,
+"rHome":5.2,
+"rAway":3.21,
 "result":null
 },
 {
@@ -3197,8 +3197,8 @@
 "gamePk":824911,
 "home":"ATL",
 "away":"SF",
-"wpHome":0.5017,
-"rHome":4.51,
+"wpHome":0.5222,
+"rHome":4.71,
 "rAway":4.76,
 "result":null
 },

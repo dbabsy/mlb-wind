@@ -2073,11 +2073,11 @@
 {
 "date":"2026-08-31",
 "gamePk":822689,
-"pid":695734,
-"name":"Daylen Lile",
-"team":"WSH",
+"pid":691594,
+"name":"Javier Sanoja",
+"team":"MIA",
 "slot":4,
-"p":0.6885,
+"p":0.7015,
 "result":null
 },
 {
@@ -2106,8 +2106,8 @@
 "pid":695720,
 "name":"Tommy White",
 "team":"ATH",
-"slot":6,
-"p":0.6981,
+"slot":5,
+"p":0.7068,
 "result":null
 },
 {
@@ -2123,21 +2123,21 @@
 {
 "date":"2026-08-31",
 "gamePk":822932,
-"pid":665742,
-"name":"Juan Soto",
+"pid":666182,
+"name":"Bo Bichette",
 "team":"NYM",
 "slot":2,
-"p":0.7158,
+"p":0.7137,
 "result":null
 },
 {
 "date":"2026-08-31",
 "gamePk":822932,
-"pid":666182,
-"name":"Bo Bichette",
+"pid":701807,
+"name":"Carson Benge",
 "team":"NYM",
 "slot":3,
-"p":0.7049,
+"p":0.7071,
 "result":null
 },
 {
@@ -2237,7 +2237,7 @@
 "name":"Pete Alonso",
 "team":"BAL",
 "slot":2,
-"p":0.7688,
+"p":0.7697,
 "result":null
 },
 {
@@ -2247,7 +2247,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7409,
+"p":0.7375,
 "result":null
 },
 {
@@ -2257,7 +2257,7 @@
 "name":"Blaze Alexander",
 "team":"BAL",
 "slot":1,
-"p":0.8013,
+"p":0.8017,
 "result":null
 },
 {
@@ -2267,7 +2267,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7605,
+"p":0.7608,
 "result":null
 },
 {
@@ -2277,7 +2277,7 @@
 "name":"Sal Stewart",
 "team":"CIN",
 "slot":3,
-"p":0.6795,
+"p":0.6797,
 "result":null
 },
 {
@@ -2287,7 +2287,7 @@
 "name":"Jackson Merrill",
 "team":"SD",
 "slot":5,
-"p":0.6794,
+"p":0.6796,
 "result":null
 },
 {
@@ -2303,21 +2303,21 @@
 {
 "date":"2026-08-31",
 "gamePk":824635,
-"pid":673548,
-"name":"Seiya Suzuki",
-"team":"CHC",
-"slot":2,
-"p":0.6834,
-"result":null
-},
-{
-"date":"2026-08-31",
-"gamePk":824635,
 "pid":691718,
 "name":"Pete Crow-Armstrong",
 "team":"CHC",
 "slot":1,
 "p":0.7157,
+"result":null
+},
+{
+"date":"2026-08-31",
+"gamePk":824635,
+"pid":694192,
+"name":"Jackson Chourio",
+"team":"MIL",
+"slot":2,
+"p":0.6981,
 "result":null
 },
 {
@@ -3097,9 +3097,9 @@
 "gamePk":822689,
 "home":"WSH",
 "away":"MIA",
-"wpHome":0.4823,
+"wpHome":0.4833,
 "rHome":4.42,
-"rAway":4.86,
+"rAway":4.85,
 "result":null
 },
 {
@@ -3107,9 +3107,9 @@
 "gamePk":822855,
 "home":"TEX",
 "away":"ATH",
-"wpHome":0.5762,
-"rHome":5.09,
-"rAway":4.59,
+"wpHome":0.6686,
+"rHome":5.56,
+"rAway":4.08,
 "result":null
 },
 {
@@ -3117,9 +3117,9 @@
 "gamePk":822932,
 "home":"TB",
 "away":"NYM",
-"wpHome":0.6693,
+"wpHome":0.7274,
 "rHome":5.98,
-"rAway":4.41,
+"rAway":3.8,
 "result":null
 },
 {
@@ -3127,9 +3127,9 @@
 "gamePk":823663,
 "home":"MIN",
 "away":"DET",
-"wpHome":0.5731,
+"wpHome":0.57,
 "rHome":4.81,
-"rAway":4.36,
+"rAway":4.39,
 "result":null
 },
 {
@@ -3137,9 +3137,9 @@
 "gamePk":823982,
 "home":"LAA",
 "away":"NYY",
-"wpHome":0.5164,
-"rHome":3.63,
-"rAway":3.72,
+"wpHome":0.5152,
+"rHome":3.65,
+"rAway":3.75,
 "result":null
 },
 {
@@ -3147,9 +3147,9 @@
 "gamePk":824149,
 "home":"HOU",
 "away":"CWS",
-"wpHome":0.5386,
-"rHome":4.59,
-"rAway":4.48,
+"wpHome":0.5051,
+"rHome":4.33,
+"rAway":4.54,
 "result":null
 },
 {
@@ -3157,9 +3157,9 @@
 "gamePk":824314,
 "home":"COL",
 "away":"BAL",
-"wpHome":0.4231,
-"rHome":5.02,
-"rAway":6.19,
+"wpHome":0.4502,
+"rHome":5.32,
+"rAway":6.2,
 "result":null
 },
 {
@@ -3167,8 +3167,8 @@
 "gamePk":824473,
 "home":"CIN",
 "away":"SD",
-"wpHome":0.3676,
-"rHome":3.96,
+"wpHome":0.3665,
+"rHome":3.95,
 "rAway":5.57,
 "result":null
 },
@@ -3177,9 +3177,9 @@
 "gamePk":824635,
 "home":"CHC",
 "away":"MIL",
-"wpHome":0.6281,
+"wpHome":0.624,
 "rHome":5.2,
-"rAway":4.18,
+"rAway":4.22,
 "result":null
 },
 {
@@ -3197,9 +3197,9 @@
 "gamePk":824911,
 "home":"ATL",
 "away":"SF",
-"wpHome":0.5222,
-"rHome":4.71,
-"rAway":4.76,
+"wpHome":0.5232,
+"rHome":4.66,
+"rAway":4.7,
 "result":null
 },
 {

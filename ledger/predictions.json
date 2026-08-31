@@ -2196,8 +2196,8 @@
 "pid":685133,
 "name":"Wade Meckler",
 "team":"LAA",
-"slot":1,
-"p":0.6778,
+"slot":3,
+"p":0.6599,
 "result":null
 },
 {
@@ -2237,7 +2237,7 @@
 "name":"Pete Alonso",
 "team":"BAL",
 "slot":2,
-"p":0.7697,
+"p":0.771,
 "result":null
 },
 {
@@ -2247,7 +2247,7 @@
 "name":"Blaze Alexander",
 "team":"BAL",
 "slot":7,
-"p":0.7534,
+"p":0.754,
 "result":null
 },
 {
@@ -2257,7 +2257,7 @@
 "name":"Jackson Holliday",
 "team":"BAL",
 "slot":1,
-"p":0.741,
+"p":0.7416,
 "result":null
 },
 {
@@ -2267,7 +2267,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7608,
+"p":0.7605,
 "result":null
 },
 {
@@ -2277,7 +2277,7 @@
 "name":"Sal Stewart",
 "team":"CIN",
 "slot":3,
-"p":0.6797,
+"p":0.6795,
 "result":null
 },
 {
@@ -2287,7 +2287,7 @@
 "name":"Jackson Merrill",
 "team":"SD",
 "slot":5,
-"p":0.6796,
+"p":0.6794,
 "result":null
 },
 {
@@ -2297,7 +2297,7 @@
 "name":"Nico Hoerner",
 "team":"CHC",
 "slot":5,
-"p":0.7193,
+"p":0.7243,
 "result":null
 },
 {
@@ -2307,7 +2307,7 @@
 "name":"Pete Crow-Armstrong",
 "team":"CHC",
 "slot":1,
-"p":0.699,
+"p":0.7085,
 "result":null
 },
 {
@@ -2317,7 +2317,7 @@
 "name":"Jackson Chourio",
 "team":"MIL",
 "slot":2,
-"p":0.6881,
+"p":0.6949,
 "result":null
 },
 {
@@ -2357,7 +2357,7 @@
 "name":"Michael Harris II",
 "team":"ATL",
 "slot":5,
-"p":0.7217,
+"p":0.7257,
 "result":null
 },
 {
@@ -2367,7 +2367,7 @@
 "name":"Drake Baldwin",
 "team":"ATL",
 "slot":1,
-"p":0.7062,
+"p":0.7101,
 "result":null
 },
 {
@@ -2377,7 +2377,7 @@
 "name":"Jung Hoo Lee",
 "team":"SF",
 "slot":5,
-"p":0.7074,
+"p":0.7114,
 "result":null
 },
 {
@@ -3137,8 +3137,8 @@
 "gamePk":823982,
 "home":"LAA",
 "away":"NYY",
-"wpHome":0.5152,
-"rHome":3.65,
+"wpHome":0.5248,
+"rHome":3.73,
 "rAway":3.75,
 "result":null
 },
@@ -3157,9 +3157,9 @@
 "gamePk":824314,
 "home":"COL",
 "away":"BAL",
-"wpHome":0.4182,
-"rHome":5.32,
-"rAway":6.6,
+"wpHome":0.4169,
+"rHome":5.34,
+"rAway":6.64,
 "result":null
 },
 {
@@ -3167,8 +3167,8 @@
 "gamePk":824473,
 "home":"CIN",
 "away":"SD",
-"wpHome":0.3665,
-"rHome":3.95,
+"wpHome":0.3676,
+"rHome":3.96,
 "rAway":5.57,
 "result":null
 },
@@ -3177,9 +3177,9 @@
 "gamePk":824635,
 "home":"CHC",
 "away":"MIL",
-"wpHome":0.6464,
-"rHome":5.46,
-"rAway":4.22,
+"wpHome":0.639,
+"rHome":5.17,
+"rAway":4.05,
 "result":null
 },
 {

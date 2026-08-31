@@ -2207,7 +2207,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.7205,
+"p":0.7206,
 "result":null
 },
 {
@@ -2383,11 +2383,11 @@
 {
 "date":"2026-08-31",
 "gamePk":825040,
-"pid":624641,
-"name":"Edmundo Sosa",
+"pid":650333,
+"name":"Luis Arraez",
 "team":"PHI",
-"slot":5,
-"p":0.7,
+"slot":4,
+"p":0.7459,
 "result":null
 },
 {
@@ -3137,9 +3137,9 @@
 "gamePk":823982,
 "home":"LAA",
 "away":"NYY",
-"wpHome":0.5248,
+"wpHome":0.526,
 "rHome":3.73,
-"rAway":3.75,
+"rAway":3.74,
 "result":null
 },
 {
@@ -3207,9 +3207,9 @@
 "gamePk":825040,
 "home":"AZ",
 "away":"PHI",
-"wpHome":0.6209,
+"wpHome":0.6168,
 "rHome":5.2,
-"rAway":4.25,
+"rAway":4.29,
 "result":null
 }
 ]

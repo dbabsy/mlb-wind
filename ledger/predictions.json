@@ -2208,7 +2208,7 @@
 "team":"HOU",
 "slot":1,
 "p":0.7206,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2218,7 +2218,7 @@
 "team":"HOU",
 "slot":2,
 "p":0.7489,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2228,7 +2228,7 @@
 "team":"CWS",
 "slot":1,
 "p":0.6868,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",

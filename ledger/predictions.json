@@ -2058,7 +2058,7 @@
 "team":"MIA",
 "slot":2,
 "p":0.7567,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2068,7 +2068,7 @@
 "team":"MIA",
 "slot":4,
 "p":0.7015,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2078,7 +2078,7 @@
 "team":"WSH",
 "slot":1,
 "p":0.715,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2088,7 +2088,7 @@
 "team":"TEX",
 "slot":4,
 "p":0.7136,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2098,7 +2098,7 @@
 "team":"ATH",
 "slot":2,
 "p":0.7454,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-31",
@@ -2108,7 +2108,7 @@
 "team":"ATH",
 "slot":5,
 "p":0.7068,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-31",
@@ -2118,7 +2118,7 @@
 "team":"TB",
 "slot":1,
 "p":0.7386,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-31",
@@ -2128,7 +2128,7 @@
 "team":"NYM",
 "slot":2,
 "p":0.7137,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2138,7 +2138,7 @@
 "team":"NYM",
 "slot":3,
 "p":0.7071,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2148,7 +2148,7 @@
 "team":"MIN",
 "slot":2,
 "p":0.6893,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2158,7 +2158,7 @@
 "team":"DET",
 "slot":2,
 "p":0.6971,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-31",
@@ -2168,7 +2168,7 @@
 "team":"MIN",
 "slot":1,
 "p":0.6851,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2268,7 +2268,7 @@
 "team":"SD",
 "slot":1,
 "p":0.7605,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2278,7 +2278,7 @@
 "team":"CIN",
 "slot":3,
 "p":0.6795,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2288,7 +2288,7 @@
 "team":"SD",
 "slot":5,
 "p":0.6794,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2298,7 +2298,7 @@
 "team":"CHC",
 "slot":5,
 "p":0.7243,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2308,7 +2308,7 @@
 "team":"CHC",
 "slot":1,
 "p":0.7085,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2318,7 +2318,7 @@
 "team":"MIL",
 "slot":2,
 "p":0.6949,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2328,7 +2328,7 @@
 "team":"BOS",
 "slot":3,
 "p":0.7426,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2338,7 +2338,7 @@
 "team":"BOS",
 "slot":2,
 "p":0.7357,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2348,7 +2348,7 @@
 "team":"BOS",
 "slot":1,
 "p":0.7139,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2358,7 +2358,7 @@
 "team":"ATL",
 "slot":5,
 "p":0.7257,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2368,7 +2368,7 @@
 "team":"ATL",
 "slot":1,
 "p":0.7101,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -2378,7 +2378,7 @@
 "team":"SF",
 "slot":5,
 "p":0.7114,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-31",
@@ -3100,7 +3100,7 @@
 "wpHome":0.4464,
 "rHome":4.08,
 "rAway":4.85,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -3110,7 +3110,7 @@
 "wpHome":0.6686,
 "rHome":5.56,
 "rAway":4.08,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -3120,7 +3120,7 @@
 "wpHome":0.7274,
 "rHome":5.98,
 "rAway":3.8,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-31",
@@ -3130,7 +3130,7 @@
 "wpHome":0.57,
 "rHome":4.81,
 "rAway":4.39,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -3170,7 +3170,7 @@
 "wpHome":0.3676,
 "rHome":3.96,
 "rAway":5.57,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-31",
@@ -3180,7 +3180,7 @@
 "wpHome":0.639,
 "rHome":5.17,
 "rAway":4.05,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -3190,7 +3190,7 @@
 "wpHome":0.7306,
 "rHome":5.2,
 "rAway":3.21,
-"result":null
+"result":true
 },
 {
 "date":"2026-08-31",
@@ -3200,7 +3200,7 @@
 "wpHome":0.5222,
 "rHome":4.71,
 "rAway":4.76,
-"result":null
+"result":false
 },
 {
 "date":"2026-08-31",

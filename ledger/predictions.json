@@ -2413,6 +2413,16 @@
 {
 "date":"2026-09-01",
 "gamePk":822687,
+"pid":643289,
+"name":"Mauricio Dub\u00f3n",
+"team":"ATL",
+"slot":5,
+"p":0.6875,
+"result":null
+},
+{
+"date":"2026-09-01",
+"gamePk":822687,
 "pid":671739,
 "name":"Michael Harris II",
 "team":"ATL",
@@ -2432,16 +2442,6 @@
 },
 {
 "date":"2026-09-01",
-"gamePk":822687,
-"pid":695734,
-"name":"Daylen Lile",
-"team":"WSH",
-"slot":1,
-"p":0.7065,
-"result":null
-},
-{
-"date":"2026-09-01",
 "gamePk":822854,
 "pid":607043,
 "name":"Brandon Nimmo",
@@ -2456,18 +2456,18 @@
 "pid":643446,
 "name":"Jeff McNeil",
 "team":"ATH",
-"slot":2,
-"p":0.7306,
+"slot":6,
+"p":0.6959,
 "result":null
 },
 {
 "date":"2026-09-01",
 "gamePk":822854,
-"pid":703607,
-"name":"Henry Bolte",
-"team":"ATH",
+"pid":679822,
+"name":"Justin Foscue",
+"team":"TEX",
 "slot":1,
-"p":0.6886,
+"p":0.7021,
 "result":null
 },
 {
@@ -2483,11 +2483,11 @@
 {
 "date":"2026-09-01",
 "gamePk":822929,
-"pid":666182,
-"name":"Bo Bichette",
+"pid":665742,
+"name":"Juan Soto",
 "team":"NYM",
 "slot":2,
-"p":0.7234,
+"p":0.7165,
 "result":null
 },
 {
@@ -2496,8 +2496,8 @@
 "pid":701807,
 "name":"Carson Benge",
 "team":"NYM",
-"slot":3,
-"p":0.7272,
+"slot":4,
+"p":0.7185,
 "result":null
 },
 {
@@ -2507,7 +2507,7 @@
 "name":"Drew Gilbert",
 "team":"SF",
 "slot":1,
-"p":0.6764,
+"p":0.6766,
 "result":null
 },
 {
@@ -2517,7 +2517,7 @@
 "name":"Nick Gonzales",
 "team":"PIT",
 "slot":4,
-"p":0.7095,
+"p":0.7107,
 "result":null
 },
 {
@@ -2527,7 +2527,7 @@
 "name":"Jung Hoo Lee",
 "team":"SF",
 "slot":5,
-"p":0.712,
+"p":0.713,
 "result":null
 },
 {
@@ -2536,18 +2536,18 @@
 "pid":650402,
 "name":"Gleyber Torres",
 "team":"DET",
-"slot":1,
-"p":0.6982,
+"slot":2,
+"p":0.6903,
 "result":null
 },
 {
 "date":"2026-09-01",
 "gamePk":823661,
-"pid":690993,
-"name":"Colt Keith",
+"pid":693307,
+"name":"Dillon Dingler",
 "team":"DET",
-"slot":2,
-"p":0.7115,
+"slot":3,
+"p":0.6936,
 "result":null
 },
 {
@@ -2556,8 +2556,8 @@
 "pid":805808,
 "name":"Kevin McGonigle",
 "team":"DET",
-"slot":3,
-"p":0.699,
+"slot":1,
+"p":0.7176,
 "result":null
 },
 {
@@ -2597,7 +2597,7 @@
 "name":"Cody Bellinger",
 "team":"NYY",
 "slot":2,
-"p":0.7116,
+"p":0.7117,
 "result":null
 },
 {
@@ -2607,7 +2607,7 @@
 "name":"Luis Garc\u00eda Jr.",
 "team":"NYY",
 "slot":3,
-"p":0.7413,
+"p":0.7409,
 "result":null
 },
 {
@@ -2617,7 +2617,7 @@
 "name":"Ben Rice",
 "team":"NYY",
 "slot":1,
-"p":0.6838,
+"p":0.6832,
 "result":null
 },
 {
@@ -2626,8 +2626,8 @@
 "pid":672640,
 "name":"Otto Lopez",
 "team":"MIA",
-"slot":2,
-"p":0.7459,
+"slot":6,
+"p":0.7117,
 "result":null
 },
 {
@@ -2643,11 +2643,21 @@
 {
 "date":"2026-09-01",
 "gamePk":824070,
-"pid":691594,
-"name":"Javier Sanoja",
-"team":"MIA",
-"slot":4,
-"p":0.7078,
+"pid":695506,
+"name":"Jac Caglianone",
+"team":"KC",
+"slot":3,
+"p":0.7009,
+"result":null
+},
+{
+"date":"2026-09-01",
+"gamePk":824148,
+"pid":545341,
+"name":"Randal Grichuk",
+"team":"CWS",
+"slot":6,
+"p":0.6954,
 "result":null
 },
 {
@@ -2672,22 +2682,12 @@
 },
 {
 "date":"2026-09-01",
-"gamePk":824148,
-"pid":803011,
-"name":"Sam Antonacci",
-"team":"CWS",
-"slot":1,
-"p":0.6879,
-"result":null
-},
-{
-"date":"2026-09-01",
 "gamePk":824313,
 "pid":624413,
 "name":"Pete Alonso",
 "team":"BAL",
 "slot":2,
-"p":0.7271,
+"p":0.7307,
 "result":null
 },
 {
@@ -2697,7 +2697,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7536,
+"p":0.7555,
 "result":null
 },
 {
@@ -2707,7 +2707,7 @@
 "name":"Blaze Alexander",
 "team":"BAL",
 "slot":7,
-"p":0.725,
+"p":0.7269,
 "result":null
 },
 {
@@ -2717,7 +2717,7 @@
 "name":"Vladimir Guerrero Jr.",
 "team":"TOR",
 "slot":3,
-"p":0.708,
+"p":0.7098,
 "result":null
 },
 {
@@ -2727,7 +2727,7 @@
 "name":"Steven Kwan",
 "team":"CLE",
 "slot":1,
-"p":0.7135,
+"p":0.7146,
 "result":null
 },
 {
@@ -2737,7 +2737,7 @@
 "name":"Chase DeLauter",
 "team":"CLE",
 "slot":2,
-"p":0.7197,
+"p":0.7218,
 "result":null
 },
 {
@@ -2777,7 +2777,7 @@
 "name":"Nico Hoerner",
 "team":"CHC",
 "slot":5,
-"p":0.7281,
+"p":0.7321,
 "result":null
 },
 {
@@ -2787,7 +2787,7 @@
 "name":"Pete Crow-Armstrong",
 "team":"CHC",
 "slot":1,
-"p":0.7232,
+"p":0.7299,
 "result":null
 },
 {
@@ -2796,8 +2796,8 @@
 "pid":694192,
 "name":"Jackson Chourio",
 "team":"MIL",
-"slot":2,
-"p":0.7094,
+"slot":1,
+"p":0.7238,
 "result":null
 },
 {
@@ -3667,8 +3667,8 @@
 "gamePk":822687,
 "home":"WSH",
 "away":"ATL",
-"wpHome":0.4437,
-"rHome":4.22,
+"wpHome":0.4229,
+"rHome":4.03,
 "rAway":5.04,
 "result":null
 },
@@ -3677,9 +3677,9 @@
 "gamePk":822854,
 "home":"TEX",
 "away":"ATH",
-"wpHome":0.669,
-"rHome":5.71,
-"rAway":4.2,
+"wpHome":0.6615,
+"rHome":5.53,
+"rAway":4.13,
 "result":null
 },
 {
@@ -3687,9 +3687,9 @@
 "gamePk":822929,
 "home":"TB",
 "away":"NYM",
-"wpHome":0.5614,
+"wpHome":0.4775,
 "rHome":4.52,
-"rAway":4.2,
+"rAway":5.02,
 "result":null
 },
 {
@@ -3697,9 +3697,9 @@
 "gamePk":823340,
 "home":"PIT",
 "away":"SF",
-"wpHome":0.474,
-"rHome":3.86,
-"rAway":4.34,
+"wpHome":0.5182,
+"rHome":3.82,
+"rAway":3.9,
 "result":null
 },
 {
@@ -3707,9 +3707,9 @@
 "gamePk":823661,
 "home":"MIN",
 "away":"DET",
-"wpHome":0.4934,
-"rHome":4.02,
-"rAway":4.33,
+"wpHome":0.4738,
+"rHome":3.95,
+"rAway":4.44,
 "result":null
 },
 {
@@ -3737,9 +3737,9 @@
 "gamePk":824070,
 "home":"KC",
 "away":"MIA",
-"wpHome":0.5327,
+"wpHome":0.4962,
 "rHome":4.55,
-"rAway":4.5,
+"rAway":4.86,
 "result":null
 },
 {
@@ -3747,9 +3747,9 @@
 "gamePk":824148,
 "home":"HOU",
 "away":"CWS",
-"wpHome":0.2992,
-"rHome":4.06,
-"rAway":6.61,
+"wpHome":0.3189,
+"rHome":4.36,
+"rAway":6.74,
 "result":null
 },
 {
@@ -3757,9 +3757,9 @@
 "gamePk":824313,
 "home":"COL",
 "away":"BAL",
-"wpHome":0.476,
-"rHome":4.96,
-"rAway":5.51,
+"wpHome":0.475,
+"rHome":5.07,
+"rAway":5.64,
 "result":null
 },
 {
@@ -3767,9 +3767,9 @@
 "gamePk":824391,
 "home":"CLE",
 "away":"TOR",
-"wpHome":0.4704,
-"rHome":3.71,
-"rAway":4.21,
+"wpHome":0.4618,
+"rHome":3.81,
+"rAway":4.4,
 "result":null
 },
 {
@@ -3787,9 +3787,9 @@
 "gamePk":824633,
 "home":"CHC",
 "away":"MIL",
-"wpHome":0.6678,
-"rHome":6.29,
-"rAway":4.68,
+"wpHome":0.6355,
+"rHome":6.55,
+"rAway":5.26,
 "result":null
 },
 {

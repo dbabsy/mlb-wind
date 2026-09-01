@@ -2567,7 +2567,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":4,
-"p":0.7144,
+"p":0.7154,
 "result":null
 },
 {
@@ -2577,7 +2577,7 @@
 "name":"Shohei Ohtani",
 "team":"LAD",
 "slot":1,
-"p":0.7213,
+"p":0.7232,
 "result":null
 },
 {
@@ -2587,7 +2587,7 @@
 "name":"Alec Burleson",
 "team":"STL",
 "slot":3,
-"p":0.7173,
+"p":0.72,
 "result":null
 },
 {
@@ -3697,9 +3697,9 @@
 "gamePk":823340,
 "home":"PIT",
 "away":"SF",
-"wpHome":0.4752,
-"rHome":3.87,
-"rAway":4.34,
+"wpHome":0.4769,
+"rHome":3.83,
+"rAway":4.28,
 "result":null
 },
 {
@@ -3717,9 +3717,9 @@
 "gamePk":823908,
 "home":"LAD",
 "away":"STL",
-"wpHome":0.5429,
-"rHome":4.68,
-"rAway":4.53,
+"wpHome":0.5396,
+"rHome":4.76,
+"rAway":4.64,
 "result":null
 },
 {
@@ -3727,9 +3727,9 @@
 "gamePk":823984,
 "home":"LAA",
 "away":"NYY",
-"wpHome":0.2937,
-"rHome":3.25,
-"rAway":5.52,
+"wpHome":0.2932,
+"rHome":3.28,
+"rAway":5.57,
 "result":null
 },
 {

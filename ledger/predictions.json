@@ -2597,7 +2597,7 @@
 "name":"Cody Bellinger",
 "team":"NYY",
 "slot":2,
-"p":0.7117,
+"p":0.7116,
 "result":null
 },
 {
@@ -2607,7 +2607,7 @@
 "name":"Luis Garc\u00eda Jr.",
 "team":"NYY",
 "slot":3,
-"p":0.7409,
+"p":0.7413,
 "result":null
 },
 {
@@ -2617,7 +2617,7 @@
 "name":"Ben Rice",
 "team":"NYY",
 "slot":1,
-"p":0.6832,
+"p":0.6838,
 "result":null
 },
 {
@@ -2687,7 +2687,7 @@
 "name":"Pete Alonso",
 "team":"BAL",
 "slot":2,
-"p":0.7271,
+"p":0.7307,
 "result":null
 },
 {
@@ -2697,7 +2697,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7536,
+"p":0.7555,
 "result":null
 },
 {
@@ -2707,7 +2707,7 @@
 "name":"Blaze Alexander",
 "team":"BAL",
 "slot":7,
-"p":0.725,
+"p":0.7269,
 "result":null
 },
 {
@@ -2717,7 +2717,7 @@
 "name":"Vladimir Guerrero Jr.",
 "team":"TOR",
 "slot":2,
-"p":0.7168,
+"p":0.7186,
 "result":null
 },
 {
@@ -2727,7 +2727,7 @@
 "name":"Steven Kwan",
 "team":"CLE",
 "slot":1,
-"p":0.7135,
+"p":0.7146,
 "result":null
 },
 {
@@ -2737,7 +2737,7 @@
 "name":"Chase DeLauter",
 "team":"CLE",
 "slot":2,
-"p":0.7197,
+"p":0.7218,
 "result":null
 },
 {
@@ -2747,7 +2747,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7668,
+"p":0.7662,
 "result":null
 },
 {
@@ -2767,7 +2767,7 @@
 "name":"Sal Stewart",
 "team":"CIN",
 "slot":3,
-"p":0.7074,
+"p":0.7071,
 "result":null
 },
 {
@@ -3757,9 +3757,9 @@
 "gamePk":824313,
 "home":"COL",
 "away":"BAL",
-"wpHome":0.476,
-"rHome":4.96,
-"rAway":5.51,
+"wpHome":0.475,
+"rHome":5.07,
+"rAway":5.64,
 "result":null
 },
 {
@@ -3767,9 +3767,9 @@
 "gamePk":824391,
 "home":"CLE",
 "away":"TOR",
-"wpHome":0.4751,
-"rHome":3.75,
-"rAway":4.21,
+"wpHome":0.4654,
+"rHome":3.85,
+"rAway":4.41,
 "result":null
 },
 {
@@ -3777,9 +3777,9 @@
 "gamePk":824472,
 "home":"CIN",
 "away":"SD",
-"wpHome":0.3974,
-"rHome":4.41,
-"rAway":5.78,
+"wpHome":0.3977,
+"rHome":4.38,
+"rAway":5.74,
 "result":null
 },
 {
@@ -3787,9 +3787,9 @@
 "gamePk":824633,
 "home":"CHC",
 "away":"MIL",
-"wpHome":0.66,
-"rHome":5.88,
-"rAway":4.43,
+"wpHome":0.6708,
+"rHome":6.53,
+"rAway":4.84,
 "result":null
 },
 {

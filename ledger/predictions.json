@@ -2687,7 +2687,7 @@
 "name":"Pete Alonso",
 "team":"BAL",
 "slot":2,
-"p":0.7307,
+"p":0.7271,
 "result":null
 },
 {
@@ -2697,7 +2697,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7555,
+"p":0.7536,
 "result":null
 },
 {
@@ -2707,7 +2707,7 @@
 "name":"Blaze Alexander",
 "team":"BAL",
 "slot":7,
-"p":0.7269,
+"p":0.725,
 "result":null
 },
 {
@@ -2747,7 +2747,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7662,
+"p":0.7668,
 "result":null
 },
 {
@@ -2767,7 +2767,7 @@
 "name":"Sal Stewart",
 "team":"CIN",
 "slot":3,
-"p":0.7071,
+"p":0.7074,
 "result":null
 },
 {
@@ -3777,9 +3777,9 @@
 "gamePk":824472,
 "home":"CIN",
 "away":"SD",
-"wpHome":0.3977,
-"rHome":4.38,
-"rAway":5.74,
+"wpHome":0.3974,
+"rHome":4.41,
+"rAway":5.78,
 "result":null
 },
 {
@@ -3797,9 +3797,9 @@
 "gamePk":824716,
 "home":"BOS",
 "away":"SEA",
-"wpHome":0.5696,
-"rHome":4.44,
-"rAway":4.05,
+"wpHome":0.5697,
+"rHome":4.42,
+"rAway":4.03,
 "result":null
 },
 {

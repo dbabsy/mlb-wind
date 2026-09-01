@@ -2503,21 +2503,21 @@
 {
 "date":"2026-09-01",
 "gamePk":823340,
-"pid":669707,
-"name":"Jared Triolo",
-"team":"PIT",
-"slot":1,
-"p":0.6889,
-"result":null
-},
-{
-"date":"2026-09-01",
-"gamePk":823340,
 "pid":687551,
 "name":"Drew Gilbert",
 "team":"SF",
 "slot":1,
 "p":0.6764,
+"result":null
+},
+{
+"date":"2026-09-01",
+"gamePk":823340,
+"pid":693304,
+"name":"Nick Gonzales",
+"team":"PIT",
+"slot":4,
+"p":0.7095,
 "result":null
 },
 {
@@ -2537,7 +2537,7 @@
 "name":"Gleyber Torres",
 "team":"DET",
 "slot":1,
-"p":0.6978,
+"p":0.6982,
 "result":null
 },
 {
@@ -2547,7 +2547,7 @@
 "name":"Colt Keith",
 "team":"DET",
 "slot":2,
-"p":0.711,
+"p":0.7115,
 "result":null
 },
 {
@@ -2557,7 +2557,7 @@
 "name":"Kevin McGonigle",
 "team":"DET",
 "slot":3,
-"p":0.6986,
+"p":0.699,
 "result":null
 },
 {
@@ -2716,8 +2716,8 @@
 "pid":665489,
 "name":"Vladimir Guerrero Jr.",
 "team":"TOR",
-"slot":2,
-"p":0.7168,
+"slot":3,
+"p":0.708,
 "result":null
 },
 {
@@ -2753,11 +2753,11 @@
 {
 "date":"2026-09-01",
 "gamePk":824472,
-"pid":682829,
-"name":"Elly De La Cruz",
-"team":"CIN",
+"pid":669392,
+"name":"Samad Taylor",
+"team":"SD",
 "slot":2,
-"p":0.7036,
+"p":0.7127,
 "result":null
 },
 {
@@ -3687,8 +3687,8 @@
 "gamePk":822929,
 "home":"TB",
 "away":"NYM",
-"wpHome":0.5154,
-"rHome":4.09,
+"wpHome":0.5614,
+"rHome":4.52,
 "rAway":4.2,
 "result":null
 },
@@ -3697,8 +3697,8 @@
 "gamePk":823340,
 "home":"PIT",
 "away":"SF",
-"wpHome":0.4752,
-"rHome":3.87,
+"wpHome":0.474,
+"rHome":3.86,
 "rAway":4.34,
 "result":null
 },
@@ -3737,8 +3737,8 @@
 "gamePk":824070,
 "home":"KC",
 "away":"MIA",
-"wpHome":0.5368,
-"rHome":4.59,
+"wpHome":0.5327,
+"rHome":4.55,
 "rAway":4.5,
 "result":null
 },
@@ -3777,9 +3777,9 @@
 "gamePk":824472,
 "home":"CIN",
 "away":"SD",
-"wpHome":0.358,
+"wpHome":0.3556,
 "rHome":4.0,
-"rAway":5.74,
+"rAway":5.77,
 "result":null
 },
 {
@@ -3797,9 +3797,9 @@
 "gamePk":824716,
 "home":"BOS",
 "away":"SEA",
-"wpHome":0.5697,
+"wpHome":0.5631,
 "rHome":4.42,
-"rAway":4.03,
+"rAway":4.09,
 "result":null
 },
 {

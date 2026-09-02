@@ -2987,7 +2987,7 @@
 "name":"Brooks Lee",
 "team":"MIN",
 "slot":2,
-"p":0.6965,
+"p":0.6964,
 "result":null
 },
 {
@@ -3013,21 +3013,21 @@
 {
 "date":"2026-09-02",
 "gamePk":823906,
-"pid":518692,
-"name":"Freddie Freeman",
+"pid":500743,
+"name":"Miguel Rojas",
 "team":"LAD",
-"slot":2,
-"p":0.7089,
+"slot":5,
+"p":0.6916,
 "result":null
 },
 {
 "date":"2026-09-02",
 "gamePk":823906,
-"pid":605141,
-"name":"Mookie Betts",
+"pid":518692,
+"name":"Freddie Freeman",
 "team":"LAD",
-"slot":3,
-"p":0.6846,
+"slot":4,
+"p":0.6948,
 "result":null
 },
 {
@@ -3037,7 +3037,17 @@
 "name":"Shohei Ohtani",
 "team":"LAD",
 "slot":1,
-"p":0.69,
+"p":0.7202,
+"result":null
+},
+{
+"date":"2026-09-02",
+"gamePk":823983,
+"pid":502671,
+"name":"Paul Goldschmidt",
+"team":"NYY",
+"slot":1,
+"p":0.6577,
 "result":null
 },
 {
@@ -3047,27 +3057,17 @@
 "name":"Cody Bellinger",
 "team":"NYY",
 "slot":2,
-"p":0.7083,
+"p":0.7082,
 "result":null
 },
 {
 "date":"2026-09-02",
 "gamePk":823983,
-"pid":671277,
-"name":"Luis Garc\u00eda Jr.",
-"team":"NYY",
+"pid":685133,
+"name":"Wade Meckler",
+"team":"LAA",
 "slot":3,
-"p":0.7136,
-"result":null
-},
-{
-"date":"2026-09-02",
-"gamePk":823983,
-"pid":700250,
-"name":"Ben Rice",
-"team":"NYY",
-"slot":1,
-"p":0.667,
+"p":0.6545,
 "result":null
 },
 {
@@ -3077,7 +3077,7 @@
 "name":"Otto Lopez",
 "team":"MIA",
 "slot":2,
-"p":0.7549,
+"p":0.755,
 "result":null
 },
 {
@@ -3087,7 +3087,7 @@
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
-"p":0.6764,
+"p":0.6762,
 "result":null
 },
 {
@@ -3107,7 +3107,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.7431,
+"p":0.743,
 "result":null
 },
 {
@@ -3117,7 +3117,7 @@
 "name":"Yordan Alvarez",
 "team":"HOU",
 "slot":2,
-"p":0.7229,
+"p":0.7228,
 "result":null
 },
 {
@@ -3227,7 +3227,7 @@
 "name":"William Contreras",
 "team":"MIL",
 "slot":4,
-"p":0.696,
+"p":0.6961,
 "result":null
 },
 {
@@ -3237,7 +3237,7 @@
 "name":"Andrew Vaughn",
 "team":"MIL",
 "slot":3,
-"p":0.716,
+"p":0.7161,
 "result":null
 },
 {
@@ -4511,9 +4511,9 @@
 "gamePk":823906,
 "home":"LAD",
 "away":"STL",
-"wpHome":0.7487,
-"rHome":4.93,
-"rAway":2.86,
+"wpHome":0.7064,
+"rHome":4.62,
+"rAway":3.01,
 "result":null
 },
 {
@@ -4521,9 +4521,9 @@
 "gamePk":823983,
 "home":"LAA",
 "away":"NYY",
-"wpHome":0.3981,
+"wpHome":0.3502,
 "rHome":2.73,
-"rAway":3.71,
+"rAway":4.15,
 "result":null
 },
 {

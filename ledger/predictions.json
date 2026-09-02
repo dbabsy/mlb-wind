@@ -2418,7 +2418,7 @@
 "team":"ATL",
 "slot":5,
 "p":0.6875,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-01",
@@ -2428,7 +2428,7 @@
 "team":"ATL",
 "slot":4,
 "p":0.7353,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2438,7 +2438,7 @@
 "team":"ATL",
 "slot":1,
 "p":0.7098,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2478,7 +2478,7 @@
 "team":"TB",
 "slot":1,
 "p":0.7577,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2488,7 +2488,7 @@
 "team":"NYM",
 "slot":2,
 "p":0.7165,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-01",
@@ -2498,7 +2498,7 @@
 "team":"NYM",
 "slot":4,
 "p":0.7185,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2508,7 +2508,7 @@
 "team":"PIT",
 "slot":2,
 "p":0.6574,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2518,7 +2518,7 @@
 "team":"PIT",
 "slot":4,
 "p":0.7095,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2528,7 +2528,7 @@
 "team":"SF",
 "slot":5,
 "p":0.712,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-01",
@@ -2538,7 +2538,7 @@
 "team":"DET",
 "slot":2,
 "p":0.6816,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2548,7 +2548,7 @@
 "team":"DET",
 "slot":3,
 "p":0.6998,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2558,7 +2558,7 @@
 "team":"DET",
 "slot":1,
 "p":0.71,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2628,7 +2628,7 @@
 "team":"MIA",
 "slot":6,
 "p":0.7138,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2638,7 +2638,7 @@
 "team":"KC",
 "slot":2,
 "p":0.7195,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2648,7 +2648,7 @@
 "team":"KC",
 "slot":3,
 "p":0.6961,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-01",
@@ -2718,7 +2718,7 @@
 "team":"TOR",
 "slot":3,
 "p":0.708,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2728,7 +2728,7 @@
 "team":"CLE",
 "slot":1,
 "p":0.7135,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2738,7 +2738,7 @@
 "team":"CLE",
 "slot":2,
 "p":0.7197,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-01",
@@ -2748,7 +2748,7 @@
 "team":"SD",
 "slot":1,
 "p":0.7662,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2758,7 +2758,7 @@
 "team":"SD",
 "slot":2,
 "p":0.7127,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2768,7 +2768,7 @@
 "team":"CIN",
 "slot":3,
 "p":0.7071,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2778,7 +2778,7 @@
 "team":"CHC",
 "slot":5,
 "p":0.7204,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2788,7 +2788,7 @@
 "team":"CHC",
 "slot":1,
 "p":0.686,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-01",
@@ -2798,7 +2798,7 @@
 "team":"MIL",
 "slot":1,
 "p":0.7096,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2808,7 +2808,7 @@
 "team":"BOS",
 "slot":3,
 "p":0.7167,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-01",
@@ -2818,7 +2818,7 @@
 "team":"BOS",
 "slot":2,
 "p":0.7147,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -2828,7 +2828,7 @@
 "team":"SEA",
 "slot":2,
 "p":0.6936,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -3670,7 +3670,7 @@
 "wpHome":0.4229,
 "rHome":4.03,
 "rAway":5.04,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -3690,7 +3690,7 @@
 "wpHome":0.4775,
 "rHome":4.52,
 "rAway":5.02,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -3700,7 +3700,7 @@
 "wpHome":0.5229,
 "rHome":3.86,
 "rAway":3.9,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -3710,7 +3710,7 @@
 "wpHome":0.4454,
 "rHome":4.05,
 "rAway":4.83,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -3740,7 +3740,7 @@
 "wpHome":0.4722,
 "rHome":4.35,
 "rAway":4.89,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-01",
@@ -3770,7 +3770,7 @@
 "wpHome":0.4639,
 "rHome":3.81,
 "rAway":4.38,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -3780,7 +3780,7 @@
 "wpHome":0.3556,
 "rHome":4.0,
 "rAway":5.77,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-01",
@@ -3800,7 +3800,7 @@
 "wpHome":0.5631,
 "rHome":4.42,
 "rAway":4.09,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-01",

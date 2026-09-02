@@ -3087,7 +3087,7 @@
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
-"p":0.6765,
+"p":0.6764,
 "result":null
 },
 {
@@ -3123,11 +3123,11 @@
 {
 "date":"2026-09-02",
 "gamePk":824147,
-"pid":673237,
-"name":"Yainer Diaz",
-"team":"HOU",
-"slot":7,
-"p":0.6886,
+"pid":803011,
+"name":"Sam Antonacci",
+"team":"CWS",
+"slot":1,
+"p":0.6838,
 "result":null
 },
 {
@@ -3226,8 +3226,8 @@
 "pid":661388,
 "name":"William Contreras",
 "team":"MIL",
-"slot":3,
-"p":0.7047,
+"slot":4,
+"p":0.6959,
 "result":null
 },
 {
@@ -3236,8 +3236,8 @@
 "pid":683734,
 "name":"Andrew Vaughn",
 "team":"MIL",
-"slot":5,
-"p":0.6985,
+"slot":3,
+"p":0.7159,
 "result":null
 },
 {
@@ -4487,9 +4487,9 @@
 "gamePk":823339,
 "home":"PIT",
 "away":"SF",
-"wpHome":0.5491,
-"rHome":4.74,
-"rAway":4.53,
+"wpHome":0.55,
+"rHome":4.79,
+"rAway":4.57,
 "result":null
 },
 {
@@ -4537,8 +4537,8 @@
 "gamePk":824147,
 "home":"HOU",
 "away":"CWS",
-"wpHome":0.5625,
-"rHome":4.76,
+"wpHome":0.5495,
+"rHome":4.63,
 "rAway":4.42,
 "result":null
 },
@@ -4579,9 +4579,9 @@
 "gamePk":824634,
 "home":"CHC",
 "away":"MIL",
-"wpHome":0.2941,
+"wpHome":0.2875,
 "rHome":3.43,
-"rAway":5.78,
+"rAway":5.87,
 "result":null
 },
 {

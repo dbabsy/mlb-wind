@@ -14,13 +14,19 @@ Three rules make the record honest:
      game's row only while that game is still in the future; once it starts,
      the row is frozen exactly as it stood.
   3. Scoring is a separate pass that only touches finished games, and only
-     fills in a result that was previously blank.
+     fills in a result that was previously blank. It resolves a hit against
+     the box score of *that game*, never against the player's total for the
+     day — on a doubleheader date those are different questions, and the day
+     total answers the easier one while leaking game one's result onto a
+     game-two prediction that has not started yet.
+
+`test_ledger.py` pins all three; CI runs it before it builds anything.
 
 The ledger lives in the repository rather than a cache, so the history
 survives, is versioned, and can be audited commit by commit.
 
     python3 ledger.py --record     # freeze today's pre-game predictions
-    python3 ledger.py --score      # fill in results for finished games
+    python3 ledger.py --score      # fill in results and final scores
     python3 ledger.py --render     # build accuracy.html
     python3 ledger.py --all        # all three, which is what CI runs
 """
@@ -141,50 +147,93 @@ def record(led, hits_html, games_html):
     return led
 
 
+def finals(d):
+    """gamePk -> (is_final, home_score, away_score) for one date."""
+    j = P.q("schedule", sportId=1, gameType="R", date=d, hydrate="team")
+    out = {}
+    for dd in j.get("dates", []):
+        for g in dd.get("games", []):
+            h, a = g["teams"]["home"], g["teams"]["away"]
+            out[g["gamePk"]] = ((g.get("status") or {}).get("codedGameState") == "F",
+                                h.get("score"), a.get("score"))
+    return out
+
+
+def game_hits(gp):
+    """pid -> reached base with a hit, for ONE game.
+
+    Day-wide hitting totals cannot answer this. On a doubleheader date both
+    games share a date and a lineup, so a day total grades game two with game
+    one's box score — and stamps that result on before game two has started,
+    which then freezes a prediction the lineup logic still needed to revise.
+    The box score is per-game and settles both problems.
+    """
+    j = P.q(f"game/{gp}/boxscore")
+    got = {}
+    for side in ("home", "away"):
+        players = ((j.get("teams") or {}).get(side) or {}).get("players") or {}
+        for pl in players.values():
+            pid = (pl.get("person") or {}).get("id")
+            bat = (pl.get("stats") or {}).get("batting") or {}
+            if pid is None or not bat:
+                continue
+            if int(bat.get("plateAppearances") or 0) >= 1:
+                got[pid] = int(bat.get("hits") or 0) >= 1
+    return got
+
+
 def score(led):
     """Fill in outcomes for finished games only."""
     open_hit_dates = sorted({r["date"] for r in led["hits"] if r["result"] is None})
-    open_game_dates = sorted({r["date"] for r in led["games"] if r["result"] is None})
+    # A game row is still open if it is missing its outcome *or* its final
+    # score — the scores were not always kept, and they are what makes the
+    # run projections auditable.
+    open_game_dates = sorted({r["date"] for r in led["games"]
+                              if r["result"] is None or r.get("sHome") is None})
     filled = 0
 
-    for d in open_hit_dates:
+    fin = {}
+    for d in sorted(set(open_hit_dates) | set(open_game_dates)):
         try:
-            j = P.q("stats", stats="byDateRange", group="hitting", season=d[:4],
-                    sportId=1, gameType="R", startDate=d, endDate=d,
-                    limit=2000, playerPool="All")
-            got = {}
-            for s in j["stats"][0]["splits"]:
-                st = s.get("stat") or {}
-                if int(st.get("plateAppearances") or 0) >= 1:
-                    got[s["player"]["id"]] = int(st.get("hits") or 0) >= 1
+            fin[d] = finals(d)
         except Exception as e:  # noqa: BLE001
-            print(f"  hits {d}: fetch failed ({type(e).__name__})")
+            print(f"  schedule {d}: fetch failed ({type(e).__name__})")
+
+    for d in open_hit_dates:
+        if d not in fin:
             continue
-        if not got:
-            continue
-        for r in led["hits"]:
-            if r["date"] == d and r["result"] is None and r["pid"] in got:
-                r["result"] = got[r["pid"]]
-                filled += 1
+        # Only games that are over, and only the ones we still owe a result.
+        want = {r["gamePk"] for r in led["hits"]
+                if r["date"] == d and r["result"] is None
+                and fin[d].get(r["gamePk"], (False,))[0]}
+        for gp in sorted(want):
+            try:
+                got = game_hits(gp)
+            except Exception as e:  # noqa: BLE001
+                print(f"  hits {d} game {gp}: fetch failed ({type(e).__name__})")
+                continue
+            if not got:
+                continue
+            for r in led["hits"]:
+                if (r["date"] == d and r["gamePk"] == gp
+                        and r["result"] is None and r["pid"] in got):
+                    r["result"] = got[r["pid"]]
+                    filled += 1
 
     for d in open_game_dates:
-        try:
-            j = P.q("schedule", sportId=1, gameType="R", date=d, hydrate="team")
-            res = {}
-            for dd in j.get("dates", []):
-                for g in dd.get("games", []):
-                    if (g.get("status") or {}).get("codedGameState") != "F":
-                        continue
-                    h, a = g["teams"]["home"], g["teams"]["away"]
-                    if "score" in h and "score" in a:
-                        res[g["gamePk"]] = h["score"] > a["score"]
-        except Exception as e:  # noqa: BLE001
-            print(f"  games {d}: fetch failed ({type(e).__name__})")
+        if d not in fin:
             continue
         for r in led["games"]:
-            if r["date"] == d and r["result"] is None and r["gamePk"] in res:
-                r["result"] = res[r["gamePk"]]
+            if r["date"] != d:
+                continue
+            final, hs, as_ = fin[d].get(r["gamePk"], (False, None, None))
+            if not final or hs is None or as_ is None:
+                continue
+            if r["result"] is None:
+                r["result"] = hs > as_
                 filled += 1
+            if r.get("sHome") is None:
+                r["sHome"], r["sAway"] = int(hs), int(as_)
 
     print(f"  scored: {filled} outcomes filled in")
     return led
@@ -253,6 +302,39 @@ def summarise(led):
             "daily": daily(picks, "p"),
             "pending": sum(1 for r in led["games"] if r["result"] is None),
         }
+
+    # The projected scorelines drive both this page's matchups and the run
+    # environment on the daily page, and until now nothing checked them: the
+    # ledger kept who won and threw the score away. Bias is the number that
+    # matters — a model that is 0.4 runs light on every game is wrong in a way
+    # win probability hides, because being light on both sides cancels out.
+    scored = [r for r in led["games"] if r.get("sHome") is not None]
+    if scored:
+        def stats(proj, act):
+            n = len(proj)
+            bias = sum(p - a for p, a in zip(proj, act)) / n
+            mae = sum(abs(p - a) for p, a in zip(proj, act)) / n
+            return {"bias": bias, "mae": mae}
+
+        ph = [r["rHome"] for r in scored]
+        pa = [r["rAway"] for r in scored]
+        ah = [r["sHome"] for r in scored]
+        aa = [r["sAway"] for r in scored]
+        out["runs"] = {
+            "n": len(scored),
+            "total": stats([x + y for x, y in zip(ph, pa)],
+                           [x + y for x, y in zip(ah, aa)]),
+            "home": stats(ph, ah),
+            "away": stats(pa, aa),
+            # Home minus away, projected against actual. This is the term the
+            # model deliberately does *not* carry as runs — home field is a
+            # logit shift — so a drift here is the check on that decision.
+            "margin": stats([x - y for x, y in zip(ph, pa)],
+                            [x - y for x, y in zip(ah, aa)]),
+            "predTotal": sum(x + y for x, y in zip(ph, pa)) / len(scored),
+            "actTotal": sum(x + y for x, y in zip(ah, aa)) / len(scored),
+            "pending": sum(1 for r in led["games"] if r.get("sHome") is None),
+        }
     return out
 
 
@@ -290,6 +372,11 @@ def main():
         if g:
             print(f"  games: {g['n']} scored, pick right {g['actual']:.1%} "
                   f"(predicted {g['pred']:.1%})")
+        r = payload.get("runs")
+        if r:
+            print(f"  runs: {r['n']} games, projected {r['predTotal']:.2f} "
+                  f"actual {r['actTotal']:.2f} (bias {r['total']['bias']:+.2f}, "
+                  f"MAE {r['total']['mae']:.2f})")
         print(f"wrote {a.out}")
 
 
@@ -367,7 +454,13 @@ footer b{color:var(--dim)}
   often is it right". The away/home split is shown so a lean toward either would be visible.<br>
   <b>Calibration</b> is the gap between what was predicted and what happened — near zero is the
   goal, and it matters more than the raw hit rate. <b>Brier</b> scores probability quality:
-  lower is better, and beating the always-guess-the-base-rate line is the bar.
+  lower is better, and beating the always-guess-the-base-rate line is the bar.<br>
+  <b>Projected scorelines</b> are graded on the final score. Bias is the honest number here:
+  a model can name winners well while being systematically light or heavy on runs, because an
+  error on both sides cancels out of the win probability but not out of the run environment the
+  daily page reports. <b>Margin</b> is home runs minus away runs — home field is deliberately
+  modelled as a probability shift rather than as runs, and a drift there is what would say
+  otherwise.
 </footer></div>
 <script>
 const D = __DATA__;
@@ -413,12 +506,40 @@ function section(key, title, note, predLabel){
       </tbody></table>`:""}
   </div>`;
 }
+function runsSection(){
+  const s = D.runs;
+  if(!s) return "";
+  const sgn = v => (v>0?"+":"") + v.toFixed(2);
+  const col = v => Math.abs(v)<0.25?'var(--good)':Math.abs(v)<0.6?'var(--amber)':'var(--bad)';
+  return `<div class="card">
+    <div class="ch"><b>Projected scorelines</b><span>how close the run projections landed${
+      s.pending?` · ${s.pending} awaiting results`:""}</span></div>
+    <div class="kpis">
+      <div class="kpi"><span>scored</span><b>${s.n.toLocaleString()}</b><small>games</small></div>
+      <div class="kpi"><span>proj total</span><b>${s.predTotal.toFixed(2)}</b><small>runs/game</small></div>
+      <div class="kpi"><span>actual total</span><b>${s.actTotal.toFixed(2)}</b><small>runs/game</small></div>
+      <div class="kpi"><span>total bias</span>
+        <b style="color:${col(s.total.bias)}">${sgn(s.total.bias)}</b><small>+ is too high</small></div>
+      <div class="kpi"><span>total error</span><b>${s.total.mae.toFixed(2)}</b><small>mean absolute</small></div>
+      <div class="kpi"><span>margin bias</span>
+        <b style="color:${col(s.margin.bias)}">${sgn(s.margin.bias)}</b><small>home minus away</small></div>
+    </div>
+    <table><thead><tr><th class="l">Side</th><th>Bias</th><th>Mean abs. error</th></tr></thead>
+    <tbody>
+      <tr><td class="l">Home</td><td style="color:${col(s.home.bias)}">${sgn(s.home.bias)}</td>
+        <td>${s.home.mae.toFixed(2)}</td></tr>
+      <tr><td class="l">Away</td><td style="color:${col(s.away.bias)}">${sgn(s.away.bias)}</td>
+        <td>${s.away.mae.toFixed(2)}</td></tr>
+    </tbody></table>
+  </div>`;
+}
 document.getElementById("stamp").textContent =
   "updated " + new Date(D.built).toLocaleString("en-US",{timeZone:"America/Chicago",
     month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}) + " CT";
 document.getElementById("board").innerHTML =
   section("hits","Hit picks","did the picked hitter record a hit","model's average")
-  + section("games","Matchup picks","did the projected winner actually win","confidence in the pick");
+  + section("games","Matchup picks","did the projected winner actually win","confidence in the pick")
+  + runsSection();
 </script></body></html>
 """
 

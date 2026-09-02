@@ -109,6 +109,31 @@ def home_edge(season):
     return math.log(rate / (1 - rate)), n, rate
 
 
+def live_state(g):
+    """Current score and state for a game under way or finished, else None.
+
+    Strictly a display layer. It is deliberately kept out of the projection
+    payload: `ledger.py` parses that payload back out of this page to freeze
+    predictions before first pitch, and a live score has no business anywhere
+    near that path. Keeping the two apart is what makes it impossible for a
+    result to leak backwards into the number that predicted it.
+    """
+    st = g.get("status") or {}
+    phase = st.get("abstractGameState")
+    if phase not in ("Live", "Final"):
+        return None
+    h, a = g["teams"]["home"], g["teams"]["away"]
+    if h.get("score") is None or a.get("score") is None:
+        return None
+    out = {"state": phase, "home": int(h["score"]), "away": int(a["score"]),
+           "detail": st.get("detailedState") or phase}
+    if phase == "Live":
+        ls = g.get("linescore") or {}
+        out["inning"] = ls.get("currentInning")
+        out["half"] = (ls.get("inningState") or "")[:3]
+    return out
+
+
 def pitch_mult(row, lg, key, denom_key):
     """A pitching staff's allowed rate against league, as a multiplier."""
     if not row or row["bf"] < 200 or not lg.get(denom_key):
@@ -167,7 +192,7 @@ def main():
     orient = load_orientations()
 
     sched = P.q("schedule", sportId=1, date=a.date,
-                hydrate="probablePitcher,lineups,team,venue(location)")
+                hydrate="probablePitcher,lineups,team,venue(location),linescore")
     games = [g for d in sched.get("dates", []) for g in d.get("games", [])]
     fallback = P.recent_lineups(date.fromisoformat(a.date))
     print(f"{len(games)} games on {a.date}", flush=True)
@@ -292,12 +317,23 @@ def main():
                "built": datetime.now(timezone.utc).isoformat(timespec="minutes"),
                "hfa": round(hfa, 4), "hfaRate": hfa_rate, "hfaN": hfa_n,
                "lgRuns": round(lg["r_pa"] * PA_PER_TEAM, 2)}
+    # A snapshot of where the games stand right now, so the page is useful even
+    # if the visitor's browser cannot reach MLB directly. Separate payload,
+    # separate constant — see live_state().
+    live = {}
+    for g in games:
+        gp = g.get("gamePk")
+        st = live_state(g) if gp else None
+        if st:
+            live[str(gp)] = st
     Path(a.out).write_text(
-        TEMPLATE.replace("__DATA__", json.dumps(payload, separators=(",", ":"))),
+        TEMPLATE.replace("__DATA__", json.dumps(payload, separators=(",", ":")))
+                .replace("__LIVE__", json.dumps(live, separators=(",", ":"))),
         encoding="utf-8")
     if out:
         avg = sum(o["wpHome"] for o in out) / len(out)
-        print(f"wrote {a.out} — {len(out)} games, mean home win prob {avg:.3f}")
+        print(f"wrote {a.out} — {len(out)} games, mean home win prob {avg:.3f}, "
+              f"{len(live)} with a live score")
 
 
 TEMPLATE = r"""<!doctype html>
@@ -346,6 +382,17 @@ h1{margin:2px 0 0;font-size:26px;font-weight:800;letter-spacing:-.035em}
   grid-row:1/3;grid-column:2/3}
 .pick b{display:block;font-family:var(--mono);font-size:22px;font-weight:800;letter-spacing:-.02em}
 .pick span{font-family:var(--mono);font-size:9px;color:var(--faint);letter-spacing:.06em}
+.lv{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;
+  padding:3px 8px;border-radius:6px;background:var(--panel2);border:1px solid var(--line)}
+.lv-tag{font-size:9px;font-weight:700;letter-spacing:.06em;padding:1px 6px;border-radius:100px;
+  flex:0 0 auto}
+.lv.on .lv-tag{color:var(--ink);background:var(--win)}
+.lv.fin .lv-tag{color:var(--dim);border:1px solid var(--line2)}
+.lv-sc{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lv-mark{margin-left:auto;font-weight:700;flex:0 0 auto}
+.lv-mark.hit{color:var(--win)}
+.lv-mark.miss{color:var(--lose)}
+.stamp.live b{color:var(--win)}
 .tag{font-size:9px;padding:1px 6px;border-radius:100px;border:1px solid var(--line2);color:var(--faint)}
 .tag.ok{border-color:#1F7A4C;color:var(--win)}
 footer{padding:14px 20px 26px;font-family:var(--mono);font-size:10px;color:var(--faint);line-height:1.75}
@@ -377,6 +424,11 @@ footer b{color:var(--dim)}
 </footer></div>
 <script>
 const D = __DATA__;
+// Live scores are a display layer and are deliberately NOT part of D. The
+// accuracy ledger parses D back out of this page to freeze predictions before
+// first pitch; a live score must never be reachable from that path.
+let LIVE = __LIVE__;
+let liveAt = null;   // last successful browser refresh; null = build-time snapshot
 function etTime(iso){
   return new Date(iso).toLocaleString("en-US",{timeZone:"America/Chicago",
     hour:"numeric",minute:"2-digit",hour12:true}) + " CT";
@@ -403,7 +455,41 @@ function stamps(){
   document.getElementById("stamps").innerHTML =
     `<span class="stamp${hrs>STALE_HRS?" stale":""}"><b>Updated</b> ${etTime(D.built)} on `+
     `${etDateShort(D.built)} · ${ago(D.built)}${hrs>STALE_HRS?" — may be out of date":""}</span>`+
-    `<span class="stamp">league avg ${D.lgRuns} runs/side</span>`;
+    `<span class="stamp">league avg ${D.lgRuns} runs/side</span>` +
+    liveStamp();
+}
+function liveStamp(){
+  const n = Object.keys(LIVE).length;
+  if(!n) return "";
+  return liveAt
+    ? `<span class="stamp live"><b>Scores live</b> \u00b7 ${ago(new Date(liveAt).toISOString())}</span>`
+    : `<span class="stamp"><b>Scores</b> as of last build</span>`;
+}
+function liveFrom(g){
+  const st=g.status||{}, phase=st.abstractGameState;
+  if(phase!=="Live" && phase!=="Final") return null;
+  const h=g.teams&&g.teams.home, a=g.teams&&g.teams.away;
+  if(!h || !a || h.score==null || a.score==null) return null;
+  const o={state:phase, home:h.score, away:a.score, detail:st.detailedState||phase};
+  if(phase==="Live"){
+    const ls=g.linescore||{};
+    o.inning=ls.currentInning; o.half=(ls.inningState||"").slice(0,3);
+  }
+  return o;
+}
+function liveStrip(g){
+  const L=LIVE[String(g.gamePk)];
+  if(!L) return "";
+  const fin = L.state==="Final";
+  const tag = fin ? (/final/i.test(L.detail)?"FINAL":L.detail.toUpperCase())
+                  : (L.inning ? `${(L.half||"").toUpperCase()} ${L.inning}`.trim() : "LIVE");
+  let mark="";
+  if(fin && L.home!==L.away){
+    const right = (g.wpHome>=0.5) === (L.home>L.away);
+    mark = `<span class="lv-mark ${right?"hit":"miss"}">${right?"\u2713":"\u2717"}</span>`;
+  }
+  return `<div class="lv ${fin?"fin":"on"}"><span class="lv-tag">${tag}</span>
+    <span class="lv-sc">${g.away.team} ${L.away} \u00b7 ${L.home} ${g.home.team}</span>${mark}</div>`;
 }
 function bar(p, win){
   return `<span class="bar"><i style="width:${(p*100).toFixed(1)}%;background:${win?"var(--win)":"var(--line2)"}"></i></span>`;
@@ -417,6 +503,7 @@ function card(g){
     ? `${Math.round(g.wx.mph)}mph ${g.row.replace(/_/g," ")} · ${Math.round(g.wx.temp)}°` : "");
   return `<div class="card">
     <div class="mu">
+      ${liveStrip(g)}
       <div class="tm"><span class="ab">${g.away.team}</span>${bar(aw,!homeFav)}
         <span class="rs">${g.away.runs.toFixed(1)}</span>
         <span class="pctv">${(aw*100).toFixed(0)}%</span></div>
@@ -436,10 +523,42 @@ document.getElementById("slate").textContent =
   `${dayLabel(D.date)} · ${D.games.length} game${D.games.length===1?"":"s"}`;
 document.getElementById("hfa").textContent =
   D.hfaRate ? (D.hfaRate*100).toFixed(1)+"%" : "about 53%";
-document.getElementById("board").innerHTML = D.games.length
-  ? D.games.map(card).join("")
-  : `<div class="card">No games scheduled.</div>`;
-stamps(); setInterval(stamps, 60000);
+function draw(){
+  document.getElementById("board").innerHTML = D.games.length
+    ? D.games.map(card).join("")
+    : `<div class="card">No games scheduled.</div>`;
+}
+
+// Ask MLB directly for the current scores. If that request is refused or the
+// visitor is offline, the page silently keeps the snapshot taken at build time
+// and looks exactly as it did before — a failure here costs nothing.
+const LIVE_URL = "https://statsapi.mlb.com/api/v1/schedule?sportId=1&hydrate=linescore&date=" + D.date;
+async function refreshLive(){
+  try{
+    const r = await fetch(LIVE_URL, {cache:"no-store"});
+    if(!r.ok) return;
+    const j = await r.json();
+    const next = {};
+    for(const d of (j.dates||[])) for(const g of (d.games||[])){
+      const st = liveFrom(g);
+      if(st && g.gamePk!=null) next[String(g.gamePk)] = st;
+    }
+    LIVE = next; liveAt = Date.now();
+    draw(); stamps();
+  }catch(e){ /* keep the build-time snapshot */ }
+}
+// Stop polling once every game on the slate is final — no reason to keep asking.
+function slateOpen(){
+  return D.games.some(g => { const L = LIVE[String(g.gamePk)];
+                             return !L || L.state !== "Final"; });
+}
+
+draw(); stamps(); setInterval(stamps, 60000);
+refreshLive();
+setInterval(() => { if(slateOpen()) refreshLive(); }, 45000);
+document.addEventListener("visibilitychange", () => {
+  if(!document.hidden && slateOpen()) refreshLive();
+});
 </script></body></html>
 """
 

@@ -154,6 +154,40 @@ def test_record_refuses_a_game_already_under_way():
               "a freshly recorded row carries no result")
 
 
+def test_live_scores_cannot_reach_the_ledger():
+    """The games page carries live scores; the ledger must not see them.
+
+    games.py renders the current score into its own `LIVE` constant, separate
+    from the `D` payload the ledger parses. If the two were ever merged, a
+    result could reach a prediction that has not been frozen yet — the exact
+    failure the ledger exists to prevent. This pins them apart.
+    """
+    import tempfile
+    from pathlib import Path
+    future = "2099-01-01T00:00:00Z"
+    page = ('<script>\nconst D = ' + json.dumps({
+        "date": "D",
+        "games": [{"gamePk": 1, "start": future, "wpHome": .6,
+                   "home": {"team": "H", "runs": 4.5},
+                   "away": {"team": "A", "runs": 4.0}}]
+    }) + ';\n'
+        + 'let LIVE = ' + json.dumps({"1": {"state": "Live", "home": 7, "away": 2}})
+        + ';\n</script>')
+
+    with tempfile.TemporaryDirectory() as t:
+        f = Path(t) / "games.html"
+        f.write_text(page)
+        led = L.record({"hits": [], "games": []}, str(Path(t) / "none.html"), str(f))
+        check(len(led["games"]) == 1, "the page still records its prediction")
+        row = led["games"][0]
+        check(row["rHome"] == 4.5 and row["rAway"] == 4.0,
+              "the recorded runs are the projection, not the live score")
+        check(row["result"] is None and row.get("sHome") is None,
+              "a live score does NOT settle the row before the game is over")
+        check(7 not in (row.get("sHome"), row.get("rHome")),
+              "the live home score never appears anywhere on the row")
+
+
 def test_summarise_reports_run_bias():
     led = {"hits": [], "games": [
         {"date": "D", "gamePk": 1, "home": "H", "away": "A", "wpHome": .6,

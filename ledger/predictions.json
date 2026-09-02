@@ -3137,7 +3137,7 @@
 "name":"Pete Alonso",
 "team":"BAL",
 "slot":2,
-"p":0.7556,
+"p":0.7541,
 "result":null
 },
 {
@@ -3147,7 +3147,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7537,
+"p":0.7533,
 "result":null
 },
 {
@@ -3157,7 +3157,7 @@
 "name":"Jackson Holliday",
 "team":"BAL",
 "slot":1,
-"p":0.7332,
+"p":0.7324,
 "result":null
 },
 {
@@ -3227,7 +3227,7 @@
 "name":"William Contreras",
 "team":"MIL",
 "slot":3,
-"p":0.6965,
+"p":0.7048,
 "result":null
 },
 {
@@ -3237,7 +3237,7 @@
 "name":"Andrew Vaughn",
 "team":"MIL",
 "slot":5,
-"p":0.6911,
+"p":0.6986,
 "result":null
 },
 {
@@ -3247,7 +3247,7 @@
 "name":"Jackson Chourio",
 "team":"MIL",
 "slot":1,
-"p":0.7192,
+"p":0.7297,
 "result":null
 },
 {
@@ -3257,7 +3257,7 @@
 "name":"Josh Naylor",
 "team":"SEA",
 "slot":5,
-"p":0.7193,
+"p":0.7183,
 "result":null
 },
 {
@@ -3267,7 +3267,7 @@
 "name":"Randy Arozarena",
 "team":"SEA",
 "slot":1,
-"p":0.7283,
+"p":0.7247,
 "result":null
 },
 {
@@ -3277,7 +3277,7 @@
 "name":"Mickey Gasper",
 "team":"BOS",
 "slot":2,
-"p":0.7092,
+"p":0.7037,
 "result":null
 },
 {
@@ -4357,9 +4357,9 @@
 "gamePk":824312,
 "home":"COL",
 "away":"BAL",
-"wpHome":0.3828,
-"rHome":4.51,
-"rAway":6.08,
+"wpHome":0.3859,
+"rHome":4.5,
+"rAway":6.03,
 "result":null
 },
 {
@@ -4387,9 +4387,9 @@
 "gamePk":824634,
 "home":"CHC",
 "away":"MIL",
-"wpHome":0.2566,
-"rHome":2.87,
-"rAway":5.44,
+"wpHome":0.2809,
+"rHome":3.31,
+"rAway":5.78,
 "result":null
 },
 {
@@ -4397,9 +4397,9 @@
 "gamePk":824717,
 "home":"BOS",
 "away":"SEA",
-"wpHome":0.4894,
-"rHome":4.72,
-"rAway":5.11,
+"wpHome":0.4855,
+"rHome":4.55,
+"rAway":4.97,
 "result":null
 },
 {

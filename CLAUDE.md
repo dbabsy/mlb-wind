@@ -101,6 +101,15 @@ drops picks that a late lineup change superseded. Breaking any of those turns
 the accuracy page into a lie. There is a manual check for this: try recording
 a past date and confirm it writes nothing.
 
+**A hit is scored from that game's box score, never from the day's totals.**
+Day-wide hitting stats key on date and player, which on a doubleheader date is
+two games and one answer: both rows get "did he hit at all today", which is the
+easier question, and game two's row gets stamped before game two starts — which
+in turn freezes a prediction the late-lineup logic still needed to revise. This
+bit us on 2026-08-29 (two doubleheaders, 12 contaminated rows, one game left
+holding 4 hit picks instead of 3). `score()` fetches one box score per finished
+game instead. `test_ledger.py` pins it.
+
 **The ledger is committed by CI** with `[skip ci]` in the message. Without that
 the commit triggers another build, forever. Expect to rebase over bot commits
 when pushing; the ledger conflict is normally resolved in favour of whichever
@@ -118,7 +127,25 @@ re-recorded once the games have started.
 - Whether the xBA correction actually helps. Year-over-year evidence says yes
   (+0.030 r); a 10-day backtest could not resolve it. The ledger will settle it
   once it has a few thousand picks.
-- Hit picks backtested at 74% but the first live night came in at 56% (n=43).
-  Too early to mean anything either way.
-- Calibration converges long before skill score. Roughly 300 picks before the
-  calibration gap is worth reading; thousands before Brier skill is.
+- Hit picks backtested at 74%; through 2026-09-01 they are 68.8% against a
+  mean projection of 71.2% (n=282). The gap is 0.9 SE — nothing to act on yet.
+- **Do not read a Brier skill score off the hit picks.** They are the top 3 of
+  each game, so the projections span 0.656–0.784 (sd 0.024). Discrimination is
+  capped at `var(p) / p(1-p)` = 0.3% no matter how good the model is, and noise
+  swamps that at any sample this page will ever reach. Calibration is the only
+  number on that card worth reading. Matchup picks are not range-restricted the
+  same way (sd 0.105, cap 4.5%) and are running at 6.0% — that card's skill
+  score does mean something.
+- Hit outcomes are 1.5x overdispersed across days (chi2 9.2 on 6 df, p~.16), so
+  the effective sample may be ~2/3 of the nominal one. Seven days is too few to
+  say. If it holds up, every confidence interval on the hits card is too narrow.
+  Teammates within a game are *not* correlated (overdispersion 0.97), so if the
+  effect is real it is a slate-wide thing, not a lineup thing.
+- Run projections were unmeasurable until 2026-09-02: the ledger kept who won
+  and threw the final score away. It now stores `sHome`/`sAway` and the accuracy
+  page grades bias and MAE on each side, the total, and the margin. The margin
+  is the one to watch — it is the direct check on modelling home field as a
+  logit shift rather than as runs.
+- Nothing in the first 8 days refutes any model coefficient. Both probability
+  models are calibrated within noise (hits z=-0.86, matchups z=+0.19). The
+  adjustments made on 2026-09-02 were to the measurement, not to the models.

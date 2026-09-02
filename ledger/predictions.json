@@ -1238,7 +1238,7 @@
 "team":"AZ",
 "slot":1,
 "p":0.7259,
-"result":false
+"result":null
 },
 {
 "date":"2026-08-29",
@@ -1248,7 +1248,7 @@
 "team":"AZ",
 "slot":3,
 "p":0.705,
-"result":true
+"result":null
 },
 {
 "date":"2026-08-29",
@@ -1258,7 +1258,7 @@
 "team":"SF",
 "slot":4,
 "p":0.7201,
-"result":true
+"result":null
 },
 {
 "date":"2026-08-29",
@@ -1268,7 +1268,7 @@
 "team":"AZ",
 "slot":1,
 "p":0.753,
-"result":false
+"result":null
 },
 {
 "date":"2026-08-29",
@@ -1278,7 +1278,7 @@
 "team":"AZ",
 "slot":3,
 "p":0.7177,
-"result":true
+"result":null
 },
 {
 "date":"2026-08-29",
@@ -1288,7 +1288,7 @@
 "team":"SF",
 "slot":4,
 "p":0.7353,
-"result":true
+"result":null
 },
 {
 "date":"2026-08-29",
@@ -1298,7 +1298,7 @@
 "team":"NYY",
 "slot":5,
 "p":0.6702,
-"result":true
+"result":null
 },
 {
 "date":"2026-08-29",
@@ -1318,7 +1318,7 @@
 "team":"BOS",
 "slot":2,
 "p":0.6786,
-"result":true
+"result":null
 },
 {
 "date":"2026-08-29",
@@ -1328,7 +1328,7 @@
 "team":"NYY",
 "slot":2,
 "p":0.6556,
-"result":false
+"result":null
 },
 {
 "date":"2026-08-29",
@@ -1338,7 +1338,7 @@
 "team":"NYY",
 "slot":5,
 "p":0.6834,
-"result":true
+"result":null
 },
 {
 "date":"2026-08-29",
@@ -1348,7 +1348,7 @@
 "team":"BOS",
 "slot":2,
 "p":0.661,
-"result":true
+"result":null
 },
 {
 "date":"2026-08-29",
@@ -1358,7 +1358,7 @@
 "team":"NYY",
 "slot":2,
 "p":0.6727,
-"result":false
+"result":null
 },
 {
 "date":"2026-08-29",

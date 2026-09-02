@@ -49,6 +49,12 @@ jobs:
           key: statcast-${{ github.run_id }}
           restore-keys: statcast-
 
+      # The ledger's honesty rules are the one thing in this repo that a bug
+      # can quietly turn into a false claim on a public page, so they are
+      # checked before anything is built. No network needed.
+      - name: Test ledger rules
+        run: python3 test_ledger.py
+
       - name: Fetch data
         run: python3 fetch.py
 

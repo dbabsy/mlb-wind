@@ -110,6 +110,16 @@ bit us on 2026-08-29 (two doubleheaders, 12 contaminated rows, one game left
 holding 4 hit picks instead of 3). `score()` fetches one box score per finished
 game instead. `test_ledger.py` pins it.
 
+**Live scores live in `LIVE`, never in `D`.** `games.html` shows the current
+score beside each projection. That data is written to its own constant and
+fetched independently by the visitor's browser, because `ledger.py` parses the
+page's `D` payload back out to freeze predictions — merging the two would put a
+result within reach of a prediction that has not been frozen yet, which is the
+one thing this whole apparatus exists to prevent. `test_ledger.py` pins them
+apart. The browser fetch is best-effort: if MLB refuses the cross-origin request
+the page falls back to the snapshot taken at build time and looks unchanged, so
+the feature can never break the page.
+
 **The ledger is committed by CI** with `[skip ci]` in the message. Without that
 the commit triggers another build, forever. Expect to rebase over bot commits
 when pushing; the ledger conflict is normally resolved in favour of whichever

@@ -2906,8 +2906,8 @@
 "pid":643446,
 "name":"Jeff McNeil",
 "team":"ATH",
-"slot":6,
-"p":0.6989,
+"slot":5,
+"p":0.7075,
 "result":null
 },
 {
@@ -3017,7 +3017,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":2,
-"p":0.7098,
+"p":0.709,
 "result":null
 },
 {
@@ -3027,7 +3027,7 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":3,
-"p":0.6861,
+"p":0.6847,
 "result":null
 },
 {
@@ -3037,7 +3037,7 @@
 "name":"Shohei Ohtani",
 "team":"LAD",
 "slot":1,
-"p":0.6917,
+"p":0.69,
 "result":null
 },
 {
@@ -3167,7 +3167,7 @@
 "name":"Vladimir Guerrero Jr.",
 "team":"TOR",
 "slot":3,
-"p":0.6975,
+"p":0.6977,
 "result":null
 },
 {
@@ -3177,7 +3177,7 @@
 "name":"Brett Bateman",
 "team":"TOR",
 "slot":1,
-"p":0.6829,
+"p":0.6832,
 "result":null
 },
 {
@@ -3187,7 +3187,7 @@
 "name":"Chase DeLauter",
 "team":"CLE",
 "slot":2,
-"p":0.6831,
+"p":0.6834,
 "result":null
 },
 {
@@ -3227,7 +3227,7 @@
 "name":"William Contreras",
 "team":"MIL",
 "slot":3,
-"p":0.7048,
+"p":0.7005,
 "result":null
 },
 {
@@ -3237,7 +3237,7 @@
 "name":"Andrew Vaughn",
 "team":"MIL",
 "slot":5,
-"p":0.6986,
+"p":0.6944,
 "result":null
 },
 {
@@ -3247,7 +3247,7 @@
 "name":"Jackson Chourio",
 "team":"MIL",
 "slot":1,
-"p":0.7297,
+"p":0.7248,
 "result":null
 },
 {
@@ -3283,21 +3283,21 @@
 {
 "date":"2026-09-02",
 "gamePk":825037,
-"pid":545121,
-"name":"Ildemaro Vargas",
-"team":"AZ",
-"slot":6,
-"p":0.6971,
-"result":null
-},
-{
-"date":"2026-09-02",
-"gamePk":825037,
 "pid":650333,
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
 "p":0.7253,
+"result":null
+},
+{
+"date":"2026-09-02",
+"gamePk":825037,
+"pid":663457,
+"name":"Lars Nootbaar",
+"team":"AZ",
+"slot":1,
+"p":0.6867,
 "result":null
 },
 {
@@ -4467,9 +4467,9 @@
 "gamePk":822851,
 "home":"TEX",
 "away":"ATH",
-"wpHome":0.592,
-"rHome":5.72,
-"rAway":5.01,
+"wpHome":0.608,
+"rHome":5.9,
+"rAway":5.0,
 "result":null
 },
 {
@@ -4507,9 +4507,9 @@
 "gamePk":823906,
 "home":"LAD",
 "away":"STL",
-"wpHome":0.7459,
-"rHome":5.01,
-"rAway":2.94,
+"wpHome":0.7487,
+"rHome":4.93,
+"rAway":2.86,
 "result":null
 },
 {
@@ -4557,9 +4557,9 @@
 "gamePk":824390,
 "home":"CLE",
 "away":"TOR",
-"wpHome":0.4033,
-"rHome":3.41,
-"rAway":4.5,
+"wpHome":0.4035,
+"rHome":3.42,
+"rAway":4.51,
 "result":null
 },
 {
@@ -4577,9 +4577,9 @@
 "gamePk":824634,
 "home":"CHC",
 "away":"MIL",
-"wpHome":0.2809,
-"rHome":3.31,
-"rAway":5.78,
+"wpHome":0.2736,
+"rHome":3.15,
+"rAway":5.64,
 "result":null
 },
 {
@@ -4597,8 +4597,8 @@
 "gamePk":825037,
 "home":"AZ",
 "away":"PHI",
-"wpHome":0.6933,
-"rHome":5.0,
+"wpHome":0.7127,
+"rHome":5.24,
 "rAway":3.41,
 "result":null
 }

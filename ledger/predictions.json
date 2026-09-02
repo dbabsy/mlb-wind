@@ -3037,7 +3037,7 @@
 "name":"Shohei Ohtani",
 "team":"LAD",
 "slot":1,
-"p":0.69,
+"p":0.6901,
 "result":null
 },
 {
@@ -3087,7 +3087,7 @@
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
-"p":0.6763,
+"p":0.6764,
 "result":null
 },
 {
@@ -3147,7 +3147,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7537,
+"p":0.7538,
 "result":null
 },
 {
@@ -3177,7 +3177,7 @@
 "name":"Brett Bateman",
 "team":"TOR",
 "slot":1,
-"p":0.6832,
+"p":0.6833,
 "result":null
 },
 {
@@ -3227,7 +3227,7 @@
 "name":"William Contreras",
 "team":"MIL",
 "slot":3,
-"p":0.7005,
+"p":0.7048,
 "result":null
 },
 {
@@ -3237,7 +3237,7 @@
 "name":"Andrew Vaughn",
 "team":"MIL",
 "slot":5,
-"p":0.6944,
+"p":0.6986,
 "result":null
 },
 {
@@ -3247,7 +3247,7 @@
 "name":"Jackson Chourio",
 "team":"MIL",
 "slot":1,
-"p":0.7248,
+"p":0.7297,
 "result":null
 },
 {
@@ -3256,8 +3256,8 @@
 "pid":647304,
 "name":"Josh Naylor",
 "team":"SEA",
-"slot":5,
-"p":0.7193,
+"slot":4,
+"p":0.7279,
 "result":null
 },
 {
@@ -4477,8 +4477,8 @@
 "gamePk":822931,
 "home":"TB",
 "away":"NYM",
-"wpHome":0.5307,
-"rHome":4.53,
+"wpHome":0.557,
+"rHome":4.79,
 "rAway":4.5,
 "result":null
 },
@@ -4487,8 +4487,8 @@
 "gamePk":823339,
 "home":"PIT",
 "away":"SF",
-"wpHome":0.539,
-"rHome":4.55,
+"wpHome":0.5632,
+"rHome":4.79,
 "rAway":4.44,
 "result":null
 },
@@ -4547,9 +4547,9 @@
 "gamePk":824312,
 "home":"COL",
 "away":"BAL",
-"wpHome":0.3848,
+"wpHome":0.3606,
 "rHome":4.53,
-"rAway":6.08,
+"rAway":6.39,
 "result":null
 },
 {
@@ -4557,8 +4557,8 @@
 "gamePk":824390,
 "home":"CLE",
 "away":"TOR",
-"wpHome":0.4035,
-"rHome":3.42,
+"wpHome":0.4072,
+"rHome":3.45,
 "rAway":4.51,
 "result":null
 },
@@ -4577,9 +4577,9 @@
 "gamePk":824634,
 "home":"CHC",
 "away":"MIL",
-"wpHome":0.2736,
-"rHome":3.15,
-"rAway":5.64,
+"wpHome":0.2809,
+"rHome":3.31,
+"rAway":5.78,
 "result":null
 },
 {
@@ -4587,9 +4587,9 @@
 "gamePk":824717,
 "home":"BOS",
 "away":"SEA",
-"wpHome":0.4894,
+"wpHome":0.4856,
 "rHome":4.72,
-"rAway":5.11,
+"rAway":5.15,
 "result":null
 },
 {
@@ -4597,9 +4597,9 @@
 "gamePk":825037,
 "home":"AZ",
 "away":"PHI",
-"wpHome":0.7127,
+"wpHome":0.7053,
 "rHome":5.24,
-"rAway":3.41,
+"rAway":3.48,
 "result":null
 }
 ]

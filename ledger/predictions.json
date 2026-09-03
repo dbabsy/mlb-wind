@@ -3337,7 +3337,7 @@
 "name":"Chandler Simpson",
 "team":"TB",
 "slot":5,
-"p":0.7049,
+"p":0.7048,
 "result":null
 },
 {
@@ -3378,7 +3378,7 @@
 "team":"PIT",
 "slot":6,
 "p":0.661,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-03",
@@ -3388,7 +3388,7 @@
 "team":"PIT",
 "slot":2,
 "p":0.6641,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-03",
@@ -3398,7 +3398,7 @@
 "team":"PIT",
 "slot":4,
 "p":0.7048,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-03",
@@ -3457,7 +3457,7 @@
 "name":"Jac Caglianone",
 "team":"KC",
 "slot":3,
-"p":0.7036,
+"p":0.7035,
 "result":null
 },
 {
@@ -3547,7 +3547,7 @@
 "name":"Jackson Chourio",
 "team":"MIL",
 "slot":1,
-"p":0.7322,
+"p":0.7321,
 "result":null
 },
 {
@@ -4907,8 +4907,8 @@
 "gamePk":822853,
 "home":"TEX",
 "away":"TB",
-"wpHome":0.4886,
-"rHome":4.06,
+"wpHome":0.49,
+"rHome":4.07,
 "rAway":4.4,
 "result":null
 },
@@ -4917,7 +4917,7 @@
 "gamePk":823095,
 "home":"SEA",
 "away":"ATH",
-"wpHome":0.5798,
+"wpHome":0.58,
 "rHome":5.22,
 "rAway":4.66,
 "result":null
@@ -4930,14 +4930,16 @@
 "wpHome":0.563,
 "rHome":4.86,
 "rAway":4.49,
-"result":null
+"result":true,
+"sHome":5,
+"sAway":2
 },
 {
 "date":"2026-09-03",
 "gamePk":823907,
 "home":"LAD",
 "away":"STL",
-"wpHome":0.7027,
+"wpHome":0.7029,
 "rHome":4.69,
 "rAway":3.08,
 "result":null
@@ -4947,7 +4949,7 @@
 "gamePk":824069,
 "home":"KC",
 "away":"MIA",
-"wpHome":0.4901,
+"wpHome":0.4903,
 "rHome":4.13,
 "rAway":4.46,
 "result":null
@@ -4977,7 +4979,7 @@
 "gamePk":824632,
 "home":"CHC",
 "away":"MIL",
-"wpHome":0.359,
+"wpHome":0.3592,
 "rHome":3.7,
 "rAway":5.32,
 "result":null
@@ -4987,7 +4989,7 @@
 "gamePk":824796,
 "home":"BAL",
 "away":"BOS",
-"wpHome":0.3598,
+"wpHome":0.36,
 "rHome":3.33,
 "rAway":4.83,
 "result":null

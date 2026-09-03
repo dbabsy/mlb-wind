@@ -3483,11 +3483,11 @@
 {
 "date":"2026-09-03",
 "gamePk":824144,
-"pid":670623,
-"name":"Isaac Paredes",
+"pid":673237,
+"name":"Yainer Diaz",
 "team":"HOU",
-"slot":3,
-"p":0.6799,
+"slot":8,
+"p":0.6859,
 "result":null
 },
 {
@@ -3497,7 +3497,7 @@
 "name":"Nathan Lukes",
 "team":"TOR",
 "slot":2,
-"p":0.7067,
+"p":0.7032,
 "result":null
 },
 {
@@ -3507,7 +3507,7 @@
 "name":"Vladimir Guerrero Jr.",
 "team":"TOR",
 "slot":3,
-"p":0.7123,
+"p":0.7104,
 "result":null
 },
 {
@@ -3517,7 +3517,7 @@
 "name":"Chase DeLauter",
 "team":"CLE",
 "slot":2,
-"p":0.7058,
+"p":0.7037,
 "result":null
 },
 {
@@ -4917,9 +4917,9 @@
 "gamePk":823095,
 "home":"SEA",
 "away":"ATH",
-"wpHome":0.58,
-"rHome":5.32,
-"rAway":4.75,
+"wpHome":0.5798,
+"rHome":5.22,
+"rAway":4.66,
 "result":null
 },
 {
@@ -4957,9 +4957,9 @@
 "gamePk":824144,
 "home":"HOU",
 "away":"CWS",
-"wpHome":0.5698,
-"rHome":5.39,
-"rAway":4.92,
+"wpHome":0.5876,
+"rHome":5.58,
+"rAway":4.91,
 "result":null
 },
 {
@@ -4967,9 +4967,9 @@
 "gamePk":824388,
 "home":"CLE",
 "away":"TOR",
-"wpHome":0.5369,
-"rHome":4.1,
-"rAway":4.0,
+"wpHome":0.5428,
+"rHome":4.02,
+"rAway":3.87,
 "result":null
 },
 {

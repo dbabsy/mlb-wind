@@ -3337,7 +3337,7 @@
 "name":"Chandler Simpson",
 "team":"TB",
 "slot":5,
-"p":0.7048,
+"p":0.7049,
 "result":null
 },
 {
@@ -3367,7 +3367,7 @@
 "name":"Dominic Canzone",
 "team":"SEA",
 "slot":2,
-"p":0.7094,
+"p":0.7095,
 "result":null
 },
 {
@@ -3417,7 +3417,7 @@
 "name":"Shohei Ohtani",
 "team":"LAD",
 "slot":1,
-"p":0.7099,
+"p":0.71,
 "result":null
 },
 {
@@ -3447,7 +3447,7 @@
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
-"p":0.7251,
+"p":0.7252,
 "result":null
 },
 {
@@ -3457,7 +3457,7 @@
 "name":"Jac Caglianone",
 "team":"KC",
 "slot":3,
-"p":0.7035,
+"p":0.7036,
 "result":null
 },
 {
@@ -3527,7 +3527,7 @@
 "name":"William Contreras",
 "team":"MIL",
 "slot":4,
-"p":0.711,
+"p":0.7023,
 "result":null
 },
 {
@@ -3537,7 +3537,7 @@
 "name":"Andrew Vaughn",
 "team":"MIL",
 "slot":3,
-"p":0.7121,
+"p":0.7046,
 "result":null
 },
 {
@@ -3547,7 +3547,7 @@
 "name":"Jackson Chourio",
 "team":"MIL",
 "slot":1,
-"p":0.7421,
+"p":0.7322,
 "result":null
 },
 {
@@ -3557,7 +3557,7 @@
 "name":"Pete Alonso",
 "team":"BAL",
 "slot":2,
-"p":0.7072,
+"p":0.7073,
 "result":null
 },
 {
@@ -3577,7 +3577,7 @@
 "name":"Mickey Gasper",
 "team":"BOS",
 "slot":2,
-"p":0.7014,
+"p":0.7015,
 "result":null
 }
 ],
@@ -4977,9 +4977,9 @@
 "gamePk":824632,
 "home":"CHC",
 "away":"MIL",
-"wpHome":0.3771,
-"rHome":4.11,
-"rAway":5.63,
+"wpHome":0.359,
+"rHome":3.7,
+"rAway":5.32,
 "result":null
 },
 {

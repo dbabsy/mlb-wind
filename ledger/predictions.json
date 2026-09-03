@@ -3336,8 +3336,8 @@
 "pid":802415,
 "name":"Chandler Simpson",
 "team":"TB",
-"slot":5,
-"p":0.7049,
+"slot":2,
+"p":0.7309,
 "result":null
 },
 {
@@ -3407,7 +3407,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":4,
-"p":0.6982,
+"p":0.6973,
 "result":null
 },
 {
@@ -3417,7 +3417,7 @@
 "name":"Shohei Ohtani",
 "team":"LAD",
 "slot":1,
-"p":0.7117,
+"p":0.71,
 "result":null
 },
 {
@@ -3427,7 +3427,7 @@
 "name":"Alec Burleson",
 "team":"STL",
 "slot":3,
-"p":0.7062,
+"p":0.7045,
 "result":null
 },
 {
@@ -4907,9 +4907,9 @@
 "gamePk":822853,
 "home":"TEX",
 "away":"TB",
-"wpHome":0.49,
+"wpHome":0.5137,
 "rHome":4.07,
-"rAway":4.4,
+"rAway":4.18,
 "result":null
 },
 {

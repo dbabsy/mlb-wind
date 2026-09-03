@@ -3347,7 +3347,7 @@
 "name":"Jeff McNeil",
 "team":"ATH",
 "slot":5,
-"p":0.7152,
+"p":0.7155,
 "result":null
 },
 {
@@ -3356,8 +3356,8 @@
 "pid":647304,
 "name":"Josh Naylor",
 "team":"SEA",
-"slot":4,
-"p":0.7089,
+"slot":5,
+"p":0.6997,
 "result":null
 },
 {
@@ -3367,7 +3367,7 @@
 "name":"Dominic Canzone",
 "team":"SEA",
 "slot":2,
-"p":0.7095,
+"p":0.7064,
 "result":null
 },
 {
@@ -3423,11 +3423,11 @@
 {
 "date":"2026-09-03",
 "gamePk":823907,
-"pid":676475,
-"name":"Alec Burleson",
+"pid":691023,
+"name":"Jordan Walker",
 "team":"STL",
 "slot":3,
-"p":0.7045,
+"p":0.6996,
 "result":null
 },
 {
@@ -4917,9 +4917,9 @@
 "gamePk":823095,
 "home":"SEA",
 "away":"ATH",
-"wpHome":0.58,
-"rHome":5.22,
-"rAway":4.66,
+"wpHome":0.5904,
+"rHome":5.28,
+"rAway":4.61,
 "result":null
 },
 {
@@ -4939,9 +4939,9 @@
 "gamePk":823907,
 "home":"LAD",
 "away":"STL",
-"wpHome":0.7029,
-"rHome":4.69,
-"rAway":3.08,
+"wpHome":0.6373,
+"rHome":4.52,
+"rAway":3.51,
 "result":null
 },
 {

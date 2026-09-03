@@ -3407,17 +3407,17 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":4,
-"p":0.6973,
+"p":0.6974,
 "result":null
 },
 {
 "date":"2026-09-03",
 "gamePk":823907,
-"pid":660271,
-"name":"Shohei Ohtani",
+"pid":605141,
+"name":"Mookie Betts",
 "team":"LAD",
-"slot":1,
-"p":0.71,
+"slot":2,
+"p":0.6976,
 "result":null
 },
 {
@@ -3527,7 +3527,7 @@
 "name":"William Contreras",
 "team":"MIL",
 "slot":3,
-"p":0.713,
+"p":0.7131,
 "result":null
 },
 {
@@ -3557,7 +3557,7 @@
 "name":"Blaze Alexander",
 "team":"BAL",
 "slot":1,
-"p":0.7509,
+"p":0.751,
 "result":null
 },
 {

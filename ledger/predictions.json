@@ -3707,7 +3707,7 @@
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
-"p":0.7437,
+"p":0.7435,
 "result":null
 },
 {
@@ -3717,7 +3717,7 @@
 "name":"Michael Harris II",
 "team":"ATL",
 "slot":5,
-"p":0.7352,
+"p":0.734,
 "result":null
 },
 {
@@ -3727,7 +3727,7 @@
 "name":"Drake Baldwin",
 "team":"ATL",
 "slot":1,
-"p":0.7337,
+"p":0.7327,
 "result":null
 },
 {
@@ -3887,7 +3887,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7496,
+"p":0.7492,
 "result":null
 },
 {
@@ -3897,7 +3897,7 @@
 "name":"Jos\u00e9 Ferm\u00edn",
 "team":"STL",
 "slot":1,
-"p":0.7221,
+"p":0.7217,
 "result":null
 },
 {
@@ -3907,7 +3907,7 @@
 "name":"Jordan Walker",
 "team":"STL",
 "slot":3,
-"p":0.7491,
+"p":0.7484,
 "result":null
 },
 {
@@ -4007,7 +4007,7 @@
 "name":"Brooks Lee",
 "team":"MIN",
 "slot":2,
-"p":0.7073,
+"p":0.701,
 "result":null
 },
 {
@@ -4017,7 +4017,7 @@
 "name":"Sam Antonacci",
 "team":"CWS",
 "slot":1,
-"p":0.7061,
+"p":0.7047,
 "result":null
 },
 {
@@ -4027,7 +4027,7 @@
 "name":"Luke Keaschall",
 "team":"MIN",
 "slot":1,
-"p":0.6999,
+"p":0.6973,
 "result":null
 },
 {
@@ -4037,7 +4037,7 @@
 "name":"Pete Alonso",
 "team":"BAL",
 "slot":4,
-"p":0.6922,
+"p":0.69,
 "result":null
 },
 {
@@ -4047,7 +4047,7 @@
 "name":"Blaze Alexander",
 "team":"BAL",
 "slot":1,
-"p":0.7549,
+"p":0.754,
 "result":null
 },
 {
@@ -4057,7 +4057,7 @@
 "name":"Mickey Gasper",
 "team":"BOS",
 "slot":2,
-"p":0.6992,
+"p":0.6967,
 "result":null
 }
 ],
@@ -5535,9 +5535,9 @@
 "gamePk":823418,
 "home":"PHI",
 "away":"ATL",
-"wpHome":0.4377,
-"rHome":3.08,
-"rAway":3.78,
+"wpHome":0.4405,
+"rHome":3.04,
+"rAway":3.71,
 "result":null
 },
 {
@@ -5595,8 +5595,8 @@
 "gamePk":824311,
 "home":"COL",
 "away":"STL",
-"wpHome":0.4054,
-"rHome":4.25,
+"wpHome":0.4065,
+"rHome":4.26,
 "rAway":5.48,
 "result":null
 },
@@ -5625,9 +5625,9 @@
 "gamePk":824471,
 "home":"CIN",
 "away":"MIL",
-"wpHome":0.3731,
-"rHome":4.44,
-"rAway":6.1,
+"wpHome":0.3733,
+"rHome":4.41,
+"rAway":6.06,
 "result":null
 },
 {
@@ -5635,9 +5635,9 @@
 "gamePk":824554,
 "home":"CWS",
 "away":"MIN",
-"wpHome":0.4959,
-"rHome":5.4,
-"rAway":5.74,
+"wpHome":0.4977,
+"rHome":5.18,
+"rAway":5.49,
 "result":null
 },
 {
@@ -5645,9 +5645,9 @@
 "gamePk":824797,
 "home":"BAL",
 "away":"BOS",
-"wpHome":0.4294,
-"rHome":3.85,
-"rAway":4.75,
+"wpHome":0.4278,
+"rHome":3.75,
+"rAway":4.65,
 "result":null
 }
 ]

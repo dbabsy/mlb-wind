@@ -3617,7 +3617,7 @@
 "name":"Jeff McNeil",
 "team":"ATH",
 "slot":5,
-"p":0.7053,
+"p":0.7075,
 "result":null
 },
 {
@@ -3627,7 +3627,7 @@
 "name":"Josh Naylor",
 "team":"SEA",
 "slot":5,
-"p":0.6987,
+"p":0.6999,
 "result":null
 },
 {
@@ -3637,7 +3637,7 @@
 "name":"Dominic Canzone",
 "team":"SEA",
 "slot":2,
-"p":0.7066,
+"p":0.7093,
 "result":null
 },
 {
@@ -3977,7 +3977,7 @@
 "name":"William Contreras",
 "team":"MIL",
 "slot":3,
-"p":0.7004,
+"p":0.6996,
 "result":null
 },
 {
@@ -3987,7 +3987,7 @@
 "name":"Elly De La Cruz",
 "team":"CIN",
 "slot":2,
-"p":0.6927,
+"p":0.6919,
 "result":null
 },
 {
@@ -3997,7 +3997,7 @@
 "name":"Jackson Chourio",
 "team":"MIL",
 "slot":1,
-"p":0.7301,
+"p":0.7291,
 "result":null
 },
 {
@@ -4037,7 +4037,7 @@
 "name":"Pete Alonso",
 "team":"BAL",
 "slot":4,
-"p":0.6922,
+"p":0.6946,
 "result":null
 },
 {
@@ -4047,7 +4047,7 @@
 "name":"Blaze Alexander",
 "team":"BAL",
 "slot":1,
-"p":0.7549,
+"p":0.7565,
 "result":null
 },
 {
@@ -4057,7 +4057,7 @@
 "name":"Mickey Gasper",
 "team":"BOS",
 "slot":2,
-"p":0.6992,
+"p":0.7018,
 "result":null
 }
 ],
@@ -5505,9 +5505,9 @@
 "gamePk":823093,
 "home":"SEA",
 "away":"ATH",
-"wpHome":0.6249,
-"rHome":4.8,
-"rAway":3.86,
+"wpHome":0.6229,
+"rHome":4.93,
+"rAway":3.99,
 "result":null
 },
 {
@@ -5626,8 +5626,8 @@
 "home":"CIN",
 "away":"MIL",
 "wpHome":0.3731,
-"rHome":4.44,
-"rAway":6.1,
+"rHome":4.4,
+"rAway":6.05,
 "result":null
 },
 {
@@ -5645,9 +5645,9 @@
 "gamePk":824797,
 "home":"BAL",
 "away":"BOS",
-"wpHome":0.4294,
-"rHome":3.85,
-"rAway":4.75,
+"wpHome":0.4305,
+"rHome":3.92,
+"rAway":4.82,
 "result":null
 }
 ]

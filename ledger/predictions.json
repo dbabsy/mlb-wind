@@ -3997,7 +3997,7 @@
 "name":"Jackson Chourio",
 "team":"MIL",
 "slot":1,
-"p":0.7299,
+"p":0.7301,
 "result":null
 },
 {
@@ -5625,9 +5625,9 @@
 "gamePk":824471,
 "home":"CIN",
 "away":"MIL",
-"wpHome":0.3733,
-"rHome":4.41,
-"rAway":6.06,
+"wpHome":0.3731,
+"rHome":4.44,
+"rAway":6.1,
 "result":null
 },
 {

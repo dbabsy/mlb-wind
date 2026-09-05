@@ -4427,7 +4427,7 @@
 "name":"Elly De La Cruz",
 "team":"CIN",
 "slot":2,
-"p":0.6874,
+"p":0.6873,
 "result":null
 },
 {
@@ -4437,7 +4437,7 @@
 "name":"Jackson Chourio",
 "team":"MIL",
 "slot":3,
-"p":0.6932,
+"p":0.6947,
 "result":null
 },
 {
@@ -4447,7 +4447,7 @@
 "name":"Sal Stewart",
 "team":"CIN",
 "slot":3,
-"p":0.6942,
+"p":0.695,
 "result":null
 },
 {
@@ -6247,9 +6247,9 @@
 "gamePk":824389,
 "home":"CLE",
 "away":"DET",
-"wpHome":0.7194,
-"rHome":4.9,
-"rAway":3.09,
+"wpHome":0.7188,
+"rHome":4.92,
+"rAway":3.11,
 "result":null
 },
 {

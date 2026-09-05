@@ -4097,7 +4097,7 @@
 "name":"Jeff McNeil",
 "team":"ATH",
 "slot":2,
-"p":0.7608,
+"p":0.7632,
 "result":null
 },
 {
@@ -4107,7 +4107,7 @@
 "name":"Randy Arozarena",
 "team":"SEA",
 "slot":1,
-"p":0.7202,
+"p":0.7256,
 "result":null
 },
 {
@@ -4117,7 +4117,7 @@
 "name":"Henry Bolte",
 "team":"ATH",
 "slot":1,
-"p":0.7138,
+"p":0.7153,
 "result":null
 },
 {
@@ -4307,7 +4307,7 @@
 "name":"Vladimir Guerrero Jr.",
 "team":"TOR",
 "slot":3,
-"p":0.735,
+"p":0.7368,
 "result":null
 },
 {
@@ -4317,7 +4317,7 @@
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
-"p":0.7199,
+"p":0.723,
 "result":null
 },
 {
@@ -4327,7 +4327,7 @@
 "name":"Brett Bateman",
 "team":"TOR",
 "slot":1,
-"p":0.7066,
+"p":0.7086,
 "result":null
 },
 {
@@ -4427,7 +4427,7 @@
 "name":"Elly De La Cruz",
 "team":"CIN",
 "slot":2,
-"p":0.6874,
+"p":0.6866,
 "result":null
 },
 {
@@ -4437,7 +4437,7 @@
 "name":"Jackson Chourio",
 "team":"MIL",
 "slot":3,
-"p":0.6932,
+"p":0.694,
 "result":null
 },
 {
@@ -4447,7 +4447,7 @@
 "name":"Sal Stewart",
 "team":"CIN",
 "slot":3,
-"p":0.6942,
+"p":0.6943,
 "result":null
 },
 {
@@ -6257,9 +6257,9 @@
 "gamePk":824468,
 "home":"CIN",
 "away":"MIL",
-"wpHome":0.4149,
-"rHome":4.19,
-"rAway":5.3,
+"wpHome":0.4161,
+"rHome":4.26,
+"rAway":5.37,
 "result":null
 },
 {

@@ -3588,7 +3588,7 @@
 "team":"TB",
 "slot":1,
 "p":0.7452,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-04",
@@ -3598,7 +3598,7 @@
 "team":"TB",
 "slot":3,
 "p":0.7084,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-04",
@@ -3608,7 +3608,7 @@
 "team":"TB",
 "slot":6,
 "p":0.7078,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-04",
@@ -5498,7 +5498,9 @@
 "wpHome":0.4312,
 "rHome":3.95,
 "rAway":4.85,
-"result":null
+"result":false,
+"sHome":6,
+"sAway":7
 },
 {
 "date":"2026-09-04",

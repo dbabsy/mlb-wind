@@ -4423,21 +4423,11 @@
 {
 "date":"2026-09-05",
 "gamePk":824468,
-"pid":682829,
-"name":"Elly De La Cruz",
-"team":"CIN",
-"slot":2,
-"p":0.6874,
-"result":null
-},
-{
-"date":"2026-09-05",
-"gamePk":824468,
 "pid":694192,
 "name":"Jackson Chourio",
 "team":"MIL",
-"slot":3,
-"p":0.6932,
+"slot":1,
+"p":0.7109,
 "result":null
 },
 {
@@ -4452,12 +4442,22 @@
 },
 {
 "date":"2026-09-05",
+"gamePk":824468,
+"pid":800325,
+"name":"Luis Lara",
+"team":"MIL",
+"slot":2,
+"p":0.6971,
+"result":null
+},
+{
+"date":"2026-09-05",
 "gamePk":824553,
 "pid":701785,
 "name":"Kaelen Culpepper",
 "team":"MIN",
 "slot":2,
-"p":0.6982,
+"p":0.6965,
 "result":null
 },
 {
@@ -4467,7 +4467,7 @@
 "name":"Sam Antonacci",
 "team":"CWS",
 "slot":1,
-"p":0.6821,
+"p":0.6801,
 "result":null
 },
 {
@@ -4477,7 +4477,7 @@
 "name":"Luke Keaschall",
 "team":"MIN",
 "slot":1,
-"p":0.6849,
+"p":0.6823,
 "result":null
 },
 {
@@ -6157,8 +6157,8 @@
 "gamePk":823257,
 "home":"SD",
 "away":"NYY",
-"wpHome":0.4562,
-"rHome":3.47,
+"wpHome":0.4372,
+"rHome":3.32,
 "rAway":4.06,
 "result":null
 },
@@ -6247,9 +6247,9 @@
 "gamePk":824389,
 "home":"CLE",
 "away":"DET",
-"wpHome":0.6701,
+"wpHome":0.7045,
 "rHome":4.34,
-"rAway":3.09,
+"rAway":2.81,
 "result":null
 },
 {
@@ -6257,9 +6257,9 @@
 "gamePk":824468,
 "home":"CIN",
 "away":"MIL",
-"wpHome":0.4224,
+"wpHome":0.3941,
 "rHome":4.26,
-"rAway":5.3,
+"rAway":5.62,
 "result":null
 },
 {

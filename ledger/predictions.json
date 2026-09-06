@@ -4518,7 +4518,7 @@
 "team":"TEX",
 "slot":4,
 "p":0.695,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-06",
@@ -4528,7 +4528,7 @@
 "team":"TB",
 "slot":1,
 "p":0.7497,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-06",
@@ -4538,7 +4538,7 @@
 "team":"TB",
 "slot":5,
 "p":0.7244,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-06",
@@ -4726,8 +4726,8 @@
 "pid":518692,
 "name":"Freddie Freeman",
 "team":"LAD",
-"slot":2,
-"p":0.7162,
+"slot":4,
+"p":0.6987,
 "result":null
 },
 {
@@ -4736,8 +4736,8 @@
 "pid":605141,
 "name":"Mookie Betts",
 "team":"LAD",
-"slot":3,
-"p":0.6901,
+"slot":2,
+"p":0.699,
 "result":null
 },
 {
@@ -4747,7 +4747,7 @@
 "name":"James Wood",
 "team":"WSH",
 "slot":1,
-"p":0.6887,
+"p":0.6888,
 "result":null
 },
 {
@@ -4907,7 +4907,7 @@
 "name":"Josh Bell",
 "team":"MIN",
 "slot":4,
-"p":0.6779,
+"p":0.678,
 "result":null
 },
 {
@@ -4927,7 +4927,7 @@
 "name":"Luke Keaschall",
 "team":"MIN",
 "slot":1,
-"p":0.6939,
+"p":0.694,
 "result":null
 },
 {
@@ -6770,7 +6770,9 @@
 "wpHome":0.5686,
 "rHome":4.9,
 "rAway":4.46,
-"result":null
+"result":true,
+"sHome":8,
+"sAway":6
 },
 {
 "date":"2026-09-06",
@@ -6845,8 +6847,8 @@
 "gamePk":823903,
 "home":"LAD",
 "away":"WSH",
-"wpHome":0.5678,
-"rHome":4.48,
+"wpHome":0.5822,
+"rHome":4.62,
 "rAway":4.08,
 "result":null
 },
@@ -6913,7 +6915,7 @@
 "gamePk":824552,
 "home":"CWS",
 "away":"MIN",
-"wpHome":0.6128,
+"wpHome":0.613,
 "rHome":4.94,
 "rAway":4.08,
 "result":null

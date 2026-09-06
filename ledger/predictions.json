@@ -4758,7 +4758,7 @@
 "team":"TOR",
 "slot":2,
 "p":0.7209,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-06",
@@ -4768,7 +4768,7 @@
 "team":"TOR",
 "slot":3,
 "p":0.7224,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-06",
@@ -4778,7 +4778,7 @@
 "team":"KC",
 "slot":2,
 "p":0.7011,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-06",
@@ -4788,7 +4788,7 @@
 "team":"HOU",
 "slot":1,
 "p":0.7202,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-06",
@@ -4798,7 +4798,7 @@
 "team":"HOU",
 "slot":2,
 "p":0.7453,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-06",
@@ -4808,7 +4808,7 @@
 "team":"AZ",
 "slot":3,
 "p":0.6897,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-06",
@@ -4917,7 +4917,7 @@
 "name":"Sam Antonacci",
 "team":"CWS",
 "slot":1,
-"p":0.699,
+"p":0.6989,
 "result":null
 },
 {
@@ -6858,7 +6858,9 @@
 "wpHome":0.4359,
 "rHome":4.16,
 "rAway":5.02,
-"result":null
+"result":true,
+"sHome":6,
+"sAway":1
 },
 {
 "date":"2026-09-06",
@@ -6868,7 +6870,9 @@
 "wpHome":0.5325,
 "rHome":3.84,
 "rAway":3.77,
-"result":null
+"result":false,
+"sHome":2,
+"sAway":3
 },
 {
 "date":"2026-09-06",
@@ -6909,7 +6913,7 @@
 "gamePk":824552,
 "home":"CWS",
 "away":"MIN",
-"wpHome":0.6129,
+"wpHome":0.6128,
 "rHome":4.94,
 "rAway":4.08,
 "result":null

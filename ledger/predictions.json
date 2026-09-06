@@ -4548,7 +4548,7 @@
 "team":"ATH",
 "slot":2,
 "p":0.7416,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-06",
@@ -4558,7 +4558,7 @@
 "team":"SEA",
 "slot":6,
 "p":0.6963,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-06",
@@ -4568,7 +4568,7 @@
 "team":"SEA",
 "slot":1,
 "p":0.7049,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-06",
@@ -4578,7 +4578,7 @@
 "team":"NYY",
 "slot":2,
 "p":0.6883,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-06",
@@ -4588,7 +4588,7 @@
 "team":"SD",
 "slot":1,
 "p":0.7524,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-06",
@@ -4598,7 +4598,7 @@
 "team":"NYY",
 "slot":3,
 "p":0.7131,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-06",
@@ -4727,7 +4727,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":4,
-"p":0.6987,
+"p":0.6988,
 "result":null
 },
 {
@@ -4737,7 +4737,7 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":2,
-"p":0.699,
+"p":0.6991,
 "result":null
 },
 {
@@ -4818,7 +4818,7 @@
 "team":"COL",
 "slot":1,
 "p":0.7535,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-06",
@@ -4828,7 +4828,7 @@
 "team":"STL",
 "slot":3,
 "p":0.7671,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-06",
@@ -4838,7 +4838,7 @@
 "team":"STL",
 "slot":4,
 "p":0.7542,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-06",
@@ -6782,7 +6782,9 @@
 "wpHome":0.5908,
 "rHome":5.28,
 "rAway":4.59,
-"result":null
+"result":true,
+"sHome":2,
+"sAway":0
 },
 {
 "date":"2026-09-06",
@@ -6792,7 +6794,9 @@
 "wpHome":0.4882,
 "rHome":3.71,
 "rAway":4.02,
-"result":null
+"result":true,
+"sHome":4,
+"sAway":3
 },
 {
 "date":"2026-09-06",
@@ -6847,7 +6851,7 @@
 "gamePk":823903,
 "home":"LAD",
 "away":"WSH",
-"wpHome":0.5822,
+"wpHome":0.5824,
 "rHome":4.62,
 "rAway":4.08,
 "result":null
@@ -6884,7 +6888,9 @@
 "wpHome":0.435,
 "rHome":5.31,
 "rAway":6.34,
-"result":null
+"result":false,
+"sHome":8,
+"sAway":10
 },
 {
 "date":"2026-09-06",

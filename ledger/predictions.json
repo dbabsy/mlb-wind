@@ -4556,8 +4556,8 @@
 "pid":647304,
 "name":"Josh Naylor",
 "team":"SEA",
-"slot":5,
-"p":0.7049,
+"slot":6,
+"p":0.6962,
 "result":null
 },
 {
@@ -4567,7 +4567,7 @@
 "name":"Randy Arozarena",
 "team":"SEA",
 "slot":1,
-"p":0.7048,
+"p":0.7049,
 "result":null
 },
 {
@@ -4577,17 +4577,7 @@
 "name":"Cody Bellinger",
 "team":"NYY",
 "slot":2,
-"p":0.6882,
-"result":null
-},
-{
-"date":"2026-09-06",
-"gamePk":823253,
-"pid":664034,
-"name":"Ty France",
-"team":"SD",
-"slot":4,
-"p":0.6619,
+"p":0.6883,
 "result":null
 },
 {
@@ -4597,7 +4587,17 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7523,
+"p":0.7524,
+"result":null
+},
+{
+"date":"2026-09-06",
+"gamePk":823253,
+"pid":671277,
+"name":"Luis Garc\u00eda Jr.",
+"team":"NYY",
+"slot":3,
+"p":0.7132,
 "result":null
 },
 {
@@ -4737,7 +4737,7 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":3,
-"p":0.6901,
+"p":0.6902,
 "result":null
 },
 {
@@ -4747,7 +4747,7 @@
 "name":"James Wood",
 "team":"WSH",
 "slot":1,
-"p":0.6887,
+"p":0.6888,
 "result":null
 },
 {
@@ -4817,7 +4817,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7534,
+"p":0.7535,
 "result":null
 },
 {
@@ -4837,7 +4837,7 @@
 "name":"Jordan Walker",
 "team":"STL",
 "slot":4,
-"p":0.7541,
+"p":0.7542,
 "result":null
 },
 {
@@ -4917,7 +4917,7 @@
 "name":"Sam Antonacci",
 "team":"CWS",
 "slot":1,
-"p":0.6989,
+"p":0.699,
 "result":null
 },
 {
@@ -4927,7 +4927,7 @@
 "name":"Luke Keaschall",
 "team":"MIN",
 "slot":1,
-"p":0.6939,
+"p":0.694,
 "result":null
 },
 {
@@ -6777,9 +6777,9 @@
 "gamePk":823091,
 "home":"SEA",
 "away":"ATH",
-"wpHome":0.6063,
-"rHome":4.91,
-"rAway":4.11,
+"wpHome":0.5908,
+"rHome":5.28,
+"rAway":4.59,
 "result":null
 },
 {
@@ -6787,9 +6787,9 @@
 "gamePk":823253,
 "home":"SD",
 "away":"NYY",
-"wpHome":0.517,
-"rHome":3.57,
-"rAway":3.63,
+"wpHome":0.4882,
+"rHome":3.71,
+"rAway":4.02,
 "result":null
 },
 {
@@ -6837,9 +6837,9 @@
 "gamePk":823903,
 "home":"LAD",
 "away":"WSH",
-"wpHome":0.5673,
-"rHome":4.47,
-"rAway":4.07,
+"wpHome":0.5672,
+"rHome":4.48,
+"rAway":4.08,
 "result":null
 },
 {
@@ -6897,8 +6897,8 @@
 "gamePk":824552,
 "home":"CWS",
 "away":"MIN",
-"wpHome":0.6011,
-"rHome":4.81,
+"wpHome":0.6133,
+"rHome":4.94,
 "rAway":4.07,
 "result":null
 },

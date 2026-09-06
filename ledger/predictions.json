@@ -4637,7 +4637,7 @@
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
-"p":0.756,
+"p":0.7526,
 "result":null
 },
 {
@@ -4647,7 +4647,7 @@
 "name":"Michael Harris II",
 "team":"ATL",
 "slot":4,
-"p":0.7529,
+"p":0.748,
 "result":null
 },
 {
@@ -4657,7 +4657,7 @@
 "name":"Drake Baldwin",
 "team":"ATL",
 "slot":1,
-"p":0.7283,
+"p":0.7237,
 "result":null
 },
 {
@@ -6777,8 +6777,8 @@
 "gamePk":823091,
 "home":"SEA",
 "away":"ATH",
-"wpHome":0.6072,
-"rHome":4.92,
+"wpHome":0.6063,
+"rHome":4.91,
 "rAway":4.11,
 "result":null
 },
@@ -6837,8 +6837,8 @@
 "gamePk":823903,
 "home":"LAD",
 "away":"WSH",
-"wpHome":0.5683,
-"rHome":4.48,
+"wpHome":0.5673,
+"rHome":4.47,
 "rAway":4.07,
 "result":null
 },
@@ -6877,8 +6877,8 @@
 "gamePk":824385,
 "home":"CLE",
 "away":"DET",
-"wpHome":0.5644,
-"rHome":4.74,
+"wpHome":0.5634,
+"rHome":4.73,
 "rAway":4.35,
 "result":null
 },

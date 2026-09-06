@@ -4557,7 +4557,7 @@
 "name":"Josh Naylor",
 "team":"SEA",
 "slot":6,
-"p":0.6962,
+"p":0.6963,
 "result":null
 },
 {
@@ -4597,7 +4597,7 @@
 "name":"Luis Garc\u00eda Jr.",
 "team":"NYY",
 "slot":3,
-"p":0.7132,
+"p":0.7131,
 "result":null
 },
 {
@@ -4727,7 +4727,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":2,
-"p":0.7162,
+"p":0.7163,
 "result":null
 },
 {
@@ -4903,11 +4903,11 @@
 {
 "date":"2026-09-06",
 "gamePk":824552,
-"pid":701785,
-"name":"Kaelen Culpepper",
+"pid":605137,
+"name":"Josh Bell",
 "team":"MIN",
-"slot":2,
-"p":0.7039,
+"slot":4,
+"p":0.678,
 "result":null
 },
 {
@@ -4927,7 +4927,7 @@
 "name":"Luke Keaschall",
 "team":"MIN",
 "slot":1,
-"p":0.694,
+"p":0.6941,
 "result":null
 },
 {
@@ -6897,9 +6897,9 @@
 "gamePk":824552,
 "home":"CWS",
 "away":"MIN",
-"wpHome":0.6133,
+"wpHome":0.6112,
 "rHome":4.94,
-"rAway":4.07,
+"rAway":4.09,
 "result":null
 },
 {

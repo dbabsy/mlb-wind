@@ -5127,7 +5127,7 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":2,
-"p":0.6949,
+"p":0.695,
 "result":null
 },
 {
@@ -5137,7 +5137,7 @@
 "name":"Tommy Edman",
 "team":"LAD",
 "slot":1,
-"p":0.6936,
+"p":0.6937,
 "result":null
 },
 {
@@ -5267,7 +5267,7 @@
 "name":"Jeff McNeil",
 "team":"ATH",
 "slot":2,
-"p":0.7101,
+"p":0.7102,
 "result":null
 },
 {
@@ -5277,7 +5277,7 @@
 "name":"Nathan Lukes",
 "team":"TOR",
 "slot":2,
-"p":0.705,
+"p":0.7048,
 "result":null
 },
 {
@@ -5287,7 +5287,7 @@
 "name":"Vladimir Guerrero Jr.",
 "team":"TOR",
 "slot":3,
-"p":0.7103,
+"p":0.7102,
 "result":null
 }
 ],
@@ -7333,9 +7333,9 @@
 "gamePk":823902,
 "home":"LAD",
 "away":"CIN",
-"wpHome":0.4964,
+"wpHome":0.5107,
 "rHome":4.42,
-"rAway":4.71,
+"rAway":4.57,
 "result":null
 },
 {

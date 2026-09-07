@@ -4977,7 +4977,7 @@
 "name":"Jordan Walker",
 "team":"STL",
 "slot":4,
-"p":0.7033,
+"p":0.7032,
 "result":null
 },
 {
@@ -4997,7 +4997,17 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7564,
+"p":0.7563,
+"result":null
+},
+{
+"date":"2026-09-07",
+"gamePk":823254,
+"pid":694673,
+"name":"Abimelec Ortiz",
+"team":"WSH",
+"slot":2,
+"p":0.6624,
 "result":null
 },
 {
@@ -5012,23 +5022,13 @@
 },
 {
 "date":"2026-09-07",
-"gamePk":823254,
-"pid":701538,
-"name":"Jackson Merrill",
-"team":"SD",
-"slot":5,
-"p":0.6581,
-"result":null
-},
-{
-"date":"2026-09-07",
 "gamePk":823415,
 "pid":650333,
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
 "p":0.7372,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-07",
@@ -5038,7 +5038,7 @@
 "team":"ATL",
 "slot":6,
 "p":0.711,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-07",
@@ -5048,7 +5048,7 @@
 "team":"ATL",
 "slot":2,
 "p":0.7071,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-07",
@@ -5127,7 +5127,7 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":2,
-"p":0.6933,
+"p":0.6932,
 "result":null
 },
 {
@@ -5137,7 +5137,7 @@
 "name":"Tommy Edman",
 "team":"LAD",
 "slot":1,
-"p":0.6927,
+"p":0.6926,
 "result":null
 },
 {
@@ -7277,9 +7277,9 @@
 "gamePk":823175,
 "home":"SF",
 "away":"STL",
-"wpHome":0.5956,
+"wpHome":0.5969,
 "rHome":4.85,
-"rAway":4.17,
+"rAway":4.16,
 "result":null
 },
 {
@@ -7287,9 +7287,9 @@
 "gamePk":823254,
 "home":"SD",
 "away":"WSH",
-"wpHome":0.6212,
+"wpHome":0.6093,
 "rHome":5.3,
-"rAway":4.32,
+"rAway":4.44,
 "result":null
 },
 {
@@ -7300,7 +7300,9 @@
 "wpHome":0.6333,
 "rHome":4.54,
 "rAway":3.56,
-"result":null
+"result":true,
+"sHome":1,
+"sAway":0
 },
 {
 "date":"2026-09-07",
@@ -7327,7 +7329,7 @@
 "gamePk":823902,
 "home":"LAD",
 "away":"CIN",
-"wpHome":0.4985,
+"wpHome":0.4988,
 "rHome":4.35,
 "rAway":4.61,
 "result":null
@@ -7377,9 +7379,9 @@
 "gamePk":824958,
 "home":"ATH",
 "away":"TOR",
-"wpHome":0.3705,
+"wpHome":0.3716,
 "rHome":3.45,
-"rAway":4.87,
+"rAway":4.86,
 "result":null
 }
 ]

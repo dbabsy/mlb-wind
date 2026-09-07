@@ -4967,7 +4967,7 @@
 "name":"Alec Burleson",
 "team":"STL",
 "slot":3,
-"p":0.7229,
+"p":0.723,
 "result":null
 },
 {
@@ -5117,7 +5117,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":4,
-"p":0.6809,
+"p":0.681,
 "result":null
 },
 {
@@ -5127,7 +5127,7 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":2,
-"p":0.6932,
+"p":0.6933,
 "result":null
 },
 {
@@ -5137,7 +5137,7 @@
 "name":"Tommy Edman",
 "team":"LAD",
 "slot":1,
-"p":0.6926,
+"p":0.6927,
 "result":null
 },
 {
@@ -5187,7 +5187,7 @@
 "name":"Kevin McGonigle",
 "team":"DET",
 "slot":2,
-"p":0.7113,
+"p":0.7114,
 "result":null
 },
 {
@@ -5277,7 +5277,7 @@
 "name":"Nathan Lukes",
 "team":"TOR",
 "slot":2,
-"p":0.7049,
+"p":0.705,
 "result":null
 },
 {
@@ -7277,9 +7277,9 @@
 "gamePk":823175,
 "home":"SF",
 "away":"STL",
-"wpHome":0.5966,
+"wpHome":0.5956,
 "rHome":4.85,
-"rAway":4.16,
+"rAway":4.17,
 "result":null
 },
 {
@@ -7377,9 +7377,9 @@
 "gamePk":824958,
 "home":"ATH",
 "away":"TOR",
-"wpHome":0.3714,
+"wpHome":0.3705,
 "rHome":3.45,
-"rAway":4.86,
+"rAway":4.87,
 "result":null
 }
 ]

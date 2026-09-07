@@ -4908,7 +4908,7 @@
 "team":"MIN",
 "slot":4,
 "p":0.678,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-06",
@@ -4918,7 +4918,7 @@
 "team":"CWS",
 "slot":1,
 "p":0.6989,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-06",
@@ -4928,7 +4928,7 @@
 "team":"MIN",
 "slot":1,
 "p":0.694,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-06",
@@ -6924,7 +6924,9 @@
 "wpHome":0.613,
 "rHome":4.94,
 "rAway":4.08,
-"result":null
+"result":true,
+"sHome":10,
+"sAway":1
 },
 {
 "date":"2026-09-06",

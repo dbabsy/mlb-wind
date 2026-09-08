@@ -5323,6 +5323,16 @@
 {
 "date":"2026-09-08",
 "gamePk":823174,
+"pid":663494,
+"name":"Bryan Torres",
+"team":"STL",
+"slot":1,
+"p":0.6581,
+"result":null
+},
+{
+"date":"2026-09-08",
+"gamePk":823174,
 "pid":676475,
 "name":"Alec Burleson",
 "team":"STL",
@@ -5338,16 +5348,6 @@
 "team":"STL",
 "slot":4,
 "p":0.6811,
-"result":null
-},
-{
-"date":"2026-09-08",
-"gamePk":823174,
-"pid":808982,
-"name":"Jung Hoo Lee",
-"team":"SF",
-"slot":5,
-"p":0.7043,
 "result":null
 },
 {
@@ -5657,7 +5657,7 @@
 "name":"Jos\u00e9 Ram\u00edrez",
 "team":"CLE",
 "slot":3,
-"p":0.694,
+"p":0.6942,
 "result":null
 },
 {
@@ -5667,7 +5667,7 @@
 "name":"Pete Alonso",
 "team":"BAL",
 "slot":2,
-"p":0.6936,
+"p":0.6925,
 "result":null
 },
 {
@@ -5677,7 +5677,7 @@
 "name":"Steven Kwan",
 "team":"CLE",
 "slot":1,
-"p":0.7156,
+"p":0.7161,
 "result":null
 },
 {
@@ -7859,8 +7859,8 @@
 "gamePk":823092,
 "home":"SEA",
 "away":"TEX",
-"wpHome":0.49,
-"rHome":3.86,
+"wpHome":0.4934,
+"rHome":3.89,
 "rAway":4.19,
 "result":null
 },
@@ -7869,8 +7869,8 @@
 "gamePk":823174,
 "home":"SF",
 "away":"STL",
-"wpHome":0.5262,
-"rHome":4.22,
+"wpHome":0.5272,
+"rHome":4.23,
 "rAway":4.23,
 "result":null
 },
@@ -7879,8 +7879,8 @@
 "gamePk":823250,
 "home":"SD",
 "away":"WSH",
-"wpHome":0.7019,
-"rHome":5.68,
+"wpHome":0.6897,
+"rHome":5.52,
 "rAway":3.84,
 "result":null
 },
@@ -7979,9 +7979,9 @@
 "gamePk":824792,
 "home":"BAL",
 "away":"CLE",
-"wpHome":0.5064,
-"rHome":4.1,
-"rAway":4.29,
+"wpHome":0.5088,
+"rHome":4.16,
+"rAway":4.33,
 "result":null
 },
 {

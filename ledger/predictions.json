@@ -5297,7 +5297,7 @@
 "name":"Brandon Nimmo",
 "team":"TEX",
 "slot":4,
-"p":0.6958,
+"p":0.6872,
 "result":null
 },
 {
@@ -5307,7 +5307,7 @@
 "name":"Ezequiel Duran",
 "team":"TEX",
 "slot":1,
-"p":0.7141,
+"p":0.7065,
 "result":null
 },
 {
@@ -5503,31 +5503,31 @@
 {
 "date":"2026-09-08",
 "gamePk":823901,
+"pid":500743,
+"name":"Miguel Rojas",
+"team":"LAD",
+"slot":6,
+"p":0.6986,
+"result":null
+},
+{
+"date":"2026-09-08",
+"gamePk":823901,
 "pid":518692,
 "name":"Freddie Freeman",
 "team":"LAD",
-"slot":2,
-"p":0.7222,
+"slot":4,
+"p":0.7048,
 "result":null
 },
 {
 "date":"2026-09-08",
 "gamePk":823901,
-"pid":660271,
-"name":"Shohei Ohtani",
+"pid":605141,
+"name":"Mookie Betts",
 "team":"LAD",
-"slot":1,
-"p":0.7186,
-"result":null
-},
-{
-"date":"2026-09-08",
-"gamePk":823901,
-"pid":682829,
-"name":"Elly De La Cruz",
-"team":"CIN",
 "slot":2,
-"p":0.6948,
+"p":0.7134,
 "result":null
 },
 {
@@ -5597,7 +5597,7 @@
 "name":"Tristan Peters",
 "team":"CWS",
 "slot":7,
-"p":0.6409,
+"p":0.6456,
 "result":null
 },
 {
@@ -5607,7 +5607,7 @@
 "name":"Sam Antonacci",
 "team":"CWS",
 "slot":1,
-"p":0.667,
+"p":0.6716,
 "result":null
 },
 {
@@ -5617,7 +5617,7 @@
 "name":"Konnor Griffin",
 "team":"PIT",
 "slot":1,
-"p":0.6583,
+"p":0.6627,
 "result":null
 },
 {
@@ -7859,9 +7859,9 @@
 "gamePk":823092,
 "home":"SEA",
 "away":"TEX",
-"wpHome":0.4934,
+"wpHome":0.5068,
 "rHome":3.89,
-"rAway":4.19,
+"rAway":4.07,
 "result":null
 },
 {
@@ -7879,9 +7879,9 @@
 "gamePk":823250,
 "home":"SD",
 "away":"WSH",
-"wpHome":0.6897,
+"wpHome":0.6968,
 "rHome":5.52,
-"rAway":3.84,
+"rAway":3.77,
 "result":null
 },
 {
@@ -7929,8 +7929,8 @@
 "gamePk":823901,
 "home":"LAD",
 "away":"CIN",
-"wpHome":0.7163,
-"rHome":5.7,
+"wpHome":0.7298,
+"rHome":5.89,
 "rAway":3.71,
 "result":null
 },
@@ -7959,9 +7959,9 @@
 "gamePk":824551,
 "home":"CWS",
 "away":"PIT",
-"wpHome":0.5948,
-"rHome":4.56,
-"rAway":3.93,
+"wpHome":0.595,
+"rHome":4.64,
+"rAway":4.0,
 "result":null
 },
 {
@@ -7999,8 +7999,8 @@
 "gamePk":824957,
 "home":"ATH",
 "away":"TOR",
-"wpHome":0.3878,
-"rHome":4.23,
+"wpHome":0.3741,
+"rHome":4.1,
 "rAway":5.67,
 "result":null
 }

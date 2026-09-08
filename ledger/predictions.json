@@ -4998,7 +4998,7 @@
 "team":"SD",
 "slot":1,
 "p":0.7563,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-07",
@@ -5008,7 +5008,7 @@
 "team":"WSH",
 "slot":2,
 "p":0.6624,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-07",
@@ -5018,7 +5018,7 @@
 "team":"WSH",
 "slot":6,
 "p":0.6612,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-07",
@@ -7290,7 +7290,9 @@
 "wpHome":0.6097,
 "rHome":5.3,
 "rAway":4.44,
-"result":null
+"result":true,
+"sHome":3,
+"sAway":2
 },
 {
 "date":"2026-09-07",

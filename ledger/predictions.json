@@ -5327,7 +5327,7 @@
 "name":"Alec Burleson",
 "team":"STL",
 "slot":3,
-"p":0.7072,
+"p":0.7054,
 "result":null
 },
 {
@@ -5337,7 +5337,7 @@
 "name":"Jordan Walker",
 "team":"STL",
 "slot":4,
-"p":0.6843,
+"p":0.6823,
 "result":null
 },
 {
@@ -5347,7 +5347,7 @@
 "name":"Jung Hoo Lee",
 "team":"SF",
 "slot":5,
-"p":0.7075,
+"p":0.7057,
 "result":null
 },
 {
@@ -5507,7 +5507,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":2,
-"p":0.7222,
+"p":0.721,
 "result":null
 },
 {
@@ -5517,7 +5517,7 @@
 "name":"Shohei Ohtani",
 "team":"LAD",
 "slot":1,
-"p":0.7186,
+"p":0.7164,
 "result":null
 },
 {
@@ -5527,7 +5527,7 @@
 "name":"Elly De La Cruz",
 "team":"CIN",
 "slot":2,
-"p":0.6948,
+"p":0.6931,
 "result":null
 },
 {
@@ -5567,7 +5567,7 @@
 "name":"Brooks Lee",
 "team":"MIN",
 "slot":2,
-"p":0.6923,
+"p":0.6941,
 "result":null
 },
 {
@@ -5577,7 +5577,7 @@
 "name":"Colt Keith",
 "team":"DET",
 "slot":1,
-"p":0.7042,
+"p":0.7055,
 "result":null
 },
 {
@@ -5587,7 +5587,7 @@
 "name":"Kevin McGonigle",
 "team":"DET",
 "slot":2,
-"p":0.6989,
+"p":0.7003,
 "result":null
 },
 {
@@ -7929,9 +7929,9 @@
 "gamePk":823901,
 "home":"LAD",
 "away":"CIN",
-"wpHome":0.7163,
-"rHome":5.7,
-"rAway":3.71,
+"wpHome":0.7177,
+"rHome":5.61,
+"rAway":3.63,
 "result":null
 },
 {
@@ -7969,9 +7969,9 @@
 "gamePk":824714,
 "home":"BOS",
 "away":"LAA",
-"wpHome":0.422,
-"rHome":3.71,
-"rAway":4.67,
+"wpHome":0.4224,
+"rHome":3.73,
+"rAway":4.69,
 "result":null
 },
 {

@@ -5748,7 +5748,7 @@
 "team":"TEX",
 "slot":4,
 "p":0.7156,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5758,7 +5758,7 @@
 "team":"SEA",
 "slot":6,
 "p":0.6909,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5768,7 +5768,7 @@
 "team":"SEA",
 "slot":2,
 "p":0.7006,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5778,7 +5778,7 @@
 "team":"STL",
 "slot":3,
 "p":0.7032,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-09",
@@ -5788,7 +5788,7 @@
 "team":"SF",
 "slot":1,
 "p":0.6884,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5798,7 +5798,7 @@
 "team":"SF",
 "slot":5,
 "p":0.7097,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5867,7 +5867,7 @@
 "name":"Cody Bellinger",
 "team":"NYY",
 "slot":2,
-"p":0.7422,
+"p":0.7395,
 "result":null
 },
 {
@@ -5877,7 +5877,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.747,
+"p":0.7442,
 "result":null
 },
 {
@@ -5887,7 +5887,7 @@
 "name":"Luis Garc\u00eda Jr.",
 "team":"NYY",
 "slot":4,
-"p":0.7609,
+"p":0.7589,
 "result":null
 },
 {
@@ -8492,7 +8492,9 @@
 "wpHome":0.5085,
 "rHome":5.28,
 "rAway":5.47,
-"result":null
+"result":true,
+"sHome":3,
+"sAway":2
 },
 {
 "date":"2026-09-09",
@@ -8502,7 +8504,9 @@
 "wpHome":0.4827,
 "rHome":3.94,
 "rAway":4.33,
-"result":null
+"result":true,
+"sHome":7,
+"sAway":6
 },
 {
 "date":"2026-09-09",
@@ -8529,9 +8533,9 @@
 "gamePk":823497,
 "home":"NYY",
 "away":"COL",
-"wpHome":0.6124,
-"rHome":6.07,
-"rAway":5.09,
+"wpHome":0.6129,
+"rHome":6.06,
+"rAway":5.08,
 "result":null
 },
 {
@@ -8539,7 +8543,7 @@
 "gamePk":823739,
 "home":"MIL",
 "away":"CHC",
-"wpHome":0.6691,
+"wpHome":0.6695,
 "rHome":5.35,
 "rAway":3.9,
 "result":null
@@ -8559,9 +8563,9 @@
 "gamePk":823900,
 "home":"LAD",
 "away":"CIN",
-"wpHome":0.7327,
-"rHome":5.59,
-"rAway":3.46,
+"wpHome":0.7414,
+"rHome":5.35,
+"rAway":3.21,
 "result":null
 },
 {
@@ -8569,8 +8573,8 @@
 "gamePk":824064,
 "home":"KC",
 "away":"AZ",
-"wpHome":0.7067,
-"rHome":5.66,
+"wpHome":0.7078,
+"rHome":5.67,
 "rAway":3.77,
 "result":null
 },
@@ -8591,7 +8595,7 @@
 "gamePk":824549,
 "home":"CWS",
 "away":"PIT",
-"wpHome":0.4553,
+"wpHome":0.4557,
 "rHome":4.24,
 "rAway":4.93,
 "result":null
@@ -8621,7 +8625,7 @@
 "gamePk":824871,
 "home":"ATL",
 "away":"TB",
-"wpHome":0.5054,
+"wpHome":0.5058,
 "rHome":4.68,
 "rAway":4.89,
 "result":null

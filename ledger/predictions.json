@@ -5773,6 +5773,16 @@
 {
 "date":"2026-09-09",
 "gamePk":823172,
+"pid":646240,
+"name":"Rafael Devers",
+"team":"SF",
+"slot":2,
+"p":0.6572,
+"result":null
+},
+{
+"date":"2026-09-09",
+"gamePk":823172,
 "pid":663494,
 "name":"Bryan Torres",
 "team":"STL",
@@ -5788,16 +5798,6 @@
 "team":"STL",
 "slot":3,
 "p":0.7032,
-"result":null
-},
-{
-"date":"2026-09-09",
-"gamePk":823172,
-"pid":691023,
-"name":"Jordan Walker",
-"team":"STL",
-"slot":4,
-"p":0.6887,
 "result":null
 },
 {
@@ -5957,7 +5957,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":4,
-"p":0.6935,
+"p":0.6947,
 "result":null
 },
 {
@@ -5967,7 +5967,7 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":2,
-"p":0.7012,
+"p":0.7031,
 "result":null
 },
 {
@@ -5977,7 +5977,7 @@
 "name":"Tommy Edman",
 "team":"LAD",
 "slot":1,
-"p":0.7105,
+"p":0.7116,
 "result":null
 },
 {
@@ -6017,7 +6017,7 @@
 "name":"Riley Greene",
 "team":"DET",
 "slot":4,
-"p":0.682,
+"p":0.6838,
 "result":null
 },
 {
@@ -6027,7 +6027,7 @@
 "name":"Colt Keith",
 "team":"DET",
 "slot":3,
-"p":0.693,
+"p":0.6945,
 "result":null
 },
 {
@@ -6037,7 +6037,7 @@
 "name":"Kevin McGonigle",
 "team":"DET",
 "slot":1,
-"p":0.7174,
+"p":0.7191,
 "result":null
 },
 {
@@ -6137,7 +6137,7 @@
 "name":"Mauricio Dub\u00f3n",
 "team":"ATL",
 "slot":5,
-"p":0.6961,
+"p":0.6962,
 "result":null
 },
 {
@@ -6157,7 +6157,7 @@
 "name":"Michael Harris II",
 "team":"ATL",
 "slot":1,
-"p":0.7634,
+"p":0.7632,
 "result":null
 },
 {
@@ -8539,8 +8539,8 @@
 "gamePk":823739,
 "home":"MIL",
 "away":"CHC",
-"wpHome":0.6759,
-"rHome":5.26,
+"wpHome":0.675,
+"rHome":5.25,
 "rAway":3.76,
 "result":null
 },
@@ -8580,8 +8580,8 @@
 "home":"DET",
 "away":"MIN",
 "wpHome":0.6617,
-"rHome":5.08,
-"rAway":3.75,
+"rHome":5.13,
+"rAway":3.79,
 "result":null
 },
 {
@@ -8589,9 +8589,9 @@
 "gamePk":824549,
 "home":"CWS",
 "away":"PIT",
-"wpHome":0.492,
-"rHome":4.44,
-"rAway":4.77,
+"wpHome":0.4825,
+"rHome":4.21,
+"rAway":4.62,
 "result":null
 },
 {

@@ -6047,7 +6047,7 @@
 "name":"Brandon Lowe",
 "team":"PIT",
 "slot":2,
-"p":0.6652,
+"p":0.6698,
 "result":null
 },
 {
@@ -6057,7 +6057,7 @@
 "name":"Bryan Reynolds",
 "team":"PIT",
 "slot":3,
-"p":0.6628,
+"p":0.665,
 "result":null
 },
 {
@@ -6067,7 +6067,7 @@
 "name":"Konnor Griffin",
 "team":"PIT",
 "slot":1,
-"p":0.6902,
+"p":0.6924,
 "result":null
 },
 {
@@ -8589,9 +8589,9 @@
 "gamePk":824549,
 "home":"CWS",
 "away":"PIT",
-"wpHome":0.4825,
-"rHome":4.21,
-"rAway":4.62,
+"wpHome":0.492,
+"rHome":4.44,
+"rAway":4.77,
 "result":null
 },
 {

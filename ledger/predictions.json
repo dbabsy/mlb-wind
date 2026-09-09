@@ -5747,7 +5747,7 @@
 "name":"Brandon Nimmo",
 "team":"TEX",
 "slot":4,
-"p":0.7155,
+"p":0.7156,
 "result":null
 },
 {
@@ -5767,7 +5767,7 @@
 "name":"Randy Arozarena",
 "team":"SEA",
 "slot":2,
-"p":0.7005,
+"p":0.7006,
 "result":null
 },
 {
@@ -5787,7 +5787,7 @@
 "name":"Drew Gilbert",
 "team":"SF",
 "slot":1,
-"p":0.6883,
+"p":0.6884,
 "result":null
 },
 {
@@ -5797,7 +5797,7 @@
 "name":"Jung Hoo Lee",
 "team":"SF",
 "slot":5,
-"p":0.7096,
+"p":0.7097,
 "result":null
 },
 {
@@ -5807,7 +5807,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7624,
+"p":0.7625,
 "result":null
 },
 {
@@ -5837,7 +5837,7 @@
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
-"p":0.7339,
+"p":0.734,
 "result":null
 },
 {
@@ -5847,7 +5847,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.725,
+"p":0.7251,
 "result":null
 },
 {
@@ -5867,7 +5867,7 @@
 "name":"Cody Bellinger",
 "team":"NYY",
 "slot":2,
-"p":0.743,
+"p":0.7431,
 "result":null
 },
 {
@@ -5877,7 +5877,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7474,
+"p":0.7475,
 "result":null
 },
 {
@@ -5887,7 +5887,7 @@
 "name":"Luis Garc\u00eda Jr.",
 "team":"NYY",
 "slot":4,
-"p":0.7641,
+"p":0.7642,
 "result":null
 },
 {
@@ -5897,7 +5897,7 @@
 "name":"Andrew Vaughn",
 "team":"MIL",
 "slot":3,
-"p":0.7062,
+"p":0.7063,
 "result":null
 },
 {
@@ -5917,7 +5917,7 @@
 "name":"Jackson Chourio",
 "team":"MIL",
 "slot":1,
-"p":0.7401,
+"p":0.7402,
 "result":null
 },
 {
@@ -5927,7 +5927,7 @@
 "name":"Juan Soto",
 "team":"NYM",
 "slot":2,
-"p":0.7116,
+"p":0.7117,
 "result":null
 },
 {
@@ -5946,8 +5946,8 @@
 "pid":672640,
 "name":"Otto Lopez",
 "team":"MIA",
-"slot":2,
-"p":0.7295,
+"slot":4,
+"p":0.7122,
 "result":null
 },
 {
@@ -5957,7 +5957,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":4,
-"p":0.6961,
+"p":0.6962,
 "result":null
 },
 {
@@ -5977,7 +5977,7 @@
 "name":"Tommy Edman",
 "team":"LAD",
 "slot":1,
-"p":0.7131,
+"p":0.7132,
 "result":null
 },
 {
@@ -6007,7 +6007,7 @@
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
-"p":0.7582,
+"p":0.7583,
 "result":null
 },
 {
@@ -6043,21 +6043,21 @@
 {
 "date":"2026-09-09",
 "gamePk":824549,
-"pid":664040,
-"name":"Brandon Lowe",
-"team":"PIT",
-"slot":2,
-"p":0.6698,
+"pid":545341,
+"name":"Randal Grichuk",
+"team":"CWS",
+"slot":4,
+"p":0.6776,
 "result":null
 },
 {
 "date":"2026-09-09",
 "gamePk":824549,
-"pid":668804,
-"name":"Bryan Reynolds",
+"pid":664040,
+"name":"Brandon Lowe",
 "team":"PIT",
-"slot":3,
-"p":0.665,
+"slot":2,
+"p":0.6699,
 "result":null
 },
 {
@@ -6067,7 +6067,7 @@
 "name":"Konnor Griffin",
 "team":"PIT",
 "slot":1,
-"p":0.6924,
+"p":0.6925,
 "result":null
 },
 {
@@ -6077,7 +6077,7 @@
 "name":"Mike Trout",
 "team":"LAA",
 "slot":2,
-"p":0.6667,
+"p":0.6668,
 "result":null
 },
 {
@@ -6097,17 +6097,7 @@
 "name":"Zach Neto",
 "team":"LAA",
 "slot":1,
-"p":0.6661,
-"result":null
-},
-{
-"date":"2026-09-09",
-"gamePk":824791,
-"pid":608070,
-"name":"Jos\u00e9 Ram\u00edrez",
-"team":"CLE",
-"slot":3,
-"p":0.7007,
+"p":0.6662,
 "result":null
 },
 {
@@ -6127,17 +6117,17 @@
 "name":"Steven Kwan",
 "team":"CLE",
 "slot":1,
-"p":0.7296,
+"p":0.7297,
 "result":null
 },
 {
 "date":"2026-09-09",
-"gamePk":824871,
-"pid":643289,
-"name":"Mauricio Dub\u00f3n",
-"team":"ATL",
-"slot":5,
-"p":0.6961,
+"gamePk":824791,
+"pid":800050,
+"name":"Chase DeLauter",
+"team":"CLE",
+"slot":2,
+"p":0.7254,
 "result":null
 },
 {
@@ -6147,7 +6137,7 @@
 "name":"Yandy D\u00edaz",
 "team":"TB",
 "slot":1,
-"p":0.7291,
+"p":0.7391,
 "result":null
 },
 {
@@ -6156,8 +6146,18 @@
 "pid":671739,
 "name":"Michael Harris II",
 "team":"ATL",
+"slot":4,
+"p":0.738,
+"result":null
+},
+{
+"date":"2026-09-09",
+"gamePk":824871,
+"pid":686948,
+"name":"Drake Baldwin",
+"team":"ATL",
 "slot":1,
-"p":0.7634,
+"p":0.7104,
 "result":null
 },
 {
@@ -8539,9 +8539,9 @@
 "gamePk":823739,
 "home":"MIL",
 "away":"CHC",
-"wpHome":0.6759,
-"rHome":5.26,
-"rAway":3.76,
+"wpHome":0.6681,
+"rHome":5.38,
+"rAway":3.93,
 "result":null
 },
 {
@@ -8619,9 +8619,9 @@
 "gamePk":824871,
 "home":"ATL",
 "away":"TB",
-"wpHome":0.5209,
+"wpHome":0.503,
 "rHome":4.68,
-"rAway":4.73,
+"rAway":4.91,
 "result":null
 },
 {

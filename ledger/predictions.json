@@ -6198,7 +6198,7 @@
 "team":"SEA",
 "slot":6,
 "p":0.6837,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-10",
@@ -6208,7 +6208,7 @@
 "team":"TEX",
 "slot":3,
 "p":0.6862,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-10",
@@ -6218,7 +6218,7 @@
 "team":"SEA",
 "slot":3,
 "p":0.694,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-10",
@@ -6257,7 +6257,7 @@
 "name":"Cody Bellinger",
 "team":"NYY",
 "slot":2,
-"p":0.7361,
+"p":0.7351,
 "result":null
 },
 {
@@ -6277,7 +6277,7 @@
 "name":"Luis Garc\u00eda Jr.",
 "team":"NYY",
 "slot":4,
-"p":0.7585,
+"p":0.7576,
 "result":null
 },
 {
@@ -8822,7 +8822,9 @@
 "wpHome":0.5243,
 "rHome":4.32,
 "rAway":4.35,
-"result":null
+"result":true,
+"sHome":4,
+"sAway":3
 },
 {
 "date":"2026-09-10",
@@ -8841,8 +8843,8 @@
 "gamePk":823499,
 "home":"NYY",
 "away":"COL",
-"wpHome":0.7901,
-"rHome":6.27,
+"wpHome":0.788,
+"rHome":6.23,
 "rAway":3.32,
 "result":null
 },
@@ -8851,9 +8853,9 @@
 "gamePk":824550,
 "home":"CWS",
 "away":"PIT",
-"wpHome":0.5411,
-"rHome":4.41,
-"rAway":4.28,
+"wpHome":0.5414,
+"rHome":4.39,
+"rAway":4.26,
 "result":null
 },
 {

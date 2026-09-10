@@ -5808,7 +5808,7 @@
 "team":"SD",
 "slot":1,
 "p":0.7625,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5818,7 +5818,7 @@
 "team":"WSH",
 "slot":1,
 "p":0.6717,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5828,7 +5828,7 @@
 "team":"SD",
 "slot":5,
 "p":0.678,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5838,7 +5838,7 @@
 "team":"PHI",
 "slot":4,
 "p":0.7341,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5848,7 +5848,7 @@
 "team":"HOU",
 "slot":1,
 "p":0.7251,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5858,7 +5858,7 @@
 "team":"HOU",
 "slot":2,
 "p":0.7658,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5868,7 +5868,7 @@
 "team":"NYY",
 "slot":2,
 "p":0.7395,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5878,7 +5878,7 @@
 "team":"COL",
 "slot":1,
 "p":0.7442,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5888,7 +5888,7 @@
 "team":"NYY",
 "slot":4,
 "p":0.7589,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5898,7 +5898,7 @@
 "team":"MIL",
 "slot":3,
 "p":0.7064,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5908,7 +5908,7 @@
 "team":"CHC",
 "slot":1,
 "p":0.7011,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5918,7 +5918,7 @@
 "team":"MIL",
 "slot":1,
 "p":0.7402,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5928,7 +5928,7 @@
 "team":"NYM",
 "slot":2,
 "p":0.7116,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-09",
@@ -5938,7 +5938,7 @@
 "team":"NYM",
 "slot":3,
 "p":0.711,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5948,7 +5948,7 @@
 "team":"MIA",
 "slot":4,
 "p":0.7122,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -6048,7 +6048,7 @@
 "team":"CWS",
 "slot":4,
 "p":0.6776,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -6058,7 +6058,7 @@
 "team":"PIT",
 "slot":4,
 "p":0.7181,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -6068,7 +6068,7 @@
 "team":"PIT",
 "slot":1,
 "p":0.6926,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -6078,7 +6078,7 @@
 "team":"LAA",
 "slot":2,
 "p":0.6655,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -6088,7 +6088,7 @@
 "team":"BOS",
 "slot":2,
 "p":0.6766,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-09",
@@ -6098,7 +6098,7 @@
 "team":"LAA",
 "slot":1,
 "p":0.6638,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -6108,7 +6108,7 @@
 "team":"BAL",
 "slot":2,
 "p":0.7064,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -6118,7 +6118,7 @@
 "team":"CLE",
 "slot":1,
 "p":0.7297,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -6128,7 +6128,7 @@
 "team":"CLE",
 "slot":2,
 "p":0.7253,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -6138,7 +6138,7 @@
 "team":"TB",
 "slot":1,
 "p":0.7391,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -6148,7 +6148,7 @@
 "team":"ATL",
 "slot":4,
 "p":0.738,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-09",
@@ -6158,7 +6158,7 @@
 "team":"ATL",
 "slot":1,
 "p":0.7104,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -8516,7 +8516,9 @@
 "wpHome":0.585,
 "rHome":5.33,
 "rAway":4.71,
-"result":null
+"result":true,
+"sHome":9,
+"sAway":2
 },
 {
 "date":"2026-09-09",
@@ -8526,7 +8528,9 @@
 "wpHome":0.5561,
 "rHome":4.48,
 "rAway":4.2,
-"result":null
+"result":true,
+"sHome":11,
+"sAway":7
 },
 {
 "date":"2026-09-09",
@@ -8536,7 +8540,9 @@
 "wpHome":0.6129,
 "rHome":6.06,
 "rAway":5.08,
-"result":null
+"result":true,
+"sHome":6,
+"sAway":1
 },
 {
 "date":"2026-09-09",
@@ -8546,7 +8552,9 @@
 "wpHome":0.6695,
 "rHome":5.35,
 "rAway":3.9,
-"result":null
+"result":true,
+"sHome":8,
+"sAway":6
 },
 {
 "date":"2026-09-09",
@@ -8556,7 +8564,9 @@
 "wpHome":0.6065,
 "rHome":5.22,
 "rAway":4.4,
-"result":null
+"result":false,
+"sHome":14,
+"sAway":15
 },
 {
 "date":"2026-09-09",
@@ -8598,7 +8608,9 @@
 "wpHome":0.4557,
 "rHome":4.24,
 "rAway":4.93,
-"result":null
+"result":false,
+"sHome":2,
+"sAway":4
 },
 {
 "date":"2026-09-09",
@@ -8608,7 +8620,9 @@
 "wpHome":0.768,
 "rHome":5.53,
 "rAway":3.07,
-"result":null
+"result":false,
+"sHome":4,
+"sAway":6
 },
 {
 "date":"2026-09-09",
@@ -8618,7 +8632,9 @@
 "wpHome":0.4606,
 "rHome":3.72,
 "rAway":4.3,
-"result":null
+"result":true,
+"sHome":9,
+"sAway":5
 },
 {
 "date":"2026-09-09",
@@ -8628,7 +8644,9 @@
 "wpHome":0.5058,
 "rHome":4.68,
 "rAway":4.89,
-"result":null
+"result":false,
+"sHome":2,
+"sAway":7
 },
 {
 "date":"2026-09-09",

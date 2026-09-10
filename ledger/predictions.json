@@ -6197,7 +6197,7 @@
 "name":"Josh Naylor",
 "team":"SEA",
 "slot":6,
-"p":0.6837,
+"p":0.6824,
 "result":null
 },
 {
@@ -6207,7 +6207,7 @@
 "name":"Ezequiel Duran",
 "team":"TEX",
 "slot":1,
-"p":0.704,
+"p":0.701,
 "result":null
 },
 {
@@ -6217,7 +6217,7 @@
 "name":"Dominic Canzone",
 "team":"SEA",
 "slot":3,
-"p":0.694,
+"p":0.6912,
 "result":null
 },
 {
@@ -8819,9 +8819,9 @@
 "gamePk":823088,
 "home":"SEA",
 "away":"TEX",
-"wpHome":0.5419,
-"rHome":4.1,
-"rAway":3.97,
+"wpHome":0.5457,
+"rHome":3.98,
+"rAway":3.82,
 "result":null
 },
 {
@@ -8829,9 +8829,9 @@
 "gamePk":823413,
 "home":"PHI",
 "away":"HOU",
-"wpHome":0.6437,
-"rHome":5.57,
-"rAway":4.34,
+"wpHome":0.6465,
+"rHome":5.46,
+"rAway":4.22,
 "result":null
 },
 {
@@ -8859,8 +8859,8 @@
 "gamePk":824872,
 "home":"ATL",
 "away":"TB",
-"wpHome":0.5716,
-"rHome":4.14,
+"wpHome":0.5876,
+"rHome":4.29,
 "rAway":3.75,
 "result":null
 }

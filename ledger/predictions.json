@@ -6197,7 +6197,7 @@
 "name":"Josh Naylor",
 "team":"SEA",
 "slot":6,
-"p":0.6855,
+"p":0.6837,
 "result":null
 },
 {
@@ -6207,7 +6207,7 @@
 "name":"Ezequiel Duran",
 "team":"TEX",
 "slot":1,
-"p":0.7071,
+"p":0.704,
 "result":null
 },
 {
@@ -6217,7 +6217,7 @@
 "name":"Dominic Canzone",
 "team":"SEA",
 "slot":3,
-"p":0.6969,
+"p":0.694,
 "result":null
 },
 {
@@ -6257,7 +6257,7 @@
 "name":"Cody Bellinger",
 "team":"NYY",
 "slot":2,
-"p":0.7355,
+"p":0.7365,
 "result":null
 },
 {
@@ -6267,7 +6267,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7165,
+"p":0.7175,
 "result":null
 },
 {
@@ -6277,7 +6277,7 @@
 "name":"Luis Garc\u00eda Jr.",
 "team":"NYY",
 "slot":4,
-"p":0.7551,
+"p":0.7559,
 "result":null
 },
 {
@@ -6287,7 +6287,7 @@
 "name":"Randal Grichuk",
 "team":"CWS",
 "slot":4,
-"p":0.7033,
+"p":0.7048,
 "result":null
 },
 {
@@ -6297,7 +6297,7 @@
 "name":"Nick Gonzales",
 "team":"PIT",
 "slot":4,
-"p":0.6934,
+"p":0.6953,
 "result":null
 },
 {
@@ -6307,7 +6307,7 @@
 "name":"Sam Antonacci",
 "team":"CWS",
 "slot":1,
-"p":0.6907,
+"p":0.6924,
 "result":null
 },
 {
@@ -8819,9 +8819,9 @@
 "gamePk":823088,
 "home":"SEA",
 "away":"TEX",
-"wpHome":0.5395,
-"rHome":4.19,
-"rAway":4.08,
+"wpHome":0.5419,
+"rHome":4.1,
+"rAway":3.97,
 "result":null
 },
 {
@@ -8829,9 +8829,9 @@
 "gamePk":823413,
 "home":"PHI",
 "away":"HOU",
-"wpHome":0.6525,
-"rHome":5.86,
-"rAway":4.49,
+"wpHome":0.6437,
+"rHome":5.57,
+"rAway":4.34,
 "result":null
 },
 {
@@ -8839,9 +8839,9 @@
 "gamePk":823499,
 "home":"NYY",
 "away":"COL",
-"wpHome":0.8153,
-"rHome":6.31,
-"rAway":3.06,
+"wpHome":0.815,
+"rHome":6.32,
+"rAway":3.07,
 "result":null
 },
 {
@@ -8849,9 +8849,9 @@
 "gamePk":824550,
 "home":"CWS",
 "away":"PIT",
-"wpHome":0.5242,
-"rHome":4.44,
-"rAway":4.47,
+"wpHome":0.5252,
+"rHome":4.47,
+"rAway":4.49,
 "result":null
 },
 {
@@ -8859,9 +8859,9 @@
 "gamePk":824872,
 "home":"ATL",
 "away":"TB",
-"wpHome":0.5878,
-"rHome":4.27,
-"rAway":3.73,
+"wpHome":0.5716,
+"rHome":4.14,
+"rAway":3.75,
 "result":null
 }
 ]

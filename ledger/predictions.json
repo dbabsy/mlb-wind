@@ -5988,7 +5988,7 @@
 "team":"AZ",
 "slot":1,
 "p":0.7374,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -5998,7 +5998,7 @@
 "team":"AZ",
 "slot":2,
 "p":0.7064,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -6008,7 +6008,7 @@
 "team":"KC",
 "slot":2,
 "p":0.7584,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-09",
@@ -8586,7 +8586,9 @@
 "wpHome":0.7078,
 "rHome":5.67,
 "rAway":3.77,
-"result":null
+"result":true,
+"sHome":5,
+"sAway":2
 },
 {
 "date":"2026-09-09",

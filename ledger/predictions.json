@@ -6277,7 +6277,7 @@
 "name":"Luis Garc\u00eda Jr.",
 "team":"NYY",
 "slot":4,
-"p":0.7584,
+"p":0.7585,
 "result":null
 },
 {
@@ -8841,9 +8841,9 @@
 "gamePk":823499,
 "home":"NYY",
 "away":"COL",
-"wpHome":0.7901,
-"rHome":6.27,
-"rAway":3.32,
+"wpHome":0.7828,
+"rHome":6.05,
+"rAway":3.26,
 "result":null
 },
 {

@@ -6258,7 +6258,7 @@
 "team":"NYY",
 "slot":2,
 "p":0.7351,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-10",
@@ -6268,7 +6268,7 @@
 "team":"COL",
 "slot":1,
 "p":0.7153,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-10",
@@ -6278,7 +6278,7 @@
 "team":"NYY",
 "slot":4,
 "p":0.7576,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-10",
@@ -6288,7 +6288,7 @@
 "team":"PIT",
 "slot":4,
 "p":0.6934,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-10",
@@ -6298,7 +6298,7 @@
 "team":"CWS",
 "slot":1,
 "p":0.6907,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-10",
@@ -6308,7 +6308,7 @@
 "team":"PIT",
 "slot":1,
 "p":0.6664,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-10",
@@ -8846,7 +8846,9 @@
 "wpHome":0.788,
 "rHome":6.23,
 "rAway":3.32,
-"result":null
+"result":true,
+"sHome":10,
+"sAway":3
 },
 {
 "date":"2026-09-10",
@@ -8856,7 +8858,9 @@
 "wpHome":0.5414,
 "rHome":4.39,
 "rAway":4.26,
-"result":null
+"result":false,
+"sHome":0,
+"sAway":2
 },
 {
 "date":"2026-09-10",

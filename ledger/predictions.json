@@ -6647,7 +6647,17 @@
 "name":"Nico Hoerner",
 "team":"CHC",
 "slot":6,
-"p":0.6955,
+"p":0.6967,
+"result":null
+},
+{
+"date":"2026-09-11",
+"gamePk":824631,
+"pid":691718,
+"name":"Pete Crow-Armstrong",
+"team":"CHC",
+"slot":1,
+"p":0.6852,
 "result":null
 },
 {
@@ -6657,17 +6667,7 @@
 "name":"Nick Gonzales",
 "team":"PIT",
 "slot":4,
-"p":0.7054,
-"result":null
-},
-{
-"date":"2026-09-11",
-"gamePk":824631,
-"pid":804606,
-"name":"Konnor Griffin",
-"team":"PIT",
-"slot":1,
-"p":0.6821,
+"p":0.7067,
 "result":null
 },
 {
@@ -6737,7 +6737,7 @@
 "name":"Randy Arozarena",
 "team":"SEA",
 "slot":2,
-"p":0.7115,
+"p":0.7185,
 "result":null
 },
 {
@@ -6747,7 +6747,7 @@
 "name":"Tommy White",
 "team":"ATH",
 "slot":5,
-"p":0.7293,
+"p":0.7322,
 "result":null
 },
 {
@@ -6757,7 +6757,7 @@
 "name":"Henry Bolte",
 "team":"ATH",
 "slot":1,
-"p":0.7129,
+"p":0.7154,
 "result":null
 },
 {
@@ -9419,9 +9419,9 @@
 "gamePk":824227,
 "home":"DET",
 "away":"COL",
-"wpHome":0.5452,
-"rHome":4.96,
-"rAway":4.78,
+"wpHome":0.546,
+"rHome":5.02,
+"rAway":4.83,
 "result":null
 },
 {

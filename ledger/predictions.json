@@ -6343,21 +6343,21 @@
 {
 "date":"2026-09-11",
 "gamePk":822684,
-"pid":660688,
-"name":"Keibert Ruiz",
-"team":"WSH",
-"slot":7,
-"p":0.6807,
+"pid":687093,
+"name":"Vaughn Grissom",
+"team":"LAA",
+"slot":4,
+"p":0.676,
 "result":null
 },
 {
 "date":"2026-09-11",
 "gamePk":822684,
-"pid":687093,
-"name":"Vaughn Grissom",
-"team":"LAA",
-"slot":4,
-"p":0.6761,
+"pid":691781,
+"name":"Brady House",
+"team":"WSH",
+"slot":3,
+"p":0.6913,
 "result":null
 },
 {
@@ -6387,7 +6387,7 @@
 "name":"Alejandro Kirk",
 "team":"TOR",
 "slot":4,
-"p":0.7023,
+"p":0.7022,
 "result":null
 },
 {
@@ -6417,7 +6417,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.702,
+"p":0.7019,
 "result":null
 },
 {
@@ -6427,7 +6427,7 @@
 "name":"Chandler Simpson",
 "team":"TB",
 "slot":5,
-"p":0.6926,
+"p":0.6925,
 "result":null
 },
 {
@@ -6436,18 +6436,18 @@
 "pid":676475,
 "name":"Alec Burleson",
 "team":"STL",
-"slot":3,
-"p":0.7229,
+"slot":4,
+"p":0.7142,
 "result":null
 },
 {
 "date":"2026-09-11",
 "gamePk":823012,
-"pid":678246,
-"name":"Miguel Vargas",
-"team":"CWS",
-"slot":2,
-"p":0.6853,
+"pid":691023,
+"name":"Jordan Walker",
+"team":"STL",
+"slot":3,
+"p":0.7052,
 "result":null
 },
 {
@@ -6487,7 +6487,7 @@
 "name":"Jung Hoo Lee",
 "team":"SF",
 "slot":5,
-"p":0.6968,
+"p":0.6967,
 "result":null
 },
 {
@@ -6547,7 +6547,7 @@
 "name":"Chase DeLauter",
 "team":"CLE",
 "slot":2,
-"p":0.7103,
+"p":0.7102,
 "result":null
 },
 {
@@ -6583,21 +6583,11 @@
 {
 "date":"2026-09-11",
 "gamePk":823817,
-"pid":605141,
-"name":"Mookie Betts",
-"team":"LAD",
-"slot":3,
-"p":0.6979,
-"result":null
-},
-{
-"date":"2026-09-11",
-"gamePk":823817,
 "pid":669242,
 "name":"Tommy Edman",
 "team":"LAD",
 "slot":1,
-"p":0.7099,
+"p":0.7098,
 "result":null
 },
 {
@@ -6608,6 +6598,16 @@
 "team":"LAD",
 "slot":2,
 "p":0.7062,
+"result":null
+},
+{
+"date":"2026-09-11",
+"gamePk":823817,
+"pid":672640,
+"name":"Otto Lopez",
+"team":"MIA",
+"slot":2,
+"p":0.7114,
 "result":null
 },
 {
@@ -6637,7 +6637,7 @@
 "name":"Kevin McGonigle",
 "team":"DET",
 "slot":1,
-"p":0.7272,
+"p":0.7271,
 "result":null
 },
 {
@@ -6673,11 +6673,21 @@
 {
 "date":"2026-09-11",
 "gamePk":824711,
+"pid":668939,
+"name":"Adley Rutschman",
+"team":"BOS",
+"slot":3,
+"p":0.7108,
+"result":null
+},
+{
+"date":"2026-09-11",
+"gamePk":824711,
 "pid":677951,
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
-"p":0.7414,
+"p":0.7413,
 "result":null
 },
 {
@@ -6692,22 +6702,12 @@
 },
 {
 "date":"2026-09-11",
-"gamePk":824711,
-"pid":701350,
-"name":"Roman Anthony",
-"team":"BOS",
-"slot":1,
-"p":0.7055,
-"result":null
-},
-{
-"date":"2026-09-11",
 "gamePk":824873,
 "pid":650333,
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
-"p":0.7455,
+"p":0.7454,
 "result":null
 },
 {
@@ -6767,7 +6767,7 @@
 "name":"Ildemaro Vargas",
 "team":"AZ",
 "slot":1,
-"p":0.7329,
+"p":0.7516,
 "result":null
 },
 {
@@ -6777,7 +6777,7 @@
 "name":"Ketel Marte",
 "team":"AZ",
 "slot":2,
-"p":0.7066,
+"p":0.7255,
 "result":null
 },
 {
@@ -9329,8 +9329,8 @@
 "gamePk":822684,
 "home":"WSH",
 "away":"LAA",
-"wpHome":0.6768,
-"rHome":5.28,
+"wpHome":0.6936,
+"rHome":5.49,
 "rAway":3.78,
 "result":null
 },
@@ -9359,8 +9359,8 @@
 "gamePk":823012,
 "home":"STL",
 "away":"CWS",
-"wpHome":0.4159,
-"rHome":4.06,
+"wpHome":0.4514,
+"rHome":4.39,
 "rAway":5.15,
 "result":null
 },
@@ -9369,8 +9369,8 @@
 "gamePk":823173,
 "home":"SF",
 "away":"SD",
-"wpHome":0.4447,
-"rHome":3.78,
+"wpHome":0.4435,
+"rHome":3.77,
 "rAway":4.53,
 "result":null
 },
@@ -9409,8 +9409,8 @@
 "gamePk":823817,
 "home":"MIA",
 "away":"LAD",
-"wpHome":0.5235,
-"rHome":4.69,
+"wpHome":0.5091,
+"rHome":4.55,
 "rAway":4.73,
 "result":null
 },
@@ -9419,9 +9419,9 @@
 "gamePk":824227,
 "home":"DET",
 "away":"COL",
-"wpHome":0.5452,
-"rHome":4.96,
-"rAway":4.78,
+"wpHome":0.5446,
+"rHome":4.78,
+"rAway":4.61,
 "result":null
 },
 {
@@ -9439,9 +9439,9 @@
 "gamePk":824711,
 "home":"BOS",
 "away":"KC",
-"wpHome":0.6848,
-"rHome":5.75,
-"rAway":4.07,
+"wpHome":0.6883,
+"rHome":5.81,
+"rAway":4.08,
 "result":null
 },
 {
@@ -9469,8 +9469,8 @@
 "gamePk":825036,
 "home":"AZ",
 "away":"TEX",
-"wpHome":0.5168,
-"rHome":4.31,
+"wpHome":0.5179,
+"rHome":4.32,
 "rAway":4.41,
 "result":null
 }

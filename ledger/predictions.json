@@ -6437,7 +6437,7 @@
 "name":"Alec Burleson",
 "team":"STL",
 "slot":3,
-"p":0.722,
+"p":0.7247,
 "result":null
 },
 {
@@ -6447,7 +6447,7 @@
 "name":"Miguel Vargas",
 "team":"CWS",
 "slot":2,
-"p":0.6858,
+"p":0.6883,
 "result":null
 },
 {
@@ -6457,7 +6457,7 @@
 "name":"Sam Antonacci",
 "team":"CWS",
 "slot":1,
-"p":0.7106,
+"p":0.7138,
 "result":null
 },
 {
@@ -6677,7 +6677,7 @@
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
-"p":0.7414,
+"p":0.7475,
 "result":null
 },
 {
@@ -6687,7 +6687,7 @@
 "name":"Mickey Gasper",
 "team":"BOS",
 "slot":2,
-"p":0.7104,
+"p":0.7174,
 "result":null
 },
 {
@@ -6697,7 +6697,7 @@
 "name":"Roman Anthony",
 "team":"BOS",
 "slot":1,
-"p":0.7055,
+"p":0.7122,
 "result":null
 },
 {
@@ -6707,7 +6707,7 @@
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
-"p":0.7455,
+"p":0.7458,
 "result":null
 },
 {
@@ -6717,7 +6717,7 @@
 "name":"Michael Harris II",
 "team":"ATL",
 "slot":4,
-"p":0.7509,
+"p":0.7507,
 "result":null
 },
 {
@@ -6727,7 +6727,7 @@
 "name":"Drake Baldwin",
 "team":"ATL",
 "slot":1,
-"p":0.7263,
+"p":0.7261,
 "result":null
 },
 {
@@ -9359,9 +9359,9 @@
 "gamePk":823012,
 "home":"STL",
 "away":"CWS",
-"wpHome":0.4151,
-"rHome":4.12,
-"rAway":5.23,
+"wpHome":0.4156,
+"rHome":4.1,
+"rAway":5.2,
 "result":null
 },
 {
@@ -9429,9 +9429,9 @@
 "gamePk":824631,
 "home":"CHC",
 "away":"PIT",
-"wpHome":0.5544,
-"rHome":4.64,
-"rAway":4.38,
+"wpHome":0.552,
+"rHome":4.71,
+"rAway":4.47,
 "result":null
 },
 {
@@ -9439,9 +9439,9 @@
 "gamePk":824711,
 "home":"BOS",
 "away":"KC",
-"wpHome":0.6848,
-"rHome":5.75,
-"rAway":4.07,
+"wpHome":0.684,
+"rHome":5.88,
+"rAway":4.18,
 "result":null
 },
 {
@@ -9449,9 +9449,9 @@
 "gamePk":824873,
 "home":"ATL",
 "away":"PHI",
-"wpHome":0.7884,
-"rHome":5.41,
-"rAway":2.8,
+"wpHome":0.7879,
+"rHome":5.37,
+"rAway":2.78,
 "result":null
 },
 {

@@ -6467,7 +6467,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7573,
+"p":0.7591,
 "result":null
 },
 {
@@ -6477,7 +6477,7 @@
 "name":"Jackson Merrill",
 "team":"SD",
 "slot":5,
-"p":0.669,
+"p":0.6712,
 "result":null
 },
 {
@@ -6487,7 +6487,7 @@
 "name":"Jung Hoo Lee",
 "team":"SF",
 "slot":5,
-"p":0.6951,
+"p":0.6968,
 "result":null
 },
 {
@@ -9419,9 +9419,9 @@
 "gamePk":824227,
 "home":"DET",
 "away":"COL",
-"wpHome":0.546,
-"rHome":5.02,
-"rAway":4.83,
+"wpHome":0.5452,
+"rHome":4.96,
+"rAway":4.78,
 "result":null
 },
 {

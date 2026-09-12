@@ -6793,11 +6793,11 @@
 {
 "date":"2026-09-12",
 "gamePk":822685,
-"pid":685133,
-"name":"Wade Meckler",
+"pid":545361,
+"name":"Mike Trout",
 "team":"LAA",
-"slot":3,
-"p":0.6785,
+"slot":2,
+"p":0.6459,
 "result":null
 },
 {
@@ -6807,7 +6807,7 @@
 "name":"Vaughn Grissom",
 "team":"LAA",
 "slot":4,
-"p":0.6563,
+"p":0.6546,
 "result":null
 },
 {
@@ -6817,7 +6817,7 @@
 "name":"Zach Neto",
 "team":"LAA",
 "slot":1,
-"p":0.6523,
+"p":0.6494,
 "result":null
 },
 {
@@ -6827,7 +6827,7 @@
 "name":"Nathan Lukes",
 "team":"TOR",
 "slot":5,
-"p":0.698,
+"p":0.6981,
 "result":null
 },
 {
@@ -6837,7 +6837,7 @@
 "name":"Vladimir Guerrero Jr.",
 "team":"TOR",
 "slot":3,
-"p":0.7158,
+"p":0.716,
 "result":null
 },
 {
@@ -6857,7 +6857,7 @@
 "name":"Yandy D\u00edaz",
 "team":"TB",
 "slot":1,
-"p":0.727,
+"p":0.7269,
 "result":null
 },
 {
@@ -6867,7 +6867,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":2,
-"p":0.6969,
+"p":0.6967,
 "result":null
 },
 {
@@ -6877,7 +6877,7 @@
 "name":"Junior Caminero",
 "team":"TB",
 "slot":3,
-"p":0.6872,
+"p":0.6871,
 "result":null
 },
 {
@@ -6887,7 +6887,7 @@
 "name":"Randal Grichuk",
 "team":"CWS",
 "slot":2,
-"p":0.7429,
+"p":0.7434,
 "result":null
 },
 {
@@ -6897,7 +6897,7 @@
 "name":"Alec Burleson",
 "team":"STL",
 "slot":4,
-"p":0.6959,
+"p":0.699,
 "result":null
 },
 {
@@ -6907,7 +6907,7 @@
 "name":"Chase Meidroth",
 "team":"CWS",
 "slot":1,
-"p":0.6898,
+"p":0.691,
 "result":null
 },
 {
@@ -6917,17 +6917,17 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7536,
+"p":0.7514,
 "result":null
 },
 {
 "date":"2026-09-12",
 "gamePk":823170,
-"pid":701538,
-"name":"Jackson Merrill",
+"pid":687957,
+"name":"Dustin Harris",
 "team":"SD",
-"slot":5,
-"p":0.6849,
+"slot":2,
+"p":0.7075,
 "result":null
 },
 {
@@ -6936,8 +6936,8 @@
 "pid":808982,
 "name":"Jung Hoo Lee",
 "team":"SF",
-"slot":7,
-"p":0.6758,
+"slot":6,
+"p":0.683,
 "result":null
 },
 {
@@ -6976,8 +6976,8 @@
 "pid":608070,
 "name":"Jos\u00e9 Ram\u00edrez",
 "team":"CLE",
-"slot":3,
-"p":0.7132,
+"slot":2,
+"p":0.7189,
 "result":null
 },
 {
@@ -6987,7 +6987,7 @@
 "name":"Steven Kwan",
 "team":"CLE",
 "slot":1,
-"p":0.7217,
+"p":0.7178,
 "result":null
 },
 {
@@ -6996,8 +6996,8 @@
 "pid":800050,
 "name":"Chase DeLauter",
 "team":"CLE",
-"slot":2,
-"p":0.7215,
+"slot":3,
+"p":0.7094,
 "result":null
 },
 {
@@ -7007,17 +7007,17 @@
 "name":"William Contreras",
 "team":"MIL",
 "slot":3,
-"p":0.7104,
+"p":0.7103,
 "result":null
 },
 {
 "date":"2026-09-12",
 "gamePk":823737,
-"pid":683734,
-"name":"Andrew Vaughn",
-"team":"MIL",
-"slot":4,
-"p":0.6966,
+"pid":682829,
+"name":"Elly De La Cruz",
+"team":"CIN",
+"slot":2,
+"p":0.7132,
 "result":null
 },
 {
@@ -7027,7 +7027,17 @@
 "name":"Jackson Chourio",
 "team":"MIL",
 "slot":1,
-"p":0.751,
+"p":0.7509,
+"result":null
+},
+{
+"date":"2026-09-12",
+"gamePk":823819,
+"pid":518692,
+"name":"Freddie Freeman",
+"team":"LAD",
+"slot":2,
+"p":0.6947,
 "result":null
 },
 {
@@ -7037,7 +7047,7 @@
 "name":"Tommy Edman",
 "team":"LAD",
 "slot":1,
-"p":0.6835,
+"p":0.6834,
 "result":null
 },
 {
@@ -7046,18 +7056,8 @@
 "pid":672640,
 "name":"Otto Lopez",
 "team":"MIA",
-"slot":2,
-"p":0.6964,
-"result":null
-},
-{
-"date":"2026-09-12",
-"gamePk":823819,
-"pid":691594,
-"name":"Javier Sanoja",
-"team":"MIA",
 "slot":4,
-"p":0.6772,
+"p":0.6786,
 "result":null
 },
 {
@@ -7127,7 +7127,7 @@
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
-"p":0.7397,
+"p":0.7396,
 "result":null
 },
 {
@@ -7147,7 +7147,7 @@
 "name":"Roman Anthony",
 "team":"BOS",
 "slot":1,
-"p":0.6886,
+"p":0.6885,
 "result":null
 },
 {
@@ -7157,7 +7157,7 @@
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
-"p":0.7503,
+"p":0.7502,
 "result":null
 },
 {
@@ -7167,7 +7167,7 @@
 "name":"Michael Harris II",
 "team":"ATL",
 "slot":4,
-"p":0.7356,
+"p":0.7355,
 "result":null
 },
 {
@@ -7207,7 +7207,7 @@
 "name":"Randy Arozarena",
 "team":"SEA",
 "slot":2,
-"p":0.702,
+"p":0.7019,
 "result":null
 },
 {
@@ -7217,7 +7217,7 @@
 "name":"Ildemaro Vargas",
 "team":"AZ",
 "slot":1,
-"p":0.7368,
+"p":0.7367,
 "result":null
 },
 {
@@ -7237,7 +7237,7 @@
 "name":"Gabriel Moreno",
 "team":"AZ",
 "slot":3,
-"p":0.7232,
+"p":0.7231,
 "result":null
 }
 ],
@@ -9959,9 +9959,9 @@
 "gamePk":822685,
 "home":"WSH",
 "away":"LAA",
-"wpHome":0.496,
-"rHome":3.93,
-"rAway":4.22,
+"wpHome":0.5134,
+"rHome":3.84,
+"rAway":3.97,
 "result":null
 },
 {
@@ -9969,8 +9969,8 @@
 "gamePk":822768,
 "home":"TOR",
 "away":"BAL",
-"wpHome":0.7298,
-"rHome":5.05,
+"wpHome":0.7291,
+"rHome":5.04,
 "rAway":3.12,
 "result":null
 },
@@ -9979,8 +9979,8 @@
 "gamePk":822927,
 "home":"TB",
 "away":"HOU",
-"wpHome":0.5592,
-"rHome":4.49,
+"wpHome":0.5582,
+"rHome":4.48,
 "rAway":4.2,
 "result":null
 },
@@ -9989,9 +9989,9 @@
 "gamePk":823009,
 "home":"STL",
 "away":"CWS",
-"wpHome":0.4763,
-"rHome":3.43,
-"rAway":3.86,
+"wpHome":0.4783,
+"rHome":3.4,
+"rAway":3.81,
 "result":null
 },
 {
@@ -9999,9 +9999,9 @@
 "gamePk":823170,
 "home":"SF",
 "away":"SD",
-"wpHome":0.4839,
-"rHome":4.05,
-"rAway":4.46,
+"wpHome":0.4698,
+"rHome":4.09,
+"rAway":4.64,
 "result":null
 },
 {
@@ -10019,9 +10019,9 @@
 "gamePk":823657,
 "home":"MIN",
 "away":"CLE",
-"wpHome":0.4907,
-"rHome":4.47,
-"rAway":4.84,
+"wpHome":0.4669,
+"rHome":4.31,
+"rAway":4.91,
 "result":null
 },
 {
@@ -10029,9 +10029,9 @@
 "gamePk":823737,
 "home":"MIL",
 "away":"CIN",
-"wpHome":0.7005,
+"wpHome":0.69,
 "rHome":6.63,
-"rAway":4.59,
+"rAway":4.71,
 "result":null
 },
 {
@@ -10039,9 +10039,9 @@
 "gamePk":823819,
 "home":"MIA",
 "away":"LAD",
-"wpHome":0.3593,
-"rHome":3.13,
-"rAway":4.6,
+"wpHome":0.3585,
+"rHome":3.23,
+"rAway":4.74,
 "result":null
 },
 {
@@ -10089,8 +10089,8 @@
 "gamePk":824955,
 "home":"ATH",
 "away":"SEA",
-"wpHome":0.4425,
-"rHome":4.13,
+"wpHome":0.4414,
+"rHome":4.12,
 "rAway":4.96,
 "result":null
 },

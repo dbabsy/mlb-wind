@@ -6887,7 +6887,7 @@
 "name":"Randal Grichuk",
 "team":"CWS",
 "slot":2,
-"p":0.7427,
+"p":0.7435,
 "result":null
 },
 {
@@ -6897,7 +6897,7 @@
 "name":"Alec Burleson",
 "team":"STL",
 "slot":4,
-"p":0.6979,
+"p":0.699,
 "result":null
 },
 {
@@ -6907,7 +6907,7 @@
 "name":"Chase Meidroth",
 "team":"CWS",
 "slot":1,
-"p":0.6904,
+"p":0.691,
 "result":null
 },
 {
@@ -6946,8 +6946,8 @@
 "pid":641355,
 "name":"Cody Bellinger",
 "team":"NYY",
-"slot":2,
-"p":0.7354,
+"slot":3,
+"p":0.7268,
 "result":null
 },
 {
@@ -6963,11 +6963,11 @@
 {
 "date":"2026-09-12",
 "gamePk":823496,
-"pid":671277,
-"name":"Luis Garc\u00eda Jr.",
-"team":"NYY",
-"slot":4,
-"p":0.7361,
+"pid":666182,
+"name":"Bo Bichette",
+"team":"NYM",
+"slot":3,
+"p":0.6999,
 "result":null
 },
 {
@@ -7067,7 +7067,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.736,
+"p":0.7346,
 "result":null
 },
 {
@@ -9989,9 +9989,9 @@
 "gamePk":823009,
 "home":"STL",
 "away":"CWS",
-"wpHome":0.4795,
+"wpHome":0.4783,
 "rHome":3.4,
-"rAway":3.8,
+"rAway":3.81,
 "result":null
 },
 {
@@ -10009,8 +10009,8 @@
 "gamePk":823496,
 "home":"NYY",
 "away":"NYM",
-"wpHome":0.6345,
-"rHome":5.0,
+"wpHome":0.6495,
+"rHome":5.17,
 "rAway":3.96,
 "result":null
 },
@@ -10049,9 +10049,9 @@
 "gamePk":824224,
 "home":"DET",
 "away":"COL",
-"wpHome":0.646,
-"rHome":5.61,
-"rAway":4.36,
+"wpHome":0.6361,
+"rHome":5.95,
+"rAway":4.75,
 "result":null
 },
 {

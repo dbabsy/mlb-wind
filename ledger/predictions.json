@@ -6917,7 +6917,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7515,
+"p":0.7536,
 "result":null
 },
 {
@@ -6927,7 +6927,7 @@
 "name":"Jackson Merrill",
 "team":"SD",
 "slot":5,
-"p":0.6829,
+"p":0.6849,
 "result":null
 },
 {
@@ -6937,7 +6937,7 @@
 "name":"Jung Hoo Lee",
 "team":"SF",
 "slot":7,
-"p":0.6741,
+"p":0.6758,
 "result":null
 },
 {
@@ -6947,7 +6947,7 @@
 "name":"Cody Bellinger",
 "team":"NYY",
 "slot":3,
-"p":0.7294,
+"p":0.7268,
 "result":null
 },
 {
@@ -6957,7 +6957,7 @@
 "name":"Juan Soto",
 "team":"NYM",
 "slot":2,
-"p":0.7233,
+"p":0.7214,
 "result":null
 },
 {
@@ -6967,7 +6967,7 @@
 "name":"Bo Bichette",
 "team":"NYM",
 "slot":3,
-"p":0.7025,
+"p":0.6999,
 "result":null
 },
 {
@@ -9969,9 +9969,9 @@
 "gamePk":822768,
 "home":"TOR",
 "away":"BAL",
-"wpHome":0.708,
+"wpHome":0.7298,
 "rHome":5.05,
-"rAway":3.32,
+"rAway":3.12,
 "result":null
 },
 {
@@ -10049,9 +10049,9 @@
 "gamePk":824224,
 "home":"DET",
 "away":"COL",
-"wpHome":0.6359,
-"rHome":5.9,
-"rAway":4.71,
+"wpHome":0.6361,
+"rHome":5.95,
+"rAway":4.75,
 "result":null
 },
 {
@@ -10059,9 +10059,9 @@
 "gamePk":824630,
 "home":"CHC",
 "away":"PIT",
-"wpHome":0.5941,
-"rHome":4.52,
-"rAway":3.91,
+"wpHome":0.5981,
+"rHome":4.95,
+"rAway":4.26,
 "result":null
 },
 {
@@ -10069,9 +10069,9 @@
 "gamePk":824712,
 "home":"BOS",
 "away":"KC",
-"wpHome":0.6895,
-"rHome":5.22,
-"rAway":3.62,
+"wpHome":0.682,
+"rHome":5.27,
+"rAway":3.73,
 "result":null
 },
 {

@@ -6897,7 +6897,7 @@
 "name":"Alec Burleson",
 "team":"STL",
 "slot":3,
-"p":0.7077,
+"p":0.7079,
 "result":null
 },
 {
@@ -7187,7 +7187,7 @@
 "name":"Jeff McNeil",
 "team":"ATH",
 "slot":2,
-"p":0.7364,
+"p":0.7375,
 "result":null
 },
 {
@@ -7197,7 +7197,7 @@
 "name":"Josh Naylor",
 "team":"SEA",
 "slot":6,
-"p":0.7026,
+"p":0.7034,
 "result":null
 },
 {
@@ -7207,17 +7207,7 @@
 "name":"Randy Arozarena",
 "team":"SEA",
 "slot":2,
-"p":0.7005,
-"result":null
-},
-{
-"date":"2026-09-12",
-"gamePk":825035,
-"pid":545121,
-"name":"Ildemaro Vargas",
-"team":"AZ",
-"slot":1,
-"p":0.7367,
+"p":0.7019,
 "result":null
 },
 {
@@ -7227,7 +7217,7 @@
 "name":"Ketel Marte",
 "team":"AZ",
 "slot":2,
-"p":0.712,
+"p":0.7121,
 "result":null
 },
 {
@@ -7238,6 +7228,16 @@
 "team":"AZ",
 "slot":3,
 "p":0.7231,
+"result":null
+},
+{
+"date":"2026-09-12",
+"gamePk":825035,
+"pid":673962,
+"name":"Josh Jung",
+"team":"TEX",
+"slot":3,
+"p":0.715,
 "result":null
 }
 ],
@@ -9989,9 +9989,9 @@
 "gamePk":823009,
 "home":"STL",
 "away":"CWS",
-"wpHome":0.3438,
+"wpHome":0.3429,
 "rHome":3.14,
-"rAway":4.78,
+"rAway":4.79,
 "result":null
 },
 {
@@ -10085,8 +10085,8 @@
 "gamePk":824870,
 "home":"ATL",
 "away":"PHI",
-"wpHome":0.4154,
-"rHome":3.35,
+"wpHome":0.4166,
+"rHome":3.36,
 "rAway":4.32,
 "result":null
 },
@@ -10105,9 +10105,9 @@
 "gamePk":825035,
 "home":"AZ",
 "away":"TEX",
-"wpHome":0.6027,
-"rHome":4.57,
-"rAway":3.88,
+"wpHome":0.6373,
+"rHome":5.03,
+"rAway":3.96,
 "result":null
 }
 ]

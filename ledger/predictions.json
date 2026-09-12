@@ -6866,8 +6866,8 @@
 "pid":665161,
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
-"slot":2,
-"p":0.6967,
+"slot":1,
+"p":0.7055,
 "result":null
 },
 {
@@ -6897,7 +6897,7 @@
 "name":"Alec Burleson",
 "team":"STL",
 "slot":4,
-"p":0.699,
+"p":0.6991,
 "result":null
 },
 {
@@ -6927,7 +6927,7 @@
 "name":"Dustin Harris",
 "team":"SD",
 "slot":2,
-"p":0.7075,
+"p":0.7074,
 "result":null
 },
 {
@@ -6977,7 +6977,7 @@
 "name":"Jos\u00e9 Ram\u00edrez",
 "team":"CLE",
 "slot":2,
-"p":0.7189,
+"p":0.7219,
 "result":null
 },
 {
@@ -6987,7 +6987,7 @@
 "name":"Steven Kwan",
 "team":"CLE",
 "slot":1,
-"p":0.7178,
+"p":0.7217,
 "result":null
 },
 {
@@ -6997,7 +6997,7 @@
 "name":"Chase DeLauter",
 "team":"CLE",
 "slot":3,
-"p":0.7094,
+"p":0.7128,
 "result":null
 },
 {
@@ -7037,7 +7037,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":2,
-"p":0.6947,
+"p":0.6948,
 "result":null
 },
 {
@@ -7057,7 +7057,7 @@
 "name":"Otto Lopez",
 "team":"MIA",
 "slot":4,
-"p":0.6786,
+"p":0.6785,
 "result":null
 },
 {
@@ -7127,7 +7127,7 @@
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
-"p":0.7396,
+"p":0.7395,
 "result":null
 },
 {
@@ -7167,7 +7167,7 @@
 "name":"Michael Harris II",
 "team":"ATL",
 "slot":4,
-"p":0.7355,
+"p":0.7239,
 "result":null
 },
 {
@@ -7177,7 +7177,7 @@
 "name":"Drake Baldwin",
 "team":"ATL",
 "slot":1,
-"p":0.7137,
+"p":0.7188,
 "result":null
 },
 {
@@ -7237,7 +7237,7 @@
 "name":"Gabriel Moreno",
 "team":"AZ",
 "slot":3,
-"p":0.7231,
+"p":0.7232,
 "result":null
 }
 ],
@@ -9979,9 +9979,9 @@
 "gamePk":822927,
 "home":"TB",
 "away":"HOU",
-"wpHome":0.5582,
+"wpHome":0.5834,
 "rHome":4.48,
-"rAway":4.2,
+"rAway":3.97,
 "result":null
 },
 {
@@ -10079,8 +10079,8 @@
 "gamePk":824870,
 "home":"ATL",
 "away":"PHI",
-"wpHome":0.5387,
-"rHome":4.62,
+"wpHome":0.418,
+"rHome":3.54,
 "rAway":4.52,
 "result":null
 },

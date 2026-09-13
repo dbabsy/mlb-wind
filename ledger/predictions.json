@@ -7218,7 +7218,7 @@
 "team":"AZ",
 "slot":2,
 "p":0.7122,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-12",
@@ -7228,7 +7228,7 @@
 "team":"AZ",
 "slot":3,
 "p":0.7233,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-12",
@@ -7238,7 +7238,7 @@
 "team":"TEX",
 "slot":3,
 "p":0.7151,
-"result":null
+"result":true
 }
 ],
 "games":[
@@ -10128,7 +10128,9 @@
 "wpHome":0.6375,
 "rHome":5.04,
 "rAway":3.97,
-"result":null
+"result":false,
+"sHome":2,
+"sAway":6
 }
 ]
 }

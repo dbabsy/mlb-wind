@@ -7367,7 +7367,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7535,
+"p":0.7534,
 "result":null
 },
 {
@@ -7377,7 +7377,7 @@
 "name":"Dustin Harris",
 "team":"SD",
 "slot":2,
-"p":0.7126,
+"p":0.7125,
 "result":null
 },
 {
@@ -7387,7 +7387,7 @@
 "name":"Jung Hoo Lee",
 "team":"SF",
 "slot":2,
-"p":0.7332,
+"p":0.7331,
 "result":null
 },
 {
@@ -7458,7 +7458,7 @@
 "team":"CIN",
 "slot":2,
 "p":0.7137,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-13",
@@ -7468,7 +7468,7 @@
 "team":"MIL",
 "slot":2,
 "p":0.7098,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-13",
@@ -7478,7 +7478,7 @@
 "team":"CIN",
 "slot":3,
 "p":0.679,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-13",
@@ -7548,7 +7548,7 @@
 "team":"CHC",
 "slot":6,
 "p":0.6918,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-13",
@@ -7558,7 +7558,7 @@
 "team":"PIT",
 "slot":5,
 "p":0.6986,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-13",
@@ -7568,7 +7568,7 @@
 "team":"PIT",
 "slot":1,
 "p":0.6855,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-13",
@@ -10637,7 +10637,7 @@
 "gamePk":823171,
 "home":"SF",
 "away":"SD",
-"wpHome":0.554,
+"wpHome":0.5533,
 "rHome":4.17,
 "rAway":3.96,
 "result":null
@@ -10674,7 +10674,9 @@
 "wpHome":0.5413,
 "rHome":5.38,
 "rAway":5.25,
-"result":null
+"result":false,
+"sHome":3,
+"sAway":4
 },
 {
 "date":"2026-09-13",
@@ -10708,7 +10710,9 @@
 "wpHome":0.596,
 "rHome":4.64,
 "rAway":4.01,
-"result":null
+"result":false,
+"sHome":3,
+"sAway":4
 },
 {
 "date":"2026-09-13",

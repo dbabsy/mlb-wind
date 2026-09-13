@@ -7257,7 +7257,7 @@
 "name":"Vaughn Grissom",
 "team":"LAA",
 "slot":4,
-"p":0.6853,
+"p":0.6852,
 "result":null
 },
 {
@@ -7367,7 +7367,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7535,
+"p":0.7553,
 "result":null
 },
 {
@@ -7377,7 +7377,7 @@
 "name":"Dustin Harris",
 "team":"SD",
 "slot":2,
-"p":0.7126,
+"p":0.7143,
 "result":null
 },
 {
@@ -7387,7 +7387,7 @@
 "name":"Jung Hoo Lee",
 "team":"SF",
 "slot":6,
-"p":0.6986,
+"p":0.7002,
 "result":null
 },
 {
@@ -7397,7 +7397,7 @@
 "name":"Cody Bellinger",
 "team":"NYY",
 "slot":2,
-"p":0.7086,
+"p":0.7094,
 "result":null
 },
 {
@@ -7407,7 +7407,7 @@
 "name":"Juan Soto",
 "team":"NYM",
 "slot":2,
-"p":0.6962,
+"p":0.6976,
 "result":null
 },
 {
@@ -7417,7 +7417,7 @@
 "name":"Luis Garc\u00eda Jr.",
 "team":"NYY",
 "slot":4,
-"p":0.7223,
+"p":0.7231,
 "result":null
 },
 {
@@ -7647,7 +7647,7 @@
 "name":"Randy Arozarena",
 "team":"SEA",
 "slot":2,
-"p":0.6974,
+"p":0.6973,
 "result":null
 },
 {
@@ -7677,7 +7677,7 @@
 "name":"Gabriel Moreno",
 "team":"AZ",
 "slot":3,
-"p":0.7125,
+"p":0.7124,
 "result":null
 },
 {
@@ -10709,8 +10709,8 @@
 "gamePk":824869,
 "home":"ATL",
 "away":"PHI",
-"wpHome":0.64,
-"rHome":5.42,
+"wpHome":0.6391,
+"rHome":5.41,
 "rAway":4.27,
 "result":null
 },

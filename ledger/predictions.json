@@ -7517,7 +7517,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7395,
+"p":0.737,
 "result":null
 },
 {
@@ -7527,7 +7527,7 @@
 "name":"Colt Keith",
 "team":"DET",
 "slot":3,
-"p":0.714,
+"p":0.7117,
 "result":null
 },
 {
@@ -7537,7 +7537,7 @@
 "name":"Kevin McGonigle",
 "team":"DET",
 "slot":1,
-"p":0.7249,
+"p":0.7222,
 "result":null
 },
 {
@@ -10629,9 +10629,9 @@
 "gamePk":823171,
 "home":"SF",
 "away":"SD",
-"wpHome":0.6181,
-"rHome":4.71,
-"rAway":3.87,
+"wpHome":0.6176,
+"rHome":4.67,
+"rAway":3.84,
 "result":null
 },
 {
@@ -10639,8 +10639,8 @@
 "gamePk":823495,
 "home":"NYY",
 "away":"NYM",
-"wpHome":0.6166,
-"rHome":3.98,
+"wpHome":0.6155,
+"rHome":3.97,
 "rAway":3.25,
 "result":null
 },

@@ -7367,7 +7367,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7535,
+"p":0.7534,
 "result":null
 },
 {
@@ -7387,7 +7387,7 @@
 "name":"Jung Hoo Lee",
 "team":"SF",
 "slot":2,
-"p":0.7332,
+"p":0.7331,
 "result":null
 },
 {
@@ -7668,7 +7668,7 @@
 "team":"AZ",
 "slot":2,
 "p":0.6988,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-13",
@@ -7678,7 +7678,7 @@
 "team":"AZ",
 "slot":3,
 "p":0.7126,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-13",
@@ -7688,7 +7688,7 @@
 "team":"TEX",
 "slot":3,
 "p":0.707,
-"result":null
+"result":true
 }
 ],
 "games":[
@@ -10637,7 +10637,7 @@
 "gamePk":823171,
 "home":"SF",
 "away":"SD",
-"wpHome":0.5533,
+"wpHome":0.5531,
 "rHome":4.17,
 "rAway":3.96,
 "result":null
@@ -10754,7 +10754,9 @@
 "wpHome":0.4484,
 "rHome":4.05,
 "rAway":4.82,
-"result":null
+"result":false,
+"sHome":6,
+"sAway":7
 }
 ]
 }

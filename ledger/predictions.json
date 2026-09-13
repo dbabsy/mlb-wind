@@ -7367,7 +7367,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7536,
+"p":0.7554,
 "result":null
 },
 {
@@ -7377,7 +7377,7 @@
 "name":"Dustin Harris",
 "team":"SD",
 "slot":2,
-"p":0.7127,
+"p":0.7145,
 "result":null
 },
 {
@@ -7387,7 +7387,7 @@
 "name":"Jung Hoo Lee",
 "team":"SF",
 "slot":6,
-"p":0.6987,
+"p":0.7004,
 "result":null
 },
 {
@@ -7637,7 +7637,7 @@
 "name":"Jeff McNeil",
 "team":"ATH",
 "slot":2,
-"p":0.7358,
+"p":0.7359,
 "result":null
 },
 {
@@ -7667,7 +7667,7 @@
 "name":"Ketel Marte",
 "team":"AZ",
 "slot":2,
-"p":0.6987,
+"p":0.6988,
 "result":null
 },
 {
@@ -10629,8 +10629,8 @@
 "gamePk":823171,
 "home":"SF",
 "away":"SD",
-"wpHome":0.6176,
-"rHome":4.67,
+"wpHome":0.6197,
+"rHome":4.69,
 "rAway":3.84,
 "result":null
 },
@@ -10721,7 +10721,7 @@
 "gamePk":824952,
 "home":"ATH",
 "away":"SEA",
-"wpHome":0.4693,
+"wpHome":0.4695,
 "rHome":4.9,
 "rAway":5.54,
 "result":null
@@ -10731,8 +10731,8 @@
 "gamePk":825033,
 "home":"AZ",
 "away":"TEX",
-"wpHome":0.4471,
-"rHome":4.04,
+"wpHome":0.4484,
+"rHome":4.05,
 "rAway":4.82,
 "result":null
 }

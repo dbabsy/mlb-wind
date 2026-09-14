@@ -7877,7 +7877,7 @@
 "name":"Jos\u00e9 Ram\u00edrez",
 "team":"CLE",
 "slot":2,
-"p":0.6938,
+"p":0.6915,
 "result":null
 },
 {
@@ -7887,7 +7887,7 @@
 "name":"Steven Kwan",
 "team":"CLE",
 "slot":1,
-"p":0.6985,
+"p":0.6955,
 "result":null
 },
 {
@@ -7897,7 +7897,7 @@
 "name":"Sam Antonacci",
 "team":"CWS",
 "slot":1,
-"p":0.6991,
+"p":0.6972,
 "result":null
 },
 {
@@ -7907,7 +7907,7 @@
 "name":"Miguel Rojas",
 "team":"LAD",
 "slot":6,
-"p":0.7043,
+"p":0.7038,
 "result":null
 },
 {
@@ -7917,7 +7917,7 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":2,
-"p":0.7118,
+"p":0.7099,
 "result":null
 },
 {
@@ -7927,7 +7927,7 @@
 "name":"Elly De La Cruz",
 "team":"CIN",
 "slot":2,
-"p":0.7013,
+"p":0.6992,
 "result":null
 },
 {
@@ -7936,18 +7936,8 @@
 "pid":643289,
 "name":"Mauricio Dub\u00f3n",
 "team":"ATL",
-"slot":5,
-"p":0.72,
-"result":null
-},
-{
-"date":"2026-09-14",
-"gamePk":824629,
-"pid":663538,
-"name":"Nico Hoerner",
-"team":"CHC",
 "slot":6,
-"p":0.7084,
+"p":0.7115,
 "result":null
 },
 {
@@ -7956,8 +7946,18 @@
 "pid":671739,
 "name":"Michael Harris II",
 "team":"ATL",
-"slot":1,
-"p":0.7685,
+"slot":5,
+"p":0.7349,
+"result":null
+},
+{
+"date":"2026-09-14",
+"gamePk":824629,
+"pid":686948,
+"name":"Drake Baldwin",
+"team":"ATL",
+"slot":2,
+"p":0.7246,
 "result":null
 },
 {
@@ -11069,9 +11069,9 @@
 "gamePk":822765,
 "home":"TOR",
 "away":"DET",
-"wpHome":0.4861,
+"wpHome":0.4923,
 "rHome":4.16,
-"rAway":4.57,
+"rAway":4.51,
 "result":null
 },
 {
@@ -11099,9 +11099,9 @@
 "gamePk":823656,
 "home":"MIN",
 "away":"NYY",
-"wpHome":0.4285,
-"rHome":4.8,
-"rAway":5.9,
+"wpHome":0.425,
+"rHome":4.67,
+"rAway":5.79,
 "result":null
 },
 {
@@ -11129,9 +11129,9 @@
 "gamePk":824386,
 "home":"CLE",
 "away":"CWS",
-"wpHome":0.4477,
-"rHome":3.33,
-"rAway":4.01,
+"wpHome":0.4259,
+"rHome":3.34,
+"rAway":4.22,
 "result":null
 },
 {
@@ -11139,9 +11139,9 @@
 "gamePk":824465,
 "home":"CIN",
 "away":"LAD",
-"wpHome":0.3364,
-"rHome":4.06,
-"rAway":6.12,
+"wpHome":0.3347,
+"rHome":3.91,
+"rAway":5.94,
 "result":null
 },
 {
@@ -11149,9 +11149,9 @@
 "gamePk":824629,
 "home":"CHC",
 "away":"ATL",
-"wpHome":0.5985,
-"rHome":5.35,
-"rAway":4.63,
+"wpHome":0.5844,
+"rHome":5.27,
+"rAway":4.7,
 "result":null
 },
 {

@@ -7817,7 +7817,7 @@
 "name":"Josh Naylor",
 "team":"SEA",
 "slot":6,
-"p":0.6744,
+"p":0.6746,
 "result":null
 },
 {
@@ -7827,7 +7827,7 @@
 "name":"Randy Arozarena",
 "team":"SEA",
 "slot":2,
-"p":0.684,
+"p":0.6844,
 "result":null
 },
 {
@@ -7837,7 +7837,7 @@
 "name":"Wade Meckler",
 "team":"LAA",
 "slot":3,
-"p":0.6919,
+"p":0.692,
 "result":null
 },
 {
@@ -11099,9 +11099,9 @@
 "gamePk":823656,
 "home":"MIN",
 "away":"NYY",
-"wpHome":0.4285,
-"rHome":4.8,
-"rAway":5.9,
+"wpHome":0.4277,
+"rHome":4.74,
+"rAway":5.84,
 "result":null
 },
 {
@@ -11139,9 +11139,9 @@
 "gamePk":824465,
 "home":"CIN",
 "away":"LAD",
-"wpHome":0.3682,
-"rHome":3.92,
-"rAway":5.54,
+"wpHome":0.3709,
+"rHome":4.07,
+"rAway":5.7,
 "result":null
 },
 {

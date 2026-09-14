@@ -7727,7 +7727,7 @@
 "name":"Alec Burleson",
 "team":"STL",
 "slot":3,
-"p":0.6884,
+"p":0.6873,
 "result":null
 },
 {
@@ -7737,7 +7737,7 @@
 "name":"Jordan Walker",
 "team":"STL",
 "slot":4,
-"p":0.677,
+"p":0.6759,
 "result":null
 },
 {
@@ -7747,7 +7747,7 @@
 "name":"Jung Hoo Lee",
 "team":"SF",
 "slot":2,
-"p":0.7293,
+"p":0.7287,
 "result":null
 },
 {
@@ -7757,7 +7757,7 @@
 "name":"Juan Soto",
 "team":"NYM",
 "slot":2,
-"p":0.7171,
+"p":0.7174,
 "result":null
 },
 {
@@ -7767,7 +7767,7 @@
 "name":"Bo Bichette",
 "team":"NYM",
 "slot":3,
-"p":0.7065,
+"p":0.707,
 "result":null
 },
 {
@@ -7777,7 +7777,7 @@
 "name":"Carson Benge",
 "team":"NYM",
 "slot":4,
-"p":0.7,
+"p":0.7005,
 "result":null
 },
 {
@@ -7857,7 +7857,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7847,
+"p":0.7841,
 "result":null
 },
 {
@@ -7873,21 +7873,21 @@
 {
 "date":"2026-09-14",
 "gamePk":824386,
-"pid":680757,
-"name":"Steven Kwan",
+"pid":608070,
+"name":"Jos\u00e9 Ram\u00edrez",
 "team":"CLE",
-"slot":1,
-"p":0.6952,
+"slot":2,
+"p":0.6938,
 "result":null
 },
 {
 "date":"2026-09-14",
 "gamePk":824386,
-"pid":800050,
-"name":"Chase DeLauter",
+"pid":680757,
+"name":"Steven Kwan",
 "team":"CLE",
-"slot":2,
-"p":0.6953,
+"slot":1,
+"p":0.6985,
 "result":null
 },
 {
@@ -7897,7 +7897,7 @@
 "name":"Sam Antonacci",
 "team":"CWS",
 "slot":1,
-"p":0.6963,
+"p":0.6991,
 "result":null
 },
 {
@@ -11079,9 +11079,9 @@
 "gamePk":823006,
 "home":"STL",
 "away":"SF",
-"wpHome":0.5142,
-"rHome":4.01,
-"rAway":4.15,
+"wpHome":0.5152,
+"rHome":3.97,
+"rAway":4.1,
 "result":null
 },
 {
@@ -11119,9 +11119,9 @@
 "gamePk":824308,
 "home":"COL",
 "away":"SD",
-"wpHome":0.4065,
-"rHome":4.52,
-"rAway":5.83,
+"wpHome":0.4021,
+"rHome":4.36,
+"rAway":5.69,
 "result":null
 },
 {
@@ -11129,9 +11129,9 @@
 "gamePk":824386,
 "home":"CLE",
 "away":"CWS",
-"wpHome":0.432,
-"rHome":3.2,
-"rAway":4.0,
+"wpHome":0.4477,
+"rHome":3.33,
+"rAway":4.01,
 "result":null
 },
 {
@@ -11139,9 +11139,9 @@
 "gamePk":824465,
 "home":"CIN",
 "away":"LAD",
-"wpHome":0.3682,
-"rHome":3.92,
-"rAway":5.54,
+"wpHome":0.3698,
+"rHome":4.06,
+"rAway":5.7,
 "result":null
 },
 {

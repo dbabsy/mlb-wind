@@ -7757,7 +7757,7 @@
 "name":"Juan Soto",
 "team":"NYM",
 "slot":2,
-"p":0.7171,
+"p":0.7174,
 "result":null
 },
 {
@@ -7767,7 +7767,7 @@
 "name":"Bo Bichette",
 "team":"NYM",
 "slot":3,
-"p":0.7065,
+"p":0.707,
 "result":null
 },
 {
@@ -7777,7 +7777,7 @@
 "name":"Carson Benge",
 "team":"NYM",
 "slot":4,
-"p":0.7,
+"p":0.7005,
 "result":null
 },
 {
@@ -7817,7 +7817,7 @@
 "name":"Josh Naylor",
 "team":"SEA",
 "slot":6,
-"p":0.6741,
+"p":0.6746,
 "result":null
 },
 {
@@ -7833,11 +7833,11 @@
 {
 "date":"2026-09-14",
 "gamePk":823981,
-"pid":685133,
-"name":"Wade Meckler",
+"pid":687093,
+"name":"Vaughn Grissom",
 "team":"LAA",
-"slot":3,
-"p":0.6915,
+"slot":4,
+"p":0.6697,
 "result":null
 },
 {
@@ -7857,7 +7857,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7847,
+"p":0.7841,
 "result":null
 },
 {
@@ -7937,7 +7937,7 @@
 "name":"Mauricio Dub\u00f3n",
 "team":"ATL",
 "slot":6,
-"p":0.7174,
+"p":0.7175,
 "result":null
 },
 {
@@ -7986,8 +7986,8 @@
 "pid":672640,
 "name":"Otto Lopez",
 "team":"MIA",
-"slot":3,
-"p":0.7218,
+"slot":5,
+"p":0.7045,
 "result":null
 }
 ],
@@ -11109,9 +11109,9 @@
 "gamePk":823981,
 "home":"LAA",
 "away":"SEA",
-"wpHome":0.5589,
-"rHome":4.17,
-"rAway":3.91,
+"wpHome":0.6015,
+"rHome":4.39,
+"rAway":3.74,
 "result":null
 },
 {
@@ -11119,9 +11119,9 @@
 "gamePk":824308,
 "home":"COL",
 "away":"SD",
-"wpHome":0.3945,
-"rHome":4.32,
-"rAway":5.73,
+"wpHome":0.3944,
+"rHome":4.36,
+"rAway":5.78,
 "result":null
 },
 {
@@ -11159,9 +11159,9 @@
 "gamePk":825034,
 "home":"AZ",
 "away":"MIA",
-"wpHome":0.4537,
+"wpHome":0.4557,
 "rHome":3.98,
-"rAway":4.69,
+"rAway":4.67,
 "result":null
 }
 ]

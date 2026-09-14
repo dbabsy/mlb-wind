@@ -7787,7 +7787,7 @@
 "name":"Cody Bellinger",
 "team":"NYY",
 "slot":2,
-"p":0.7263,
+"p":0.7253,
 "result":null
 },
 {
@@ -7807,7 +7807,7 @@
 "name":"Ben Rice",
 "team":"NYY",
 "slot":1,
-"p":0.6962,
+"p":0.6968,
 "result":null
 },
 {
@@ -7817,7 +7817,7 @@
 "name":"Josh Naylor",
 "team":"SEA",
 "slot":6,
-"p":0.6746,
+"p":0.6744,
 "result":null
 },
 {
@@ -7827,7 +7827,7 @@
 "name":"Randy Arozarena",
 "team":"SEA",
 "slot":2,
-"p":0.6844,
+"p":0.684,
 "result":null
 },
 {
@@ -7837,7 +7837,7 @@
 "name":"Wade Meckler",
 "team":"LAA",
 "slot":3,
-"p":0.692,
+"p":0.6919,
 "result":null
 },
 {
@@ -11099,9 +11099,9 @@
 "gamePk":823656,
 "home":"MIN",
 "away":"NYY",
-"wpHome":0.4306,
-"rHome":4.7,
-"rAway":5.76,
+"wpHome":0.4285,
+"rHome":4.8,
+"rAway":5.9,
 "result":null
 },
 {
@@ -11119,9 +11119,9 @@
 "gamePk":824308,
 "home":"COL",
 "away":"SD",
-"wpHome":0.4083,
-"rHome":4.42,
-"rAway":5.69,
+"wpHome":0.4065,
+"rHome":4.52,
+"rAway":5.83,
 "result":null
 },
 {

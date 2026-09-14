@@ -7727,7 +7727,7 @@
 "name":"Alec Burleson",
 "team":"STL",
 "slot":3,
-"p":0.6873,
+"p":0.6884,
 "result":null
 },
 {
@@ -7737,7 +7737,7 @@
 "name":"Jordan Walker",
 "team":"STL",
 "slot":4,
-"p":0.6759,
+"p":0.677,
 "result":null
 },
 {
@@ -7747,7 +7747,7 @@
 "name":"Jung Hoo Lee",
 "team":"SF",
 "slot":2,
-"p":0.7287,
+"p":0.7293,
 "result":null
 },
 {
@@ -11079,9 +11079,9 @@
 "gamePk":823006,
 "home":"STL",
 "away":"SF",
-"wpHome":0.5152,
-"rHome":3.97,
-"rAway":4.1,
+"wpHome":0.5142,
+"rHome":4.01,
+"rAway":4.15,
 "result":null
 },
 {
@@ -11139,9 +11139,9 @@
 "gamePk":824465,
 "home":"CIN",
 "away":"LAD",
-"wpHome":0.3709,
-"rHome":4.07,
-"rAway":5.7,
+"wpHome":0.3682,
+"rHome":3.92,
+"rAway":5.54,
 "result":null
 },
 {

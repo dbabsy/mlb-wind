@@ -7368,7 +7368,7 @@
 "team":"SD",
 "slot":1,
 "p":0.7534,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-13",
@@ -7378,7 +7378,7 @@
 "team":"SD",
 "slot":2,
 "p":0.7126,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-13",
@@ -7388,7 +7388,7 @@
 "team":"SF",
 "slot":2,
 "p":0.7331,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-13",
@@ -7578,7 +7578,7 @@
 "team":"KC",
 "slot":2,
 "p":0.729,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-13",
@@ -7588,7 +7588,7 @@
 "team":"KC",
 "slot":3,
 "p":0.7102,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-13",
@@ -7598,7 +7598,7 @@
 "team":"BOS",
 "slot":1,
 "p":0.6947,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-13",
@@ -7638,7 +7638,7 @@
 "team":"ATH",
 "slot":2,
 "p":0.7359,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-13",
@@ -7648,7 +7648,7 @@
 "team":"SEA",
 "slot":6,
 "p":0.6938,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-13",
@@ -7658,7 +7658,7 @@
 "team":"SEA",
 "slot":2,
 "p":0.6975,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-13",
@@ -10640,7 +10640,9 @@
 "wpHome":0.5531,
 "rHome":4.17,
 "rAway":3.96,
-"result":null
+"result":false,
+"sHome":4,
+"sAway":6
 },
 {
 "date":"2026-09-13",
@@ -10722,7 +10724,9 @@
 "wpHome":0.6206,
 "rHome":4.4,
 "rAway":3.58,
-"result":null
+"result":true,
+"sHome":4,
+"sAway":1
 },
 {
 "date":"2026-09-13",
@@ -10744,7 +10748,9 @@
 "wpHome":0.4695,
 "rHome":4.9,
 "rAway":5.54,
-"result":null
+"result":true,
+"sHome":8,
+"sAway":7
 },
 {
 "date":"2026-09-13",

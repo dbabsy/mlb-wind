@@ -8027,7 +8027,7 @@
 "name":"Nathan Lukes",
 "team":"TOR",
 "slot":5,
-"p":0.684,
+"p":0.6848,
 "result":null
 },
 {
@@ -8037,7 +8037,7 @@
 "name":"Vladimir Guerrero Jr.",
 "team":"TOR",
 "slot":3,
-"p":0.7,
+"p":0.7009,
 "result":null
 },
 {
@@ -8047,7 +8047,7 @@
 "name":"Alejandro Kirk",
 "team":"TOR",
 "slot":4,
-"p":0.6794,
+"p":0.6801,
 "result":null
 },
 {
@@ -8117,7 +8117,7 @@
 "name":"Alec Burleson",
 "team":"STL",
 "slot":3,
-"p":0.6951,
+"p":0.6937,
 "result":null
 },
 {
@@ -8127,7 +8127,7 @@
 "name":"Jordan Walker",
 "team":"STL",
 "slot":4,
-"p":0.6843,
+"p":0.683,
 "result":null
 },
 {
@@ -8137,7 +8137,7 @@
 "name":"Bryce Eldridge",
 "team":"SF",
 "slot":2,
-"p":0.6595,
+"p":0.6584,
 "result":null
 },
 {
@@ -8297,7 +8297,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7593,
+"p":0.7594,
 "result":null
 },
 {
@@ -8307,7 +8307,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7995,
+"p":0.7997,
 "result":null
 },
 {
@@ -8317,7 +8317,7 @@
 "name":"Dustin Harris",
 "team":"SD",
 "slot":2,
-"p":0.7586,
+"p":0.7587,
 "result":null
 },
 {
@@ -8357,7 +8357,7 @@
 "name":"Miguel Rojas",
 "team":"LAD",
 "slot":6,
-"p":0.6964,
+"p":0.697,
 "result":null
 },
 {
@@ -8367,7 +8367,7 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":2,
-"p":0.7112,
+"p":0.7116,
 "result":null
 },
 {
@@ -8377,7 +8377,7 @@
 "name":"Tommy Edman",
 "team":"LAD",
 "slot":1,
-"p":0.7097,
+"p":0.7102,
 "result":null
 },
 {
@@ -8387,7 +8387,7 @@
 "name":"Ronald Acu\u00f1a Jr.",
 "team":"ATL",
 "slot":1,
-"p":0.7192,
+"p":0.7112,
 "result":null
 },
 {
@@ -8397,7 +8397,7 @@
 "name":"Michael Harris II",
 "team":"ATL",
 "slot":5,
-"p":0.7478,
+"p":0.7403,
 "result":null
 },
 {
@@ -8407,7 +8407,7 @@
 "name":"Drake Baldwin",
 "team":"ATL",
 "slot":2,
-"p":0.7258,
+"p":0.7188,
 "result":null
 },
 {
@@ -11649,9 +11649,9 @@
 "gamePk":822762,
 "home":"TOR",
 "away":"DET",
-"wpHome":0.5823,
-"rHome":4.96,
-"rAway":4.43,
+"wpHome":0.5821,
+"rHome":4.98,
+"rAway":4.45,
 "result":null
 },
 {
@@ -11679,9 +11679,9 @@
 "gamePk":823007,
 "home":"STL",
 "away":"SF",
-"wpHome":0.5829,
-"rHome":4.38,
-"rAway":3.89,
+"wpHome":0.5812,
+"rHome":4.32,
+"rAway":3.85,
 "result":null
 },
 {
@@ -11739,9 +11739,9 @@
 "gamePk":824307,
 "home":"COL",
 "away":"SD",
-"wpHome":0.4598,
-"rHome":5.52,
-"rAway":6.33,
+"wpHome":0.4599,
+"rHome":5.54,
+"rAway":6.35,
 "result":null
 },
 {
@@ -11769,9 +11769,9 @@
 "gamePk":824627,
 "home":"CHC",
 "away":"ATL",
-"wpHome":0.5123,
-"rHome":5.1,
-"rAway":5.28,
+"wpHome":0.5156,
+"rHome":4.88,
+"rAway":5.02,
 "result":null
 },
 {

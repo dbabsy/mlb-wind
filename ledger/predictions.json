@@ -8297,7 +8297,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7593,
+"p":0.757,
 "result":null
 },
 {
@@ -8307,7 +8307,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7995,
+"p":0.7968,
 "result":null
 },
 {
@@ -8317,7 +8317,7 @@
 "name":"Dustin Harris",
 "team":"SD",
 "slot":2,
-"p":0.7586,
+"p":0.7564,
 "result":null
 },
 {
@@ -11719,9 +11719,9 @@
 "gamePk":823980,
 "home":"LAA",
 "away":"SEA",
-"wpHome":0.3781,
-"rHome":3.81,
-"rAway":5.28,
+"wpHome":0.3786,
+"rHome":3.83,
+"rAway":5.3,
 "result":null
 },
 {

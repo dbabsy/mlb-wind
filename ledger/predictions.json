@@ -7788,7 +7788,7 @@
 "team":"NYY",
 "slot":2,
 "p":0.7253,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-14",
@@ -7798,7 +7798,7 @@
 "team":"NYY",
 "slot":4,
 "p":0.7435,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-14",
@@ -7808,7 +7808,7 @@
 "team":"NYY",
 "slot":1,
 "p":0.6968,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-14",
@@ -11108,7 +11108,9 @@
 "wpHome":0.4242,
 "rHome":4.61,
 "rAway":5.73,
-"result":null
+"result":false,
+"sHome":3,
+"sAway":8
 },
 {
 "date":"2026-09-14",

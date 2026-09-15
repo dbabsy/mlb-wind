@@ -8027,7 +8027,7 @@
 "name":"Nathan Lukes",
 "team":"TOR",
 "slot":5,
-"p":0.684,
+"p":0.6841,
 "result":null
 },
 {
@@ -8037,7 +8037,7 @@
 "name":"Vladimir Guerrero Jr.",
 "team":"TOR",
 "slot":3,
-"p":0.7,
+"p":0.7002,
 "result":null
 },
 {
@@ -8057,7 +8057,7 @@
 "name":"Brandon Nimmo",
 "team":"TEX",
 "slot":5,
-"p":0.7227,
+"p":0.7228,
 "result":null
 },
 {
@@ -8117,7 +8117,7 @@
 "name":"Alec Burleson",
 "team":"STL",
 "slot":3,
-"p":0.6951,
+"p":0.6952,
 "result":null
 },
 {
@@ -8227,7 +8227,7 @@
 "name":"Ben Rice",
 "team":"NYY",
 "slot":1,
-"p":0.7012,
+"p":0.7013,
 "result":null
 },
 {
@@ -8297,7 +8297,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7593,
+"p":0.757,
 "result":null
 },
 {
@@ -8307,17 +8307,17 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.8023,
+"p":0.7989,
 "result":null
 },
 {
 "date":"2026-09-15",
 "gamePk":824307,
-"pid":687957,
-"name":"Dustin Harris",
+"pid":669720,
+"name":"Austin Hays",
 "team":"SD",
 "slot":2,
-"p":0.7547,
+"p":0.7391,
 "result":null
 },
 {
@@ -8397,7 +8397,7 @@
 "name":"Michael Harris II",
 "team":"ATL",
 "slot":4,
-"p":0.7486,
+"p":0.7487,
 "result":null
 },
 {
@@ -11719,9 +11719,9 @@
 "gamePk":823980,
 "home":"LAA",
 "away":"SEA",
-"wpHome":0.3797,
-"rHome":3.84,
-"rAway":5.3,
+"wpHome":0.3803,
+"rHome":3.83,
+"rAway":5.28,
 "result":null
 },
 {
@@ -11739,9 +11739,9 @@
 "gamePk":824307,
 "home":"COL",
 "away":"SD",
-"wpHome":0.4701,
-"rHome":5.58,
-"rAway":6.27,
+"wpHome":0.4429,
+"rHome":5.44,
+"rAway":6.45,
 "result":null
 },
 {
@@ -11779,8 +11779,8 @@
 "gamePk":825030,
 "home":"AZ",
 "away":"MIA",
-"wpHome":0.5727,
-"rHome":4.55,
+"wpHome":0.5747,
+"rHome":4.57,
 "rAway":4.14,
 "result":null
 }

@@ -7997,7 +7997,7 @@
 "name":"Trea Turner",
 "team":"PHI",
 "slot":2,
-"p":0.6791,
+"p":0.6813,
 "result":null
 },
 {
@@ -8007,7 +8007,7 @@
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
-"p":0.7467,
+"p":0.748,
 "result":null
 },
 {
@@ -8017,7 +8017,7 @@
 "name":"James Wood",
 "team":"WSH",
 "slot":1,
-"p":0.6988,
+"p":0.701,
 "result":null
 },
 {
@@ -8027,7 +8027,7 @@
 "name":"Nathan Lukes",
 "team":"TOR",
 "slot":5,
-"p":0.6848,
+"p":0.684,
 "result":null
 },
 {
@@ -8037,7 +8037,7 @@
 "name":"Vladimir Guerrero Jr.",
 "team":"TOR",
 "slot":3,
-"p":0.7009,
+"p":0.7,
 "result":null
 },
 {
@@ -8047,7 +8047,7 @@
 "name":"Alejandro Kirk",
 "team":"TOR",
 "slot":4,
-"p":0.6801,
+"p":0.6794,
 "result":null
 },
 {
@@ -8117,7 +8117,7 @@
 "name":"Alec Burleson",
 "team":"STL",
 "slot":3,
-"p":0.6937,
+"p":0.6951,
 "result":null
 },
 {
@@ -8127,7 +8127,7 @@
 "name":"Jordan Walker",
 "team":"STL",
 "slot":4,
-"p":0.683,
+"p":0.6843,
 "result":null
 },
 {
@@ -8137,7 +8137,7 @@
 "name":"Bryce Eldridge",
 "team":"SF",
 "slot":2,
-"p":0.6584,
+"p":0.6595,
 "result":null
 },
 {
@@ -8297,7 +8297,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.757,
+"p":0.7593,
 "result":null
 },
 {
@@ -8307,7 +8307,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7968,
+"p":0.7995,
 "result":null
 },
 {
@@ -8317,7 +8317,7 @@
 "name":"Dustin Harris",
 "team":"SD",
 "slot":2,
-"p":0.7564,
+"p":0.7586,
 "result":null
 },
 {
@@ -8327,7 +8327,7 @@
 "name":"Jos\u00e9 Ram\u00edrez",
 "team":"CLE",
 "slot":2,
-"p":0.7043,
+"p":0.706,
 "result":null
 },
 {
@@ -8337,7 +8337,7 @@
 "name":"Steven Kwan",
 "team":"CLE",
 "slot":1,
-"p":0.732,
+"p":0.7338,
 "result":null
 },
 {
@@ -8347,7 +8347,7 @@
 "name":"Chase DeLauter",
 "team":"CLE",
 "slot":3,
-"p":0.7158,
+"p":0.7179,
 "result":null
 },
 {
@@ -8357,7 +8357,7 @@
 "name":"Miguel Rojas",
 "team":"LAD",
 "slot":6,
-"p":0.697,
+"p":0.6964,
 "result":null
 },
 {
@@ -8367,7 +8367,7 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":2,
-"p":0.7116,
+"p":0.7112,
 "result":null
 },
 {
@@ -8377,7 +8377,7 @@
 "name":"Tommy Edman",
 "team":"LAD",
 "slot":1,
-"p":0.7102,
+"p":0.7097,
 "result":null
 },
 {
@@ -8387,7 +8387,7 @@
 "name":"Ronald Acu\u00f1a Jr.",
 "team":"ATL",
 "slot":1,
-"p":0.7112,
+"p":0.7192,
 "result":null
 },
 {
@@ -8397,7 +8397,7 @@
 "name":"Michael Harris II",
 "team":"ATL",
 "slot":5,
-"p":0.7403,
+"p":0.7478,
 "result":null
 },
 {
@@ -8407,7 +8407,7 @@
 "name":"Drake Baldwin",
 "team":"ATL",
 "slot":2,
-"p":0.7188,
+"p":0.7258,
 "result":null
 },
 {
@@ -11639,9 +11639,9 @@
 "gamePk":822683,
 "home":"WSH",
 "away":"PHI",
-"wpHome":0.433,
-"rHome":4.21,
-"rAway":5.16,
+"wpHome":0.4371,
+"rHome":4.3,
+"rAway":5.22,
 "result":null
 },
 {
@@ -11649,9 +11649,9 @@
 "gamePk":822762,
 "home":"TOR",
 "away":"DET",
-"wpHome":0.5821,
-"rHome":4.98,
-"rAway":4.45,
+"wpHome":0.5823,
+"rHome":4.96,
+"rAway":4.43,
 "result":null
 },
 {
@@ -11679,9 +11679,9 @@
 "gamePk":823007,
 "home":"STL",
 "away":"SF",
-"wpHome":0.5812,
-"rHome":4.32,
-"rAway":3.85,
+"wpHome":0.5829,
+"rHome":4.38,
+"rAway":3.89,
 "result":null
 },
 {
@@ -11749,9 +11749,9 @@
 "gamePk":824384,
 "home":"CLE",
 "away":"CWS",
-"wpHome":0.5779,
-"rHome":4.58,
-"rAway":4.12,
+"wpHome":0.5753,
+"rHome":4.64,
+"rAway":4.2,
 "result":null
 },
 {
@@ -11769,9 +11769,9 @@
 "gamePk":824627,
 "home":"CHC",
 "away":"ATL",
-"wpHome":0.5156,
-"rHome":4.88,
-"rAway":5.02,
+"wpHome":0.5123,
+"rHome":5.1,
+"rAway":5.28,
 "result":null
 },
 {

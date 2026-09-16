@@ -8773,21 +8773,21 @@
 {
 "date":"2026-09-16",
 "gamePk":824382,
-"pid":608070,
-"name":"Jos\u00e9 Ram\u00edrez",
-"team":"CLE",
+"pid":545341,
+"name":"Randal Grichuk",
+"team":"CWS",
 "slot":2,
-"p":0.7055,
+"p":0.6974,
 "result":null
 },
 {
 "date":"2026-09-16",
 "gamePk":824382,
-"pid":666176,
-"name":"Jo Adell",
+"pid":608070,
+"name":"Jos\u00e9 Ram\u00edrez",
 "team":"CLE",
-"slot":3,
-"p":0.6926,
+"slot":2,
+"p":0.7079,
 "result":null
 },
 {
@@ -8797,7 +8797,7 @@
 "name":"Steven Kwan",
 "team":"CLE",
 "slot":1,
-"p":0.7015,
+"p":0.7026,
 "result":null
 },
 {
@@ -12379,9 +12379,9 @@
 "gamePk":824382,
 "home":"CLE",
 "away":"CWS",
-"wpHome":0.5371,
-"rHome":3.77,
-"rAway":3.7,
+"wpHome":0.5358,
+"rHome":3.87,
+"rAway":3.81,
 "result":null
 },
 {

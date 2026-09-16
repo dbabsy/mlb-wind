@@ -8447,7 +8447,7 @@
 "name":"Trea Turner",
 "team":"PHI",
 "slot":2,
-"p":0.6832,
+"p":0.6824,
 "result":null
 },
 {
@@ -8457,7 +8457,7 @@
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
-"p":0.7461,
+"p":0.7454,
 "result":null
 },
 {
@@ -8467,27 +8467,27 @@
 "name":"Alec Bohm",
 "team":"PHI",
 "slot":5,
-"p":0.6795,
+"p":0.6786,
 "result":null
 },
 {
 "date":"2026-09-16",
 "gamePk":822763,
-"pid":665489,
-"name":"Vladimir Guerrero Jr.",
+"pid":664770,
+"name":"Nathan Lukes",
 "team":"TOR",
-"slot":3,
-"p":0.6865,
+"slot":2,
+"p":0.7006,
 "result":null
 },
 {
 "date":"2026-09-16",
 "gamePk":822763,
-"pid":682985,
-"name":"Riley Greene",
+"pid":690993,
+"name":"Colt Keith",
 "team":"DET",
-"slot":4,
-"p":0.6821,
+"slot":3,
+"p":0.6954,
 "result":null
 },
 {
@@ -8807,7 +8807,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":2,
-"p":0.7172,
+"p":0.7173,
 "result":null
 },
 {
@@ -8817,7 +8817,7 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":3,
-"p":0.6911,
+"p":0.6915,
 "result":null
 },
 {
@@ -12269,9 +12269,9 @@
 "gamePk":822680,
 "home":"WSH",
 "away":"PHI",
-"wpHome":0.3886,
-"rHome":3.57,
-"rAway":4.86,
+"wpHome":0.3893,
+"rHome":3.56,
+"rAway":4.84,
 "result":null
 },
 {
@@ -12279,9 +12279,9 @@
 "gamePk":822763,
 "home":"TOR",
 "away":"DET",
-"wpHome":0.3682,
-"rHome":4.03,
-"rAway":5.67,
+"wpHome":0.3683,
+"rHome":3.96,
+"rAway":5.58,
 "result":null
 },
 {
@@ -12339,9 +12339,9 @@
 "gamePk":823655,
 "home":"MIN",
 "away":"NYY",
-"wpHome":0.2713,
-"rHome":2.88,
-"rAway":5.27,
+"wpHome":0.293,
+"rHome":3.2,
+"rAway":5.47,
 "result":null
 },
 {
@@ -12389,9 +12389,9 @@
 "gamePk":824467,
 "home":"CIN",
 "away":"LAD",
-"wpHome":0.2743,
-"rHome":3.2,
-"rAway":5.72,
+"wpHome":0.2729,
+"rHome":3.22,
+"rAway":5.77,
 "result":null
 },
 {

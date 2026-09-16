@@ -8603,11 +8603,11 @@
 {
 "date":"2026-09-16",
 "gamePk":823332,
-"pid":693304,
-"name":"Nick Gonzales",
-"team":"PIT",
-"slot":5,
-"p":0.671,
+"pid":669003,
+"name":"Garrett Mitchell",
+"team":"MIL",
+"slot":1,
+"p":0.6691,
 "result":null
 },
 {
@@ -8617,7 +8617,7 @@
 "name":"Jackson Chourio",
 "team":"MIL",
 "slot":2,
-"p":0.7013,
+"p":0.7014,
 "result":null
 },
 {
@@ -8637,7 +8637,7 @@
 "name":"Bo Bichette",
 "team":"NYM",
 "slot":3,
-"p":0.7237,
+"p":0.7238,
 "result":null
 },
 {
@@ -8687,7 +8687,7 @@
 "name":"Josh Naylor",
 "team":"SEA",
 "slot":6,
-"p":0.6981,
+"p":0.6979,
 "result":null
 },
 {
@@ -8697,7 +8697,7 @@
 "name":"Randy Arozarena",
 "team":"SEA",
 "slot":2,
-"p":0.7112,
+"p":0.7107,
 "result":null
 },
 {
@@ -8707,7 +8707,7 @@
 "name":"Wade Meckler",
 "team":"LAA",
 "slot":3,
-"p":0.725,
+"p":0.7248,
 "result":null
 },
 {
@@ -8737,7 +8737,7 @@
 "name":"Jac Caglianone",
 "team":"KC",
 "slot":3,
-"p":0.715,
+"p":0.7151,
 "result":null
 },
 {
@@ -8817,7 +8817,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":4,
-"p":0.6996,
+"p":0.6997,
 "result":null
 },
 {
@@ -8837,7 +8837,7 @@
 "name":"Mauricio Dub\u00f3n",
 "team":"ATL",
 "slot":5,
-"p":0.7002,
+"p":0.6954,
 "result":null
 },
 {
@@ -8847,7 +8847,7 @@
 "name":"Michael Harris II",
 "team":"ATL",
 "slot":4,
-"p":0.7333,
+"p":0.7247,
 "result":null
 },
 {
@@ -8857,7 +8857,7 @@
 "name":"Drake Baldwin",
 "team":"ATL",
 "slot":1,
-"p":0.7228,
+"p":0.7152,
 "result":null
 },
 {
@@ -8887,7 +8887,7 @@
 "name":"Javier Sanoja",
 "team":"MIA",
 "slot":5,
-"p":0.7068,
+"p":0.7069,
 "result":null
 }
 ],
@@ -12269,8 +12269,8 @@
 "gamePk":822680,
 "home":"WSH",
 "away":"PHI",
-"wpHome":0.3886,
-"rHome":3.57,
+"wpHome":0.3898,
+"rHome":3.58,
 "rAway":4.86,
 "result":null
 },
@@ -12289,9 +12289,9 @@
 "gamePk":822846,
 "home":"TEX",
 "away":"BOS",
-"wpHome":0.4964,
+"wpHome":0.4954,
 "rHome":4.32,
-"rAway":4.63,
+"rAway":4.64,
 "result":null
 },
 {
@@ -12299,9 +12299,9 @@
 "gamePk":822926,
 "home":"TB",
 "away":"ATH",
-"wpHome":0.661,
-"rHome":5.35,
-"rAway":4.0,
+"wpHome":0.6506,
+"rHome":5.36,
+"rAway":4.11,
 "result":null
 },
 {
@@ -12319,8 +12319,8 @@
 "gamePk":823332,
 "home":"PIT",
 "away":"MIL",
-"wpHome":0.3564,
-"rHome":3.4,
+"wpHome":0.3421,
+"rHome":3.28,
 "rAway":4.99,
 "result":null
 },

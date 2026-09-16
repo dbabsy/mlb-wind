@@ -8807,7 +8807,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":2,
-"p":0.7173,
+"p":0.7172,
 "result":null
 },
 {
@@ -8817,7 +8817,7 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":3,
-"p":0.6915,
+"p":0.6911,
 "result":null
 },
 {
@@ -12309,9 +12309,9 @@
 "gamePk":823004,
 "home":"STL",
 "away":"SF",
-"wpHome":0.502,
-"rHome":4.44,
-"rAway":4.7,
+"wpHome":0.4775,
+"rHome":4.48,
+"rAway":4.99,
 "result":null
 },
 {
@@ -12379,9 +12379,9 @@
 "gamePk":824382,
 "home":"CLE",
 "away":"CWS",
-"wpHome":0.5313,
-"rHome":3.59,
-"rAway":3.57,
+"wpHome":0.5371,
+"rHome":3.77,
+"rAway":3.7,
 "result":null
 },
 {
@@ -12389,9 +12389,9 @@
 "gamePk":824467,
 "home":"CIN",
 "away":"LAD",
-"wpHome":0.2729,
-"rHome":3.22,
-"rAway":5.77,
+"wpHome":0.2743,
+"rHome":3.2,
+"rAway":5.72,
 "result":null
 },
 {

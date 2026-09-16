@@ -8447,7 +8447,7 @@
 "name":"Trea Turner",
 "team":"PHI",
 "slot":2,
-"p":0.6832,
+"p":0.6824,
 "result":null
 },
 {
@@ -8457,7 +8457,7 @@
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
-"p":0.7461,
+"p":0.7454,
 "result":null
 },
 {
@@ -8467,7 +8467,7 @@
 "name":"Daylen Lile",
 "team":"WSH",
 "slot":2,
-"p":0.6945,
+"p":0.6936,
 "result":null
 },
 {
@@ -8478,7 +8478,7 @@
 "team":"TOR",
 "slot":2,
 "p":0.7005,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-16",
@@ -8488,7 +8488,7 @@
 "team":"DET",
 "slot":3,
 "p":0.6954,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-16",
@@ -8498,7 +8498,7 @@
 "team":"DET",
 "slot":1,
 "p":0.6962,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-16",
@@ -8517,7 +8517,7 @@
 "name":"Josh Jung",
 "team":"TEX",
 "slot":3,
-"p":0.7147,
+"p":0.7146,
 "result":null
 },
 {
@@ -8557,7 +8557,7 @@
 "name":"Chandler Simpson",
 "team":"TB",
 "slot":5,
-"p":0.7622,
+"p":0.7621,
 "result":null
 },
 {
@@ -8658,7 +8658,7 @@
 "team":"NYY",
 "slot":2,
 "p":0.7292,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-16",
@@ -8668,7 +8668,7 @@
 "team":"NYY",
 "slot":4,
 "p":0.7394,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-16",
@@ -8678,7 +8678,7 @@
 "team":"NYY",
 "slot":1,
 "p":0.7007,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-16",
@@ -8687,7 +8687,7 @@
 "name":"Josh Naylor",
 "team":"SEA",
 "slot":6,
-"p":0.6976,
+"p":0.6975,
 "result":null
 },
 {
@@ -8697,7 +8697,7 @@
 "name":"Randy Arozarena",
 "team":"SEA",
 "slot":2,
-"p":0.7111,
+"p":0.711,
 "result":null
 },
 {
@@ -8717,7 +8717,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.7139,
+"p":0.7138,
 "result":null
 },
 {
@@ -8757,7 +8757,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7759,
+"p":0.7755,
 "result":null
 },
 {
@@ -8767,7 +8767,7 @@
 "name":"Dustin Harris",
 "team":"SD",
 "slot":2,
-"p":0.7364,
+"p":0.737,
 "result":null
 },
 {
@@ -8837,7 +8837,7 @@
 "name":"Mauricio Dub\u00f3n",
 "team":"ATL",
 "slot":6,
-"p":0.6868,
+"p":0.6867,
 "result":null
 },
 {
@@ -8847,7 +8847,7 @@
 "name":"Michael Harris II",
 "team":"ATL",
 "slot":5,
-"p":0.7175,
+"p":0.7161,
 "result":null
 },
 {
@@ -8857,7 +8857,7 @@
 "name":"Drake Baldwin",
 "team":"ATL",
 "slot":2,
-"p":0.7075,
+"p":0.7064,
 "result":null
 },
 {
@@ -12269,9 +12269,9 @@
 "gamePk":822680,
 "home":"WSH",
 "away":"PHI",
-"wpHome":0.4686,
-"rHome":4.04,
-"rAway":4.6,
+"wpHome":0.4678,
+"rHome":4.02,
+"rAway":4.59,
 "result":null
 },
 {
@@ -12282,14 +12282,16 @@
 "wpHome":0.3674,
 "rHome":3.96,
 "rAway":5.59,
-"result":null
+"result":true,
+"sHome":5,
+"sAway":1
 },
 {
 "date":"2026-09-16",
 "gamePk":822846,
 "home":"TEX",
 "away":"BOS",
-"wpHome":0.5015,
+"wpHome":0.5019,
 "rHome":4.32,
 "rAway":4.58,
 "result":null
@@ -12299,7 +12301,7 @@
 "gamePk":822926,
 "home":"TB",
 "away":"ATH",
-"wpHome":0.6506,
+"wpHome":0.651,
 "rHome":5.36,
 "rAway":4.11,
 "result":null
@@ -12321,7 +12323,7 @@
 "gamePk":823332,
 "home":"PIT",
 "away":"MIL",
-"wpHome":0.3333,
+"wpHome":0.3337,
 "rHome":3.28,
 "rAway":5.09,
 "result":null
@@ -12331,9 +12333,9 @@
 "gamePk":823576,
 "home":"NYM",
 "away":"BAL",
-"wpHome":0.6467,
+"wpHome":0.6329,
 "rHome":5.35,
-"rAway":4.14,
+"rAway":4.28,
 "result":null
 },
 {
@@ -12344,14 +12346,16 @@
 "wpHome":0.293,
 "rHome":3.2,
 "rAway":5.47,
-"result":null
+"result":true,
+"sHome":5,
+"sAway":4
 },
 {
 "date":"2026-09-16",
 "gamePk":823979,
 "home":"LAA",
 "away":"SEA",
-"wpHome":0.5082,
+"wpHome":0.5086,
 "rHome":4.8,
 "rAway":5.01,
 "result":null
@@ -12361,7 +12365,7 @@
 "gamePk":824140,
 "home":"HOU",
 "away":"KC",
-"wpHome":0.4091,
+"wpHome":0.4095,
 "rHome":4.17,
 "rAway":5.37,
 "result":null
@@ -12371,9 +12375,9 @@
 "gamePk":824306,
 "home":"COL",
 "away":"SD",
-"wpHome":0.4622,
-"rHome":4.68,
-"rAway":5.37,
+"wpHome":0.4654,
+"rHome":4.58,
+"rAway":5.23,
 "result":null
 },
 {
@@ -12393,7 +12397,7 @@
 "gamePk":824467,
 "home":"CIN",
 "away":"LAD",
-"wpHome":0.2928,
+"wpHome":0.2931,
 "rHome":3.41,
 "rAway":5.78,
 "result":null
@@ -12403,9 +12407,9 @@
 "gamePk":824626,
 "home":"CHC",
 "away":"ATL",
-"wpHome":0.6148,
-"rHome":4.83,
-"rAway":4.0,
+"wpHome":0.6202,
+"rHome":4.71,
+"rAway":3.85,
 "result":null
 },
 {
@@ -12413,7 +12417,7 @@
 "gamePk":825031,
 "home":"AZ",
 "away":"MIA",
-"wpHome":0.4483,
+"wpHome":0.4487,
 "rHome":4.65,
 "rAway":5.49,
 "result":null

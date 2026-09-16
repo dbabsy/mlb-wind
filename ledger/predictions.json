@@ -8517,7 +8517,7 @@
 "name":"Josh Jung",
 "team":"TEX",
 "slot":3,
-"p":0.7146,
+"p":0.7147,
 "result":null
 },
 {
@@ -8617,7 +8617,7 @@
 "name":"Konnor Griffin",
 "team":"PIT",
 "slot":1,
-"p":0.649,
+"p":0.6489,
 "result":null
 },
 {
@@ -8687,7 +8687,7 @@
 "name":"Josh Naylor",
 "team":"SEA",
 "slot":6,
-"p":0.6975,
+"p":0.6976,
 "result":null
 },
 {
@@ -8697,7 +8697,7 @@
 "name":"Randy Arozarena",
 "team":"SEA",
 "slot":2,
-"p":0.711,
+"p":0.7111,
 "result":null
 },
 {
@@ -8717,7 +8717,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.7138,
+"p":0.7139,
 "result":null
 },
 {
@@ -8747,7 +8747,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7364,
+"p":0.7362,
 "result":null
 },
 {
@@ -8757,17 +8757,17 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7762,
+"p":0.7759,
 "result":null
 },
 {
 "date":"2026-09-16",
 "gamePk":824306,
-"pid":669720,
-"name":"Austin Hays",
+"pid":687957,
+"name":"Dustin Harris",
 "team":"SD",
 "slot":2,
-"p":0.7248,
+"p":0.7364,
 "result":null
 },
 {
@@ -8817,7 +8817,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":4,
-"p":0.6996,
+"p":0.6997,
 "result":null
 },
 {
@@ -8847,7 +8847,7 @@
 "name":"Michael Harris II",
 "team":"ATL",
 "slot":5,
-"p":0.7174,
+"p":0.7175,
 "result":null
 },
 {
@@ -8857,7 +8857,7 @@
 "name":"Drake Baldwin",
 "team":"ATL",
 "slot":2,
-"p":0.7074,
+"p":0.7075,
 "result":null
 },
 {
@@ -12321,9 +12321,9 @@
 "gamePk":823332,
 "home":"PIT",
 "away":"MIL",
-"wpHome":0.3214,
+"wpHome":0.3333,
 "rHome":3.28,
-"rAway":5.23,
+"rAway":5.09,
 "result":null
 },
 {
@@ -12351,8 +12351,8 @@
 "gamePk":823979,
 "home":"LAA",
 "away":"SEA",
-"wpHome":0.4941,
-"rHome":4.66,
+"wpHome":0.5082,
+"rHome":4.8,
 "rAway":5.01,
 "result":null
 },
@@ -12371,9 +12371,9 @@
 "gamePk":824306,
 "home":"COL",
 "away":"SD",
-"wpHome":0.4668,
+"wpHome":0.4622,
 "rHome":4.68,
-"rAway":5.32,
+"rAway":5.37,
 "result":null
 },
 {
@@ -12413,8 +12413,8 @@
 "gamePk":825031,
 "home":"AZ",
 "away":"MIA",
-"wpHome":0.4432,
-"rHome":4.6,
+"wpHome":0.4483,
+"rHome":4.65,
 "rAway":5.49,
 "result":null
 }

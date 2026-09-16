@@ -8717,7 +8717,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.7138,
+"p":0.7139,
 "result":null
 },
 {
@@ -8757,7 +8757,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.7755,
+"p":0.7759,
 "result":null
 },
 {
@@ -8767,7 +8767,7 @@
 "name":"Dustin Harris",
 "team":"SD",
 "slot":2,
-"p":0.737,
+"p":0.7364,
 "result":null
 },
 {
@@ -8837,7 +8837,7 @@
 "name":"Mauricio Dub\u00f3n",
 "team":"ATL",
 "slot":6,
-"p":0.6867,
+"p":0.6868,
 "result":null
 },
 {
@@ -8847,7 +8847,7 @@
 "name":"Michael Harris II",
 "team":"ATL",
 "slot":5,
-"p":0.7161,
+"p":0.7174,
 "result":null
 },
 {
@@ -8857,7 +8857,7 @@
 "name":"Drake Baldwin",
 "team":"ATL",
 "slot":2,
-"p":0.7064,
+"p":0.7074,
 "result":null
 },
 {
@@ -12355,9 +12355,9 @@
 "gamePk":823979,
 "home":"LAA",
 "away":"SEA",
-"wpHome":0.5086,
+"wpHome":0.5145,
 "rHome":4.8,
-"rAway":5.01,
+"rAway":4.95,
 "result":null
 },
 {
@@ -12375,9 +12375,9 @@
 "gamePk":824306,
 "home":"COL",
 "away":"SD",
-"wpHome":0.4654,
-"rHome":4.58,
-"rAway":5.23,
+"wpHome":0.4627,
+"rHome":4.68,
+"rAway":5.37,
 "result":null
 },
 {
@@ -12407,9 +12407,9 @@
 "gamePk":824626,
 "home":"CHC",
 "away":"ATL",
-"wpHome":0.6202,
-"rHome":4.71,
-"rAway":3.85,
+"wpHome":0.6152,
+"rHome":4.83,
+"rAway":4.0,
 "result":null
 },
 {

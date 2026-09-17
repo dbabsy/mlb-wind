@@ -9047,7 +9047,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.7613,
+"p":0.7612,
 "result":null
 },
 {
@@ -9108,7 +9108,7 @@
 "team":"LAD",
 "slot":2,
 "p":0.7245,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-17",
@@ -9118,7 +9118,7 @@
 "team":"LAD",
 "slot":1,
 "p":0.71,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-17",
@@ -9128,7 +9128,7 @@
 "team":"CIN",
 "slot":2,
 "p":0.7202,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-17",
@@ -9136,8 +9136,8 @@
 "pid":545341,
 "name":"Randal Grichuk",
 "team":"CWS",
-"slot":2,
-"p":0.7216,
+"slot":4,
+"p":0.7042,
 "result":null
 },
 {
@@ -12719,7 +12719,7 @@
 "gamePk":822845,
 "home":"TEX",
 "away":"BOS",
-"wpHome":0.4653,
+"wpHome":0.4651,
 "rHome":3.57,
 "rAway":4.11,
 "result":null
@@ -12749,9 +12749,9 @@
 "gamePk":823573,
 "home":"NYM",
 "away":"PHI",
-"wpHome":0.6964,
+"wpHome":0.7032,
 "rHome":5.62,
-"rAway":3.86,
+"rAway":3.79,
 "result":null
 },
 {
@@ -12759,7 +12759,7 @@
 "gamePk":823978,
 "home":"LAA",
 "away":"MIN",
-"wpHome":0.5676,
+"wpHome":0.5673,
 "rHome":4.21,
 "rAway":3.86,
 "result":null
@@ -12769,8 +12769,8 @@
 "gamePk":824141,
 "home":"HOU",
 "away":"KC",
-"wpHome":0.6091,
-"rHome":5.7,
+"wpHome":0.6237,
+"rHome":5.88,
 "rAway":4.82,
 "result":null
 },
@@ -12792,15 +12792,17 @@
 "wpHome":0.4259,
 "rHome":4.77,
 "rAway":5.88,
-"result":null
+"result":false,
+"sHome":2,
+"sAway":8
 },
 {
 "date":"2026-09-17",
 "gamePk":824548,
 "home":"CWS",
 "away":"DET",
-"wpHome":0.4692,
-"rHome":4.67,
+"wpHome":0.4305,
+"rHome":4.3,
 "rAway":5.28,
 "result":null
 }

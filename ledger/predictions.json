@@ -8946,18 +8946,18 @@
 "pid":802415,
 "name":"Chandler Simpson",
 "team":"TB",
-"slot":5,
-"p":0.732,
+"slot":6,
+"p":0.7235,
 "result":null
 },
 {
 "date":"2026-09-17",
 "gamePk":823334,
-"pid":661388,
-"name":"William Contreras",
-"team":"MIL",
-"slot":4,
-"p":0.6848,
+"pid":693304,
+"name":"Nick Gonzales",
+"team":"PIT",
+"slot":6,
+"p":0.7072,
 "result":null
 },
 {
@@ -8966,8 +8966,8 @@
 "pid":694192,
 "name":"Jackson Chourio",
 "team":"MIL",
-"slot":2,
-"p":0.7174,
+"slot":3,
+"p":0.7086,
 "result":null
 },
 {
@@ -9103,11 +9103,11 @@
 {
 "date":"2026-09-17",
 "gamePk":824464,
-"pid":605141,
-"name":"Mookie Betts",
+"pid":518692,
+"name":"Freddie Freeman",
 "team":"LAD",
 "slot":2,
-"p":0.7216,
+"p":0.7247,
 "result":null
 },
 {
@@ -12729,9 +12729,9 @@
 "gamePk":822924,
 "home":"TB",
 "away":"ATH",
-"wpHome":0.7713,
-"rHome":5.91,
-"rAway":3.3,
+"wpHome":0.7974,
+"rHome":5.66,
+"rAway":2.87,
 "result":null
 },
 {
@@ -12739,9 +12739,9 @@
 "gamePk":823334,
 "home":"PIT",
 "away":"MIL",
-"wpHome":0.4848,
-"rHome":4.91,
-"rAway":5.37,
+"wpHome":0.5408,
+"rHome":4.63,
+"rAway":4.51,
 "result":null
 },
 {
@@ -12789,9 +12789,9 @@
 "gamePk":824464,
 "home":"CIN",
 "away":"LAD",
-"wpHome":0.4704,
-"rHome":5.16,
-"rAway":5.8,
+"wpHome":0.4274,
+"rHome":4.82,
+"rAway":5.92,
 "result":null
 },
 {
@@ -12799,9 +12799,9 @@
 "gamePk":824548,
 "home":"CWS",
 "away":"DET",
-"wpHome":0.4689,
-"rHome":4.64,
-"rAway":5.25,
+"wpHome":0.4692,
+"rHome":4.67,
+"rAway":5.28,
 "result":null
 }
 ]

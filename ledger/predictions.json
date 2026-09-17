@@ -8907,7 +8907,7 @@
 "name":"Ezequiel Duran",
 "team":"TEX",
 "slot":1,
-"p":0.7047,
+"p":0.7048,
 "result":null
 },
 {
@@ -8917,7 +8917,7 @@
 "name":"Roman Anthony",
 "team":"BOS",
 "slot":1,
-"p":0.7059,
+"p":0.7058,
 "result":null
 },
 {
@@ -8997,7 +8997,7 @@
 "name":"Juan Soto",
 "team":"NYM",
 "slot":2,
-"p":0.7324,
+"p":0.7325,
 "result":null
 },
 {
@@ -9017,7 +9017,7 @@
 "name":"Wade Meckler",
 "team":"LAA",
 "slot":3,
-"p":0.6644,
+"p":0.6645,
 "result":null
 },
 {
@@ -9027,7 +9027,7 @@
 "name":"Brooks Lee",
 "team":"MIN",
 "slot":2,
-"p":0.6553,
+"p":0.6554,
 "result":null
 },
 {
@@ -9047,7 +9047,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.7612,
+"p":0.7613,
 "result":null
 },
 {
@@ -9157,7 +9157,7 @@
 "name":"Kevin McGonigle",
 "team":"DET",
 "slot":1,
-"p":0.6994,
+"p":0.6995,
 "result":null
 }
 ],
@@ -12805,9 +12805,9 @@
 "gamePk":824548,
 "home":"CWS",
 "away":"DET",
-"wpHome":0.4592,
+"wpHome":0.4582,
 "rHome":4.3,
-"rAway":4.98,
+"rAway":4.99,
 "result":null
 }
 ]

@@ -9078,7 +9078,7 @@
 "team":"SD",
 "slot":1,
 "p":0.8033,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-17",
@@ -9088,7 +9088,7 @@
 "team":"SD",
 "slot":2,
 "p":0.7686,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-17",
@@ -9098,7 +9098,7 @@
 "team":"SD",
 "slot":5,
 "p":0.739,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-17",
@@ -9137,7 +9137,7 @@
 "name":"Randal Grichuk",
 "team":"CWS",
 "slot":4,
-"p":0.7041,
+"p":0.7016,
 "result":null
 },
 {
@@ -9147,7 +9147,7 @@
 "name":"Dillon Dingler",
 "team":"DET",
 "slot":3,
-"p":0.6965,
+"p":0.695,
 "result":null
 },
 {
@@ -9157,7 +9157,7 @@
 "name":"Kevin McGonigle",
 "team":"DET",
 "slot":1,
-"p":0.6995,
+"p":0.6971,
 "result":null
 }
 ],
@@ -12719,7 +12719,7 @@
 "gamePk":822845,
 "home":"TEX",
 "away":"BOS",
-"wpHome":0.4529,
+"wpHome":0.4526,
 "rHome":3.61,
 "rAway":4.27,
 "result":null
@@ -12753,7 +12753,7 @@
 "gamePk":823573,
 "home":"NYM",
 "away":"PHI",
-"wpHome":0.711,
+"wpHome":0.7108,
 "rHome":5.72,
 "rAway":3.79,
 "result":null
@@ -12763,8 +12763,8 @@
 "gamePk":823978,
 "home":"LAA",
 "away":"MIN",
-"wpHome":0.5643,
-"rHome":4.21,
+"wpHome":0.5543,
+"rHome":4.12,
 "rAway":3.89,
 "result":null
 },
@@ -12773,7 +12773,7 @@
 "gamePk":824141,
 "home":"HOU",
 "away":"KC",
-"wpHome":0.6251,
+"wpHome":0.6248,
 "rHome":5.88,
 "rAway":4.81,
 "result":null
@@ -12786,7 +12786,9 @@
 "wpHome":0.3486,
 "rHome":4.59,
 "rAway":6.64,
-"result":null
+"result":false,
+"sHome":2,
+"sAway":9
 },
 {
 "date":"2026-09-17",
@@ -12805,9 +12807,9 @@
 "gamePk":824548,
 "home":"CWS",
 "away":"DET",
-"wpHome":0.4582,
+"wpHome":0.456,
 "rHome":4.3,
-"rAway":4.99,
+"rAway":5.01,
 "result":null
 }
 ]

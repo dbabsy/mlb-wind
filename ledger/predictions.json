@@ -9343,31 +9343,31 @@
 {
 "date":"2026-09-18",
 "gamePk":823898,
+"pid":500743,
+"name":"Miguel Rojas",
+"team":"LAD",
+"slot":5,
+"p":0.6997,
+"result":null
+},
+{
+"date":"2026-09-18",
+"gamePk":823898,
 "pid":518692,
 "name":"Freddie Freeman",
 "team":"LAD",
-"slot":2,
-"p":0.7089,
+"slot":4,
+"p":0.6913,
 "result":null
 },
 {
 "date":"2026-09-18",
 "gamePk":823898,
-"pid":669242,
-"name":"Tommy Edman",
+"pid":605141,
+"name":"Mookie Betts",
 "team":"LAD",
 "slot":1,
-"p":0.6742,
-"result":null
-},
-{
-"date":"2026-09-18",
-"gamePk":823898,
-"pid":808982,
-"name":"Jung Hoo Lee",
-"team":"SF",
-"slot":4,
-"p":0.6784,
+"p":0.7019,
 "result":null
 },
 {
@@ -9377,7 +9377,7 @@
 "name":"Wade Meckler",
 "team":"LAA",
 "slot":3,
-"p":0.6909,
+"p":0.6914,
 "result":null
 },
 {
@@ -9387,7 +9387,7 @@
 "name":"Brooks Lee",
 "team":"MIN",
 "slot":2,
-"p":0.7017,
+"p":0.7015,
 "result":null
 },
 {
@@ -9397,7 +9397,7 @@
 "name":"Luke Keaschall",
 "team":"MIN",
 "slot":1,
-"p":0.7035,
+"p":0.7037,
 "result":null
 },
 {
@@ -9497,7 +9497,7 @@
 "name":"Nico Hoerner",
 "team":"CHC",
 "slot":6,
-"p":0.7019,
+"p":0.7016,
 "result":null
 },
 {
@@ -9507,7 +9507,7 @@
 "name":"Elly De La Cruz",
 "team":"CIN",
 "slot":2,
-"p":0.6876,
+"p":0.6891,
 "result":null
 },
 {
@@ -9517,7 +9517,7 @@
 "name":"Pete Crow-Armstrong",
 "team":"CHC",
 "slot":1,
-"p":0.7034,
+"p":0.7069,
 "result":null
 },
 {
@@ -13337,9 +13337,9 @@
 "gamePk":823898,
 "home":"LAD",
 "away":"SF",
-"wpHome":0.6982,
-"rHome":4.73,
-"rAway":3.17,
+"wpHome":0.7208,
+"rHome":4.99,
+"rAway":3.16,
 "result":null
 },
 {

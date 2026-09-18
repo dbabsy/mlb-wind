@@ -9317,7 +9317,7 @@
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
-"p":0.7388,
+"p":0.7394,
 "result":null
 },
 {
@@ -9327,7 +9327,7 @@
 "name":"Juan Soto",
 "team":"NYM",
 "slot":2,
-"p":0.7099,
+"p":0.7224,
 "result":null
 },
 {
@@ -9337,7 +9337,7 @@
 "name":"Bo Bichette",
 "team":"NYM",
 "slot":3,
-"p":0.7074,
+"p":0.7186,
 "result":null
 },
 {
@@ -9497,7 +9497,7 @@
 "name":"Nico Hoerner",
 "team":"CHC",
 "slot":6,
-"p":0.7019,
+"p":0.7016,
 "result":null
 },
 {
@@ -9507,7 +9507,7 @@
 "name":"Elly De La Cruz",
 "team":"CIN",
 "slot":2,
-"p":0.6876,
+"p":0.6891,
 "result":null
 },
 {
@@ -9517,7 +9517,7 @@
 "name":"Pete Crow-Armstrong",
 "team":"CHC",
 "slot":1,
-"p":0.7034,
+"p":0.7069,
 "result":null
 },
 {
@@ -13327,8 +13327,8 @@
 "gamePk":823572,
 "home":"NYM",
 "away":"PHI",
-"wpHome":0.5969,
-"rHome":4.88,
+"wpHome":0.6511,
+"rHome":5.49,
 "rAway":4.21,
 "result":null
 },
@@ -13337,9 +13337,9 @@
 "gamePk":823898,
 "home":"LAD",
 "away":"SF",
-"wpHome":0.6962,
-"rHome":4.8,
-"rAway":3.24,
+"wpHome":0.6982,
+"rHome":4.73,
+"rAway":3.17,
 "result":null
 },
 {

@@ -8988,7 +8988,7 @@
 "team":"PHI",
 "slot":4,
 "p":0.7278,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-17",
@@ -8998,7 +8998,7 @@
 "team":"NYM",
 "slot":2,
 "p":0.7325,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-17",
@@ -9008,7 +9008,7 @@
 "team":"NYM",
 "slot":3,
 "p":0.7177,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-17",
@@ -9048,7 +9048,7 @@
 "team":"HOU",
 "slot":1,
 "p":0.7613,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-17",
@@ -9058,7 +9058,7 @@
 "team":"HOU",
 "slot":2,
 "p":0.7406,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-17",
@@ -9068,7 +9068,7 @@
 "team":"HOU",
 "slot":5,
 "p":0.7288,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-17",
@@ -9138,7 +9138,7 @@
 "team":"CWS",
 "slot":4,
 "p":0.7016,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-17",
@@ -9148,7 +9148,7 @@
 "team":"DET",
 "slot":3,
 "p":0.695,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-17",
@@ -9158,7 +9158,7 @@
 "team":"DET",
 "slot":1,
 "p":0.6971,
-"result":null
+"result":true
 }
 ],
 "games":[
@@ -12756,7 +12756,9 @@
 "wpHome":0.7108,
 "rHome":5.72,
 "rAway":3.79,
-"result":null
+"result":false,
+"sHome":0,
+"sAway":3
 },
 {
 "date":"2026-09-17",
@@ -12776,7 +12778,9 @@
 "wpHome":0.6248,
 "rHome":5.88,
 "rAway":4.81,
-"result":null
+"result":true,
+"sHome":6,
+"sAway":2
 },
 {
 "date":"2026-09-17",
@@ -12810,7 +12814,9 @@
 "wpHome":0.456,
 "rHome":4.3,
 "rAway":5.01,
-"result":null
+"result":true,
+"sHome":3,
+"sAway":1
 }
 ]
 }

@@ -8898,7 +8898,7 @@
 "team":"TEX",
 "slot":3,
 "p":0.7189,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-17",
@@ -8908,7 +8908,7 @@
 "team":"TEX",
 "slot":1,
 "p":0.7048,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-17",
@@ -8918,7 +8918,7 @@
 "team":"BOS",
 "slot":1,
 "p":0.7058,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-17",
@@ -12722,7 +12722,9 @@
 "wpHome":0.4526,
 "rHome":3.61,
 "rAway":4.27,
-"result":null
+"result":false,
+"sHome":3,
+"sAway":4
 },
 {
 "date":"2026-09-17",

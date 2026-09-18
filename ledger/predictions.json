@@ -9287,7 +9287,7 @@
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
-"p":0.7169,
+"p":0.7177,
 "result":null
 },
 {
@@ -9297,7 +9297,7 @@
 "name":"Nick Gonzales",
 "team":"PIT",
 "slot":6,
-"p":0.7031,
+"p":0.7036,
 "result":null
 },
 {
@@ -9307,7 +9307,7 @@
 "name":"Konnor Griffin",
 "team":"PIT",
 "slot":1,
-"p":0.7012,
+"p":0.7019,
 "result":null
 },
 {
@@ -9317,7 +9317,7 @@
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
-"p":0.7394,
+"p":0.7388,
 "result":null
 },
 {
@@ -9327,7 +9327,7 @@
 "name":"Juan Soto",
 "team":"NYM",
 "slot":2,
-"p":0.7224,
+"p":0.722,
 "result":null
 },
 {
@@ -9337,7 +9337,7 @@
 "name":"Bo Bichette",
 "team":"NYM",
 "slot":3,
-"p":0.7186,
+"p":0.718,
 "result":null
 },
 {
@@ -9497,7 +9497,7 @@
 "name":"Nico Hoerner",
 "team":"CHC",
 "slot":6,
-"p":0.7016,
+"p":0.7019,
 "result":null
 },
 {
@@ -9507,7 +9507,7 @@
 "name":"Elly De La Cruz",
 "team":"CIN",
 "slot":2,
-"p":0.6891,
+"p":0.6876,
 "result":null
 },
 {
@@ -9517,7 +9517,7 @@
 "name":"Pete Crow-Armstrong",
 "team":"CHC",
 "slot":1,
-"p":0.7069,
+"p":0.7034,
 "result":null
 },
 {
@@ -13317,9 +13317,9 @@
 "gamePk":823331,
 "home":"PIT",
 "away":"KC",
-"wpHome":0.6696,
-"rHome":5.22,
-"rAway":3.81,
+"wpHome":0.6698,
+"rHome":5.26,
+"rAway":3.84,
 "result":null
 },
 {
@@ -13337,9 +13337,9 @@
 "gamePk":823898,
 "home":"LAD",
 "away":"SF",
-"wpHome":0.6982,
-"rHome":4.73,
-"rAway":3.17,
+"wpHome":0.6962,
+"rHome":4.8,
+"rAway":3.24,
 "result":null
 },
 {

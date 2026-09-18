@@ -9317,7 +9317,7 @@
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
-"p":0.7394,
+"p":0.7388,
 "result":null
 },
 {
@@ -9327,7 +9327,7 @@
 "name":"Juan Soto",
 "team":"NYM",
 "slot":2,
-"p":0.7163,
+"p":0.7157,
 "result":null
 },
 {
@@ -9337,7 +9337,7 @@
 "name":"Bo Bichette",
 "team":"NYM",
 "slot":3,
-"p":0.7063,
+"p":0.7058,
 "result":null
 },
 {
@@ -13307,8 +13307,8 @@
 "gamePk":823252,
 "home":"SD",
 "away":"MIA",
-"wpHome":0.683,
-"rHome":4.83,
+"wpHome":0.6786,
+"rHome":4.78,
 "rAway":3.38,
 "result":null
 },

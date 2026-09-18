@@ -9317,7 +9317,7 @@
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
-"p":0.7388,
+"p":0.7422,
 "result":null
 },
 {
@@ -9327,7 +9327,7 @@
 "name":"Juan Soto",
 "team":"NYM",
 "slot":2,
-"p":0.722,
+"p":0.7249,
 "result":null
 },
 {
@@ -9337,7 +9337,7 @@
 "name":"Bo Bichette",
 "team":"NYM",
 "slot":3,
-"p":0.718,
+"p":0.7212,
 "result":null
 },
 {
@@ -9377,7 +9377,7 @@
 "name":"Wade Meckler",
 "team":"LAA",
 "slot":3,
-"p":0.6914,
+"p":0.6909,
 "result":null
 },
 {
@@ -9387,7 +9387,7 @@
 "name":"Brooks Lee",
 "team":"MIN",
 "slot":2,
-"p":0.7015,
+"p":0.7017,
 "result":null
 },
 {
@@ -9397,7 +9397,7 @@
 "name":"Luke Keaschall",
 "team":"MIN",
 "slot":1,
-"p":0.7037,
+"p":0.7035,
 "result":null
 },
 {
@@ -9437,7 +9437,7 @@
 "name":"Josh Naylor",
 "team":"SEA",
 "slot":6,
-"p":0.7088,
+"p":0.7106,
 "result":null
 },
 {
@@ -9447,7 +9447,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.757,
+"p":0.7593,
 "result":null
 },
 {
@@ -9457,7 +9457,7 @@
 "name":"Dominic Canzone",
 "team":"SEA",
 "slot":3,
-"p":0.7256,
+"p":0.7286,
 "result":null
 },
 {
@@ -13327,9 +13327,9 @@
 "gamePk":823572,
 "home":"NYM",
 "away":"PHI",
-"wpHome":0.6511,
-"rHome":5.49,
-"rAway":4.21,
+"wpHome":0.6506,
+"rHome":5.52,
+"rAway":4.24,
 "result":null
 },
 {
@@ -13367,9 +13367,9 @@
 "gamePk":824303,
 "home":"COL",
 "away":"SEA",
-"wpHome":0.4865,
-"rHome":4.72,
-"rAway":5.15,
+"wpHome":0.4882,
+"rHome":4.85,
+"rAway":5.27,
 "result":null
 },
 {
@@ -13387,9 +13387,9 @@
 "gamePk":824463,
 "home":"CIN",
 "away":"CHC",
-"wpHome":0.3668,
-"rHome":3.56,
-"rAway":5.08,
+"wpHome":0.3673,
+"rHome":3.65,
+"rAway":5.19,
 "result":null
 },
 {

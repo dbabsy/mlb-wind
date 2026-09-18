@@ -9377,7 +9377,7 @@
 "name":"Wade Meckler",
 "team":"LAA",
 "slot":3,
-"p":0.6909,
+"p":0.6914,
 "result":null
 },
 {
@@ -9387,7 +9387,7 @@
 "name":"Brooks Lee",
 "team":"MIN",
 "slot":2,
-"p":0.7017,
+"p":0.7015,
 "result":null
 },
 {
@@ -9397,7 +9397,7 @@
 "name":"Luke Keaschall",
 "team":"MIN",
 "slot":1,
-"p":0.7035,
+"p":0.7037,
 "result":null
 },
 {
@@ -9497,7 +9497,7 @@
 "name":"Nico Hoerner",
 "team":"CHC",
 "slot":6,
-"p":0.7019,
+"p":0.7016,
 "result":null
 },
 {
@@ -9507,7 +9507,7 @@
 "name":"Elly De La Cruz",
 "team":"CIN",
 "slot":2,
-"p":0.6876,
+"p":0.6891,
 "result":null
 },
 {
@@ -9517,7 +9517,7 @@
 "name":"Pete Crow-Armstrong",
 "team":"CHC",
 "slot":1,
-"p":0.7034,
+"p":0.7069,
 "result":null
 },
 {
@@ -13337,9 +13337,9 @@
 "gamePk":823898,
 "home":"LAD",
 "away":"SF",
-"wpHome":0.6962,
-"rHome":4.8,
-"rAway":3.24,
+"wpHome":0.6982,
+"rHome":4.73,
+"rAway":3.17,
 "result":null
 },
 {
@@ -13387,9 +13387,9 @@
 "gamePk":824463,
 "home":"CIN",
 "away":"CHC",
-"wpHome":0.3673,
-"rHome":3.65,
-"rAway":5.19,
+"wpHome":0.3668,
+"rHome":3.56,
+"rAway":5.08,
 "result":null
 },
 {

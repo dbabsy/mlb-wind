@@ -9198,7 +9198,7 @@
 "team":"TB",
 "slot":1,
 "p":0.7493,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-18",
@@ -9208,7 +9208,7 @@
 "team":"BOS",
 "slot":2,
 "p":0.6831,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-18",
@@ -9218,7 +9218,7 @@
 "team":"TB",
 "slot":5,
 "p":0.726,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-18",
@@ -9288,7 +9288,7 @@
 "team":"KC",
 "slot":2,
 "p":0.7169,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-18",
@@ -9298,7 +9298,7 @@
 "team":"PIT",
 "slot":5,
 "p":0.7117,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-18",
@@ -9308,7 +9308,7 @@
 "team":"PIT",
 "slot":1,
 "p":0.7012,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-18",
@@ -9318,7 +9318,7 @@
 "team":"PHI",
 "slot":4,
 "p":0.7422,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-18",
@@ -9328,7 +9328,7 @@
 "team":"NYM",
 "slot":2,
 "p":0.7188,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-18",
@@ -9338,7 +9338,7 @@
 "team":"NYM",
 "slot":3,
 "p":0.7089,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-18",
@@ -9408,7 +9408,7 @@
 "team":"HOU",
 "slot":1,
 "p":0.7374,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-18",
@@ -9418,7 +9418,7 @@
 "team":"HOU",
 "slot":2,
 "p":0.7299,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-18",
@@ -9428,7 +9428,7 @@
 "team":"ATL",
 "slot":4,
 "p":0.7264,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-18",
@@ -9468,7 +9468,7 @@
 "team":"CLE",
 "slot":2,
 "p":0.7005,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-18",
@@ -9478,7 +9478,7 @@
 "team":"CLE",
 "slot":1,
 "p":0.7164,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-18",
@@ -9488,7 +9488,7 @@
 "team":"CLE",
 "slot":3,
 "p":0.7095,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-18",
@@ -9498,7 +9498,7 @@
 "team":"CHC",
 "slot":6,
 "p":0.7016,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-18",
@@ -9508,7 +9508,7 @@
 "team":"CIN",
 "slot":2,
 "p":0.6891,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-18",
@@ -9518,7 +9518,7 @@
 "team":"CHC",
 "slot":1,
 "p":0.7069,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-18",
@@ -9528,7 +9528,7 @@
 "team":"CWS",
 "slot":3,
 "p":0.6954,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-18",
@@ -9538,7 +9538,7 @@
 "team":"DET",
 "slot":3,
 "p":0.6758,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-18",
@@ -9548,7 +9548,7 @@
 "team":"DET",
 "slot":1,
 "p":0.6799,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-18",
@@ -9558,7 +9558,7 @@
 "team":"BAL",
 "slot":2,
 "p":0.6821,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-18",
@@ -9568,7 +9568,7 @@
 "team":"MIL",
 "slot":4,
 "p":0.6851,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-18",
@@ -9578,7 +9578,7 @@
 "team":"MIL",
 "slot":1,
 "p":0.7125,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-18",
@@ -13290,7 +13290,9 @@
 "wpHome":0.5112,
 "rHome":3.83,
 "rAway":3.98,
-"result":null
+"result":false,
+"sHome":2,
+"sAway":4
 },
 {
 "date":"2026-09-18",
@@ -13320,7 +13322,9 @@
 "wpHome":0.6924,
 "rHome":5.41,
 "rAway":3.74,
-"result":null
+"result":true,
+"sHome":8,
+"sAway":5
 },
 {
 "date":"2026-09-18",
@@ -13330,7 +13334,9 @@
 "wpHome":0.4261,
 "rHome":3.7,
 "rAway":4.63,
-"result":null
+"result":true,
+"sHome":6,
+"sAway":3
 },
 {
 "date":"2026-09-18",
@@ -13360,7 +13366,9 @@
 "wpHome":0.5496,
 "rHome":4.52,
 "rAway":4.32,
-"result":null
+"result":false,
+"sHome":2,
+"sAway":6
 },
 {
 "date":"2026-09-18",
@@ -13380,7 +13388,9 @@
 "wpHome":0.7403,
 "rHome":6.27,
 "rAway":3.88,
-"result":null
+"result":true,
+"sHome":5,
+"sAway":3
 },
 {
 "date":"2026-09-18",
@@ -13390,7 +13400,9 @@
 "wpHome":0.4166,
 "rHome":4.04,
 "rAway":5.13,
-"result":null
+"result":true,
+"sHome":6,
+"sAway":4
 },
 {
 "date":"2026-09-18",
@@ -13400,7 +13412,9 @@
 "wpHome":0.51,
 "rHome":4.83,
 "rAway":5.02,
-"result":null
+"result":false,
+"sHome":8,
+"sAway":11
 },
 {
 "date":"2026-09-18",
@@ -13410,7 +13424,9 @@
 "wpHome":0.3739,
 "rHome":3.81,
 "rAway":5.32,
-"result":null
+"result":false,
+"sHome":5,
+"sAway":6
 },
 {
 "date":"2026-09-18",

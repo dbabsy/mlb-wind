@@ -9613,21 +9613,11 @@
 {
 "date":"2026-09-19",
 "gamePk":822843,
-"pid":664770,
-"name":"Nathan Lukes",
-"team":"TOR",
-"slot":2,
-"p":0.7042,
-"result":null
-},
-{
-"date":"2026-09-19",
-"gamePk":822843,
 "pid":665489,
 "name":"Vladimir Guerrero Jr.",
 "team":"TOR",
-"slot":3,
-"p":0.6994,
+"slot":2,
+"p":0.7083,
 "result":null
 },
 {
@@ -9638,6 +9628,16 @@
 "team":"TEX",
 "slot":3,
 "p":0.7095,
+"result":null
+},
+{
+"date":"2026-09-19",
+"gamePk":822843,
+"pid":677649,
+"name":"Ezequiel Duran",
+"team":"TEX",
+"slot":1,
+"p":0.697,
 "result":null
 },
 {
@@ -9827,7 +9827,7 @@
 "name":"Josh Bell",
 "team":"MIN",
 "slot":5,
-"p":0.6568,
+"p":0.6569,
 "result":null
 },
 {
@@ -9967,7 +9967,7 @@
 "name":"Pete Crow-Armstrong",
 "team":"CHC",
 "slot":1,
-"p":0.7149,
+"p":0.715,
 "result":null
 },
 {
@@ -10007,7 +10007,7 @@
 "name":"William Contreras",
 "team":"MIL",
 "slot":3,
-"p":0.6968,
+"p":0.6969,
 "result":null
 },
 {
@@ -13907,9 +13907,9 @@
 "gamePk":822843,
 "home":"TEX",
 "away":"TOR",
-"wpHome":0.5079,
-"rHome":3.95,
-"rAway":4.13,
+"wpHome":0.5093,
+"rHome":4.04,
+"rAway":4.21,
 "result":null
 },
 {
@@ -13947,9 +13947,9 @@
 "gamePk":823330,
 "home":"PIT",
 "away":"KC",
-"wpHome":0.6082,
+"wpHome":0.5787,
 "rHome":4.88,
-"rAway":4.1,
+"rAway":4.38,
 "result":null
 },
 {
@@ -13967,9 +13967,9 @@
 "gamePk":823899,
 "home":"LAD",
 "away":"SF",
-"wpHome":0.7841,
-"rHome":4.92,
-"rAway":2.54,
+"wpHome":0.7848,
+"rHome":4.85,
+"rAway":2.49,
 "result":null
 },
 {
@@ -14047,8 +14047,8 @@
 "gamePk":825029,
 "home":"AZ",
 "away":"NYY",
-"wpHome":0.3855,
-"rHome":2.93,
+"wpHome":0.3976,
+"rHome":3.02,
 "rAway":4.08,
 "result":null
 }

@@ -9647,7 +9647,7 @@
 "name":"Yandy D\u00edaz",
 "team":"TB",
 "slot":1,
-"p":0.7258,
+"p":0.7482,
 "result":null
 },
 {
@@ -9657,7 +9657,7 @@
 "name":"Junior Caminero",
 "team":"TB",
 "slot":3,
-"p":0.6888,
+"p":0.7122,
 "result":null
 },
 {
@@ -9667,7 +9667,7 @@
 "name":"Chandler Simpson",
 "team":"TB",
 "slot":5,
-"p":0.7016,
+"p":0.7232,
 "result":null
 },
 {
@@ -9837,7 +9837,7 @@
 "name":"Vaughn Grissom",
 "team":"LAA",
 "slot":4,
-"p":0.6687,
+"p":0.6688,
 "result":null
 },
 {
@@ -9847,7 +9847,7 @@
 "name":"Luke Keaschall",
 "team":"MIN",
 "slot":1,
-"p":0.6835,
+"p":0.6831,
 "result":null
 },
 {
@@ -9917,7 +9917,7 @@
 "name":"Jos\u00e9 Ram\u00edrez",
 "team":"CLE",
 "slot":2,
-"p":0.7241,
+"p":0.7236,
 "result":null
 },
 {
@@ -9927,7 +9927,7 @@
 "name":"Shea Langeliers",
 "team":"ATH",
 "slot":2,
-"p":0.6992,
+"p":0.6985,
 "result":null
 },
 {
@@ -9937,7 +9937,7 @@
 "name":"Chase DeLauter",
 "team":"CLE",
 "slot":3,
-"p":0.7074,
+"p":0.7073,
 "result":null
 },
 {
@@ -13917,9 +13917,9 @@
 "gamePk":822921,
 "home":"TB",
 "away":"BOS",
-"wpHome":0.5712,
-"rHome":4.6,
-"rAway":4.19,
+"wpHome":0.556,
+"rHome":4.9,
+"rAway":4.62,
 "result":null
 },
 {

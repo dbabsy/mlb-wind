@@ -131,6 +131,10 @@ def live_state(g):
         ls = g.get("linescore") or {}
         out["inning"] = ls.get("currentInning")
         out["half"] = (ls.get("inningState") or "")[:3]
+    # Deliberately no baserunners here. This snapshot is frozen at build time
+    # and the page may be opened hours later; a stale score is merely old, but
+    # a stale runner on second is a lie about the state of the game. Runners
+    # are shown only from a live browser refresh, where they are seconds old.
     return out
 
 
@@ -392,6 +396,21 @@ h1{margin:2px 0 0;font-size:26px;font-weight:800;letter-spacing:-.035em}
 .lv-mark{margin-left:auto;font-weight:700;flex:0 0 auto}
 .lv-mark.hit{color:var(--win)}
 .lv-mark.miss{color:var(--lose)}
+.runs{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;
+  color:var(--dim);padding:0 2px;min-height:16px}
+.bd{position:relative;width:17px;height:17px;flex:0 0 auto}
+.bd .bg{position:absolute;width:6px;height:6px;transform:rotate(45deg);
+  border:1px solid var(--line2);background:transparent}
+.bd .bg:nth-child(1){left:5.5px;top:0}
+.bd .bg:nth-child(2){left:0;top:5.5px}
+.bd .bg:nth-child(3){left:11px;top:5.5px}
+.bd .bg.full{background:var(--amber);border-color:var(--amber)}
+.outs{display:flex;gap:3px;flex:0 0 auto}
+.outs .od{width:5px;height:5px;border-radius:100px;border:1px solid var(--line2)}
+.outs .od.full{background:var(--lose);border-color:var(--lose)}
+.who{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.who b{color:var(--text);font-weight:600}
+.who .empty{color:var(--faint)}
 .stamp.live b{color:var(--win)}
 .tag{font-size:9px;padding:1px 6px;border-radius:100px;border:1px solid var(--line2);color:var(--faint)}
 .tag.ok{border-color:#1F7A4C;color:var(--win)}
@@ -465,6 +484,13 @@ function liveStamp(){
     ? `<span class="stamp live"><b>Scores live</b> \u00b7 ${ago(new Date(liveAt).toISOString())}</span>`
     : `<span class="stamp"><b>Scores</b> as of last build</span>`;
 }
+const SUFFIX=/^(jr|sr|ii|iii|iv|v)\.?$/i;
+function surname(full){
+  const t=String(full||"").trim().split(/\s+/);
+  if(t.length<2) return t[0]||"";
+  // "Vladimir Guerrero Jr." is Guerrero Jr., not Jr.
+  return SUFFIX.test(t[t.length-1]) ? t.slice(-2).join(" ") : t[t.length-1];
+}
 function liveFrom(g){
   const st=g.status||{}, phase=st.abstractGameState;
   if(phase!=="Live" && phase!=="Final") return null;
@@ -474,8 +500,38 @@ function liveFrom(g){
   if(phase==="Live"){
     const ls=g.linescore||{};
     o.inning=ls.currentInning; o.half=(ls.inningState||"").slice(0,3);
+    if(typeof ls.outs==="number") o.outs=ls.outs;
+    // offense.first/second/third are present only when that base is occupied.
+    const off=ls.offense||{};
+    const on=[];
+    for(const [key,label] of [["first","1B"],["second","2B"],["third","3B"]]){
+      if(off[key] && off[key].fullName){
+        on.push({base:label, name:surname(off[key].fullName)});
+      }
+    }
+    if(on.length) o.on=on;
   }
   return o;
+}
+function diamond(on){
+  const occ = new Set((on||[]).map(r=>r.base));
+  const cell = b => `<i class="bg${occ.has(b)?" full":""}"></i>`;
+  return `<span class="bd" aria-hidden="true">${cell("2B")}${cell("3B")}${cell("1B")}</span>`;
+}
+function outsDots(n){
+  if(typeof n!=="number") return "";
+  let h="";
+  for(let i=0;i<3;i++) h += `<i class="od${i<n?" full":""}"></i>`;
+  return `<span class="outs" title="${n} out">${h}</span>`;
+}
+function runners(L){
+  // Runners come only from a live refresh — see live_state() in games.py.
+  if(L.state!=="Live" || (!L.on && typeof L.outs!=="number")) return "";
+  const who = L.on && L.on.length
+    ? L.on.map(r=>`<b>${r.name}</b> ${r.base}`).join(" \u00b7 ")
+    : `<span class="empty">bases empty</span>`;
+  return `<div class="runs">${diamond(L.on)}${outsDots(L.outs)}
+    <span class="who">${who}</span></div>`;
 }
 function liveStrip(g){
   const L=LIVE[String(g.gamePk)];
@@ -489,7 +545,8 @@ function liveStrip(g){
     mark = `<span class="lv-mark ${right?"hit":"miss"}">${right?"\u2713":"\u2717"}</span>`;
   }
   return `<div class="lv ${fin?"fin":"on"}"><span class="lv-tag">${tag}</span>
-    <span class="lv-sc">${g.away.team} ${L.away} \u00b7 ${L.home} ${g.home.team}</span>${mark}</div>`;
+    <span class="lv-sc">${g.away.team} ${L.away} \u00b7 ${L.home} ${g.home.team}</span>${mark}</div>
+    ${runners(L)}`;
 }
 function bar(p, win){
   return `<span class="bar"><i style="width:${(p*100).toFixed(1)}%;background:${win?"var(--win)":"var(--line2)"}"></i></span>`;

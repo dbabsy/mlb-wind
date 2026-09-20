@@ -10068,7 +10068,7 @@
 "team":"TOR",
 "slot":3,
 "p":0.7012,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-20",
@@ -10078,7 +10078,7 @@
 "team":"TOR",
 "slot":2,
 "p":0.7142,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-20",
@@ -10088,7 +10088,7 @@
 "team":"TEX",
 "slot":3,
 "p":0.7134,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-20",
@@ -14540,7 +14540,9 @@
 "wpHome":0.4648,
 "rHome":3.44,
 "rAway":3.98,
-"result":null
+"result":false,
+"sHome":2,
+"sAway":7
 },
 {
 "date":"2026-09-20",
@@ -14679,9 +14681,9 @@
 "gamePk":824789,
 "home":"BAL",
 "away":"MIL",
-"wpHome":0.1826,
+"wpHome":0.183,
 "rHome":2.26,
-"rAway":5.54,
+"rAway":5.53,
 "result":null
 },
 {

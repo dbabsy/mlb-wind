@@ -408,12 +408,17 @@ h1{margin:2px 0 0;font-size:26px;font-weight:800;letter-spacing:-.035em}
 .outs{display:flex;gap:3px;flex:0 0 auto}
 .outs .od{width:5px;height:5px;border-radius:100px;border:1px solid var(--line2)}
 .outs .od.full{background:var(--lose);border-color:var(--lose)}
-.ab{display:flex;align-items:baseline;gap:4px;flex:0 0 auto;white-space:nowrap}
-.ab .caret{color:var(--amber);font-style:normal;font-size:8px;line-height:1}
-.ab b{color:var(--text);font-weight:700}
-.ab em{font-style:normal;color:var(--faint);font-size:9px;
+/* Named atbat, not ab: .ab is the team abbreviation in the matchup rows, and
+   sharing it dragged in width:42px and font-size:13px, which overflowed this
+   block onto the runner text beside it. */
+.atbat{display:flex;align-items:baseline;gap:4px;flex:0 1 auto;min-width:0;
+  white-space:nowrap;overflow:hidden}
+.atbat .caret{color:var(--amber);font-style:normal;font-size:8px;line-height:1;
+  flex:0 0 auto}
+.atbat b{color:var(--text);font-weight:700;overflow:hidden;text-overflow:ellipsis}
+.atbat em{font-style:normal;color:var(--faint);font-size:9px;flex:0 0 auto;
   border:1px solid var(--line2);border-radius:3px;padding:0 3px}
-.who{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.who{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:1 1 auto}
 .who b{color:var(--text);font-weight:600}
 .who .empty{color:var(--faint)}
 .stamp.live b{color:var(--win)}
@@ -547,7 +552,7 @@ function runners(L){
     : `<span class="empty">bases empty</span>`;
   // Who is up is the more immediate question, so it leads and never truncates.
   const ab = L.bat
-    ? `<span class="ab"><i class="caret">\u25B8</i><b>${L.bat}</b>${
+    ? `<span class="atbat"><i class="caret">\u25B8</i><b>${L.bat}</b>${
         L.count?`<em>${L.count}</em>`:""}</span>`
     : "";
   return `<div class="runs">${diamond(L.on)}${outsDots(L.outs)}${ab}

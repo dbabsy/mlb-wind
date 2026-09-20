@@ -133,6 +133,17 @@ on second is a false claim about the state of the game. `test_ledger.py` pins
 `live_state()` to emit no runners, batter or count, because the property is
 invisible until someone reads a frozen page.
 
+**Class names in a page's `<style>` are a flat namespace — check before
+adding one.** The at-bat block was given `class="ab"`, which was already the
+team abbreviation in the matchup rows. It silently inherited that rule's
+`width:42px` and `font-size:13px`, so the batter's name rendered oversized and
+overflowed its fixed box onto the runner text beside it. Nothing errored; the
+page just looked wrong, and only on games that were live, which is why it
+reached production. `test_ledger.py` now fails on any class defined by two
+standalone rules in `games.py` or `ledger.py` (descendant and modifier
+selectors like `.bd .bg` or `.tag.ok` are scoped and do not count, and `@media`
+overrides are skipped).
+
 **The ledger is committed by CI** with `[skip ci]` in the message. Without that
 the commit triggers another build, forever. Expect to rebase over bot commits
 when pushing; the ledger conflict is normally resolved in favour of whichever

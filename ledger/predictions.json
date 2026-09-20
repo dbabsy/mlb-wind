@@ -10167,7 +10167,7 @@
 "name":"Otto Lopez",
 "team":"MIA",
 "slot":2,
-"p":0.733,
+"p":0.7331,
 "result":null
 },
 {
@@ -10247,7 +10247,7 @@
 "name":"Miguel Rojas",
 "team":"LAD",
 "slot":5,
-"p":0.703,
+"p":0.7031,
 "result":null
 },
 {
@@ -10277,7 +10277,7 @@
 "name":"Wade Meckler",
 "team":"LAA",
 "slot":3,
-"p":0.6821,
+"p":0.6822,
 "result":null
 },
 {
@@ -10297,7 +10297,7 @@
 "name":"Walker Jenkins",
 "team":"MIN",
 "slot":1,
-"p":0.6685,
+"p":0.6686,
 "result":null
 },
 {
@@ -10457,7 +10457,7 @@
 "name":"William Contreras",
 "team":"MIL",
 "slot":3,
-"p":0.698,
+"p":0.6981,
 "result":null
 },
 {
@@ -10507,7 +10507,7 @@
 "name":"Gabriel Moreno",
 "team":"AZ",
 "slot":3,
-"p":0.7198,
+"p":0.7199,
 "result":null
 }
 ],

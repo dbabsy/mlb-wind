@@ -207,14 +207,19 @@ def test_build_snapshot_carries_no_baserunners():
         "status": {"abstractGameState": "Live", "detailedState": "In Progress"},
         "teams": {"home": {"score": 3}, "away": {"score": 2}},
         "linescore": {"currentInning": 7, "inningState": "Bottom", "outs": 2,
-                      "offense": {"first": {"fullName": "A Batter"},
+                      "balls": 2, "strikes": 1,
+                      "offense": {"batter": {"fullName": "C Hitter"},
+                                  "first": {"fullName": "A Batter"},
                                   "third": {"fullName": "B Runner"}}}})
     check(snap["home"] == 3 and snap["away"] == 2, "the snapshot carries the score")
     check(snap["inning"] == 7, "the snapshot carries the inning")
     check("on" not in snap, "the snapshot carries NO baserunners")
     check("outs" not in snap, "the snapshot carries NO out count")
-    check("Batter" not in json.dumps(snap) and "Runner" not in json.dumps(snap),
-          "no runner name appears anywhere in the snapshot")
+    check("bat" not in snap, "the snapshot carries NO batter")
+    check("count" not in snap, "the snapshot carries NO ball-strike count")
+    blob = json.dumps(snap)
+    check(all(n not in blob for n in ("Batter", "Runner", "Hitter")),
+          "no player name appears anywhere in the snapshot")
 
 
 def test_summarise_reports_run_bias():

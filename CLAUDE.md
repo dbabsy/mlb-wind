@@ -120,15 +120,18 @@ apart. The browser fetch is best-effort: if MLB refuses the cross-origin request
 the page falls back to the snapshot taken at build time and looks unchanged, so
 the feature can never break the page.
 
-**Baserunners are shown only from a live browser refresh, never from the
-build snapshot.** `games.html` draws a base diamond, the out count and the
-runners' names, read off the `linescore` the schedule call already hydrates —
-no extra request. But the build-time snapshot deliberately omits them
+**The live game state is shown only from a live browser refresh, never from
+the build snapshot.** `games.html` draws the batter and count, a base diamond,
+the out count and the runners' names, all read off the `linescore` the schedule
+call already hydrates — no extra request. Between halves MLB still names a
+batter (the next one up) with the count at 0-0, so a batter is claimed only
+while `inningState` is Top or Bottom; during the break the line shows the
+diamond and "bases empty" instead. But the build-time snapshot deliberately omits them
 (`live_state()` returns score and inning only): that snapshot can be hours old
 when the page is opened, and while a stale score is merely old, a stale runner
 on second is a false claim about the state of the game. `test_ledger.py` pins
-`live_state()` to emit no runners, because the property is invisible until
-someone reads a frozen page.
+`live_state()` to emit no runners, batter or count, because the property is
+invisible until someone reads a frozen page.
 
 **The ledger is committed by CI** with `[skip ci]` in the message. Without that
 the commit triggers another build, forever. Expect to rebase over bot commits

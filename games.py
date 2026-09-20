@@ -408,7 +408,12 @@ h1{margin:2px 0 0;font-size:26px;font-weight:800;letter-spacing:-.035em}
 .outs{display:flex;gap:3px;flex:0 0 auto}
 .outs .od{width:5px;height:5px;border-radius:100px;border:1px solid var(--line2)}
 .outs .od.full{background:var(--lose);border-color:var(--lose)}
-.who{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ab{display:flex;align-items:baseline;gap:4px;flex:0 0 auto;white-space:nowrap}
+.ab .caret{color:var(--amber);font-style:normal;font-size:8px;line-height:1}
+.ab b{color:var(--text);font-weight:700}
+.ab em{font-style:normal;color:var(--faint);font-size:9px;
+  border:1px solid var(--line2);border-radius:3px;padding:0 3px}
+.who{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 .who b{color:var(--text);font-weight:600}
 .who .empty{color:var(--faint)}
 .stamp.live b{color:var(--win)}
@@ -510,6 +515,16 @@ function liveFrom(g){
       }
     }
     if(on.length) o.on=on;
+    // Between halves MLB still names a batter — the next one up — and the
+    // count reads 0-0. Nobody is at the plate during the break, so only
+    // claim a batter while a half-inning is actually under way.
+    const mid = o.half==="Top" || o.half==="Bot";
+    if(mid && off.batter && off.batter.fullName){
+      o.bat = surname(off.batter.fullName);
+      if(typeof ls.balls==="number" && typeof ls.strikes==="number"){
+        o.count = ls.balls + "-" + ls.strikes;
+      }
+    }
   }
   return o;
 }
@@ -525,12 +540,17 @@ function outsDots(n){
   return `<span class="outs" title="${n} out">${h}</span>`;
 }
 function runners(L){
-  // Runners come only from a live refresh — see live_state() in games.py.
-  if(L.state!=="Live" || (!L.on && typeof L.outs!=="number")) return "";
+  // Batter and runners come only from a live refresh — see live_state().
+  if(L.state!=="Live" || (!L.on && typeof L.outs!=="number" && !L.bat)) return "";
   const who = L.on && L.on.length
     ? L.on.map(r=>`<b>${r.name}</b> ${r.base}`).join(" \u00b7 ")
     : `<span class="empty">bases empty</span>`;
-  return `<div class="runs">${diamond(L.on)}${outsDots(L.outs)}
+  // Who is up is the more immediate question, so it leads and never truncates.
+  const ab = L.bat
+    ? `<span class="ab"><i class="caret">\u25B8</i><b>${L.bat}</b>${
+        L.count?`<em>${L.count}</em>`:""}</span>`
+    : "";
+  return `<div class="runs">${diamond(L.on)}${outsDots(L.outs)}${ab}
     <span class="who">${who}</span></div>`;
 }
 function liveStrip(g){

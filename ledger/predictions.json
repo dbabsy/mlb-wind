@@ -10098,7 +10098,7 @@
 "team":"TB",
 "slot":1,
 "p":0.7691,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-20",
@@ -10108,7 +10108,7 @@
 "team":"TB",
 "slot":4,
 "p":0.7119,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-20",
@@ -10118,7 +10118,7 @@
 "team":"TB",
 "slot":5,
 "p":0.771,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-20",
@@ -10128,7 +10128,7 @@
 "team":"STL",
 "slot":3,
 "p":0.703,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-20",
@@ -10138,7 +10138,7 @@
 "team":"STL",
 "slot":4,
 "p":0.6802,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-20",
@@ -10148,7 +10148,7 @@
 "team":"WSH",
 "slot":1,
 "p":0.6828,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-20",
@@ -10188,7 +10188,7 @@
 "team":"PIT",
 "slot":2,
 "p":0.6899,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-20",
@@ -10198,7 +10198,7 @@
 "team":"PIT",
 "slot":5,
 "p":0.704,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-20",
@@ -10208,7 +10208,7 @@
 "team":"PIT",
 "slot":1,
 "p":0.6957,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-20",
@@ -10218,7 +10218,7 @@
 "team":"PHI",
 "slot":4,
 "p":0.7314,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-20",
@@ -10228,7 +10228,7 @@
 "team":"NYM",
 "slot":2,
 "p":0.7365,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-20",
@@ -10238,7 +10238,7 @@
 "team":"NYM",
 "slot":3,
 "p":0.7243,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-20",
@@ -10398,7 +10398,7 @@
 "team":"CHC",
 "slot":6,
 "p":0.7167,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-20",
@@ -10408,7 +10408,7 @@
 "team":"CIN",
 "slot":2,
 "p":0.7191,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-20",
@@ -10418,7 +10418,7 @@
 "team":"CHC",
 "slot":1,
 "p":0.7249,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-20",
@@ -10457,17 +10457,17 @@
 "name":"William Contreras",
 "team":"MIL",
 "slot":3,
-"p":0.6981,
+"p":0.6996,
 "result":null
 },
 {
 "date":"2026-09-20",
 "gamePk":824789,
-"pid":683734,
-"name":"Andrew Vaughn",
+"pid":687401,
+"name":"Joey Ortiz",
 "team":"MIL",
-"slot":4,
-"p":0.6894,
+"slot":5,
+"p":0.6696,
 "result":null
 },
 {
@@ -10477,7 +10477,7 @@
 "name":"Jackson Chourio",
 "team":"MIL",
 "slot":1,
-"p":0.7193,
+"p":0.7208,
 "result":null
 },
 {
@@ -14550,7 +14550,9 @@
 "wpHome":0.6299,
 "rHome":5.36,
 "rAway":4.32,
-"result":null
+"result":true,
+"sHome":5,
+"sAway":1
 },
 {
 "date":"2026-09-20",
@@ -14560,7 +14562,9 @@
 "wpHome":0.5782,
 "rHome":5.13,
 "rAway":4.63,
-"result":null
+"result":true,
+"sHome":5,
+"sAway":3
 },
 {
 "date":"2026-09-20",
@@ -14580,7 +14584,9 @@
 "wpHome":0.7045,
 "rHome":5.45,
 "rAway":3.66,
-"result":null
+"result":true,
+"sHome":4,
+"sAway":3
 },
 {
 "date":"2026-09-20",
@@ -14590,7 +14596,9 @@
 "wpHome":0.5056,
 "rHome":4.15,
 "rAway":4.37,
-"result":null
+"result":false,
+"sHome":2,
+"sAway":7
 },
 {
 "date":"2026-09-20",
@@ -14650,7 +14658,9 @@
 "wpHome":0.4623,
 "rHome":5.5,
 "rAway":6.28,
-"result":null
+"result":false,
+"sHome":1,
+"sAway":9
 },
 {
 "date":"2026-09-20",
@@ -14667,9 +14677,9 @@
 "gamePk":824789,
 "home":"BAL",
 "away":"MIL",
-"wpHome":0.2226,
-"rHome":2.29,
-"rAway":4.97,
+"wpHome":0.1833,
+"rHome":2.26,
+"rAway":5.53,
 "result":null
 },
 {

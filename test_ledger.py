@@ -10,6 +10,7 @@ the page telling a lie about its own record — so the rules are pinned here.
 """
 import json
 import sys
+from pathlib import Path
 
 import players as P
 import ledger as L
@@ -186,6 +187,34 @@ def test_live_scores_cannot_reach_the_ledger():
               "a live score does NOT settle the row before the game is over")
         check(7 not in (row.get("sHome"), row.get("rHome")),
               "the live home score never appears anywhere on the row")
+
+
+def test_build_snapshot_carries_no_baserunners():
+    """The build-time score snapshot must not include who is on base.
+
+    games.py freezes a snapshot so the page still shows scores when the
+    visitor's browser cannot reach MLB. That snapshot can be hours old by the
+    time anyone opens the page. A stale score is merely old; a stale runner on
+    second is a false claim about the state of the game. Runners are therefore
+    shown only from a live browser refresh, and this pins live_state() to emit
+    none — the property is invisible until someone reads a frozen page.
+    """
+    src = (Path(__file__).parent / "games.py").read_text()
+    ns = {}
+    exec(src[src.index("def live_state(g):"):src.index("def pitch_mult(")], ns)
+    snap = ns["live_state"]({
+        "gamePk": 1,
+        "status": {"abstractGameState": "Live", "detailedState": "In Progress"},
+        "teams": {"home": {"score": 3}, "away": {"score": 2}},
+        "linescore": {"currentInning": 7, "inningState": "Bottom", "outs": 2,
+                      "offense": {"first": {"fullName": "A Batter"},
+                                  "third": {"fullName": "B Runner"}}}})
+    check(snap["home"] == 3 and snap["away"] == 2, "the snapshot carries the score")
+    check(snap["inning"] == 7, "the snapshot carries the inning")
+    check("on" not in snap, "the snapshot carries NO baserunners")
+    check("outs" not in snap, "the snapshot carries NO out count")
+    check("Batter" not in json.dumps(snap) and "Runner" not in json.dumps(snap),
+          "no runner name appears anywhere in the snapshot")
 
 
 def test_summarise_reports_run_bias():

@@ -9,6 +9,7 @@ the page telling a lie about its own record — so the rules are pinned here.
     python3 test_ledger.py
 """
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -187,6 +188,63 @@ def test_live_scores_cannot_reach_the_ledger():
               "a live score does NOT settle the row before the game is over")
         check(7 not in (row.get("sHome"), row.get("rHome")),
               "the live home score never appears anywhere on the row")
+
+
+def bare_class_rules(css):
+    """Class names defined by a standalone `.name{...}` rule, outside @media.
+
+    Only bare selectors count: `.bd .bg`, `.tag.ok` and `.lv.on .lv-tag` are
+    scoped to a component and cannot collide. `@media` blocks are skipped
+    because a responsive override of the same class is the point.
+    """
+    depth, out, i = 0, [], 0
+    top = []
+    # Strip @media blocks by brace matching.
+    while i < len(css):
+        if css.startswith("@media", i):
+            j, d = css.index("{", i), 0
+            while j < len(css):
+                if css[j] == "{":
+                    d += 1
+                elif css[j] == "}":
+                    d -= 1
+                    if d == 0:
+                        break
+                j += 1
+            i = j + 1
+            continue
+        top.append(css[i])
+        i += 1
+    top = "".join(top)
+    for block in top.split("}"):
+        if "{" not in block:
+            continue
+        for sel in block.split("{")[0].split(","):
+            sel = sel.strip()
+            if re.fullmatch(r"\.[A-Za-z][-\w]*", sel):
+                out.append(sel[1:])
+    return out
+
+
+def test_no_two_components_share_a_class_name():
+    """Two components sharing a class name is a silent layout bug.
+
+    This bit us for real: the at-bat block was given `class="ab"`, which was
+    already the team abbreviation in the matchup rows. It inherited that rule's
+    `width:42px` and `font-size:13px`, so the batter's name rendered oversized
+    and overflowed its fixed box onto the runner text beside it. Nothing
+    errored — the page just looked wrong, and only on games that were live.
+    """
+    from collections import Counter
+    for name in ("games.py", "ledger.py"):
+        src = (Path(__file__).parent / name).read_text()
+        if "<style>" not in src:
+            continue
+        css = src[src.index("<style>"):src.index("</style>")]
+        dupes = sorted(c for c, n in Counter(bare_class_rules(css)).items() if n > 1)
+        check(not dupes,
+              f"{name}: no class is defined twice at the top level"
+              + (f" (found: {', '.join('.' + d for d in dupes)})" if dupes else ""))
 
 
 def test_build_snapshot_carries_no_baserunners():

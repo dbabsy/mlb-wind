@@ -10308,7 +10308,7 @@
 "team":"HOU",
 "slot":1,
 "p":0.7087,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-20",
@@ -10318,7 +10318,7 @@
 "team":"HOU",
 "slot":2,
 "p":0.7324,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-20",
@@ -10328,7 +10328,7 @@
 "team":"ATL",
 "slot":4,
 "p":0.7249,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-20",
@@ -10457,7 +10457,7 @@
 "name":"William Contreras",
 "team":"MIL",
 "slot":3,
-"p":0.6996,
+"p":0.6997,
 "result":null
 },
 {
@@ -10477,7 +10477,7 @@
 "name":"Jackson Chourio",
 "team":"MIL",
 "slot":1,
-"p":0.7208,
+"p":0.7209,
 "result":null
 },
 {
@@ -14628,7 +14628,9 @@
 "wpHome":0.453,
 "rHome":4.11,
 "rAway":4.84,
-"result":null
+"result":false,
+"sHome":2,
+"sAway":4
 },
 {
 "date":"2026-09-20",
@@ -14677,9 +14679,9 @@
 "gamePk":824789,
 "home":"BAL",
 "away":"MIL",
-"wpHome":0.1833,
+"wpHome":0.1826,
 "rHome":2.26,
-"rAway":5.53,
+"rAway":5.54,
 "result":null
 },
 {

@@ -85,6 +85,47 @@ def test_doubleheader_is_scored_per_game():
           "an unfinished game records nothing at all")
 
 
+def test_plate_appearances_are_recorded_and_backfilled():
+    """PA is what separates the two explanations for the picks running hot.
+
+    hits.py builds P(at least one hit) from a per-PA rate and a FIXED PA per
+    lineup slot. Through 2026-09-20 the picks came in 3.7 points under their
+    projection, and fitting a correction to the outcome alone could not say
+    whether the rate or the PA count was to blame — a PA shrink, a rate
+    shrink and a flat logit shrink all scored identically out of sample.
+    Recording the actual PA settles it.
+    """
+    P.q = stub({"dates": [{"games": [game(1, "F", 5, 3)]}]},
+               {1: {"teams": {"home": {"players": {
+                       "ID1": {"person": {"id": 1}, "battingOrder": "300",
+                               "stats": {"batting": {"plateAppearances": 5, "hits": 2}}},
+                       "ID2": {"person": {"id": 2}, "battingOrder": "401",
+                               "stats": {"batting": {"plateAppearances": 3, "hits": 0}}}}},
+                     "away": {"players": {}}}}})
+    led = {"hits": [
+        # already settled: the PA must backfill without touching the result
+        {"date": "D", "gamePk": 1, "pid": 1, "slot": 3, "p": .7, "result": True},
+        # unsettled: scores and records PA in one pass
+        {"date": "D", "gamePk": 1, "pid": 2, "slot": 4, "p": .7, "result": None}],
+        "games": []}
+    L.score(led)
+    a, b = led["hits"]
+    check(a["pa"] == 5 and a["h"] == 2, "PA backfills onto an already-settled row")
+    check(a["result"] is True, "backfilling PA does not disturb the settled result")
+    check(b["result"] is False and b["pa"] == 3, "an open row gets both at once")
+    check(a["slotActual"] == 3, "the actual batting slot is recorded")
+    check(b["slotActual"] == 4, "a substitute's slot reads from the hundreds digit")
+    snap = json.dumps(led, sort_keys=True)
+    L.score(led)
+    check(json.dumps(led, sort_keys=True) == snap, "re-scoring changes nothing")
+
+    summary = L.summarise({"hits": led["hits"], "games": []})["hits"]["pa"]
+    check(summary["n"] == 2, "the PA summary counts the rows that have one")
+    # slot 3 assumes 4.43 and got 5; slot 4 assumes 4.32 and got 3.
+    check(abs(summary["gap"] - ((4.43 - 5) + (4.32 - 3)) / 2) < 1e-9,
+          "the summary reports assumed minus actual PA")
+
+
 def test_scoring_is_idempotent_and_backfills():
     P.q = stub({"dates": [{"games": [game(1, "F", 5, 3)]}]}, {1: box({1: (4, 2)})})
     led = {"hits": [], "games": [{"date": "D", "gamePk": 1, "rHome": 4.0,

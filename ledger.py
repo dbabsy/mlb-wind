@@ -160,13 +160,20 @@ def finals(d):
 
 
 def game_hits(gp):
-    """pid -> reached base with a hit, for ONE game.
+    """pid -> what the hitter actually did in ONE game.
 
     Day-wide hitting totals cannot answer this. On a doubleheader date both
     games share a date and a lineup, so a day total grades game two with game
     one's box score — and stamps that result on before game two has started,
     which then freezes a prediction the lineup logic still needed to revise.
     The box score is per-game and settles both problems.
+
+    Returns the plate appearances and batting-order slot alongside the hit,
+    because `hits.py` turns a per-PA rate into P(at least one hit) using a
+    *fixed* PA per lineup slot. When the picks come in under their projection
+    the cause is either that rate or that PA count, and without the actual PA
+    the two are indistinguishable — every correction fitted to the outcome
+    alone scores the same. See the note in CLAUDE.md.
     """
     j = P.q(f"game/{gp}/boxscore")
     got = {}
@@ -177,14 +184,27 @@ def game_hits(gp):
             bat = (pl.get("stats") or {}).get("batting") or {}
             if pid is None or not bat:
                 continue
-            if int(bat.get("plateAppearances") or 0) >= 1:
-                got[pid] = int(bat.get("hits") or 0) >= 1
+            pa = int(bat.get("plateAppearances") or 0)
+            if pa < 1:
+                continue
+            # battingOrder is "400" for the cleanup spot, "401" for a
+            # substitute who took it over; the hundreds digit is the slot.
+            order = str(pl.get("battingOrder") or "")
+            slot = int(order[0]) if order[:1].isdigit() and order[0] != "0" else None
+            got[pid] = {"hit": int(bat.get("hits") or 0) >= 1,
+                        "pa": pa,
+                        "h": int(bat.get("hits") or 0),
+                        "slotActual": slot}
     return got
 
 
 def score(led):
     """Fill in outcomes for finished games only."""
-    open_hit_dates = sorted({r["date"] for r in led["hits"] if r["result"] is None})
+    # A hit row is still open if it is missing its outcome *or* the plate
+    # appearances behind it — the PA was not always kept, and it is what makes
+    # the projection's PA assumption auditable.
+    open_hit_dates = sorted({r["date"] for r in led["hits"]
+                             if r["result"] is None or r.get("pa") is None})
     # A game row is still open if it is missing its outcome *or* its final
     # score — the scores were not always kept, and they are what makes the
     # run projections auditable.
@@ -202,9 +222,9 @@ def score(led):
     for d in open_hit_dates:
         if d not in fin:
             continue
-        # Only games that are over, and only the ones we still owe a result.
+        # Only games that are over, and only the ones we still owe something.
         want = {r["gamePk"] for r in led["hits"]
-                if r["date"] == d and r["result"] is None
+                if r["date"] == d and (r["result"] is None or r.get("pa") is None)
                 and fin[d].get(r["gamePk"], (False,))[0]}
         for gp in sorted(want):
             try:
@@ -215,10 +235,19 @@ def score(led):
             if not got:
                 continue
             for r in led["hits"]:
-                if (r["date"] == d and r["gamePk"] == gp
-                        and r["result"] is None and r["pid"] in got):
-                    r["result"] = got[r["pid"]]
+                if r["date"] != d or r["gamePk"] != gp or r["pid"] not in got:
+                    continue
+                box = got[r["pid"]]
+                if r["result"] is None:
+                    r["result"] = box["hit"]
                     filled += 1
+                # Observations, not predictions: safe to backfill onto a row
+                # that is already settled, and never revised once written.
+                if r.get("pa") is None:
+                    r["pa"] = box["pa"]
+                    r["h"] = box["h"]
+                    if box["slotActual"] is not None:
+                        r["slotActual"] = box["slotActual"]
 
     for d in open_game_dates:
         if d not in fin:
@@ -276,6 +305,25 @@ def summarise(led):
             "daily": daily(hits, "p"),
             "pending": sum(1 for r in led["hits"] if r["result"] is None),
         }
+        # hits.py turns a per-PA hit rate into P(at least one hit) using a
+        # fixed PA per lineup slot. If the picks come in under their
+        # projection, that is either the rate or the PA count, and the outcome
+        # alone cannot separate them. This compares the assumption against
+        # what the hitters actually got.
+        withpa = [r for r in hits if r.get("pa")]
+        if withpa:
+            slot_pa = [4.65, 4.54, 4.43, 4.32, 4.21, 4.10, 3.99, 3.88, 3.77]
+            assumed = [slot_pa[min(max(r["slot"], 1), 9) - 1] for r in withpa]
+            actual = [r["pa"] for r in withpa]
+            moved = [r for r in withpa
+                     if r.get("slotActual") and r["slotActual"] != r["slot"]]
+            out["hits"]["pa"] = {
+                "n": len(withpa),
+                "assumed": sum(assumed) / len(assumed),
+                "actual": sum(actual) / len(actual),
+                "gap": sum(a - b for a, b in zip(assumed, actual)) / len(actual),
+                "movedShare": len(moved) / len(withpa),
+            }
     if games:
         # The model works in home-win probability because that is the natural
         # frame for Pythagenpat, but nobody bets "the home team". Restate every
@@ -368,6 +416,11 @@ def main():
         if h:
             print(f"  hits: {h['n']} scored, predicted {h['pred']:.3f} "
                   f"actual {h['actual']:.3f}")
+            pa = h.get("pa")
+            if pa:
+                print(f"    PA: assumed {pa['assumed']:.2f}, actual "
+                      f"{pa['actual']:.2f} ({pa['gap']:+.2f}), "
+                      f"{pa['movedShare']:.0%} batted out of their projected slot")
         g = payload.get("games")
         if g:
             print(f"  games: {g['n']} scored, pick right {g['actual']:.1%} "
@@ -407,6 +460,9 @@ h1{margin:2px 0 0;font-size:26px;font-weight:800;letter-spacing:-.035em}
   background:var(--panel);border:1px solid var(--amberDim);border-radius:100px;
   text-decoration:none;display:inline-block}
 .pill:hover{border-color:var(--amber);background:rgba(255,176,0,.08)}
+.pa{padding:10px 14px;border-top:1px solid var(--line);font-size:12px;color:var(--dim)}
+.pa b{color:var(--text)}
+.pa i{font-style:normal;color:var(--faint);font-size:11px}
 .card{margin:0 20px 14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .ch{padding:11px 14px;border-bottom:1px solid var(--line);display:flex;
   justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
@@ -482,6 +538,13 @@ function section(key, title, note, predLabel){
     the first slate it records — check back tomorrow.</div></div>`;
   const gap = s.pred - s.actual;
   const recent = s.daily.slice(-10).reverse();
+  const pa = s.pa ? `<div class="pa">Plate appearances: the model assumed
+      <b>${s.pa.assumed.toFixed(2)}</b> per pick, hitters actually got
+      <b>${s.pa.actual.toFixed(2)}</b>
+      (<b style="color:${Math.abs(s.pa.gap)<0.15?'var(--good)':'var(--bad)'}">${
+        s.pa.gap>0?"+":""}${s.pa.gap.toFixed(2)}</b> too many),
+      and ${(s.pa.movedShare*100).toFixed(0)}% batted outside their projected slot.
+      <i>n=${s.pa.n.toLocaleString()}</i></div>` : "";
   return `<div class="card">
     <div class="ch"><b>${title}</b><span>${note}${s.pending?` · ${s.pending} awaiting results`:""}</span></div>
     <div class="kpis">
@@ -504,6 +567,7 @@ function section(key, title, note, predLabel){
       <td>${d.n}</td><td>${pc(d.pred,0)}</td>
       <td style="color:${d.actual>=d.pred?'var(--good)':'var(--bad)'}">${pc(d.actual,0)}</td></tr>`).join("")}
       </tbody></table>`:""}
+    ${pa}
   </div>`;
 }
 function runsSection(){

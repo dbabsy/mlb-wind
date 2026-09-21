@@ -10428,7 +10428,7 @@
 "team":"DET",
 "slot":4,
 "p":0.6859,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-20",
@@ -10438,7 +10438,7 @@
 "team":"CWS",
 "slot":1,
 "p":0.6972,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-20",
@@ -10448,7 +10448,7 @@
 "team":"DET",
 "slot":1,
 "p":0.7122,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-20",
@@ -10458,7 +10458,7 @@
 "team":"MIL",
 "slot":3,
 "p":0.6996,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-20",
@@ -10468,7 +10468,7 @@
 "team":"MIL",
 "slot":5,
 "p":0.6696,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-20",
@@ -10478,7 +10478,7 @@
 "team":"MIL",
 "slot":1,
 "p":0.7208,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-20",
@@ -14684,7 +14684,9 @@
 "wpHome":0.357,
 "rHome":3.56,
 "rAway":5.2,
-"result":null
+"result":true,
+"sHome":8,
+"sAway":1
 },
 {
 "date":"2026-09-20",
@@ -14694,7 +14696,9 @@
 "wpHome":0.1832,
 "rHome":2.26,
 "rAway":5.53,
-"result":null
+"result":false,
+"sHome":0,
+"sAway":3
 },
 {
 "date":"2026-09-20",

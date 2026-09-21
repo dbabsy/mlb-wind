@@ -10543,11 +10543,11 @@
 {
 "date":"2026-09-21",
 "gamePk":824221,
-"pid":650402,
-"name":"Gleyber Torres",
+"pid":680664,
+"name":"Eduardo Valencia",
 "team":"DET",
-"slot":2,
-"p":0.6682,
+"slot":4,
+"p":0.6748,
 "result":null
 },
 {
@@ -10556,18 +10556,18 @@
 "pid":682985,
 "name":"Riley Greene",
 "team":"DET",
-"slot":4,
-"p":0.6853,
+"slot":3,
+"p":0.6817,
 "result":null
 },
 {
 "date":"2026-09-21",
 "gamePk":824221,
-"pid":805808,
-"name":"Kevin McGonigle",
+"pid":701678,
+"name":"Hao-Yu Lee",
 "team":"DET",
-"slot":1,
-"p":0.6992,
+"slot":2,
+"p":0.6844,
 "result":null
 },
 {
@@ -10577,7 +10577,7 @@
 "name":"Nathan Lukes",
 "team":"TOR",
 "slot":3,
-"p":0.7144,
+"p":0.7161,
 "result":null
 },
 {
@@ -10587,7 +10587,7 @@
 "name":"Vladimir Guerrero Jr.",
 "team":"TOR",
 "slot":2,
-"p":0.7226,
+"p":0.7244,
 "result":null
 },
 {
@@ -10597,7 +10597,7 @@
 "name":"Brett Bateman",
 "team":"TOR",
 "slot":1,
-"p":0.6943,
+"p":0.6957,
 "result":null
 }
 ],
@@ -14817,8 +14817,8 @@
 "gamePk":824221,
 "home":"DET",
 "away":"WSH",
-"wpHome":0.6568,
-"rHome":5.61,
+"wpHome":0.5916,
+"rHome":4.87,
 "rAway":4.26,
 "result":null
 },

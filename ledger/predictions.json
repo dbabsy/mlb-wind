@@ -10517,7 +10517,7 @@
 "name":"Andrew Knizner",
 "team":"SF",
 "slot":4,
-"p":0.6755,
+"p":0.6786,
 "result":null
 },
 {
@@ -10527,7 +10527,7 @@
 "name":"Brooks Lee",
 "team":"MIN",
 "slot":2,
-"p":0.6671,
+"p":0.6704,
 "result":null
 },
 {
@@ -10537,7 +10537,7 @@
 "name":"Jung Hoo Lee",
 "team":"SF",
 "slot":2,
-"p":0.7411,
+"p":0.7439,
 "result":null
 },
 {
@@ -10577,17 +10577,17 @@
 "name":"Nathan Lukes",
 "team":"TOR",
 "slot":3,
-"p":0.714,
+"p":0.7161,
 "result":null
 },
 {
 "date":"2026-09-21",
 "gamePk":824787,
-"pid":665489,
-"name":"Vladimir Guerrero Jr.",
+"pid":672386,
+"name":"Alejandro Kirk",
 "team":"TOR",
 "slot":2,
-"p":0.722,
+"p":0.7102,
 "result":null
 },
 {
@@ -10597,7 +10597,7 @@
 "name":"Brett Bateman",
 "team":"TOR",
 "slot":1,
-"p":0.6941,
+"p":0.6957,
 "result":null
 }
 ],
@@ -14807,9 +14807,9 @@
 "gamePk":823169,
 "home":"SF",
 "away":"MIN",
-"wpHome":0.5473,
-"rHome":4.17,
-"rAway":4.01,
+"wpHome":0.5482,
+"rHome":4.24,
+"rAway":4.07,
 "result":null
 },
 {
@@ -14827,9 +14827,9 @@
 "gamePk":824787,
 "home":"BAL",
 "away":"TOR",
-"wpHome":0.4491,
+"wpHome":0.4386,
 "rHome":3.66,
-"rAway":4.37,
+"rAway":4.47,
 "result":null
 }
 ]

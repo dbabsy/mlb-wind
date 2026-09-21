@@ -10577,7 +10577,7 @@
 "name":"Nathan Lukes",
 "team":"TOR",
 "slot":3,
-"p":0.714,
+"p":0.7144,
 "result":null
 },
 {
@@ -10587,7 +10587,7 @@
 "name":"Vladimir Guerrero Jr.",
 "team":"TOR",
 "slot":2,
-"p":0.722,
+"p":0.7226,
 "result":null
 },
 {
@@ -10597,7 +10597,7 @@
 "name":"Brett Bateman",
 "team":"TOR",
 "slot":1,
-"p":0.6941,
+"p":0.6943,
 "result":null
 }
 ],
@@ -14817,9 +14817,9 @@
 "gamePk":824221,
 "home":"DET",
 "away":"WSH",
-"wpHome":0.6573,
-"rHome":5.58,
-"rAway":4.23,
+"wpHome":0.6568,
+"rHome":5.61,
+"rAway":4.26,
 "result":null
 },
 {

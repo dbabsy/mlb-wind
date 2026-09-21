@@ -10523,11 +10523,11 @@
 {
 "date":"2026-09-21",
 "gamePk":823169,
-"pid":686797,
-"name":"Brooks Lee",
-"team":"MIN",
-"slot":2,
-"p":0.6704,
+"pid":682674,
+"name":"Victor Bericoto",
+"team":"SF",
+"slot":3,
+"p":0.6651,
 "result":null
 },
 {
@@ -10577,7 +10577,7 @@
 "name":"Nathan Lukes",
 "team":"TOR",
 "slot":3,
-"p":0.7161,
+"p":0.714,
 "result":null
 },
 {
@@ -10587,7 +10587,7 @@
 "name":"Alejandro Kirk",
 "team":"TOR",
 "slot":2,
-"p":0.7102,
+"p":0.7091,
 "result":null
 },
 {
@@ -10597,7 +10597,7 @@
 "name":"Brett Bateman",
 "team":"TOR",
 "slot":1,
-"p":0.6957,
+"p":0.6941,
 "result":null
 }
 ],
@@ -14807,9 +14807,9 @@
 "gamePk":823169,
 "home":"SF",
 "away":"MIN",
-"wpHome":0.5482,
+"wpHome":0.5176,
 "rHome":4.24,
-"rAway":4.07,
+"rAway":4.35,
 "result":null
 },
 {

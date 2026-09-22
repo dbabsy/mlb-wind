@@ -15373,8 +15373,8 @@
 "gamePk":823494,
 "home":"NYY",
 "away":"TB",
-"wpHome":0.6015,
-"rHome":3.26,
+"wpHome":0.6188,
+"rHome":3.4,
 "rAway":2.74,
 "result":null
 },
@@ -15425,9 +15425,9 @@
 "gamePk":824302,
 "home":"COL",
 "away":"AZ",
-"wpHome":0.3381,
-"rHome":4.53,
-"rAway":6.73,
+"wpHome":0.3355,
+"rHome":4.63,
+"rAway":6.9,
 "result":null
 },
 {
@@ -15435,9 +15435,9 @@
 "gamePk":824624,
 "home":"CHC",
 "away":"MIA",
-"wpHome":0.5372,
-"rHome":4.84,
-"rAway":4.77,
+"wpHome":0.5342,
+"rHome":4.93,
+"rAway":4.89,
 "result":null
 },
 {

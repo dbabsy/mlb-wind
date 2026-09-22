@@ -10548,7 +10548,7 @@
 "team":"DET",
 "slot":3,
 "p":0.6817,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-21",
@@ -10558,7 +10558,7 @@
 "team":"WSH",
 "slot":2,
 "p":0.6959,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-21",
@@ -10568,7 +10568,7 @@
 "team":"DET",
 "slot":2,
 "p":0.6844,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-21",
@@ -10578,7 +10578,7 @@
 "team":"TOR",
 "slot":3,
 "p":0.714,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-21",
@@ -10588,7 +10588,7 @@
 "team":"TOR",
 "slot":2,
 "p":0.7091,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-21",
@@ -10598,7 +10598,7 @@
 "team":"TOR",
 "slot":1,
 "p":0.6941,
-"result":null
+"result":false
 }
 ],
 "games":[
@@ -14820,7 +14820,9 @@
 "wpHome":0.578,
 "rHome":4.87,
 "rAway":4.39,
-"result":null
+"result":true,
+"sHome":9,
+"sAway":2
 },
 {
 "date":"2026-09-21",
@@ -14830,7 +14832,9 @@
 "wpHome":0.4386,
 "rHome":3.66,
 "rAway":4.47,
-"result":null
+"result":true,
+"sHome":4,
+"sAway":3
 }
 ]
 }

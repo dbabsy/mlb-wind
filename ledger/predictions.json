@@ -11129,7 +11129,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.7547,
+"p":0.7524,
 "result":null,
 "dk":{
 "o":-218,
@@ -11143,7 +11143,7 @@
 "name":"Yordan Alvarez",
 "team":"HOU",
 "slot":2,
-"p":0.7611,
+"p":0.7581,
 "result":null,
 "dk":{
 "o":-241,
@@ -11157,7 +11157,7 @@
 "name":"Yainer Diaz",
 "team":"HOU",
 "slot":5,
-"p":0.7321,
+"p":0.7297,
 "result":null,
 "dk":{
 "o":-237,
@@ -11289,7 +11289,7 @@
 "name":"Cody Bellinger",
 "team":"NYY",
 "slot":2,
-"p":0.7288,
+"p":0.7275,
 "result":null,
 "dk":{
 "o":-207,
@@ -11303,7 +11303,7 @@
 "name":"Yandy D\u00edaz",
 "team":"TB",
 "slot":1,
-"p":0.7395,
+"p":0.7391,
 "result":null,
 "dk":{
 "o":-225,
@@ -11313,12 +11313,16 @@
 {
 "date":"2026-09-23",
 "gamePk":823492,
-"pid":671277,
-"name":"Luis Garc\u00eda Jr.",
-"team":"NYY",
-"slot":4,
-"p":0.7141,
-"result":null
+"pid":802415,
+"name":"Chandler Simpson",
+"team":"TB",
+"slot":5,
+"p":0.7126,
+"result":null,
+"dk":{
+"o":-188,
+"u":141
+}
 },
 {
 "date":"2026-09-23",
@@ -11571,26 +11575,12 @@
 {
 "date":"2026-09-23",
 "gamePk":824784,
-"pid":687952,
-"name":"Christian Encarnacion-Strand",
-"team":"BAL",
-"slot":5,
-"p":0.6526,
-"result":null
-},
-{
-"date":"2026-09-23",
-"gamePk":824785,
-"pid":543807,
-"name":"George Springer",
+"pid":665489,
+"name":"Vladimir Guerrero Jr.",
 "team":"TOR",
-"slot":4,
-"p":0.6683,
-"result":null,
-"dk":{
-"o":-204,
-"u":152
-}
+"slot":2,
+"p":0.7082,
+"result":null
 },
 {
 "date":"2026-09-23",
@@ -11619,6 +11609,16 @@
 "o":-238,
 "u":176
 }
+},
+{
+"date":"2026-09-23",
+"gamePk":824785,
+"pid":665489,
+"name":"Vladimir Guerrero Jr.",
+"team":"TOR",
+"slot":2,
+"p":0.7297,
+"result":null
 },
 {
 "date":"2026-09-23",
@@ -16385,9 +16385,9 @@
 "gamePk":824784,
 "home":"BAL",
 "away":"TOR",
-"wpHome":0.5174,
+"wpHome":0.514,
 "rHome":3.91,
-"rAway":4.01,
+"rAway":4.04,
 "result":null,
 "dk":{
 "ml":{
@@ -16406,9 +16406,9 @@
 "gamePk":824785,
 "home":"BAL",
 "away":"TOR",
-"wpHome":0.5125,
+"wpHome":0.5084,
 "rHome":4.53,
-"rAway":4.69,
+"rAway":4.73,
 "result":null,
 "dk":{
 "ml":{

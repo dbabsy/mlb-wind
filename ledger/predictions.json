@@ -11087,7 +11087,7 @@
 "name":"Juan Soto",
 "team":"NYM",
 "slot":2,
-"p":0.7152,
+"p":0.7531,
 "result":null
 },
 {
@@ -11097,7 +11097,7 @@
 "name":"Bo Bichette",
 "team":"NYM",
 "slot":3,
-"p":0.7108,
+"p":0.7419,
 "result":null
 },
 {
@@ -11107,7 +11107,7 @@
 "name":"Carson Benge",
 "team":"NYM",
 "slot":5,
-"p":0.7024,
+"p":0.7251,
 "result":null
 },
 {
@@ -11117,7 +11117,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.7524,
+"p":0.7547,
 "result":null
 },
 {
@@ -11127,7 +11127,7 @@
 "name":"Yordan Alvarez",
 "team":"HOU",
 "slot":2,
-"p":0.7581,
+"p":0.7611,
 "result":null
 },
 {
@@ -11137,7 +11137,7 @@
 "name":"Yainer Diaz",
 "team":"HOU",
 "slot":5,
-"p":0.7297,
+"p":0.7321,
 "result":null
 },
 {
@@ -11323,21 +11323,11 @@
 {
 "date":"2026-09-23",
 "gamePk":824223,
-"pid":680664,
-"name":"Eduardo Valencia",
-"team":"DET",
-"slot":4,
-"p":0.6924,
-"result":null
-},
-{
-"date":"2026-09-23",
-"gamePk":824223,
 "pid":695578,
 "name":"James Wood",
 "team":"WSH",
 "slot":1,
-"p":0.6911,
+"p":0.6898,
 "result":null
 },
 {
@@ -11347,7 +11337,17 @@
 "name":"Hao-Yu Lee",
 "team":"DET",
 "slot":2,
-"p":0.6942,
+"p":0.6929,
+"result":null
+},
+{
+"date":"2026-09-23",
+"gamePk":824223,
+"pid":805808,
+"name":"Kevin McGonigle",
+"team":"DET",
+"slot":1,
+"p":0.7017,
 "result":null
 },
 {
@@ -11357,7 +11357,7 @@
 "name":"Ildemaro Vargas",
 "team":"AZ",
 "slot":1,
-"p":0.7473,
+"p":0.7454,
 "result":null
 },
 {
@@ -11367,7 +11367,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7582,
+"p":0.7548,
 "result":null
 },
 {
@@ -11377,7 +11377,7 @@
 "name":"Gabriel Moreno",
 "team":"AZ",
 "slot":3,
-"p":0.7405,
+"p":0.7368,
 "result":null
 },
 {
@@ -11456,18 +11456,18 @@
 "pid":664770,
 "name":"Nathan Lukes",
 "team":"TOR",
-"slot":3,
-"p":0.7012,
+"slot":1,
+"p":0.7188,
 "result":null
 },
 {
 "date":"2026-09-23",
 "gamePk":824784,
-"pid":672386,
-"name":"Alejandro Kirk",
-"team":"TOR",
-"slot":2,
-"p":0.6953,
+"pid":687952,
+"name":"Christian Encarnacion-Strand",
+"team":"BAL",
+"slot":5,
+"p":0.6526,
 "result":null
 },
 {
@@ -11486,18 +11486,18 @@
 "pid":664770,
 "name":"Nathan Lukes",
 "team":"TOR",
-"slot":3,
-"p":0.7012,
+"slot":1,
+"p":0.7427,
 "result":null
 },
 {
 "date":"2026-09-23",
 "gamePk":824785,
-"pid":672386,
-"name":"Alejandro Kirk",
+"pid":676391,
+"name":"Ernie Clement",
 "team":"TOR",
-"slot":2,
-"p":0.6953,
+"slot":9,
+"p":0.6704,
 "result":null
 },
 {
@@ -15993,9 +15993,9 @@
 "gamePk":822841,
 "home":"TEX",
 "away":"NYM",
-"wpHome":0.3918,
+"wpHome":0.3423,
 "rHome":3.46,
-"rAway":4.69,
+"rAway":5.23,
 "result":null
 },
 {
@@ -16073,8 +16073,8 @@
 "gamePk":824223,
 "home":"DET",
 "away":"WSH",
-"wpHome":0.7104,
-"rHome":6.23,
+"wpHome":0.6821,
+"rHome":5.84,
 "rAway":4.18,
 "result":null
 },
@@ -16083,9 +16083,9 @@
 "gamePk":824301,
 "home":"COL",
 "away":"AZ",
-"wpHome":0.4556,
-"rHome":6.12,
-"rAway":7.04,
+"wpHome":0.4571,
+"rHome":5.83,
+"rAway":6.7,
 "result":null
 },
 {
@@ -16113,9 +16113,9 @@
 "gamePk":824784,
 "home":"BAL",
 "away":"TOR",
-"wpHome":0.5267,
-"rHome":4.31,
-"rAway":4.33,
+"wpHome":0.5174,
+"rHome":3.91,
+"rAway":4.01,
 "result":null
 },
 {
@@ -16123,9 +16123,9 @@
 "gamePk":824785,
 "home":"BAL",
 "away":"TOR",
-"wpHome":0.572,
-"rHome":4.75,
-"rAway":4.33,
+"wpHome":0.5005,
+"rHome":4.33,
+"rAway":4.6,
 "result":null
 },
 {

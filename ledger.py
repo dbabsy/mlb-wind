@@ -291,6 +291,39 @@ def versus_dk(rows, p_of, sides_of):
             "bets": bets, "won": won, "profit": profit}
 
 
+def totals_vs_dk(rows):
+    """The side of DraftKings' total the model's projection pointed at, graded.
+
+    The projection is a mean and a book's line sits near the median, which in
+    baseball is lower -- scoring is skewed by the occasional blowout -- so a
+    model that is unbiased on runs can still lean over every line. This is
+    where that shows up, in results rather than argument.
+    """
+    n = won = push = over = 0
+    profit = 0.0
+    for r in rows:
+        t = (r.get("dk") or {}).get("total")
+        if not t or r.get("sHome") is None:
+            continue
+        proj, line = r["rHome"] + r["rAway"], t["line"]
+        if proj == line:
+            continue
+        side_over = proj > line
+        actual = r["sHome"] + r["sAway"]
+        n += 1
+        over += side_over
+        if actual == line:
+            push += 1
+        elif (actual > line) == side_over:
+            won += 1
+            profit += dk.decimal(t["o"] if side_over else t["u"]) - 1
+        else:
+            profit -= 1
+    if not n:
+        return None
+    return {"n": n, "won": won, "push": push, "over": over, "profit": profit}
+
+
 def summarise(led):
     hits = [r for r in led["hits"] if r["result"] is not None]
     games = [r for r in led["games"] if r["result"] is not None]
@@ -394,6 +427,9 @@ def summarise(led):
                   lambda r: r.get("dk") and (r["dk"]["o"], r["dk"]["u"]))
     if h:
         vs["hits"] = h
+    t = totals_vs_dk(led["games"])
+    if t:
+        vs["totals"] = t
     if vs:
         out["dk"] = vs
     return out
@@ -434,6 +470,10 @@ def main():
             print(f"  games: {g['n']} scored, pick right {g['actual']:.1%} "
                   f"(predicted {g['pred']:.1%})")
         for k, v in (payload.get("dk") or {}).items():
+            if k == "totals":
+                print(f"  vs DraftKings (totals): {v['n']} graded, model's side won "
+                      f"{v['won']}, {v['over']} of them overs, {v['profit']:+.2f} units")
+                continue
             print(f"  vs DraftKings ({k}): {v['n']} priced, log loss model "
                   f"{v['model']:.4f} book {v['book']:.4f}; {v['bets']} value bets, "
                   f"{v['profit']:+.2f} units")
@@ -583,10 +623,13 @@ function dkSection(){
     <td>${v.bets?`${v.won}/${v.bets}`:"—"}</td>
     <td style="color:${v.profit>=0?'var(--good)':'var(--bad)'}">${v.bets?(v.profit>=0?"+":"")+v.profit.toFixed(2)+"u":"—"}</td></tr>`;
   return `<div class="card">${head}
-    <table><thead><tr><th class="l">Market</th><th>N</th><th>Model LL</th><th>DK LL</th>
-      <th>Sharper</th><th>Value bets won</th><th>Flat 1u</th></tr></thead>
-    <tbody>${row("Moneyline", s.games)}${row("1+ hit", s.hits)}</tbody></table>
-    <div class="empty">Log loss, lower is better, with DraftKings' margin removed. A value bet
+    <div style="overflow-x:auto"><table style="white-space:nowrap"><thead><tr><th class="l">Market</th><th>N</th><th>Model</th><th>DK</th>
+      <th>Sharper</th><th>Bets won</th><th>1u flat</th></tr></thead>
+    <tbody>${row("Moneyline", s.games)}${row("1+ hit", s.hits)}${s.totals?`<tr>
+      <td class="l">Total, model's side</td><td>${s.totals.n}</td><td>—</td><td>—</td>
+      <td>${s.totals.over} over</td><td>${s.totals.won}/${s.totals.n-s.totals.push}</td>
+      <td style="color:${s.totals.profit>=0?'var(--good)':'var(--bad)'}">${(s.totals.profit>=0?"+":"")+s.totals.profit.toFixed(2)}u</td></tr>`:""}</tbody></table></div>
+    <div class="empty">Model and DK are log loss, lower is better, with DraftKings' margin removed. A value bet
     is one unit on the side the model expected to return more at DraftKings' pre-game price,
     whenever that was at least 1%; the running total is what that would have made or lost. A few
     hundred bets are needed before either number means much.</div>

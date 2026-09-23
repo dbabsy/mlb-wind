@@ -472,6 +472,19 @@ def test_versus_dk_arithmetic():
     q1 = dk.no_vig(120, -140)
     check(abs(v["book"] - (-(math.log(q1) + math.log(dk.no_vig(-200, 170))) / 2)) < 1e-12,
           "DraftKings is scored on its no-vig chance")
+    tot = L.totals_vs_dk([
+        # Model 9.5 on a 7.5 line: over at -110; 10 runs scored, won 100/110.
+        {"rHome": 5.0, "rAway": 4.5, "sHome": 6, "sAway": 4, "dk": {"total": {"line": 7.5, "o": -110, "u": -110}}},
+        # Model 7.0 on 8.5: under at +100; 12 scored, lost.
+        {"rHome": 3.5, "rAway": 3.5, "sHome": 9, "sAway": 3, "dk": {"total": {"line": 8.5, "o": -120, "u": 100}}},
+        # Model 9.0 on 8.0, landed exactly 8: a push.
+        {"rHome": 4.5, "rAway": 4.5, "sHome": 5, "sAway": 3, "dk": {"total": {"line": 8.0, "o": -110, "u": -110}}},
+        # Not final yet: not graded.
+        {"rHome": 4.5, "rAway": 4.5, "dk": {"total": {"line": 8.0, "o": -110, "u": -110}}},
+    ])
+    check(tot["n"] == 3 and tot["won"] == 1 and tot["push"] == 1 and tot["over"] == 2,
+          "totals are graded on the side the projection pointed at, pushes apart")
+    check(abs(tot["profit"] - (100 / 110 - 1)) < 1e-9, "a push neither wins nor loses")
     s = L.summarise({"hits": [], "games": [dict(r, date="D", gamePk=i, home="H", away="A",
                                                  rHome=4.0, rAway=4.0)
                                             for i, r in enumerate(rows)]})

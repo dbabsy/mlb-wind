@@ -466,6 +466,12 @@ footer b{color:var(--dim)}
 </div>
 <div id="board"></div>
 <footer>
+  <b>DraftKings</b> prices are the pre-game prices when the page was built. <b>Value</b> is the
+  model's expected return on one unit at that price, shown at 1% or more. A large one usually
+  means the model is missing something the market knows (a rest day, a bullpen game, a late
+  scratch), not that DraftKings is wrong; the accuracy page grades every flagged bet, so trust
+  it only as far as that record goes. The model's total is a <b>mean</b>, and a book's line sits
+  near the median, which in baseball is lower, so the model will lean over most lines.<br>
   Expected runs come from each projected lineup's wOBA, with plate appearances split
   <b>59/41</b> between the opposing starter and bullpen — the league's real split — then scaled by
   park and tonight's weather. Runs become a win probability through Pythagenpat.<br>

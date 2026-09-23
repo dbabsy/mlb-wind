@@ -556,6 +556,10 @@ footer b{color:var(--dim)}
 </div>
 <div id="board"></div>
 <footer>
+  <b>DraftKings</b> 1+ hit prices are the pre-game prices when the page was built. <b>Value</b>
+  is the model's expected return on one unit at that price, shown at 1% or more. The accuracy
+  page shows these picks landing a few points below their projections, so discount the
+  percentage by about that much, and read a large value as a question rather than an answer.<br>
   A plate appearance is a walk, a hit by pitch, a strikeout, a homer, or a ball in play —
   only the last two can be a hit, so each is modelled separately and recombined as
   <b>P(HR) + P(in play) × BABIP</b>. Batter and pitcher are merged by <b>odds ratio</b>, and each

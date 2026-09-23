@@ -13,6 +13,7 @@ import re
 import sys
 from pathlib import Path
 
+import dk
 import players as P
 import ledger as L
 
@@ -303,6 +304,178 @@ def test_summarise_omits_runs_when_no_scores():
                                   "wpHome": .6, "rHome": 5.0, "rAway": 4.0, "result": True}]}
     check("runs" not in L.summarise(led),
           "no run card is claimed before any final score is known")
+
+
+# ── DraftKings ──────────────────────────────────────────────────────────
+def _odd(stat, side, price, line=None, bet="ou", ent="all", pid=None, period="game"):
+    o = {"statID": stat, "sideID": side, "betTypeID": bet, "statEntityID": ent,
+         "periodID": period, "byBookmaker": {"draftkings": {"odds": price, "available": True}}}
+    if line is not None:
+        o["byBookmaker"]["draftkings"]["overUnder"] = line
+    if pid:
+        o["playerID"] = pid
+    return o
+
+
+def _event(eid="e1", start="2026-09-23T23:10:00.000Z", started=False,
+           home="ARIZONA_DIAMONDBACKS_MLB", away="WASHINGTON_NATIONALS_MLB"):
+    """Shaped like a real SportsGameOdds MLB event (September 2026)."""
+    odds = [
+        _odd("points", "home", "-165", bet="ml", ent="home"),
+        _odd("points", "away", "+144", bet="ml", ent="away"),
+        _odd("points", "over", "-110", "8.5"), _odd("points", "under", "-110", "8.5"),
+        # First five innings: a different bet.
+        _odd("points", "home", "-150", bet="ml", ent="home", period="1h"),
+        _odd("batting_hits", "over", "-250", "0.5", pid="P1"),
+        _odd("batting_hits", "under", "+190", "0.5", pid="P1"),
+        _odd("batting_hits", "yes", "-240", bet="yn", ent="P1", pid="P1"),
+        _odd("batting_hits", "no", "+185", bet="yn", ent="P1", pid="P1"),
+        # Only the yes/no form for this hitter.
+        _odd("batting_hits", "yes", "-150", bet="yn", ent="P2", pid="P2"),
+        _odd("batting_hits", "no", "+120", bet="yn", ent="P2", pid="P2"),
+        # 2+ hits is not 1+ hit.
+        _odd("batting_hits", "over", "+160", "1.5", pid="P3"),
+        _odd("batting_hits", "under", "-210", "1.5", pid="P3"),
+    ]
+    return {"eventID": eid, "status": {"startsAt": start, "started": started},
+            "teams": {"home": {"teamID": home}, "away": {"teamID": away}},
+            "players": {"P1": {"name": "Ronald Acuña Jr."}, "P2": {"name": "CJ Abrams"},
+                        "P3": {"name": "Luis Arraez"}},
+            "odds": {str(i): o for i, o in enumerate(odds)}}
+
+
+def test_dk_reads_the_three_markets():
+    e = dk.parse(_event())
+    check(e["ml"] == {"home": -165, "away": 144}, "the full-game moneyline is read, not the first five")
+    check(e["total"] == {"line": 8.5, "o": -110, "u": -110}, "the game total is read with its line")
+    check(e["hits"].get("ronaldacuna") == {"o": -250, "u": 190},
+          "1+ hit prefers the over/under and folds the accent in the name")
+    check(e["hits"].get("cjabrams") == {"o": -150, "u": 120}, "a yes/no alone is 1+ hit")
+    check("luisarraez" not in e["hits"], "o1.5 hits is not mistaken for 1+ hit")
+
+
+def test_dk_matches_the_right_game():
+    cache = {"events": [dk.parse(_event("g1", "2026-09-23T17:10:00Z")),
+                        dk.parse(_event("g2", "2026-09-23T23:10:00Z"))]}
+    dbacks = {"teamName": "D-backs", "name": "Arizona Diamondbacks"}
+    nats = {"teamName": "Nationals", "name": "Washington Nationals"}
+    ev = dk.find_game(cache, dbacks, nats, "2026-09-23T23:05:00Z")
+    check(ev is not None and ev["id"] == "g2",
+          "MLB's 'D-backs' still finds Arizona, and a doubleheader goes by start time")
+    check(dk.find_game(cache, nats, dbacks, "2026-09-23T23:05:00Z") is None,
+          "home and away are not interchangeable")
+    check(dk.find_game(cache, dbacks, nats, "2026-09-25T23:05:00Z") is None,
+          "a game days away is not matched to today's price")
+    red = {"teamName": "Red Sox", "name": "Boston Red Sox"}
+    white = {"teamName": "White Sox", "name": "Chicago White Sox"}
+    sox = {"events": [dk.parse(_event("s", home="CHICAGO_WHITE_SOX_MLB",
+                                      away="NEW_YORK_YANKEES_MLB"))]}
+    check(dk.find_game(sox, red, {"teamName": "Yankees"}, "2026-09-23T23:10:00Z") is None,
+          "the Red Sox are not the White Sox")
+
+
+def test_dk_cache_spends_only_when_due():
+    import tempfile
+    from datetime import datetime, timezone, timedelta
+    calls = []
+
+    def get(path, params, key):
+        calls.append(params)
+        return {"data": [_event("a", "2026-09-23T23:10:00Z"),
+                         _event("b", "2026-09-23T15:00:00Z", started=True)]}
+    saved = dk.CACHE
+    with tempfile.TemporaryDirectory() as tmp:
+        dk.CACHE = Path(tmp) / "dk.json"
+        try:
+            t0 = datetime(2026, 9, 23, 12, 0, tzinfo=timezone.utc)
+            c = dk.load("2026-09-23", key="k", now=t0, get=get)
+            check(len(calls) == 1 and [e["id"] for e in c["events"]] == ["a"],
+                  "a refresh asks once, and a game already started is not priced")
+            check(calls[0]["startsBefore"] == "2026-09-24T11:00:00Z",
+                  "the window ends at 6am Central after the slate, so tomorrow costs nothing")
+            dk.load("2026-09-23", key="k", now=t0 + timedelta(hours=3), get=get)
+            check(len(calls) == 1, "a second build inside the refresh interval spends nothing")
+            dk.load("2026-09-23", key="", now=t0 + timedelta(hours=5), get=get)
+            check(len(calls) == 1, "no key, no request")
+
+            def gone(path, params, key):
+                calls.append(params)
+                return {"data": []}
+            c = dk.load("2026-09-23", key="k", now=datetime(2026, 9, 24, 0, 0, tzinfo=timezone.utc),
+                        get=gone)
+            check(len(calls) == 2 and [e["id"] for e in c["events"]] == ["a"],
+                  "a game that has since started keeps its last pre-game price")
+
+            def boom(path, params, key):
+                raise OSError("down")
+            c = dk.load("2026-09-23", key="k", now=datetime(2026, 9, 24, 5, 0, tzinfo=timezone.utc),
+                        get=boom)
+            check([e["id"] for e in c["events"]] == ["a"], "a failed refresh keeps the cached prices")
+            c = dk.load("2026-09-24", key="", now=datetime(2026, 9, 24, 12, 0, tzinfo=timezone.utc),
+                        get=get)
+            check(c["events"] == [], "yesterday's prices are never shown on today's slate")
+        finally:
+            dk.CACHE = saved
+
+
+def test_dk_price_is_frozen_with_the_prediction():
+    """A price is recorded with the pick, refreshed with it before first pitch,
+    kept when a later build has none, and never touched once the game starts."""
+    import tempfile
+    future, past = "2099-01-01T00:00:00Z", "2000-01-01T00:00:00Z"
+
+    def pages(d, start, hdk, gdk):
+        pick = {"id": 1, "name": "A", "team": "T", "slot": 1, "p": .7}
+        if hdk:
+            pick["dk"] = hdk
+        g = {"gamePk": 1, "start": start, "wpHome": .6,
+             "home": {"team": "H", "runs": 4.5}, "away": {"team": "A", "runs": 4.0}}
+        if gdk:
+            g["dk"] = gdk
+        (d / "h.html").write_text('<script>const D = ' + json.dumps(
+            {"date": "D", "games": [{"gamePk": 1, "start": start, "picks": [pick]}]}) + ';\n</script>')
+        (d / "g.html").write_text('<script>const D = ' + json.dumps(
+            {"date": "D", "games": [g]}) + ';\n</script>')
+        return str(d / "h.html"), str(d / "g.html")
+
+    with tempfile.TemporaryDirectory() as t:
+        d = Path(t)
+        g1 = {"ml": {"home": -150, "away": 130}, "total": None}
+        led = L.record({"hits": [], "games": []}, *pages(d, future, {"o": -250, "u": 190}, g1))
+        check(led["hits"][0].get("dk") == {"o": -250, "u": 190}
+              and led["games"][0].get("dk") == g1, "a DraftKings price is recorded with the pick")
+        led = L.record(led, *pages(d, future, None, None))
+        check(led["hits"][0].get("dk") == {"o": -250, "u": 190},
+              "a later build with no price keeps the recorded one")
+        led = L.record(led, *pages(d, future, {"o": -270, "u": 205}, None))
+        check(led["hits"][0]["dk"]["o"] == -270, "before first pitch the price follows the market")
+        led = L.record(led, *pages(d, past, {"o": -400, "u": 300},
+                                   {"ml": {"home": -300, "away": 250}}))
+        check(led["hits"][0]["dk"]["o"] == -270 and led["games"][0]["dk"] == g1,
+              "after first pitch nothing on the row moves, the price included")
+
+
+def test_versus_dk_arithmetic():
+    rows = [
+        # Model 60% at +120 (decimal 2.2): EV +0.32, bet home, home wins: +1.2.
+        {"wpHome": .6, "result": True, "dk": {"ml": {"home": 120, "away": -140}}},
+        # Model 30% home at -200: away 70% at +170 is EV +0.89, bet away, home wins: -1.
+        {"wpHome": .3, "result": True, "dk": {"ml": {"home": -200, "away": 170}}},
+        # No price: not counted.
+        {"wpHome": .5, "result": False},
+    ]
+    v = L.versus_dk(rows, lambda r: r["wpHome"],
+                    lambda r: r.get("dk") and (r["dk"]["ml"]["home"], r["dk"]["ml"]["away"]))
+    check(v["n"] == 2 and v["bets"] == 2 and v["won"] == 1, "value bets are counted on priced rows only")
+    check(abs(v["profit"] - 0.2) < 1e-9, "flat-stake profit is +1.2 - 1 = +0.2 units")
+    import math
+    q1 = dk.no_vig(120, -140)
+    check(abs(v["book"] - (-(math.log(q1) + math.log(dk.no_vig(-200, 170))) / 2)) < 1e-12,
+          "DraftKings is scored on its no-vig chance")
+    s = L.summarise({"hits": [], "games": [dict(r, date="D", gamePk=i, home="H", away="A",
+                                                 rHome=4.0, rAway=4.0)
+                                            for i, r in enumerate(rows)]})
+    check(s.get("dk", {}).get("games", {}).get("n") == 2, "the accuracy page carries the comparison")
 
 
 if __name__ == "__main__":

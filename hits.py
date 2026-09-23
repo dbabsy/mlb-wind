@@ -58,6 +58,7 @@ from pathlib import Path
 
 from orient import load_orientations
 import daily as Dl
+import dk
 import players as P
 
 CACHE = Path(__file__).parent / ".cache"
@@ -327,6 +328,7 @@ def main():
     park_delta, _pc, _td, _fb, domes, hand_delta = Dl.load_model()
     orient = load_orientations()
 
+    odds = dk.load(date.fromisoformat(a.date))
     sched = P.q("schedule", sportId=1, date=a.date,
                 hydrate="probablePitcher,lineups,team,venue(location)")
     games = [g for d in sched.get("dates", []) for g in d.get("games", [])]
@@ -445,6 +447,14 @@ def main():
                 })
 
         cands.sort(key=lambda c: -c["p"])
+        # DraftKings' 1+ hit price for the picks, when it has posted one. In D
+        # on purpose: the ledger freezes it with the pick at first pitch.
+        ev_ = dk.find_game(odds, g["teams"]["home"].get("team"),
+                           g["teams"]["away"].get("team"), g.get("gameDate", ""))
+        for c in cands[:a.picks]:
+            hp = dk.hit_price(ev_, c["name"])
+            if hp:
+                c["dk"] = hp
         out.append({
             "gamePk": g.get("gamePk"),
             "venue": ven.get("name", ""), "start": g.get("gameDate", ""),
@@ -456,11 +466,17 @@ def main():
         })
 
     out.sort(key=lambda g: g.get("start") or "")  # first pitch order, like a schedule
+    priced = sum(1 for g in out for c in g["picks"] if c.get("dk"))
+    if odds.get("events"):
+        print(f"  dk: 1+ hit prices on {priced} of "
+              f"{sum(len(g['picks']) for g in out)} picks", flush=True)
     payload = {"games": out, "date": a.date, "picks": a.picks,
+               "dkAt": odds.get("at") if priced else None,
                "built": datetime.now(timezone.utc).isoformat(timespec="minutes"),
                "lgHit": round(lg["babip"], 3)}
     Path(a.out).write_text(
-        TEMPLATE.replace("__DATA__", json.dumps(payload, separators=(",", ":"))),
+        TEMPLATE.replace("__DATA__", json.dumps(payload, separators=(",", ":")))
+                .replace("__MINEV__", str(dk.MIN_EV)),
         encoding="utf-8")
     allp = [c["p"] for g in out for c in g["picks"]]
     if allp:
@@ -514,6 +530,12 @@ h1{margin:2px 0 0;font-size:26px;font-weight:800;letter-spacing:-.035em}
   display:flex;gap:10px;flex-wrap:wrap}
 .big{font-family:var(--mono);font-size:20px;font-weight:800;letter-spacing:-.02em;
   grid-row:1/3;grid-column:3/4;text-align:right;min-width:62px}
+.dkh{grid-column:2/4;display:flex;flex-wrap:wrap;gap:2px 10px;font-family:var(--mono);
+  font-size:9.5px;color:var(--dim);font-variant-numeric:tabular-nums}
+.dkh .bk{color:var(--amber);font-weight:700;letter-spacing:.05em}
+.dkh b{color:var(--text);font-weight:600}
+.dkh .val{color:var(--hot);font-weight:700}
+.dkh .nov{color:var(--faint)}
 .bar{grid-column:2/4;height:4px;background:var(--panel2);border-radius:100px;overflow:hidden;margin-top:3px}
 .bar i{display:block;height:100%;background:var(--hot);border-radius:100px}
 footer{padding:14px 20px 26px;font-family:var(--mono);font-size:10px;color:var(--faint);line-height:1.75}
@@ -544,6 +566,7 @@ footer b{color:var(--dim)}
 </footer></div>
 <script>
 const D = __DATA__;
+const MIN_EV = __MINEV__;
 let byGame = true;
 function etTime(iso){ return new Date(iso).toLocaleString("en-US",{timeZone:"America/Chicago",
   hour:"numeric",minute:"2-digit",hour12:true}) + " CT"; }
@@ -559,7 +582,19 @@ function stamps(){
   const hrs=(Date.now()-new Date(D.built).getTime())/3.6e6;
   document.getElementById("stamps").innerHTML =
     `<span class="stamp${hrs>4?" stale":""}"><b>Updated</b> ${etTime(D.built)} on `+
-    `${etDateShort(D.built)} · ${ago(D.built)}${hrs>4?" — may be out of date":""}</span>`;
+    `${etDateShort(D.built)} · ${ago(D.built)}${hrs>4?" — may be out of date":""}</span>` +
+    (D.dkAt ? `<span class="stamp"><b>DraftKings</b> prices ${ago(D.dkAt)} · check the live price before betting</span>` : "");
+}
+function sgn(x){ return (x>0?"+":"")+x; }
+function imp(a){ a=+a; return a<0 ? -a/(-a+100) : 100/(a+100); }
+function dec(a){ a=+a; return 1 + (a<0 ? 100/-a : a/100); }
+function dkHit(c){
+  const d=c.dk; if(!d) return "";
+  const nv = imp(d.o)/(imp(d.o)+imp(d.u)), e = c.p*dec(d.o)-1;
+  return `<div class="dkh"><span class="bk">DK</span><span>1+ hit <b>${sgn(d.o)}</b></span>
+    <span>${(nv*100).toFixed(0)}% no-vig</span>${e>MIN_EV
+      ? `<span class="val" title="model's expected return on one unit at DraftKings' price">value +${(e*100).toFixed(1)}%</span>`
+      : `<span class="nov">no value at this price</span>`}</div>`;
 }
 function pick(c,i){
   return `<div class="pk">
@@ -570,6 +605,7 @@ function pick(c,i){
     <div class="sub"><span>${c.pa} PA</span><span>vs ${c.vs} (${c.hand})</span>
       <span>${(c.perPA*100).toFixed(0)}% per PA</span>${
         c.spd?`<span>${c.spd} ft/s</span>`:""}</div>
+    ${dkHit(c)}
     <span class="bar"><i style="width:${(c.p*100).toFixed(0)}%"></i></span>
   </div>`;
 }

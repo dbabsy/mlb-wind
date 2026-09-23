@@ -28,6 +28,34 @@ python3 ledger.py --all --hits-html public/hits.html --games-html public/games.h
 Any page script takes `--date YYYY-MM-DD` and `--out PATH`. Building a past
 date is how the models were backtested.
 
+## DraftKings prices
+
+`dk.py` puts DraftKings' pre-game prices beside the model: moneyline and total
+on `games.html`, the 1+ hit price on each pick on `hits.html`, and a "value"
+tag where the model's expected return at DraftKings' price is at least 1%
+(`dk.MIN_EV`). The ledger records the price with the prediction and the
+accuracy page grades the model against DraftKings' no-vig number, plus the
+flat-stake record of the value bets. Same threshold in both places, so the
+record grades exactly what the pages flagged.
+
+The source is SportsGameOdds (`SGO_API_KEY` secret, optional). Its free plan
+is **2,500 objects a month, about one per game fetched, shared with
+mlb-streaks and nfl-streaks.** Fetching on every build here would cost ~100 a
+day alone, so prices are cached in `.cache/dk_odds.json` (the Actions cache the
+Statcast step already restores) and refreshed only when four hours old -- the
+7am, 11am, 4pm and 10pm passes -- asking only for games that have not started
+and none of tomorrow's. About 40 a day in a full regular season. Raising the
+cadence means taking allowance from the other two repos.
+
+The price lives in `D` on purpose and does not break the `LIVE` rule: it is a
+pre-game price, fetched with `startsAfter` = now, and the ledger's first-pitch
+freeze covers it like every other field. A later build with no price keeps the
+recorded one; `test_ledger.py` pins all of that.
+
+Games are matched on club names in their places (MLB calls Arizona "D-backs",
+so the full name is tried too) and a start within four hours, which is what
+separates the two halves of a doubleheader.
+
 ## Decisions that took measurement to reach
 
 Do not undo these without re-measuring. Each cost real work to establish and

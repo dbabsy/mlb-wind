@@ -22,6 +22,11 @@ Three rules make the record honest:
 
 `test_ledger.py` pins all three; CI runs it before it builds anything.
 
+DraftKings' price rides along with a prediction when the page had one. It is
+refreshed with the row while the game is still ahead and frozen with it at
+first pitch, so what is recorded is the last pre-game price this build saw --
+never a live one. A later refresh that has no price keeps the one recorded.
+
 The ledger lives in the repository rather than a cache, so the history
 survives, is versioned, and can be audited commit by commit.
 
@@ -39,6 +44,7 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
+import dk
 import players as P
 
 HERE = Path(__file__).parent
@@ -111,6 +117,8 @@ def record(led, hits_html, games_html):
                 payload = {"date": H["date"], "gamePk": gp, "pid": c["id"],
                            "name": c["name"], "team": c["team"], "slot": c["slot"],
                            "p": c["p"], "result": None}
+                if c.get("dk"):
+                    payload["dk"] = c["dk"]
                 if row:
                     row.update(payload)
                     updated += 1
@@ -134,6 +142,8 @@ def record(led, hits_html, games_html):
                        "home": g["home"]["team"], "away": g["away"]["team"],
                        "wpHome": g["wpHome"], "rHome": g["home"]["runs"],
                        "rAway": g["away"]["runs"], "result": None}
+            if g.get("dk"):
+                payload["dk"] = g["dk"]
             if row:
                 row.update(payload)
                 updated += 1
@@ -244,6 +254,43 @@ def brier(rows, key="p"):
     return sum((r[key] - (1 if r["result"] else 0)) ** 2 for r in rows) / n if n else None
 
 
+def versus_dk(rows, p_of, sides_of):
+    """The model against DraftKings on the rows that carried a price.
+
+    Log loss for each, with DraftKings' margin taken out so the comparison is
+    of two opinions rather than of an opinion and a price. And the flat-stake
+    record of the "value" the pages point at: one unit on whichever side the
+    model expected to return more at DraftKings' price, when that was positive.
+    """
+    import math
+    n = bets = won = 0
+    ll_m = ll_b = profit = 0.0
+    for r in rows:
+        s = sides_of(r)
+        if not s:
+            continue
+        (pa, pb), y = s, bool(r["result"])
+        p = min(max(p_of(r), 1e-6), 1 - 1e-6)
+        q = min(max(dk.no_vig(pa, pb), 1e-6), 1 - 1e-6)
+        n += 1
+        ll_m -= math.log(p if y else 1 - p)
+        ll_b -= math.log(q if y else 1 - q)
+        ea, eb = dk.ev(p, pa), dk.ev(1 - p, pb)
+        if max(ea, eb) > dk.MIN_EV:
+            bets += 1
+            first = ea >= eb
+            price = pa if first else pb
+            if first == y:
+                won += 1
+                profit += dk.decimal(price) - 1
+            else:
+                profit -= 1
+    if not n:
+        return None
+    return {"n": n, "model": ll_m / n, "book": ll_b / n,
+            "bets": bets, "won": won, "profit": profit}
+
+
 def summarise(led):
     hits = [r for r in led["hits"] if r["result"] is not None]
     games = [r for r in led["games"] if r["result"] is not None]
@@ -335,6 +382,20 @@ def summarise(led):
             "actTotal": sum(x + y for x, y in zip(ah, aa)) / len(scored),
             "pending": sum(1 for r in led["games"] if r.get("sHome") is None),
         }
+    vs = {}
+    g = versus_dk([r for r in led["games"] if r["result"] is not None],
+                  lambda r: r["wpHome"],
+                  lambda r: ((r.get("dk") or {}).get("ml") or {}).get("home") is not None
+                  and (r["dk"]["ml"]["home"], r["dk"]["ml"]["away"]))
+    if g:
+        vs["games"] = g
+    h = versus_dk([r for r in led["hits"] if r["result"] is not None],
+                  lambda r: r["p"],
+                  lambda r: r.get("dk") and (r["dk"]["o"], r["dk"]["u"]))
+    if h:
+        vs["hits"] = h
+    if vs:
+        out["dk"] = vs
     return out
 
 
@@ -372,6 +433,10 @@ def main():
         if g:
             print(f"  games: {g['n']} scored, pick right {g['actual']:.1%} "
                   f"(predicted {g['pred']:.1%})")
+        for k, v in (payload.get("dk") or {}).items():
+            print(f"  vs DraftKings ({k}): {v['n']} priced, log loss model "
+                  f"{v['model']:.4f} book {v['book']:.4f}; {v['bets']} value bets, "
+                  f"{v['profit']:+.2f} units")
         r = payload.get("runs")
         if r:
             print(f"  runs: {r['n']} games, projected {r['predTotal']:.2f} "
@@ -506,6 +571,27 @@ function section(key, title, note, predLabel){
       </tbody></table>`:""}
   </div>`;
 }
+function dkSection(){
+  const s = D.dk;
+  const head = `<div class="ch"><b>Against DraftKings</b><span>the model's number against the price it was up against</span></div>`;
+  if(!s) return `<div class="card">${head}<div class="empty">Nothing scored against a
+    DraftKings price yet. Prices are recorded with the picks from now on and graded the
+    morning after.</div></div>`;
+  const row = (label, v) => !v ? "" : `<tr><td class="l">${label}</td><td>${v.n}</td>
+    <td>${v.model.toFixed(3)}</td><td>${v.book.toFixed(3)}</td>
+    <td style="color:${v.model<=v.book?'var(--good)':'var(--bad)'}">${v.model<=v.book?"model":"DraftKings"}</td>
+    <td>${v.bets?`${v.won}/${v.bets}`:"—"}</td>
+    <td style="color:${v.profit>=0?'var(--good)':'var(--bad)'}">${v.bets?(v.profit>=0?"+":"")+v.profit.toFixed(2)+"u":"—"}</td></tr>`;
+  return `<div class="card">${head}
+    <table><thead><tr><th class="l">Market</th><th>N</th><th>Model LL</th><th>DK LL</th>
+      <th>Sharper</th><th>Value bets won</th><th>Flat 1u</th></tr></thead>
+    <tbody>${row("Moneyline", s.games)}${row("1+ hit", s.hits)}</tbody></table>
+    <div class="empty">Log loss, lower is better, with DraftKings' margin removed. A value bet
+    is one unit on the side the model expected to return more at DraftKings' pre-game price,
+    whenever that was at least 1%; the running total is what that would have made or lost. A few
+    hundred bets are needed before either number means much.</div>
+  </div>`;
+}
 function runsSection(){
   const s = D.runs;
   if(!s) return "";
@@ -539,7 +625,8 @@ document.getElementById("stamp").textContent =
 document.getElementById("board").innerHTML =
   section("hits","Hit picks","did the picked hitter record a hit","model's average")
   + section("games","Matchup picks","did the projected winner actually win","confidence in the pick")
-  + runsSection();
+  + runsSection()
+  + dkSection();
 </script></body></html>
 """
 

@@ -11117,7 +11117,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.7547,
+"p":0.7524,
 "result":null
 },
 {
@@ -11127,7 +11127,7 @@
 "name":"Yordan Alvarez",
 "team":"HOU",
 "slot":2,
-"p":0.7611,
+"p":0.7581,
 "result":null
 },
 {
@@ -11137,7 +11137,7 @@
 "name":"Yainer Diaz",
 "team":"HOU",
 "slot":5,
-"p":0.7321,
+"p":0.7297,
 "result":null
 },
 {
@@ -11267,7 +11267,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":2,
-"p":0.6941,
+"p":0.6963,
 "result":null
 },
 {
@@ -11277,7 +11277,7 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":1,
-"p":0.7039,
+"p":0.7058,
 "result":null
 },
 {
@@ -11287,7 +11287,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.6951,
+"p":0.6986,
 "result":null
 },
 {
@@ -11327,7 +11327,7 @@
 "name":"James Wood",
 "team":"WSH",
 "slot":1,
-"p":0.6898,
+"p":0.6911,
 "result":null
 },
 {
@@ -11337,7 +11337,7 @@
 "name":"Hao-Yu Lee",
 "team":"DET",
 "slot":2,
-"p":0.6929,
+"p":0.6942,
 "result":null
 },
 {
@@ -11347,7 +11347,7 @@
 "name":"Kevin McGonigle",
 "team":"DET",
 "slot":1,
-"p":0.7017,
+"p":0.703,
 "result":null
 },
 {
@@ -11357,7 +11357,7 @@
 "name":"Ildemaro Vargas",
 "team":"AZ",
 "slot":1,
-"p":0.7454,
+"p":0.7445,
 "result":null
 },
 {
@@ -11367,7 +11367,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7548,
+"p":0.7552,
 "result":null
 },
 {
@@ -11377,7 +11377,17 @@
 "name":"Gabriel Moreno",
 "team":"AZ",
 "slot":3,
-"p":0.7368,
+"p":0.7374,
+"result":null
+},
+{
+"date":"2026-09-23",
+"gamePk":824625,
+"pid":663538,
+"name":"Nico Hoerner",
+"team":"CHC",
+"slot":6,
+"p":0.7116,
 "result":null
 },
 {
@@ -11387,7 +11397,7 @@
 "name":"Otto Lopez",
 "team":"MIA",
 "slot":2,
-"p":0.7339,
+"p":0.7326,
 "result":null
 },
 {
@@ -11397,17 +11407,7 @@
 "name":"Javier Sanoja",
 "team":"MIA",
 "slot":4,
-"p":0.7278,
-"result":null
-},
-{
-"date":"2026-09-23",
-"gamePk":824625,
-"pid":691718,
-"name":"Pete Crow-Armstrong",
-"team":"CHC",
-"slot":1,
-"p":0.7121,
+"p":0.7252,
 "result":null
 },
 {
@@ -11447,7 +11447,7 @@
 "name":"Pete Alonso",
 "team":"BAL",
 "slot":2,
-"p":0.686,
+"p":0.689,
 "result":null
 },
 {
@@ -11457,7 +11457,7 @@
 "name":"Nathan Lukes",
 "team":"TOR",
 "slot":1,
-"p":0.7188,
+"p":0.717,
 "result":null
 },
 {
@@ -11467,7 +11467,7 @@
 "name":"Christian Encarnacion-Strand",
 "team":"BAL",
 "slot":5,
-"p":0.6526,
+"p":0.6519,
 "result":null
 },
 {
@@ -16053,9 +16053,9 @@
 "gamePk":823894,
 "home":"LAD",
 "away":"SD",
-"wpHome":0.7447,
-"rHome":5.49,
-"rAway":3.29,
+"wpHome":0.743,
+"rHome":5.58,
+"rAway":3.37,
 "result":null
 },
 {
@@ -16073,9 +16073,9 @@
 "gamePk":824223,
 "home":"DET",
 "away":"WSH",
-"wpHome":0.6821,
+"wpHome":0.64,
 "rHome":5.84,
-"rAway":4.18,
+"rAway":4.62,
 "result":null
 },
 {
@@ -16083,9 +16083,9 @@
 "gamePk":824301,
 "home":"COL",
 "away":"AZ",
-"wpHome":0.4571,
-"rHome":5.83,
-"rAway":6.7,
+"wpHome":0.4547,
+"rHome":6.0,
+"rAway":6.92,
 "result":null
 },
 {
@@ -16093,9 +16093,9 @@
 "gamePk":824625,
 "home":"CHC",
 "away":"MIA",
-"wpHome":0.5288,
-"rHome":4.96,
-"rAway":4.96,
+"wpHome":0.5328,
+"rHome":4.79,
+"rAway":4.75,
 "result":null
 },
 {
@@ -16123,9 +16123,9 @@
 "gamePk":824785,
 "home":"BAL",
 "away":"TOR",
-"wpHome":0.5005,
-"rHome":4.33,
-"rAway":4.6,
+"wpHome":0.5125,
+"rHome":4.53,
+"rAway":4.69,
 "result":null
 },
 {

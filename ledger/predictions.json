@@ -11129,7 +11129,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.7547,
+"p":0.7524,
 "result":null,
 "dk":{
 "o":-218,
@@ -11143,7 +11143,7 @@
 "name":"Yordan Alvarez",
 "team":"HOU",
 "slot":2,
-"p":0.7611,
+"p":0.7581,
 "result":null,
 "dk":{
 "o":-241,
@@ -11157,7 +11157,7 @@
 "name":"Yainer Diaz",
 "team":"HOU",
 "slot":5,
-"p":0.7321,
+"p":0.7297,
 "result":null,
 "dk":{
 "o":-237,
@@ -11489,7 +11489,7 @@
 "name":"Javier Sanoja",
 "team":"MIA",
 "slot":4,
-"p":0.7278,
+"p":0.7279,
 "result":null,
 "dk":{
 "o":-181,
@@ -16473,13 +16473,13 @@
 "name":"Brice Matthews",
 "team":"HOU",
 "start":"2026-09-24T02:10:00Z",
-"p":0.5659,
-"pAdj":0.5343,
+"p":0.564,
+"pAdj":0.5324,
 "dk":{
 "o":106,
 "u":-140
 },
-"ev":0.1007,
+"ev":0.0967,
 "result":null
 },
 {

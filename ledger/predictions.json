@@ -10608,7 +10608,7 @@
 "team":"NYM",
 "slot":2,
 "p":0.7181,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-22",
@@ -10618,7 +10618,7 @@
 "team":"NYM",
 "slot":3,
 "p":0.7095,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-22",
@@ -10628,7 +10628,7 @@
 "team":"TEX",
 "slot":3,
 "p":0.7237,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-22",
@@ -10908,7 +10908,7 @@
 "team":"AZ",
 "slot":1,
 "p":0.7883,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-22",
@@ -10918,7 +10918,7 @@
 "team":"AZ",
 "slot":2,
 "p":0.7686,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-22",
@@ -10928,7 +10928,7 @@
 "team":"AZ",
 "slot":3,
 "p":0.7783,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-22",
@@ -15326,7 +15326,9 @@
 "wpHome":0.6152,
 "rHome":5.4,
 "rAway":4.51,
-"result":null
+"result":false,
+"sHome":3,
+"sAway":6
 },
 {
 "date":"2026-09-22",
@@ -15438,7 +15440,9 @@
 "wpHome":0.3369,
 "rHome":4.54,
 "rAway":6.76,
-"result":null
+"result":false,
+"sHome":2,
+"sAway":7
 },
 {
 "date":"2026-09-22",

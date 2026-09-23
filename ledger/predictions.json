@@ -11129,7 +11129,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.7524,
+"p":0.7547,
 "result":null,
 "dk":{
 "o":-227,
@@ -11143,7 +11143,7 @@
 "name":"Yordan Alvarez",
 "team":"HOU",
 "slot":2,
-"p":0.7582,
+"p":0.7611,
 "result":null,
 "dk":{
 "o":-241,
@@ -11157,7 +11157,7 @@
 "name":"Yainer Diaz",
 "team":"HOU",
 "slot":5,
-"p":0.7298,
+"p":0.7321,
 "result":null,
 "dk":{
 "o":-237,
@@ -11645,7 +11645,7 @@
 "name":"Michael Harris II",
 "team":"ATL",
 "slot":5,
-"p":0.7159,
+"p":0.7158,
 "result":null,
 "dk":{
 "o":-247,
@@ -16158,8 +16158,8 @@
 "gamePk":823086,
 "home":"SEA",
 "away":"HOU",
-"wpHome":0.4111,
-"rHome":4.34,
+"wpHome":0.4122,
+"rHome":4.35,
 "rAway":5.55,
 "result":null,
 "dk":{
@@ -16391,9 +16391,9 @@
 "gamePk":824784,
 "home":"BAL",
 "away":"TOR",
-"wpHome":0.4001,
-"rHome":4.26,
-"rAway":5.58,
+"wpHome":0.3992,
+"rHome":4.21,
+"rAway":5.53,
 "result":null,
 "dk":{
 "ml":{

@@ -491,6 +491,72 @@ def test_versus_dk_arithmetic():
     check(s.get("dk", {}).get("games", {}).get("n") == 2, "the accuracy page carries the comparison")
 
 
+def test_value_list_ranks_on_the_shaded_model():
+    c = [{"name": "A", "p": .72, "dk": {"o": -250, "u": 190}},   # 71.4% break-even
+         {"name": "B", "p": .70, "dk": {"o": -150, "u": 120}},   # 60% break-even
+         {"name": "C", "p": .66, "dk": {"o": -160, "u": 125}},
+         {"name": "D", "p": .80}]                                  # no price
+    v = dk.best_value(c, gap=0.0)
+    check([x["name"] for x in v] == ["B", "C"],
+          "ranked by expected return at DK's price; thin edges and unpriced hitters left out")
+    check(abs(v[0]["ev"] - (0.70 * (1 + 100 / 150) - 1)) < 1e-4, "expected return is p x decimal - 1")
+    v = dk.best_value(c, gap=0.05)
+    check([x["name"] for x in v] == ["B"] and abs(v[0]["pAdj"] - 0.65) < 1e-9,
+          "the model is shaded by its measured gap before it is compared")
+    many = [{"name": str(i), "p": .75, "dk": {"o": -120 + i, "u": 100}} for i in range(15)]
+    check(len(dk.best_value(many)) == 10, "the list stops at ten")
+
+
+def test_calibration_gap_is_measured_not_assumed():
+    rows = [{"p": .7, "result": i % 10 < 6} for i in range(300)] + [{"p": .7, "result": None}]
+    gap, n = L.calibration({"hits": rows})
+    check(n == 300 and abs(gap - 0.1) < 1e-9, "gap is mean predicted minus actual over settled picks")
+    check(L.calibration({"hits": rows[:50]}) == (0.0, 50), "too few settled picks means no shading")
+
+
+def test_value_picks_follow_the_ledger_rules():
+    import tempfile
+    future, past = "2099-01-01T00:00:00Z", "2000-01-01T00:00:00Z"
+
+    def page(d, vals):
+        (d / "h.html").write_text('<script>const D = ' + json.dumps(
+            {"date": "D", "games": [], "value": vals}) + ';\n</script>')
+        return str(d / "h.html")
+
+    def v(pid, start, gp=1, o=-150):
+        return {"gamePk": gp, "id": pid, "name": f"P{pid}", "team": "T", "start": start,
+                "p": .7, "pAdj": .67, "dk": {"o": o, "u": 120}, "ev": .1}
+
+    with tempfile.TemporaryDirectory() as t:
+        d = Path(t)
+        none = str(d / "none.html")
+        led = L.record({"hits": [], "games": []}, page(d, [v(1, future), v(2, future, 2), v(3, past, 3)]), none)
+        check(sorted(r["pid"] for r in led["value"]) == [1, 2],
+              "value picks are recorded before first pitch and never after")
+        led = L.record(led, page(d, [v(2, future, 2, o=-170)]), none)
+        check([r["pid"] for r in led["value"]] == [2] and led["value"][0]["dk"]["o"] == -170,
+              "a pick that falls off the list before its game is dropped; one still on it follows the price")
+        led["value"].append(dict(v(9, past, 9), date="D", pid=9, result=None))
+        led = L.record(led, page(d, [v(2, future, 2, o=-170)]), none)
+        check(9 in [r["pid"] for r in led["value"]], "a pick whose game has started is frozen, even off the list")
+
+        sched = {"dates": [{"games": [game(2, "F", 5, 3), game(9, "F", 1, 0)]}]}
+        boxes = {2: box({2: (4, 1)}), 9: box({77: (4, 0)})}
+        saved = P.q
+        P.q = stub(sched, boxes)
+        try:
+            L.score(led)
+        finally:
+            P.q = saved
+        byp = {r["pid"]: r for r in led["value"]}
+        check(byp[2]["result"] is True, "a value pick is settled from that game's box score")
+        check(byp[9].get("void") and byp[9]["result"] is None,
+              "a value pick who never batted is a void, not a loss")
+        s = L.summarise(led)["dk"]["value"]
+        check(s["n"] == 1 and s["won"] == 1 and s["void"] == 1 and abs(s["profit"] - 100 / 170) < 1e-9,
+              "the accuracy page grades the list at DK's price and leaves voids out")
+
+
 if __name__ == "__main__":
     for name, fn in sorted(globals().items()):
         if name.startswith("test_"):

@@ -323,6 +323,30 @@ def hit_price(ev_, name):
     return ((ev_ or {}).get("hits") or {}).get(norm_name(name))
 
 
+def best_value(cands, gap=0.0, n=10, min_ev=None):
+    """The hitters whose 1+ hit price at DraftKings the model likes most.
+
+    `cands` are hits.py candidates carrying `dk` = {"o", "u"}. Each model
+    chance is first shaded by `gap` -- how far the model's picks have landed
+    below their projections in the ledger -- so the ranking is on the model as
+    it has actually performed, not as it claims. Ranked by expected return on
+    one unit at DraftKings' over price; nothing under `min_ev` makes the list.
+    """
+    min_ev = MIN_EV if min_ev is None else min_ev
+    out = []
+    for c in cands:
+        d = c.get("dk")
+        if not d:
+            continue
+        p = min(0.99, max(0.01, c["p"] - gap))
+        e = ev(p, d["o"])
+        if e > min_ev:
+            out.append(dict(c, pAdj=round(p, 4), ev=round(e, 4),
+                            nv=round(no_vig(d["o"], d["u"]), 4)))
+    out.sort(key=lambda c: -c["ev"])
+    return out[:n]
+
+
 if __name__ == "__main__":
     from players import baseball_today
     c = load(baseball_today())

@@ -52,6 +52,17 @@ pre-game price, fetched with `startsAfter` = now, and the ledger's first-pitch
 freeze covers it like every other field. A later build with no price keeps the
 recorded one; `test_ledger.py` pins all of that.
 
+**The top-10 value list on `hits.html`** ranks every hitter DraftKings has a
+1+ hit price on -- not only the top three per game -- by expected return at
+that price, games not yet started only. The model's chance is first shaded by
+`ledger.calibration`: mean predicted minus actual over every settled hit pick
+(0.032 over 1,098 on 2026-09-23), so the ranking is on the model as it has
+performed. That gap was measured on top-three picks (p 0.66-0.78) and is
+applied to everyone on the list, which reaches a little lower; if the value
+list's own record diverges, that is the first assumption to question. The list
+is kept in the ledger as `value`, under the same rules as the picks, and a
+hitter who never bats is a void -- refunded, as DraftKings settles it.
+
 Games are matched on club names in their places (MLB calls Arizona "D-backs",
 so the full name is tried too) and a start within four hours, which is what
 separates the two halves of a doubleheader.

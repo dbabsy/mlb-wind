@@ -53,12 +53,25 @@ API = "https://statsapi.mlb.com/api/v1"
 
 
 def load():
+    led = {"hits": [], "games": []}
     if LEDGER.exists():
         try:
-            return json.loads(LEDGER.read_text())
+            led = json.loads(LEDGER.read_text())
         except ValueError:
             pass
-    return {"hits": [], "games": []}
+    led.setdefault("value", [])
+    return led
+
+
+def calibration(led, min_n=200):
+    """How far the hit picks have landed below their projections: mean
+    predicted minus actual over every settled pick, or 0 on too few to say.
+    hits.py shades the model by this before comparing it with DraftKings."""
+    done = [r for r in led.get("hits", []) if r.get("result") is not None]
+    if len(done) < min_n:
+        return 0.0, len(done)
+    gap = (sum(r["p"] for r in done) - sum(1 for r in done if r["result"])) / len(done)
+    return round(gap, 4), len(done)
 
 
 def save(led):
@@ -152,6 +165,39 @@ def record(led, hits_html, games_html):
                 idx[key] = payload
                 added += 1
 
+    # The value list: the hitters DraftKings' 1+ hit price looked most wrong
+    # on. Same rules as the picks -- recorded only before first pitch, a row
+    # that falls off the list is dropped only while its game is still ahead,
+    # and nothing with a result is ever touched.
+    if H and H.get("value") is not None:
+        led.setdefault("value", [])
+        live = {(v["gamePk"], v["id"]) for v in H["value"]}
+        before = len(led["value"])
+        led["value"] = [r for r in led["value"]
+                        if not (r["date"] == H["date"] and r["result"] is None
+                                and not r.get("void") and not_started(r.get("start", ""))
+                                and (r["gamePk"], r["pid"]) not in live)]
+        dropped += before - len(led["value"])
+        vidx = {(r["date"], r["gamePk"], r["pid"]): r for r in led["value"]}
+        for v in H["value"]:
+            if not not_started(v.get("start", "")):
+                continue
+            key = (H["date"], v["gamePk"], v["id"])
+            row = vidx.get(key)
+            if row and (row.get("result") is not None or row.get("void")):
+                continue
+            payload = {"date": H["date"], "gamePk": v["gamePk"], "pid": v["id"],
+                       "name": v["name"], "team": v["team"], "start": v["start"],
+                       "p": v["p"], "pAdj": v["pAdj"], "dk": v["dk"], "ev": v["ev"],
+                       "result": None}
+            if row:
+                row.update(payload)
+                updated += 1
+            else:
+                led["value"].append(payload)
+                vidx[key] = payload
+                added += 1
+
     print(f"  recorded: {added} new, {updated} refreshed, {dropped} superseded, "
           f"{skipped} games already under way")
     return led
@@ -194,7 +240,9 @@ def game_hits(gp):
 
 def score(led):
     """Fill in outcomes for finished games only."""
-    open_hit_dates = sorted({r["date"] for r in led["hits"] if r["result"] is None})
+    led.setdefault("value", [])
+    open_hit_dates = sorted({r["date"] for r in led["hits"] + led["value"]
+                             if r["result"] is None and not r.get("void")})
     # A game row is still open if it is missing its outcome *or* its final
     # score — the scores were not always kept, and they are what makes the
     # run projections auditable.
@@ -213,8 +261,8 @@ def score(led):
         if d not in fin:
             continue
         # Only games that are over, and only the ones we still owe a result.
-        want = {r["gamePk"] for r in led["hits"]
-                if r["date"] == d and r["result"] is None
+        want = {r["gamePk"] for r in led["hits"] + led["value"]
+                if r["date"] == d and r["result"] is None and not r.get("void")
                 and fin[d].get(r["gamePk"], (False,))[0]}
         for gp in sorted(want):
             try:
@@ -228,6 +276,16 @@ def score(led):
                 if (r["date"] == d and r["gamePk"] == gp
                         and r["result"] is None and r["pid"] in got):
                     r["result"] = got[r["pid"]]
+                    filled += 1
+            # A value pick who never batted is a void, as DraftKings settles
+            # it: the bet is refunded, so it is neither a win nor a loss.
+            for r in led["value"]:
+                if (r["date"] == d and r["gamePk"] == gp
+                        and r["result"] is None and not r.get("void")):
+                    if r["pid"] in got:
+                        r["result"] = got[r["pid"]]
+                    else:
+                        r["void"] = True
                     filled += 1
 
     for d in open_game_dates:
@@ -427,6 +485,17 @@ def summarise(led):
                   lambda r: r.get("dk") and (r["dk"]["o"], r["dk"]["u"]))
     if h:
         vs["hits"] = h
+    vals = [r for r in led.get("value", []) if r["result"] is not None]
+    if vals:
+        vs["value"] = {
+            "n": len(vals),
+            "won": sum(1 for r in vals if r["result"]),
+            "pred": sum(r["pAdj"] for r in vals) / len(vals),
+            "book": sum(dk.no_vig(r["dk"]["o"], r["dk"]["u"]) for r in vals) / len(vals),
+            "profit": sum(dk.decimal(r["dk"]["o"]) - 1 if r["result"] else -1 for r in vals),
+            "void": sum(1 for r in led["value"] if r.get("void")),
+            "pending": sum(1 for r in led["value"] if r["result"] is None and not r.get("void")),
+        }
     t = totals_vs_dk(led["games"])
     if t:
         vs["totals"] = t
@@ -455,7 +524,8 @@ def main():
         led = score(led)
     if a.record or a.score:
         save(led)
-        print(f"  ledger: {len(led['hits'])} hit picks, {len(led['games'])} games")
+        print(f"  ledger: {len(led['hits'])} hit picks, {len(led['games'])} games, "
+              f"{len(led['value'])} value picks")
     if a.render:
         payload = summarise(led)
         Path(a.out).write_text(
@@ -470,6 +540,10 @@ def main():
             print(f"  games: {g['n']} scored, pick right {g['actual']:.1%} "
                   f"(predicted {g['pred']:.1%})")
         for k, v in (payload.get("dk") or {}).items():
+            if k == "value":
+                print(f"  value picks: {v['won']}/{v['n']} hit (model said "
+                      f"{v['pred']:.1%}, DraftKings {v['book']:.1%}), {v['profit']:+.2f} units")
+                continue
             if k == "totals":
                 print(f"  vs DraftKings (totals): {v['n']} graded, model's side won "
                       f"{v['won']}, {v['over']} of them overs, {v['profit']:+.2f} units")
@@ -622,7 +696,17 @@ function dkSection(){
     <td style="color:${v.model<=v.book?'var(--good)':'var(--bad)'}">${v.model<=v.book?"model":"DraftKings"}</td>
     <td>${v.bets?`${v.won}/${v.bets}`:"—"}</td>
     <td style="color:${v.profit>=0?'var(--good)':'var(--bad)'}">${v.bets?(v.profit>=0?"+":"")+v.profit.toFixed(2)+"u":"—"}</td></tr>`;
-  return `<div class="card">${head}
+  const v = s.value;
+  const vcard = !v ? "" : `<div class="kpis">
+      <div class="kpi"><span>top-10 value picks</span><b>${v.won}/${v.n}</b><small>got a hit${v.void?` · ${v.void} void`:""}</small></div>
+      <div class="kpi"><span>model said</span><b>${pc(v.pred)}</b><small>after its record</small></div>
+      <div class="kpi"><span>DraftKings said</span><b>${pc(v.book)}</b><small>no-vig</small></div>
+      <div class="kpi"><span>actual</span><b>${pc(v.won/v.n)}</b><small>${v.pending?v.pending+" pending":"all settled"}</small></div>
+      <div class="kpi"><span>1u each at DK</span>
+        <b style="color:${v.profit>=0?'var(--good)':'var(--bad)'}">${(v.profit>=0?"+":"")+v.profit.toFixed(2)}u</b>
+        <small>flat stakes</small></div>
+    </div>`;
+  return `<div class="card">${head}${vcard}
     <div style="overflow-x:auto"><table style="white-space:nowrap"><thead><tr><th class="l">Market</th><th>N</th><th>Model</th><th>DK</th>
       <th>Sharper</th><th>Bets won</th><th>1u flat</th></tr></thead>
     <tbody>${row("Moneyline", s.games)}${row("1+ hit", s.hits)}${s.totals?`<tr>

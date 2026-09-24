@@ -28,6 +28,45 @@ python3 ledger.py --all --hits-html public/hits.html --games-html public/games.h
 Any page script takes `--date YYYY-MM-DD` and `--out PATH`. Building a past
 date is how the models were backtested.
 
+## DraftKings prices
+
+`dk.py` puts DraftKings' pre-game prices beside the model: moneyline and total
+on `games.html`, the 1+ hit price on each pick on `hits.html`, and a "value"
+tag where the model's expected return at DraftKings' price is at least 1%
+(`dk.MIN_EV`). The ledger records the price with the prediction and the
+accuracy page grades the model against DraftKings' no-vig number, plus the
+flat-stake record of the value bets. Same threshold in both places, so the
+record grades exactly what the pages flagged.
+
+The source is SportsGameOdds (`SGO_API_KEY` secret, optional). Its free plan
+is **2,500 objects a month, about one per game fetched, shared with
+mlb-streaks and nfl-streaks.** Fetching on every build here would cost ~100 a
+day alone, so prices are cached in `.cache/dk_odds.json` (the Actions cache the
+Statcast step already restores) and refreshed only when four hours old -- the
+7am, 11am, 4pm and 10pm passes -- asking only for games that have not started
+and none of tomorrow's. About 40 a day in a full regular season. Raising the
+cadence means taking allowance from the other two repos.
+
+The price lives in `D` on purpose and does not break the `LIVE` rule: it is a
+pre-game price, fetched with `startsAfter` = now, and the ledger's first-pitch
+freeze covers it like every other field. A later build with no price keeps the
+recorded one; `test_ledger.py` pins all of that.
+
+**The top-10 value list on `hits.html`** ranks every hitter DraftKings has a
+1+ hit price on -- not only the top three per game -- by expected return at
+that price, games not yet started only. The model's chance is first shaded by
+`ledger.calibration`: mean predicted minus actual over every settled hit pick
+(0.032 over 1,098 on 2026-09-23), so the ranking is on the model as it has
+performed. That gap was measured on top-three picks (p 0.66-0.78) and is
+applied to everyone on the list, which reaches a little lower; if the value
+list's own record diverges, that is the first assumption to question. The list
+is kept in the ledger as `value`, under the same rules as the picks, and a
+hitter who never bats is a void -- refunded, as DraftKings settles it.
+
+Games are matched on club names in their places (MLB calls Arizona "D-backs",
+so the full name is tried too) and a start within four hours, which is what
+separates the two halves of a doubleheader.
+
 ## Decisions that took measurement to reach
 
 Do not undo these without re-measuring. Each cost real work to establish and
@@ -192,6 +231,40 @@ re-recorded once the games have started.
   pulled early. A correction fitted on this window could be fitting the
   calendar. Wait for the PA readout, or for a sample that spans more of a
   season, before changing a coefficient.
+- **DraftKings sits below the model on every priced hit pick.** 61 of 61 on
+  2026-09-23/24, by 7.1 points with `dk.no_vig` (proportional), 6.2 additive,
+  5.6 by the power method — the direction does not depend on how the margin is
+  stripped. Proportional de-vigging is known to understate heavy favourites,
+  and these props mostly price around -220, so the market figure is probably
+  a point or so low. Over 1,146 settled picks the model runs ~3 points hot,
+  so reality lands **between** model and market. That makes a blend of the two
+  the most promising accuracy lever there is: forecast combination is
+  well-established and the market carries lineup, injury and weather news the
+  model cannot see. It cannot be fitted yet — the prices start 2026-09-23.
+- **Be sceptical of the value list's claimed edges.** It ranks every priced
+  hitter by model-minus-market, which is the winner's curse at its most severe:
+  a large pool (~200 hitters, not 18 per game) selected directly on the
+  disagreement with a strong estimator, so the biggest "edges" are
+  disproportionately the model's biggest errors. Claimed expected return runs
+  2.9% to 29.5% (mean 13.3%) against a book with a 6.7% margin; professional
+  bettors are content with 2-3%. First 16 settled: 8 won against a 54%
+  breakeven, -5.4% a bet against +13.8% claimed. Sixteen bets prove nothing
+  on their own, but the size of the claimed edge is itself evidence. The 0.032
+  shade it applies was measured on top-three picks (p 0.66-0.78); value picks
+  average 0.639, outside that range. By contrast every top-three pick bet at
+  DraftKings' price went 25 of 36 (+0.9% a bet), roughly breaking even against
+  the margin — the model's confident picks hold up; its disagreements with the
+  market are where it goes wrong.
+- **An explanation that fits the size but not the fingerprints: selection.**
+  Picking the top 3 of ~18 noisy estimates overstates them even when the model
+  is unbiased; a simulation with estimation noise of sd 0.020 in the per-PA rate
+  (roughly the sampling error on one season's PA) reproduces the gap almost
+  exactly (+0.030). But the tell-tale patterns are absent or reversed: a
+  hitter's above-his-norm days and below-his-norm days run hot by the same
+  amount (-0.027 / -0.028), and the lowest-baseline hitters, not the highest,
+  are the worst (-0.047 / -0.008 / -0.030 by thirds). Every test run on the
+  outcomes alone has come back with an interval too wide to decide — measure
+  the inputs instead.
 - Day-level overdispersion has settled at **1.18** over 26 days (chi2 29.4 on
   25 df), down from the 1.53 measured over the first 7. The effective sample
   is ~85% of nominal, not the ~two-thirds the early reading suggested.

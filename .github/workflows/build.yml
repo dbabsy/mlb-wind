@@ -64,7 +64,13 @@ jobs:
       - name: Fit park orientations
         run: python3 orient.py
 
+      # SGO_API_KEY brings DraftKings prices (dk.py). Optional: without it the
+      # pages build exactly as before. The prices are cached in .cache/ above
+      # and refreshed at most every four hours, which is what keeps this repo
+      # inside the allowance it shares with mlb-streaks and nfl-streaks.
       - name: Build pages
+        env:
+          SGO_API_KEY: ${{ secrets.SGO_API_KEY }}
         run: |
           mkdir -p public
           python3 wind.py --out public/index.html

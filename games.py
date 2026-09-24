@@ -35,6 +35,7 @@ from pathlib import Path
 
 from orient import load_orientations
 import daily as Dl
+import dk
 import players as P
 
 CACHE = Path(__file__).parent / ".cache"
@@ -195,6 +196,7 @@ def main():
     park_delta, _pc, _td, _fb, domes, hand_delta = Dl.load_model()
     orient = load_orientations()
 
+    odds = dk.load(date.fromisoformat(a.date))
     sched = P.q("schedule", sportId=1, date=a.date,
                 hydrate="probablePitcher,lineups,team,venue(location),linescore")
     games = [g for d in sched.get("dates", []) for g in d.get("games", [])]
@@ -308,16 +310,27 @@ def main():
         pyth = rh ** x / (rh ** x + ra ** x)
         # Home advantage as a logit shift: batting last, not extra scoring.
         wp_home = 1 / (1 + math.exp(-(math.log(pyth / (1 - pyth)) + hfa)))
-        out.append({
+        rec = {
             "gamePk": g.get("gamePk"),
             "venue": ven.get("name", ""), "start": g.get("gameDate", ""),
             "home": sides["home"], "away": sides["away"],
             "wpHome": round(wp_home, 4), "total": round(rh + ra, 2),
             "dome": vid in domes, "wx": wx, "row": row,
-        })
+        }
+        # DraftKings' pre-game prices, when there are any. Part of D on
+        # purpose: the ledger freezes them with the prediction at first pitch.
+        prices = dk.game_prices(dk.find_game(odds, g["teams"]["home"].get("team"),
+                                             g["teams"]["away"].get("team"),
+                                             rec["start"]))
+        if prices:
+            rec["dk"] = prices
+        out.append(rec)
 
     out.sort(key=lambda r: r.get("start") or "")  # first pitch order, like a schedule
-    payload = {"games": out, "date": a.date,
+    priced = sum(1 for r in out if r.get("dk"))
+    if odds.get("events"):
+        print(f"  dk: prices on {priced} of {len(out)} games", flush=True)
+    payload = {"games": out, "date": a.date, "dkAt": odds.get("at") if priced else None,
                "built": datetime.now(timezone.utc).isoformat(timespec="minutes"),
                "hfa": round(hfa, 4), "hfaRate": hfa_rate, "hfaN": hfa_n,
                "lgRuns": round(lg["r_pa"] * PA_PER_TEAM, 2)}
@@ -332,6 +345,7 @@ def main():
             live[str(gp)] = st
     Path(a.out).write_text(
         TEMPLATE.replace("__DATA__", json.dumps(payload, separators=(",", ":")))
+                .replace("__MINEV__", str(dk.MIN_EV))
                 .replace("__LIVE__", json.dumps(live, separators=(",", ":"))),
         encoding="utf-8")
     if out:
@@ -423,6 +437,15 @@ h1{margin:2px 0 0;font-size:26px;font-weight:800;letter-spacing:-.035em}
 .who .empty{color:var(--faint)}
 .stamp.live b{color:var(--win)}
 .tag{font-size:9px;padding:1px 6px;border-radius:100px;border:1px solid var(--line2);color:var(--faint)}
+/* DraftKings' prices beside the projection. "dkp", not "dk" or "px": check
+   the flat class namespace before adding a name here. */
+.dkp{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px;
+  margin-top:2px;padding-top:6px;border-top:1px dashed var(--line);font-family:var(--mono);
+  font-size:10px;color:var(--dim);font-variant-numeric:tabular-nums}
+.dkp .bk{color:var(--amber);font-weight:700;letter-spacing:.05em}
+.dkp b{color:var(--text);font-weight:600}
+.dkp .val{color:var(--win);font-weight:700}
+.dkp .nov{color:var(--faint)}
 .tag.ok{border-color:#1F7A4C;color:var(--win)}
 footer{padding:14px 20px 26px;font-family:var(--mono);font-size:10px;color:var(--faint);line-height:1.75}
 footer b{color:var(--dim)}
@@ -443,6 +466,12 @@ footer b{color:var(--dim)}
 </div>
 <div id="board"></div>
 <footer>
+  <b>DraftKings</b> prices are the pre-game prices when the page was built. <b>Value</b> is the
+  model's expected return on one unit at that price, shown at 1% or more. A large one usually
+  means the model is missing something the market knows (a rest day, a bullpen game, a late
+  scratch), not that DraftKings is wrong; the accuracy page grades every flagged bet, so trust
+  it only as far as that record goes. The model's total is a <b>mean</b>, and a book's line sits
+  near the median, which in baseball is lower, so the model will lean over most lines.<br>
   Expected runs come from each projected lineup's wOBA, with plate appearances split
   <b>59/41</b> between the opposing starter and bullpen — the league's real split — then scaled by
   park and tonight's weather. Runs become a win probability through Pythagenpat.<br>
@@ -453,6 +482,7 @@ footer b{color:var(--dim)}
 </footer></div>
 <script>
 const D = __DATA__;
+const MIN_EV = __MINEV__;
 // Live scores are a display layer and are deliberately NOT part of D. The
 // accuracy ledger parses D back out of this page to freeze predictions before
 // first pitch; a live score must never be reachable from that path.
@@ -485,6 +515,7 @@ function stamps(){
     `<span class="stamp${hrs>STALE_HRS?" stale":""}"><b>Updated</b> ${etTime(D.built)} on `+
     `${etDateShort(D.built)} · ${ago(D.built)}${hrs>STALE_HRS?" — may be out of date":""}</span>`+
     `<span class="stamp">league avg ${D.lgRuns} runs/side</span>` +
+    (D.dkAt ? `<span class="stamp"><b>DraftKings</b> prices ${ago(D.dkAt)} · check the live price before betting</span>` : "") +
     liveStamp();
 }
 function liveStamp(){
@@ -573,6 +604,30 @@ function liveStrip(g){
     <span class="lv-sc">${g.away.team} ${L.away} \u00b7 ${L.home} ${g.home.team}</span>${mark}</div>
     ${runners(L)}`;
 }
+function sgn(x){ return (x>0?"+":"")+x; }
+function imp(a){ a=+a; return a<0 ? -a/(-a+100) : 100/(a+100); }
+function dec(a){ a=+a; return 1 + (a<0 ? 100/-a : a/100); }
+function dkRow(g){
+  const d=g.dk; if(!d) return "";
+  const bits=[`<span class="bk">DK</span>`];
+  if(d.ml){
+    const nvH = imp(d.ml.home)/(imp(d.ml.home)+imp(d.ml.away));
+    bits.push(`<span>${g.away.team} <b>${sgn(d.ml.away)}</b> · ${g.home.team} <b>${sgn(d.ml.home)}</b></span>`);
+    bits.push(`<span>${g.home.team} ${(nvH*100).toFixed(0)}% no-vig</span>`);
+    // Expected return on one unit at DraftKings' price if the model is right.
+    const evH = g.wpHome*dec(d.ml.home)-1, evA = (1-g.wpHome)*dec(d.ml.away)-1;
+    const best = evH>=evA ? [g.home.team, evH] : [g.away.team, evA];
+    bits.push(best[1]>MIN_EV
+      ? `<span class="val" title="model's expected return on one unit at DraftKings' price">value ${best[0]} +${(best[1]*100).toFixed(1)}%</span>`
+      : `<span class="nov">no value on the moneyline</span>`);
+  }
+  if(d.total){
+    const diff = g.total - d.total.line;
+    bits.push(`<span>total ${d.total.line} o<b>${sgn(d.total.o)}</b> u<b>${sgn(d.total.u)}</b></span>`);
+    bits.push(`<span>model ${g.total.toFixed(1)} (${diff>=0?"+":""}${diff.toFixed(1)})</span>`);
+  }
+  return `<div class="dkp">${bits.join("")}</div>`;
+}
 function bar(p, win){
   return `<span class="bar"><i style="width:${(p*100).toFixed(1)}%;background:${win?"var(--win)":"var(--line2)"}"></i></span>`;
 }
@@ -599,6 +654,7 @@ function card(g){
       <span>total ${g.total.toFixed(1)}</span>${wxs?`<span>${wxs}</span>`:""}
       <span class="tag ${conf===2?"ok":""}">${conf}/2 lineups</span>
     </div>
+    ${dkRow(g)}
   </div>`;
 }
 document.getElementById("slate").textContent =

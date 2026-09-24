@@ -11707,20 +11707,6 @@
 {
 "date":"2026-09-24",
 "gamePk":822842,
-"pid":665742,
-"name":"Juan Soto",
-"team":"NYM",
-"slot":2,
-"p":0.71,
-"result":null,
-"dk":{
-"o":-194,
-"u":145
-}
-},
-{
-"date":"2026-09-24",
-"gamePk":822842,
 "pid":666182,
 "name":"Bo Bichette",
 "team":"NYM",
@@ -11744,6 +11730,20 @@
 "dk":{
 "o":-260,
 "u":192
+}
+},
+{
+"date":"2026-09-24",
+"gamePk":822842,
+"pid":701807,
+"name":"Carson Benge",
+"team":"NYM",
+"slot":4,
+"p":0.7104,
+"result":null,
+"dk":{
+"o":-207,
+"u":154
 }
 },
 {
@@ -11837,7 +11837,7 @@
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
-"p":0.7271,
+"p":0.7478,
 "result":null,
 "dk":{
 "o":-241,
@@ -11955,7 +11955,7 @@
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
-"p":0.7135,
+"p":0.7158,
 "result":null
 },
 {
@@ -11965,7 +11965,7 @@
 "name":"Miguel Vargas",
 "team":"CWS",
 "slot":3,
-"p":0.6787,
+"p":0.6818,
 "result":null,
 "dk":{
 "o":-245,
@@ -11979,7 +11979,7 @@
 "name":"Sam Antonacci",
 "team":"CWS",
 "slot":1,
-"p":0.7291,
+"p":0.7311,
 "result":null
 },
 {
@@ -11989,7 +11989,7 @@
 "name":"Ketel Marte",
 "team":"AZ",
 "slot":2,
-"p":0.7615,
+"p":0.7643,
 "result":null
 },
 {
@@ -11999,7 +11999,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7456,
+"p":0.7478,
 "result":null
 },
 {
@@ -12009,7 +12009,7 @@
 "name":"Gabriel Moreno",
 "team":"AZ",
 "slot":3,
-"p":0.7796,
+"p":0.7828,
 "result":null
 },
 {
@@ -12141,7 +12141,7 @@
 "name":"Jose Altuve",
 "team":"HOU",
 "slot":1,
-"p":0.7088,
+"p":0.7133,
 "result":null
 },
 {
@@ -12151,7 +12151,7 @@
 "name":"Yordan Alvarez",
 "team":"HOU",
 "slot":2,
-"p":0.7326,
+"p":0.7383,
 "result":null
 },
 {
@@ -12161,7 +12161,7 @@
 "name":"Yainer Diaz",
 "team":"HOU",
 "slot":4,
-"p":0.7464,
+"p":0.7512,
 "result":null
 }
 ],
@@ -16965,9 +16965,9 @@
 "gamePk":822842,
 "home":"TEX",
 "away":"NYM",
-"wpHome":0.5228,
+"wpHome":0.4981,
 "rHome":4.94,
-"rAway":5.0,
+"rAway":5.26,
 "result":null,
 "dk":{
 "ml":{
@@ -17028,8 +17028,8 @@
 "gamePk":823411,
 "home":"PHI",
 "away":"MIL",
-"wpHome":0.3943,
-"rHome":4.19,
+"wpHome":0.3858,
+"rHome":4.11,
 "rAway":5.56,
 "result":null,
 "dk":{
@@ -17091,9 +17091,9 @@
 "gamePk":824059,
 "home":"KC",
 "away":"CWS",
-"wpHome":0.4817,
-"rHome":4.41,
-"rAway":4.87,
+"wpHome":0.4857,
+"rHome":4.57,
+"rAway":5.0,
 "result":null,
 "dk":{
 "ml":{
@@ -17112,9 +17112,9 @@
 "gamePk":824298,
 "home":"COL",
 "away":"AZ",
-"wpHome":0.3411,
-"rHome":4.57,
-"rAway":6.72,
+"wpHome":0.3345,
+"rHome":4.56,
+"rAway":6.8,
 "result":null,
 "dk":{
 "ml":{
@@ -17175,9 +17175,9 @@
 "gamePk":824866,
 "home":"ATL",
 "away":"CIN",
-"wpHome":0.688,
+"wpHome":0.689,
 "rHome":5.47,
-"rAway":3.83,
+"rAway":3.82,
 "result":null,
 "dk":{
 "ml":{
@@ -17196,9 +17196,9 @@
 "gamePk":824950,
 "home":"ATH",
 "away":"HOU",
-"wpHome":0.2798,
-"rHome":4.28,
-"rAway":7.24,
+"wpHome":0.2759,
+"rHome":4.42,
+"rAway":7.51,
 "result":null,
 "dk":{
 "ml":{
@@ -17488,6 +17488,22 @@
 },
 {
 "date":"2026-09-24",
+"gamePk":822842,
+"pid":683146,
+"name":"Brett Baty",
+"team":"NYM",
+"start":"2026-09-24T18:35:00Z",
+"p":0.641,
+"pAdj":0.6121,
+"dk":{
+"o":-114,
+"u":-117
+},
+"ev":0.149,
+"result":null
+},
+{
+"date":"2026-09-24",
 "gamePk":823087,
 "pid":642350,
 "name":"Jose Siri",
@@ -17612,22 +17628,6 @@
 "u":107
 },
 "ev":0.0965,
-"result":null
-},
-{
-"date":"2026-09-24",
-"gamePk":824866,
-"pid":680574,
-"name":"Matt McLain",
-"team":"CIN",
-"start":"2026-09-24T23:15:00Z",
-"p":0.5845,
-"pAdj":0.5556,
-"dk":{
-"o":-105,
-"u":-126
-},
-"ev":0.0847,
 "result":null
 }
 ]

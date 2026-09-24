@@ -11125,15 +11125,15 @@
 {
 "date":"2026-09-23",
 "gamePk":823086,
-"pid":665161,
-"name":"Jeremy Pe\u00f1a",
+"pid":514888,
+"name":"Jose Altuve",
 "team":"HOU",
 "slot":1,
-"p":0.7547,
+"p":0.7143,
 "result":null,
 "dk":{
-"o":-227,
-"u":168
+"o":-214,
+"u":159
 }
 },
 {
@@ -11143,7 +11143,7 @@
 "name":"Yordan Alvarez",
 "team":"HOU",
 "slot":2,
-"p":0.7611,
+"p":0.7581,
 "result":null,
 "dk":{
 "o":-241,
@@ -11156,8 +11156,8 @@
 "pid":673237,
 "name":"Yainer Diaz",
 "team":"HOU",
-"slot":5,
-"p":0.7321,
+"slot":4,
+"p":0.7382,
 "result":null,
 "dk":{
 "o":-237,
@@ -11172,7 +11172,7 @@
 "team":"MIN",
 "slot":3,
 "p":0.6881,
-"result":null,
+"result":true,
 "dk":{
 "o":-257,
 "u":189
@@ -11186,7 +11186,7 @@
 "team":"MIN",
 "slot":5,
 "p":0.6855,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-23",
@@ -11196,7 +11196,7 @@
 "team":"MIN",
 "slot":1,
 "p":0.6926,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-23",
@@ -11323,25 +11323,11 @@
 {
 "date":"2026-09-23",
 "gamePk":823894,
-"pid":518692,
-"name":"Freddie Freeman",
-"team":"LAD",
-"slot":2,
-"p":0.6963,
-"result":null,
-"dk":{
-"o":-183,
-"u":137
-}
-},
-{
-"date":"2026-09-23",
-"gamePk":823894,
 "pid":605141,
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":1,
-"p":0.7058,
+"p":0.7038,
 "result":null,
 "dk":{
 "o":-209,
@@ -11351,11 +11337,25 @@
 {
 "date":"2026-09-23",
 "gamePk":823894,
+"pid":660271,
+"name":"Shohei Ohtani",
+"team":"LAD",
+"slot":2,
+"p":0.6866,
+"result":null,
+"dk":{
+"o":-221,
+"u":164
+}
+},
+{
+"date":"2026-09-23",
+"gamePk":823894,
 "pid":665487,
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.6986,
+"p":0.6951,
 "result":null,
 "dk":{
 "o":-219,
@@ -11673,7 +11673,7 @@
 "name":"Jeff McNeil",
 "team":"ATH",
 "slot":4,
-"p":0.692,
+"p":0.6919,
 "result":null,
 "dk":{
 "o":-235,
@@ -11687,7 +11687,7 @@
 "name":"Wade Meckler",
 "team":"LAA",
 "slot":5,
-"p":0.6792,
+"p":0.6791,
 "result":null,
 "dk":{
 "o":-187,
@@ -16158,9 +16158,9 @@
 "gamePk":823086,
 "home":"SEA",
 "away":"HOU",
-"wpHome":0.4122,
-"rHome":4.35,
-"rAway":5.55,
+"wpHome":0.4228,
+"rHome":4.19,
+"rAway":5.24,
 "result":null,
 "dk":{
 "ml":{
@@ -16182,7 +16182,7 @@
 "wpHome":0.4892,
 "rHome":4.0,
 "rAway":4.36,
-"result":null,
+"result":false,
 "dk":{
 "ml":{
 "home":134,
@@ -16193,7 +16193,9 @@
 "o":-105,
 "u":-114
 }
-}
+},
+"sHome":2,
+"sAway":4
 },
 {
 "date":"2026-09-23",
@@ -16263,9 +16265,9 @@
 "gamePk":823894,
 "home":"LAD",
 "away":"SD",
-"wpHome":0.7429,
-"rHome":5.58,
-"rAway":3.37,
+"wpHome":0.7279,
+"rHome":5.5,
+"rAway":3.46,
 "result":null,
 "dk":{
 "ml":{
@@ -16456,7 +16458,7 @@
 "gamePk":824951,
 "home":"ATH",
 "away":"LAA",
-"wpHome":0.3844,
+"wpHome":0.3841,
 "rHome":3.91,
 "rAway":5.33,
 "result":null,
@@ -16474,6 +16476,70 @@
 }
 ],
 "value":[
+{
+"date":"2026-09-23",
+"gamePk":823086,
+"pid":572233,
+"name":"Christian Walker",
+"team":"HOU",
+"start":"2026-09-24T02:10:00Z",
+"p":0.6544,
+"pAdj":0.6236,
+"dk":{
+"o":-154,
+"u":116
+},
+"ev":0.0285,
+"result":null
+},
+{
+"date":"2026-09-23",
+"gamePk":823086,
+"pid":666211,
+"name":"Taylor Trammell",
+"team":"HOU",
+"start":"2026-09-24T02:10:00Z",
+"p":0.5907,
+"pAdj":0.5599,
+"dk":{
+"o":-115,
+"u":-116
+},
+"ev":0.0468,
+"result":null
+},
+{
+"date":"2026-09-23",
+"gamePk":823086,
+"pid":670541,
+"name":"Yordan Alvarez",
+"team":"HOU",
+"start":"2026-09-24T02:10:00Z",
+"p":0.7581,
+"pAdj":0.7273,
+"dk":{
+"o":-241,
+"u":178
+},
+"ev":0.0291,
+"result":null
+},
+{
+"date":"2026-09-23",
+"gamePk":823086,
+"pid":701358,
+"name":"Cam Smith",
+"team":"HOU",
+"start":"2026-09-24T02:10:00Z",
+"p":0.6369,
+"pAdj":0.6061,
+"dk":{
+"o":-142,
+"u":107
+},
+"ev":0.0329,
+"result":null
+},
 {
 "date":"2026-09-23",
 "gamePk":823410,
@@ -16557,17 +16623,33 @@
 {
 "date":"2026-09-23",
 "gamePk":823894,
+"pid":669392,
+"name":"Samad Taylor",
+"team":"SD",
+"start":"2026-09-24T02:10:00Z",
+"p":0.6112,
+"pAdj":0.5804,
+"dk":{
+"o":-113,
+"u":-117
+},
+"ev":0.094,
+"result":null
+},
+{
+"date":"2026-09-23",
+"gamePk":823894,
 "pid":687957,
 "name":"Dustin Harris",
 "team":"SD",
 "start":"2026-09-24T02:10:00Z",
-"p":0.6799,
-"pAdj":0.6491,
+"p":0.6779,
+"pAdj":0.6471,
 "dk":{
 "o":-138,
 "u":104
 },
-"ev":0.1195,
+"ev":0.116,
 "result":null
 },
 {

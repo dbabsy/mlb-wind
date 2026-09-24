@@ -11763,15 +11763,15 @@
 {
 "date":"2026-09-24",
 "gamePk":823087,
-"pid":677594,
-"name":"Julio Rodr\u00edguez",
-"team":"SEA",
-"slot":5,
-"p":0.694,
+"pid":685133,
+"name":"Wade Meckler",
+"team":"LAA",
+"slot":3,
+"p":0.6967,
 "result":null,
 "dk":{
-"o":-218,
-"u":162
+"o":-158,
+"u":119
 }
 },
 {
@@ -11935,7 +11935,7 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":2,
-"p":0.7012,
+"p":0.7011,
 "result":null,
 "dk":{
 "o":-204,
@@ -11949,7 +11949,7 @@
 "name":"Fernando Tatis Jr.",
 "team":"SD",
 "slot":1,
-"p":0.6941,
+"p":0.6942,
 "result":null,
 "dk":{
 "o":-232,
@@ -11998,7 +11998,7 @@
 "team":"AZ",
 "slot":2,
 "p":0.7643,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-24",
@@ -12008,7 +12008,7 @@
 "team":"COL",
 "slot":1,
 "p":0.7478,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-24",
@@ -12018,7 +12018,7 @@
 "team":"AZ",
 "slot":3,
 "p":0.7828,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-24",
@@ -12159,7 +12159,7 @@
 "name":"Yordan Alvarez",
 "team":"HOU",
 "slot":2,
-"p":0.7326,
+"p":0.7325,
 "result":null
 },
 {
@@ -12169,7 +12169,7 @@
 "name":"Yainer Diaz",
 "team":"HOU",
 "slot":4,
-"p":0.7464,
+"p":0.7463,
 "result":null
 }
 ],
@@ -16996,9 +16996,9 @@
 "gamePk":823087,
 "home":"SEA",
 "away":"LAA",
-"wpHome":0.7329,
+"wpHome":0.7164,
 "rHome":5.48,
-"rAway":3.4,
+"rAway":3.56,
 "result":null,
 "dk":{
 "ml":{
@@ -17061,7 +17061,7 @@
 "gamePk":823493,
 "home":"NYY",
 "away":"TB",
-"wpHome":0.695,
+"wpHome":0.6948,
 "rHome":4.53,
 "rAway":3.05,
 "result":null,
@@ -17082,7 +17082,7 @@
 "gamePk":823895,
 "home":"LAD",
 "away":"SD",
-"wpHome":0.5526,
+"wpHome":0.5524,
 "rHome":3.85,
 "rAway":3.65,
 "result":null,
@@ -17129,7 +17129,7 @@
 "wpHome":0.3313,
 "rHome":4.66,
 "rAway":6.98,
-"result":null,
+"result":false,
 "dk":{
 "ml":{
 "home":163,
@@ -17140,7 +17140,9 @@
 "o":-116,
 "u":-104
 }
-}
+},
+"sHome":8,
+"sAway":12
 },
 {
 "date":"2026-09-24",
@@ -17170,7 +17172,7 @@
 "gamePk":824707,
 "home":"BOS",
 "away":"CLE",
-"wpHome":0.5809,
+"wpHome":0.5807,
 "rHome":4.2,
 "rAway":3.74,
 "result":null,
@@ -17191,7 +17193,7 @@
 "gamePk":824866,
 "home":"ATL",
 "away":"CIN",
-"wpHome":0.7364,
+"wpHome":0.7362,
 "rHome":6.05,
 "rAway":3.77,
 "result":null,
@@ -17212,7 +17214,7 @@
 "gamePk":824950,
 "home":"ATH",
 "away":"HOU",
-"wpHome":0.2637,
+"wpHome":0.2635,
 "rHome":4.09,
 "rAway":7.23,
 "result":null,
@@ -17521,33 +17523,33 @@
 {
 "date":"2026-09-24",
 "gamePk":823087,
-"pid":642350,
-"name":"Jose Siri",
+"pid":666139,
+"name":"Josh Lowe",
 "team":"LAA",
 "start":"2026-09-25T01:40:00Z",
-"p":0.6219,
-"pAdj":0.5955,
+"p":0.5854,
+"pAdj":0.559,
 "dk":{
-"o":116,
-"u":-154
+"o":103,
+"u":-137
 },
-"ev":0.2863,
+"ev":0.1348,
 "result":null
 },
 {
 "date":"2026-09-24",
 "gamePk":823087,
-"pid":687093,
-"name":"Vaughn Grissom",
+"pid":685133,
+"name":"Wade Meckler",
 "team":"LAA",
 "start":"2026-09-25T01:40:00Z",
-"p":0.6748,
-"pAdj":0.6484,
+"p":0.6967,
+"pAdj":0.6703,
 "dk":{
-"o":-150,
-"u":113
+"o":-158,
+"u":119
 },
-"ev":0.0807,
+"ev":0.0945,
 "result":null
 },
 {
@@ -17557,29 +17559,13 @@
 "name":"Denzer Guzman",
 "team":"LAA",
 "start":"2026-09-25T01:40:00Z",
-"p":0.6427,
-"pAdj":0.6163,
+"p":0.6248,
+"pAdj":0.5984,
 "dk":{
 "o":-127,
 "u":-105
 },
-"ev":0.1016,
-"result":null
-},
-{
-"date":"2026-09-24",
-"gamePk":823087,
-"pid":695681,
-"name":"Christian Moore",
-"team":"LAA",
-"start":"2026-09-25T01:40:00Z",
-"p":0.5322,
-"pAdj":0.5058,
-"dk":{
-"o":113,
-"u":-150
-},
-"ev":0.0774,
+"ev":0.0696,
 "result":null
 },
 {
@@ -17617,6 +17603,22 @@
 {
 "date":"2026-09-24",
 "gamePk":823493,
+"pid":683748,
+"name":"Victor Mesa Jr.",
+"team":"TB",
+"start":"2026-09-24T23:05:00Z",
+"p":0.6201,
+"pAdj":0.5937,
+"dk":{
+"o":-124,
+"u":-107
+},
+"ev":0.0725,
+"result":null
+},
+{
+"date":"2026-09-24",
+"gamePk":823493,
 "pid":689414,
 "name":"Liam Hicks",
 "team":"TB",
@@ -17637,13 +17639,13 @@
 "name":"Samad Taylor",
 "team":"SD",
 "start":"2026-09-25T02:10:00Z",
-"p":0.593,
-"pAdj":0.5666,
+"p":0.5931,
+"pAdj":0.5667,
 "dk":{
 "o":-104,
 "u":-128
 },
-"ev":0.1114,
+"ev":0.1116,
 "result":null
 },
 {

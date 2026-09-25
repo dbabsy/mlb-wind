@@ -12255,7 +12255,7 @@
 "name":"Josh Naylor",
 "team":"SEA",
 "slot":6,
-"p":0.6803,
+"p":0.68,
 "result":null,
 "dk":{
 "o":-192,
@@ -12269,7 +12269,7 @@
 "name":"Randy Arozarena",
 "team":"SEA",
 "slot":2,
-"p":0.6831,
+"p":0.6858,
 "result":null,
 "dk":{
 "o":-183,
@@ -12283,7 +12283,7 @@
 "name":"Wade Meckler",
 "team":"LAA",
 "slot":3,
-"p":0.6822,
+"p":0.6827,
 "result":null,
 "dk":{
 "o":-207,
@@ -12369,7 +12369,7 @@
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
-"p":0.7308,
+"p":0.7332,
 "result":null
 },
 {
@@ -12379,7 +12379,7 @@
 "name":"Yandy D\u00edaz",
 "team":"TB",
 "slot":1,
-"p":0.7637,
+"p":0.765,
 "result":null,
 "dk":{
 "o":-217,
@@ -12393,7 +12393,7 @@
 "name":"Chandler Simpson",
 "team":"TB",
 "slot":5,
-"p":0.7473,
+"p":0.752,
 "result":null,
 "dk":{
 "o":-179,
@@ -12407,7 +12407,7 @@
 "name":"Paul Goldschmidt",
 "team":"NYY",
 "slot":1,
-"p":0.6778,
+"p":0.6777,
 "result":null,
 "dk":{
 "o":-196,
@@ -12431,29 +12431,15 @@
 {
 "date":"2026-09-25",
 "gamePk":823489,
-"pid":641355,
-"name":"Cody Bellinger",
+"pid":700250,
+"name":"Ben Rice",
 "team":"NYY",
 "slot":2,
-"p":0.7219,
+"p":0.6758,
 "result":null,
 "dk":{
-"o":-195,
-"u":145
-}
-},
-{
-"date":"2026-09-25",
-"gamePk":823491,
-"pid":502671,
-"name":"Paul Goldschmidt",
-"team":"NYY",
-"slot":1,
-"p":0.6745,
-"result":null,
-"dk":{
-"o":-196,
-"u":148
+"o":-141,
+"u":107
 }
 },
 {
@@ -12473,15 +12459,29 @@
 {
 "date":"2026-09-25",
 "gamePk":823491,
-"pid":641355,
-"name":"Cody Bellinger",
+"pid":642708,
+"name":"Amed Rosario",
 "team":"NYY",
-"slot":2,
-"p":0.736,
+"slot":4,
+"p":0.6748,
 "result":null,
 "dk":{
-"o":-195,
-"u":145
+"o":-154,
+"u":113
+}
+},
+{
+"date":"2026-09-25",
+"gamePk":823491,
+"pid":700250,
+"name":"Ben Rice",
+"team":"NYY",
+"slot":2,
+"p":0.6894,
+"result":null,
+"dk":{
+"o":-141,
+"u":107
 }
 },
 {
@@ -12529,7 +12529,7 @@
 "name":"William Contreras",
 "team":"MIL",
 "slot":3,
-"p":0.7025,
+"p":0.7033,
 "result":null,
 "dk":{
 "o":-216,
@@ -12543,7 +12543,7 @@
 "name":"Garrett Mitchell",
 "team":"MIL",
 "slot":1,
-"p":0.6979,
+"p":0.699,
 "result":null,
 "dk":{
 "o":-222,
@@ -12557,7 +12557,7 @@
 "name":"Alec Burleson",
 "team":"STL",
 "slot":3,
-"p":0.7083,
+"p":0.7108,
 "result":null,
 "dk":{
 "o":-200,
@@ -12613,7 +12613,7 @@
 "name":"Jos\u00e9 Ram\u00edrez",
 "team":"CLE",
 "slot":2,
-"p":0.7162,
+"p":0.7138,
 "result":null
 },
 {
@@ -12623,7 +12623,7 @@
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
-"p":0.7093,
+"p":0.7036,
 "result":null,
 "dk":{
 "o":-219,
@@ -12637,7 +12637,7 @@
 "name":"Angel Mart\u00ednez",
 "team":"CLE",
 "slot":5,
-"p":0.7059,
+"p":0.7025,
 "result":null,
 "dk":{
 "o":-212,
@@ -12651,7 +12651,7 @@
 "name":"Oneil Cruz",
 "team":"PIT",
 "slot":1,
-"p":0.6748,
+"p":0.6775,
 "result":null,
 "dk":{
 "o":-150,
@@ -12665,7 +12665,7 @@
 "name":"Nick Gonzales",
 "team":"PIT",
 "slot":5,
-"p":0.6883,
+"p":0.6899,
 "result":null,
 "dk":{
 "o":-238,
@@ -12679,7 +12679,7 @@
 "name":"Kevin McGonigle",
 "team":"DET",
 "slot":1,
-"p":0.6762,
+"p":0.6781,
 "result":null,
 "dk":{
 "o":-196,
@@ -12777,7 +12777,7 @@
 "name":"Nico Hoerner",
 "team":"CHC",
 "slot":5,
-"p":0.7242,
+"p":0.724,
 "result":null
 },
 {
@@ -12787,7 +12787,7 @@
 "name":"Pete Crow-Armstrong",
 "team":"CHC",
 "slot":1,
-"p":0.7145,
+"p":0.7146,
 "result":null
 },
 {
@@ -12797,7 +12797,7 @@
 "name":"Roman Anthony",
 "team":"BOS",
 "slot":1,
-"p":0.7126,
+"p":0.7135,
 "result":null
 },
 {
@@ -17949,9 +17949,9 @@
 "gamePk":823085,
 "home":"SEA",
 "away":"LAA",
-"wpHome":0.4588,
-"rHome":3.55,
-"rAway":4.14,
+"wpHome":0.4616,
+"rHome":3.42,
+"rAway":3.97,
 "result":null,
 "dk":{
 "ml":{
@@ -18012,9 +18012,9 @@
 "gamePk":823409,
 "home":"PHI",
 "away":"TB",
-"wpHome":0.564,
-"rHome":4.47,
-"rAway":4.13,
+"wpHome":0.5532,
+"rHome":4.2,
+"rAway":3.97,
 "result":null,
 "dk":{
 "ml":{
@@ -18033,9 +18033,9 @@
 "gamePk":823489,
 "home":"NYY",
 "away":"BAL",
-"wpHome":0.5978,
-"rHome":4.62,
-"rAway":3.96,
+"wpHome":0.5832,
+"rHome":4.42,
+"rAway":3.91,
 "result":null,
 "dk":{
 "ml":{
@@ -18054,9 +18054,9 @@
 "gamePk":823491,
 "home":"NYY",
 "away":"BAL",
-"wpHome":0.5445,
-"rHome":4.11,
-"rAway":3.96,
+"wpHome":0.5925,
+"rHome":4.4,
+"rAway":3.81,
 "result":null,
 "dk":{
 "ml":{
@@ -18096,9 +18096,9 @@
 "gamePk":823735,
 "home":"MIL",
 "away":"STL",
-"wpHome":0.6871,
-"rHome":5.34,
-"rAway":3.73,
+"wpHome":0.6875,
+"rHome":5.32,
+"rAway":3.71,
 "result":null,
 "dk":{
 "ml":{
@@ -18138,9 +18138,9 @@
 "gamePk":824058,
 "home":"KC",
 "away":"CLE",
-"wpHome":0.4336,
-"rHome":3.65,
-"rAway":4.49,
+"wpHome":0.4291,
+"rHome":3.51,
+"rAway":4.37,
 "result":null,
 "dk":{
 "ml":{
@@ -18159,9 +18159,9 @@
 "gamePk":824220,
 "home":"DET",
 "away":"PIT",
-"wpHome":0.5565,
-"rHome":4.92,
-"rAway":4.63,
+"wpHome":0.5543,
+"rHome":4.97,
+"rAway":4.7,
 "result":null,
 "dk":{
 "ml":{
@@ -18223,8 +18223,8 @@
 "home":"BOS",
 "away":"CHC",
 "wpHome":0.4972,
-"rHome":4.31,
-"rAway":4.6,
+"rHome":4.32,
+"rAway":4.61,
 "result":null,
 "dk":{
 "ml":{
@@ -18872,17 +18872,33 @@
 {
 "date":"2026-09-25",
 "gamePk":823409,
-"pid":680700,
-"name":"Richie Palacios",
+"pid":670764,
+"name":"Taylor Walls",
 "team":"TB",
 "start":"2026-09-25T22:40:00Z",
-"p":0.6369,
-"pAdj":0.6099,
+"p":0.5764,
+"pAdj":0.5494,
 "dk":{
 "o":102,
 "u":-135
 },
-"ev":0.232,
+"ev":0.1098,
+"result":null
+},
+{
+"date":"2026-09-25",
+"gamePk":823409,
+"pid":680700,
+"name":"Richie Palacios",
+"team":"TB",
+"start":"2026-09-25T22:40:00Z",
+"p":0.6384,
+"pAdj":0.6114,
+"dk":{
+"o":102,
+"u":-135
+},
+"ev":0.235,
 "result":null
 },
 {
@@ -18892,13 +18908,13 @@
 "name":"Chandler Simpson",
 "team":"TB",
 "start":"2026-09-25T22:40:00Z",
-"p":0.7473,
-"pAdj":0.7203,
+"p":0.752,
+"pAdj":0.725,
 "dk":{
 "o":-179,
 "u":134
 },
-"ev":0.1227,
+"ev":0.13,
 "result":null
 },
 {
@@ -18915,6 +18931,22 @@
 "u":-129
 },
 "ev":0.1247,
+"result":null
+},
+{
+"date":"2026-09-25",
+"gamePk":823491,
+"pid":700250,
+"name":"Ben Rice",
+"team":"NYY",
+"start":"2026-09-25T20:05:00Z",
+"p":0.6894,
+"pAdj":0.6624,
+"dk":{
+"o":-141,
+"u":107
+},
+"ev":0.1322,
 "result":null
 },
 {

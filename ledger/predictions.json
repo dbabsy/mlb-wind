@@ -12369,7 +12369,7 @@
 "name":"Luis Arraez",
 "team":"PHI",
 "slot":4,
-"p":0.7332,
+"p":0.7308,
 "result":null
 },
 {
@@ -12379,7 +12379,7 @@
 "name":"Yandy D\u00edaz",
 "team":"TB",
 "slot":1,
-"p":0.765,
+"p":0.7637,
 "result":null,
 "dk":{
 "o":-217,
@@ -12393,7 +12393,7 @@
 "name":"Chandler Simpson",
 "team":"TB",
 "slot":5,
-"p":0.752,
+"p":0.7473,
 "result":null,
 "dk":{
 "o":-179,
@@ -12777,7 +12777,7 @@
 "name":"Nico Hoerner",
 "team":"CHC",
 "slot":5,
-"p":0.7276,
+"p":0.7242,
 "result":null
 },
 {
@@ -12787,7 +12787,7 @@
 "name":"Pete Crow-Armstrong",
 "team":"CHC",
 "slot":1,
-"p":0.7191,
+"p":0.7145,
 "result":null
 },
 {
@@ -12797,7 +12797,7 @@
 "name":"Roman Anthony",
 "team":"BOS",
 "slot":1,
-"p":0.7163,
+"p":0.7126,
 "result":null
 },
 {
@@ -12807,7 +12807,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.7405,
+"p":0.7386,
 "result":null
 },
 {
@@ -12817,7 +12817,7 @@
 "name":"Yordan Alvarez",
 "team":"HOU",
 "slot":2,
-"p":0.7822,
+"p":0.7798,
 "result":null
 },
 {
@@ -12827,7 +12827,7 @@
 "name":"Yainer Diaz",
 "team":"HOU",
 "slot":5,
-"p":0.7131,
+"p":0.7109,
 "result":null
 }
 ],
@@ -17949,9 +17949,9 @@
 "gamePk":823085,
 "home":"SEA",
 "away":"LAA",
-"wpHome":0.4616,
-"rHome":3.42,
-"rAway":3.97,
+"wpHome":0.4588,
+"rHome":3.55,
+"rAway":4.14,
 "result":null,
 "dk":{
 "ml":{
@@ -18012,9 +18012,9 @@
 "gamePk":823409,
 "home":"PHI",
 "away":"TB",
-"wpHome":0.5532,
-"rHome":4.2,
-"rAway":3.97,
+"wpHome":0.564,
+"rHome":4.47,
+"rAway":4.13,
 "result":null,
 "dk":{
 "ml":{
@@ -18243,9 +18243,9 @@
 "gamePk":824947,
 "home":"ATH",
 "away":"HOU",
-"wpHome":0.3761,
-"rHome":4.33,
-"rAway":5.94,
+"wpHome":0.3753,
+"rHome":4.45,
+"rAway":6.1,
 "result":null,
 "dk":{
 "ml":{
@@ -18876,13 +18876,13 @@
 "name":"Richie Palacios",
 "team":"TB",
 "start":"2026-09-25T22:40:00Z",
-"p":0.6384,
-"pAdj":0.6114,
+"p":0.6369,
+"pAdj":0.6099,
 "dk":{
 "o":102,
 "u":-135
 },
-"ev":0.235,
+"ev":0.232,
 "result":null
 },
 {
@@ -18892,13 +18892,13 @@
 "name":"Chandler Simpson",
 "team":"TB",
 "start":"2026-09-25T22:40:00Z",
-"p":0.752,
-"pAdj":0.725,
+"p":0.7473,
+"pAdj":0.7203,
 "dk":{
 "o":-179,
 "u":134
 },
-"ev":0.13,
+"ev":0.1227,
 "result":null
 },
 {

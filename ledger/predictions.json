@@ -12880,7 +12880,7 @@
 "team":"TOR",
 "slot":2,
 "p":0.7236,
-"result":null,
+"result":false,
 "dk":{
 "o":-278,
 "u":204
@@ -12894,7 +12894,7 @@
 "team":"TOR",
 "slot":3,
 "p":0.7087,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-26",
@@ -12904,7 +12904,7 @@
 "team":"TOR",
 "slot":1,
 "p":0.6919,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-26",
@@ -13013,7 +13013,7 @@
 "name":"Dustin Harris",
 "team":"SD",
 "slot":2,
-"p":0.709,
+"p":0.7089,
 "result":null,
 "dk":{
 "o":-178,
@@ -13187,7 +13187,7 @@
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
-"p":0.7282,
+"p":0.7281,
 "result":null,
 "dk":{
 "o":-267,
@@ -13201,7 +13201,7 @@
 "name":"Steven Kwan",
 "team":"CLE",
 "slot":1,
-"p":0.7121,
+"p":0.712,
 "result":null
 },
 {
@@ -13273,7 +13273,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7501,
+"p":0.75,
 "result":null,
 "dk":{
 "o":-213,
@@ -13287,7 +13287,7 @@
 "name":"Miguel Vargas",
 "team":"CWS",
 "slot":1,
-"p":0.7077,
+"p":0.7076,
 "result":null,
 "dk":{
 "o":-262,
@@ -13301,7 +13301,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.7486,
+"p":0.7485,
 "result":null
 },
 {
@@ -18818,7 +18818,7 @@
 "wpHome":0.69,
 "rHome":5.29,
 "rAway":3.67,
-"result":null,
+"result":false,
 "dk":{
 "ml":{
 "away":136,
@@ -18829,14 +18829,16 @@
 "o":-102,
 "u":-118
 }
-}
+},
+"sHome":1,
+"sAway":5
 },
 {
 "date":"2026-09-26",
 "gamePk":823083,
 "home":"SEA",
 "away":"LAA",
-"wpHome":0.5896,
+"wpHome":0.5894,
 "rHome":4.87,
 "rAway":4.27,
 "result":null,
@@ -18878,9 +18880,9 @@
 "gamePk":823245,
 "home":"SD",
 "away":"AZ",
-"wpHome":0.4923,
-"rHome":4.75,
-"rAway":5.12,
+"wpHome":0.4783,
+"rHome":4.67,
+"rAway":5.18,
 "result":null,
 "dk":{
 "ml":{
@@ -18899,7 +18901,7 @@
 "gamePk":823407,
 "home":"PHI",
 "away":"TB",
-"wpHome":0.3706,
+"wpHome":0.3704,
 "rHome":4.19,
 "rAway":5.84,
 "result":null,
@@ -18941,9 +18943,9 @@
 "gamePk":823733,
 "home":"MIL",
 "away":"STL",
-"wpHome":0.61,
+"wpHome":0.6066,
 "rHome":4.93,
-"rAway":4.13,
+"rAway":4.16,
 "result":null,
 "dk":{
 "ml":{
@@ -18983,9 +18985,9 @@
 "gamePk":824057,
 "home":"KC",
 "away":"CLE",
-"wpHome":0.5161,
+"wpHome":0.5149,
 "rHome":4.52,
-"rAway":4.64,
+"rAway":4.65,
 "result":null,
 "dk":{
 "ml":{
@@ -19027,7 +19029,7 @@
 "gamePk":824543,
 "home":"CWS",
 "away":"COL",
-"wpHome":0.6282,
+"wpHome":0.628,
 "rHome":5.77,
 "rAway":4.68,
 "result":null,
@@ -19048,7 +19050,7 @@
 "gamePk":824949,
 "home":"ATH",
 "away":"HOU",
-"wpHome":0.301,
+"wpHome":0.3008,
 "rHome":3.81,
 "rAway":6.24,
 "result":null,
@@ -19987,13 +19989,13 @@
 "name":"Bryce Teodosio",
 "team":"LAA",
 "start":"2026-09-27T01:40:00Z",
-"p":0.5317,
-"pAdj":0.5063,
+"p":0.5315,
+"pAdj":0.5078,
 "dk":{
 "o":111,
 "u":-148
 },
-"ev":0.0683,
+"ev":0.0715,
 "result":null
 },
 {
@@ -20031,33 +20033,17 @@
 {
 "date":"2026-09-26",
 "gamePk":823245,
-"pid":669392,
-"name":"Samad Taylor",
-"team":"SD",
-"start":"2026-09-27T00:40:00Z",
-"p":0.6413,
-"pAdj":0.6159,
-"dk":{
-"o":-119,
-"u":-111
-},
-"ev":0.1335,
-"result":null
-},
-{
-"date":"2026-09-26",
-"gamePk":823245,
 "pid":687957,
 "name":"Dustin Harris",
 "team":"SD",
 "start":"2026-09-27T00:40:00Z",
-"p":0.709,
-"pAdj":0.6836,
+"p":0.7089,
+"pAdj":0.6852,
 "dk":{
 "o":-178,
 "u":133
 },
-"ev":0.0676,
+"ev":0.0701,
 "result":null
 },
 {
@@ -20068,12 +20054,12 @@
 "team":"PHI",
 "start":"2026-09-26T23:15:00Z",
 "p":0.6578,
-"pAdj":0.6324,
+"pAdj":0.6341,
 "dk":{
 "o":-135,
 "u":102
 },
-"ev":0.1008,
+"ev":0.1038,
 "result":null
 },
 {
@@ -20084,12 +20070,12 @@
 "team":"TB",
 "start":"2026-09-26T23:15:00Z",
 "p":0.6465,
-"pAdj":0.6211,
+"pAdj":0.6228,
 "dk":{
 "o":-138,
 "u":104
 },
-"ev":0.0712,
+"ev":0.0741,
 "result":null
 },
 {
@@ -20100,12 +20086,12 @@
 "team":"TB",
 "start":"2026-09-26T23:15:00Z",
 "p":0.6597,
-"pAdj":0.6343,
+"pAdj":0.636,
 "dk":{
 "o":-143,
 "u":108
 },
-"ev":0.0779,
+"ev":0.0808,
 "result":null
 },
 {
@@ -20116,12 +20102,12 @@
 "team":"TB",
 "start":"2026-09-26T23:15:00Z",
 "p":0.6977,
-"pAdj":0.6723,
+"pAdj":0.674,
 "dk":{
 "o":-152,
 "u":114
 },
-"ev":0.1146,
+"ev":0.1174,
 "result":null
 },
 {
@@ -20132,12 +20118,12 @@
 "team":"STL",
 "start":"2026-09-26T23:10:00Z",
 "p":0.6085,
-"pAdj":0.5831,
+"pAdj":0.5848,
 "dk":{
 "o":-111,
 "u":-120
 },
-"ev":0.1084,
+"ev":0.1116,
 "result":null
 },
 {
@@ -20148,12 +20134,12 @@
 "team":"STL",
 "start":"2026-09-26T23:10:00Z",
 "p":0.7156,
-"pAdj":0.6902,
+"pAdj":0.6919,
 "dk":{
 "o":-178,
 "u":133
 },
-"ev":0.078,
+"ev":0.0806,
 "result":null
 },
 {
@@ -20163,13 +20149,29 @@
 "name":"Brett Sullivan",
 "team":"COL",
 "start":"2026-09-26T23:10:00Z",
-"p":0.6169,
-"pAdj":0.5915,
+"p":0.6168,
+"pAdj":0.5931,
 "dk":{
 "o":-121,
 "u":-110
 },
-"ev":0.0803,
+"ev":0.0833,
+"result":null
+},
+{
+"date":"2026-09-26",
+"gamePk":824543,
+"pid":694249,
+"name":"Cole Carrigg",
+"team":"COL",
+"start":"2026-09-26T23:10:00Z",
+"p":0.6923,
+"pAdj":0.6686,
+"dk":{
+"o":-167,
+"u":125
+},
+"ev":0.069,
 "result":null
 }
 ]

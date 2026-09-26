@@ -13027,7 +13027,7 @@
 "name":"Yandy D\u00edaz",
 "team":"TB",
 "slot":1,
-"p":0.7482,
+"p":0.7481,
 "result":null,
 "dk":{
 "o":-262,
@@ -13211,7 +13211,7 @@
 "name":"Chase DeLauter",
 "team":"CLE",
 "slot":3,
-"p":0.7011,
+"p":0.701,
 "result":null
 },
 {
@@ -13287,7 +13287,7 @@
 "name":"Miguel Vargas",
 "team":"CWS",
 "slot":1,
-"p":0.7076,
+"p":0.7077,
 "result":null,
 "dk":{
 "o":-262,
@@ -18838,9 +18838,9 @@
 "gamePk":823083,
 "home":"SEA",
 "away":"LAA",
-"wpHome":0.5894,
+"wpHome":0.5883,
 "rHome":4.87,
-"rAway":4.27,
+"rAway":4.28,
 "result":null,
 "dk":{
 "ml":{
@@ -19989,13 +19989,13 @@
 "name":"Bryce Teodosio",
 "team":"LAA",
 "start":"2026-09-27T01:40:00Z",
-"p":0.5315,
-"pAdj":0.5078,
+"p":0.5316,
+"pAdj":0.5079,
 "dk":{
 "o":111,
 "u":-148
 },
-"ev":0.0715,
+"ev":0.0717,
 "result":null
 },
 {
@@ -20069,13 +20069,13 @@
 "name":"Richie Palacios",
 "team":"TB",
 "start":"2026-09-26T23:15:00Z",
-"p":0.6465,
-"pAdj":0.6228,
+"p":0.6464,
+"pAdj":0.6227,
 "dk":{
 "o":-138,
 "u":104
 },
-"ev":0.0741,
+"ev":0.0739,
 "result":null
 },
 {

@@ -12913,7 +12913,7 @@
 "name":"Julio Rodr\u00edguez",
 "team":"SEA",
 "slot":3,
-"p":0.6926,
+"p":0.6906,
 "result":null,
 "dk":{
 "o":-231,
@@ -12927,7 +12927,7 @@
 "name":"Wade Meckler",
 "team":"LAA",
 "slot":3,
-"p":0.6999,
+"p":0.6995,
 "result":null,
 "dk":{
 "o":-176,
@@ -12941,7 +12941,7 @@
 "name":"Dominic Canzone",
 "team":"SEA",
 "slot":2,
-"p":0.7088,
+"p":0.7061,
 "result":null,
 "dk":{
 "o":-211,
@@ -13227,7 +13227,7 @@
 "name":"Brandon Lowe",
 "team":"PIT",
 "slot":2,
-"p":0.6561,
+"p":0.6554,
 "result":null,
 "dk":{
 "o":-204,
@@ -13241,7 +13241,7 @@
 "name":"Max Clark",
 "team":"DET",
 "slot":1,
-"p":0.6727,
+"p":0.6733,
 "result":null
 },
 {
@@ -18780,9 +18780,9 @@
 "gamePk":822678,
 "home":"WSH",
 "away":"NYM",
-"wpHome":0.4156,
-"rHome":3.57,
-"rAway":4.58,
+"wpHome":0.4112,
+"rHome":3.65,
+"rAway":4.72,
 "result":null,
 "dk":{
 "ml":{
@@ -18906,9 +18906,9 @@
 "gamePk":823653,
 "home":"MIN",
 "away":"TEX",
-"wpHome":0.5607,
-"rHome":4.64,
-"rAway":4.33,
+"wpHome":0.5582,
+"rHome":4.5,
+"rAway":4.22,
 "result":null,
 "dk":{
 "ml":{
@@ -19971,13 +19971,13 @@
 "name":"Bryce Teodosio",
 "team":"LAA",
 "start":"2026-09-27T01:40:00Z",
-"p":0.5336,
-"pAdj":0.5082,
+"p":0.5315,
+"pAdj":0.5061,
 "dk":{
 "o":111,
 "u":-148
 },
-"ev":0.0723,
+"ev":0.0679,
 "result":null
 },
 {

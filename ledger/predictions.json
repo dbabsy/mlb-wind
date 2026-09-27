@@ -13332,7 +13332,7 @@
 "team":"NYM",
 "slot":2,
 "p":0.71,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-27",
@@ -13342,7 +13342,7 @@
 "team":"NYM",
 "slot":3,
 "p":0.7062,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-27",
@@ -13352,7 +13352,7 @@
 "team":"NYM",
 "slot":4,
 "p":0.6973,
-"result":null,
+"result":true,
 "dk":{
 "o":-227,
 "u":168
@@ -19652,7 +19652,7 @@
 "wpHome":0.5099,
 "rHome":4.53,
 "rAway":4.7,
-"result":null,
+"result":true,
 "dk":{
 "ml":{
 "away":-110,
@@ -19663,7 +19663,9 @@
 "o":-117,
 "u":-103
 }
-}
+},
+"sHome":6,
+"sAway":4
 },
 {
 "date":"2026-09-27",

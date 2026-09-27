@@ -13361,21 +13361,11 @@
 {
 "date":"2026-09-27",
 "gamePk":822761,
-"pid":664770,
-"name":"Nathan Lukes",
-"team":"TOR",
-"slot":2,
-"p":0.6799,
-"result":null
-},
-{
-"date":"2026-09-27",
-"gamePk":822761,
 "pid":682829,
 "name":"Elly De La Cruz",
 "team":"CIN",
 "slot":2,
-"p":0.6985,
+"p":0.6933,
 "result":null,
 "dk":{
 "o":-168,
@@ -13389,12 +13379,22 @@
 "name":"Sal Stewart",
 "team":"CIN",
 "slot":3,
-"p":0.6765,
+"p":0.6723,
 "result":null,
 "dk":{
 "o":-194,
 "u":145
 }
+},
+{
+"date":"2026-09-27",
+"gamePk":822761,
+"pid":703520,
+"name":"Brett Bateman",
+"team":"TOR",
+"slot":2,
+"p":0.6588,
+"result":null
 },
 {
 "date":"2026-09-27",
@@ -13479,16 +13479,12 @@
 {
 "date":"2026-09-27",
 "gamePk":823246,
-"pid":665487,
-"name":"Fernando Tatis Jr.",
-"team":"SD",
-"slot":1,
-"p":0.7429,
-"result":null,
-"dk":{
-"o":-236,
-"u":174
-}
+"pid":606466,
+"name":"Ketel Marte",
+"team":"AZ",
+"slot":2,
+"p":0.7108,
+"result":null
 },
 {
 "date":"2026-09-27",
@@ -13510,8 +13506,8 @@
 "pid":687957,
 "name":"Dustin Harris",
 "team":"SD",
-"slot":2,
-"p":0.7149,
+"slot":1,
+"p":0.7237,
 "result":null,
 "dk":{
 "o":-175,
@@ -13643,25 +13639,11 @@
 {
 "date":"2026-09-27",
 "gamePk":823731,
-"pid":661388,
-"name":"William Contreras",
-"team":"MIL",
-"slot":4,
-"p":0.6853,
-"result":null,
-"dk":{
-"o":-213,
-"u":159
-}
-},
-{
-"date":"2026-09-27",
-"gamePk":823731,
 "pid":668930,
 "name":"Brice Turang",
 "team":"MIL",
-"slot":2,
-"p":0.6688,
+"slot":4,
+"p":0.6509,
 "result":null,
 "dk":{
 "o":-183,
@@ -13671,11 +13653,25 @@
 {
 "date":"2026-09-27",
 "gamePk":823731,
+"pid":669003,
+"name":"Garrett Mitchell",
+"team":"MIL",
+"slot":1,
+"p":0.6914,
+"result":null,
+"dk":{
+"o":-192,
+"u":143
+}
+},
+{
+"date":"2026-09-27",
+"gamePk":823731,
 "pid":694192,
 "name":"Jackson Chourio",
 "team":"MIL",
-"slot":1,
-"p":0.7119,
+"slot":3,
+"p":0.6942,
 "result":null
 },
 {
@@ -13729,26 +13725,26 @@
 {
 "date":"2026-09-27",
 "gamePk":824055,
+"pid":672580,
+"name":"Maikel Garcia",
+"team":"KC",
+"slot":1,
+"p":0.7093,
+"result":null,
+"dk":{
+"o":-203,
+"u":152
+}
+},
+{
+"date":"2026-09-27",
+"gamePk":824055,
 "pid":677951,
 "name":"Bobby Witt Jr.",
 "team":"KC",
 "slot":2,
 "p":0.722,
 "result":null
-},
-{
-"date":"2026-09-27",
-"gamePk":824055,
-"pid":800050,
-"name":"Chase DeLauter",
-"team":"CLE",
-"slot":3,
-"p":0.6892,
-"result":null,
-"dk":{
-"o":-256,
-"u":189
-}
 },
 {
 "date":"2026-09-27",
@@ -13794,8 +13790,8 @@
 "pid":545341,
 "name":"Randal Grichuk",
 "team":"CWS",
-"slot":3,
-"p":0.7615,
+"slot":1,
+"p":0.7792,
 "result":null
 },
 {
@@ -13805,7 +13801,7 @@
 "name":"Jake McCarthy",
 "team":"COL",
 "slot":1,
-"p":0.7438,
+"p":0.745,
 "result":null,
 "dk":{
 "o":-209,
@@ -13815,16 +13811,12 @@
 {
 "date":"2026-09-27",
 "gamePk":824542,
-"pid":678246,
-"name":"Miguel Vargas",
+"pid":803011,
+"name":"Sam Antonacci",
 "team":"CWS",
-"slot":1,
-"p":0.7343,
-"result":null,
-"dk":{
-"o":-274,
-"u":201
-}
+"slot":5,
+"p":0.7172,
+"result":null
 },
 {
 "date":"2026-09-27",
@@ -19653,9 +19645,9 @@
 "gamePk":822679,
 "home":"WSH",
 "away":"NYM",
-"wpHome":0.5069,
+"wpHome":0.5099,
 "rHome":4.53,
-"rAway":4.73,
+"rAway":4.7,
 "result":null,
 "dk":{
 "ml":{
@@ -19674,9 +19666,9 @@
 "gamePk":822761,
 "home":"TOR",
 "away":"CIN",
-"wpHome":0.4803,
-"rHome":4.54,
-"rAway":5.01,
+"wpHome":0.4892,
+"rHome":4.56,
+"rAway":4.94,
 "result":null,
 "dk":{
 "ml":{
@@ -19716,8 +19708,8 @@
 "gamePk":823164,
 "home":"SF",
 "away":"LAD",
-"wpHome":0.2875,
-"rHome":3.55,
+"wpHome":0.2865,
+"rHome":3.54,
 "rAway":6.04,
 "result":null,
 "dk":{
@@ -19737,8 +19729,8 @@
 "gamePk":823246,
 "home":"SD",
 "away":"AZ",
-"wpHome":0.4153,
-"rHome":3.98,
+"wpHome":0.3059,
+"rHome":3.04,
 "rAway":5.06,
 "result":null,
 "dk":{
@@ -19821,9 +19813,9 @@
 "gamePk":823731,
 "home":"MIL",
 "away":"STL",
-"wpHome":0.7951,
-"rHome":4.81,
-"rAway":2.37,
+"wpHome":0.8489,
+"rHome":4.76,
+"rAway":1.86,
 "result":null,
 "dk":{
 "ml":{
@@ -19863,8 +19855,8 @@
 "gamePk":824055,
 "home":"KC",
 "away":"CLE",
-"wpHome":0.3968,
-"rHome":3.23,
+"wpHome":0.3775,
+"rHome":3.08,
 "rAway":4.34,
 "result":null,
 "dk":{
@@ -19884,8 +19876,8 @@
 "gamePk":824217,
 "home":"DET",
 "away":"PIT",
-"wpHome":0.4928,
-"rHome":4.5,
+"wpHome":0.4865,
+"rHome":4.44,
 "rAway":4.84,
 "result":null,
 "dk":{
@@ -19905,9 +19897,9 @@
 "gamePk":824542,
 "home":"CWS",
 "away":"COL",
-"wpHome":0.6467,
-"rHome":5.93,
-"rAway":4.61,
+"wpHome":0.5823,
+"rHome":5.36,
+"rAway":4.78,
 "result":null,
 "dk":{
 "ml":{
@@ -21153,34 +21145,18 @@
 },
 {
 "date":"2026-09-27",
-"gamePk":823164,
-"pid":668800,
-"name":"Andrew Knizner",
-"team":"SF",
-"start":"2026-09-27T19:05:00Z",
-"p":0.6378,
-"pAdj":0.6158,
-"dk":{
-"o":-127,
-"u":-104
-},
-"ev":0.1007,
-"result":null
-},
-{
-"date":"2026-09-27",
 "gamePk":823246,
 "pid":687957,
 "name":"Dustin Harris",
 "team":"SD",
 "start":"2026-09-27T19:10:00Z",
-"p":0.7149,
-"pAdj":0.6929,
+"p":0.7237,
+"pAdj":0.7017,
 "dk":{
 "o":-175,
 "u":131
 },
-"ev":0.0888,
+"ev":0.1027,
 "result":null
 },
 {
@@ -21189,7 +21165,7 @@
 "pid":669016,
 "name":"Brandon Marsh",
 "team":"PHI",
-"start":"2026-09-27T19:05:00Z",
+"start":"2026-09-27T18:30:00Z",
 "p":0.668,
 "pAdj":0.646,
 "dk":{
@@ -21205,7 +21181,7 @@
 "pid":680700,
 "name":"Richie Palacios",
 "team":"TB",
-"start":"2026-09-27T19:05:00Z",
+"start":"2026-09-27T18:30:00Z",
 "p":0.6157,
 "pAdj":0.5937,
 "dk":{
@@ -21221,7 +21197,7 @@
 "pid":689414,
 "name":"Liam Hicks",
 "team":"TB",
-"start":"2026-09-27T19:05:00Z",
+"start":"2026-09-27T18:30:00Z",
 "p":0.6759,
 "pAdj":0.6539,
 "dk":{
@@ -21270,29 +21246,45 @@
 "name":"Nathan Church",
 "team":"STL",
 "start":"2026-09-27T19:10:00Z",
-"p":0.5725,
-"pAdj":0.5505,
+"p":0.6043,
+"pAdj":0.5823,
 "dk":{
 "o":105,
 "u":-139
 },
-"ev":0.1285,
+"ev":0.1937,
 "result":null
 },
 {
 "date":"2026-09-27",
-"gamePk":824055,
-"pid":670231,
-"name":"John Rave",
-"team":"KC",
+"gamePk":824542,
+"pid":682668,
+"name":"Luisangel Acu\u00f1a",
+"team":"CWS",
 "start":"2026-09-27T19:10:00Z",
-"p":0.6061,
-"pAdj":0.5841,
+"p":0.687,
+"pAdj":0.665,
 "dk":{
-"o":-110,
-"u":-121
+"o":-158,
+"u":119
 },
-"ev":0.1151,
+"ev":0.0859,
+"result":null
+},
+{
+"date":"2026-09-27",
+"gamePk":824542,
+"pid":687597,
+"name":"Jordan Beck",
+"team":"COL",
+"start":"2026-09-27T19:10:00Z",
+"p":0.5732,
+"pAdj":0.5512,
+"dk":{
+"o":-103,
+"u":-129
+},
+"ev":0.0863,
 "result":null
 }
 ]

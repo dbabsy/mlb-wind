@@ -13070,7 +13070,7 @@
 "team":"TEX",
 "slot":1,
 "p":0.7102,
-"result":null,
+"result":true,
 "dk":{
 "o":-236,
 "u":175
@@ -13084,7 +13084,7 @@
 "team":"MIN",
 "slot":2,
 "p":0.697,
-"result":null,
+"result":true,
 "dk":{
 "o":-237,
 "u":176
@@ -13098,7 +13098,7 @@
 "team":"MIN",
 "slot":1,
 "p":0.7089,
-"result":null,
+"result":true,
 "dk":{
 "o":-228,
 "u":169
@@ -13112,7 +13112,7 @@
 "team":"STL",
 "slot":3,
 "p":0.7156,
-"result":null,
+"result":true,
 "dk":{
 "o":-178,
 "u":133
@@ -13126,7 +13126,7 @@
 "team":"MIL",
 "slot":1,
 "p":0.7094,
-"result":null,
+"result":true,
 "dk":{
 "o":-267,
 "u":196
@@ -13140,7 +13140,7 @@
 "team":"STL",
 "slot":1,
 "p":0.683,
-"result":null,
+"result":false,
 "dk":{
 "o":-169,
 "u":127
@@ -13188,7 +13188,7 @@
 "team":"KC",
 "slot":2,
 "p":0.7281,
-"result":null,
+"result":true,
 "dk":{
 "o":-267,
 "u":196
@@ -13202,7 +13202,7 @@
 "team":"CLE",
 "slot":1,
 "p":0.712,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-26",
@@ -13212,7 +13212,7 @@
 "team":"CLE",
 "slot":3,
 "p":0.701,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-26",
@@ -13260,7 +13260,7 @@
 "team":"CWS",
 "slot":3,
 "p":0.744,
-"result":null,
+"result":false,
 "dk":{
 "o":-224,
 "u":166
@@ -13274,7 +13274,7 @@
 "team":"COL",
 "slot":1,
 "p":0.75,
-"result":null,
+"result":true,
 "dk":{
 "o":-213,
 "u":158
@@ -13288,7 +13288,7 @@
 "team":"CWS",
 "slot":1,
 "p":0.7077,
-"result":null,
+"result":false,
 "dk":{
 "o":-262,
 "u":193
@@ -18927,7 +18927,7 @@
 "wpHome":0.5777,
 "rHome":4.51,
 "rAway":4.05,
-"result":null,
+"result":false,
 "dk":{
 "ml":{
 "away":-125,
@@ -18938,7 +18938,9 @@
 "o":-105,
 "u":-114
 }
-}
+},
+"sHome":2,
+"sAway":6
 },
 {
 "date":"2026-09-26",
@@ -18948,7 +18950,7 @@
 "wpHome":0.6066,
 "rHome":4.93,
 "rAway":4.16,
-"result":null,
+"result":true,
 "dk":{
 "ml":{
 "away":135,
@@ -18959,7 +18961,9 @@
 "o":-109,
 "u":-111
 }
-}
+},
+"sHome":3,
+"sAway":2
 },
 {
 "date":"2026-09-26",
@@ -18992,7 +18996,7 @@
 "wpHome":0.5149,
 "rHome":4.52,
 "rAway":4.65,
-"result":null,
+"result":false,
 "dk":{
 "ml":{
 "away":-114,
@@ -19003,7 +19007,9 @@
 "o":-102,
 "u":-118
 }
-}
+},
+"sHome":5,
+"sAway":11
 },
 {
 "date":"2026-09-26",
@@ -19036,7 +19042,7 @@
 "wpHome":0.628,
 "rHome":5.77,
 "rAway":4.68,
-"result":null,
+"result":false,
 "dk":{
 "ml":{
 "away":200,
@@ -19047,7 +19053,9 @@
 "o":-115,
 "u":-105
 }
-}
+},
+"sHome":6,
+"sAway":9
 },
 {
 "date":"2026-09-26",
@@ -20192,7 +20200,7 @@
 "u":-120
 },
 "ev":0.1116,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-26",
@@ -20208,7 +20216,7 @@
 "u":133
 },
 "ev":0.0806,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-26",
@@ -20224,7 +20232,7 @@
 "u":-110
 },
 "ev":0.0833,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-26",
@@ -20240,7 +20248,7 @@
 "u":125
 },
 "ev":0.069,
-"result":null
+"result":true
 }
 ]
 }

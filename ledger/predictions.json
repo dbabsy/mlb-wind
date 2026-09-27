@@ -13860,7 +13860,7 @@
 "team":"HOU",
 "slot":1,
 "p":0.7606,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-27",
@@ -13870,7 +13870,7 @@
 "team":"HOU",
 "slot":2,
 "p":0.7414,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-27",
@@ -13880,7 +13880,7 @@
 "team":"HOU",
 "slot":5,
 "p":0.7367,
-"result":null
+"result":true
 }
 ],
 "games":[
@@ -19970,7 +19970,7 @@
 "wpHome":0.3179,
 "rHome":4.52,
 "rAway":6.97,
-"result":null,
+"result":false,
 "dk":{
 "ml":{
 "away":-192,
@@ -19981,7 +19981,9 @@
 "o":-105,
 "u":-114
 }
-}
+},
+"sHome":0,
+"sAway":9
 }
 ],
 "value":[

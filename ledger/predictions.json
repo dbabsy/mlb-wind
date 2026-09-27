@@ -13509,7 +13509,7 @@
 "name":"Bryce Harper",
 "team":"PHI",
 "slot":3,
-"p":0.7026,
+"p":0.6997,
 "result":null,
 "dk":{
 "o":-206,
@@ -13523,7 +13523,7 @@
 "name":"Trea Turner",
 "team":"PHI",
 "slot":1,
-"p":0.7007,
+"p":0.6992,
 "result":null,
 "dk":{
 "o":-239,
@@ -13537,7 +13537,7 @@
 "name":"Yandy D\u00edaz",
 "team":"TB",
 "slot":1,
-"p":0.7303,
+"p":0.731,
 "result":null,
 "dk":{
 "o":-247,
@@ -13551,7 +13551,7 @@
 "name":"Pete Alonso",
 "team":"BAL",
 "slot":2,
-"p":0.6805,
+"p":0.6867,
 "result":null,
 "dk":{
 "o":-204,
@@ -13565,7 +13565,7 @@
 "name":"Cody Bellinger",
 "team":"NYY",
 "slot":2,
-"p":0.7215,
+"p":0.7244,
 "result":null,
 "dk":{
 "o":-238,
@@ -13579,7 +13579,7 @@
 "name":"Luis Garc\u00eda Jr.",
 "team":"NYY",
 "slot":4,
-"p":0.7236,
+"p":0.7266,
 "result":null,
 "dk":{
 "o":-226,
@@ -13631,7 +13631,7 @@
 "name":"William Contreras",
 "team":"MIL",
 "slot":4,
-"p":0.6853,
+"p":0.6842,
 "result":null,
 "dk":{
 "o":-214,
@@ -13645,7 +13645,7 @@
 "name":"Brice Turang",
 "team":"MIL",
 "slot":2,
-"p":0.6688,
+"p":0.6677,
 "result":null,
 "dk":{
 "o":-192,
@@ -13659,7 +13659,7 @@
 "name":"Jackson Chourio",
 "team":"MIL",
 "slot":1,
-"p":0.7119,
+"p":0.7107,
 "result":null
 },
 {
@@ -13829,7 +13829,7 @@
 "name":"Roman Anthony",
 "team":"BOS",
 "slot":1,
-"p":0.6706,
+"p":0.6967,
 "result":null
 },
 {
@@ -19650,9 +19650,9 @@
 "gamePk":822761,
 "home":"TOR",
 "away":"CIN",
-"wpHome":0.482,
-"rHome":4.51,
-"rAway":4.96,
+"wpHome":0.4845,
+"rHome":4.44,
+"rAway":4.86,
 "result":null,
 "dk":{
 "ml":{
@@ -19734,9 +19734,9 @@
 "gamePk":823408,
 "home":"PHI",
 "away":"TB",
-"wpHome":0.4592,
-"rHome":3.79,
-"rAway":4.4,
+"wpHome":0.4615,
+"rHome":3.53,
+"rAway":4.09,
 "result":null,
 "dk":{
 "ml":{
@@ -19755,9 +19755,9 @@
 "gamePk":823490,
 "home":"NYY",
 "away":"BAL",
-"wpHome":0.592,
-"rHome":4.31,
-"rAway":3.73,
+"wpHome":0.594,
+"rHome":4.44,
+"rAway":3.83,
 "result":null,
 "dk":{
 "ml":{
@@ -19797,9 +19797,9 @@
 "gamePk":823731,
 "home":"MIL",
 "away":"STL",
-"wpHome":0.7951,
-"rHome":4.81,
-"rAway":2.37,
+"wpHome":0.7935,
+"rHome":4.82,
+"rAway":2.39,
 "result":null,
 "dk":{
 "ml":{
@@ -19881,9 +19881,9 @@
 "gamePk":824542,
 "home":"CWS",
 "away":"COL",
-"wpHome":0.6467,
-"rHome":5.93,
-"rAway":4.61,
+"wpHome":0.647,
+"rHome":5.91,
+"rAway":4.59,
 "result":null,
 "dk":{
 "ml":{
@@ -19902,8 +19902,8 @@
 "gamePk":824705,
 "home":"BOS",
 "away":"CHC",
-"wpHome":0.4525,
-"rHome":3.76,
+"wpHome":0.4757,
+"rHome":3.96,
 "rAway":4.43,
 "result":null,
 "dk":{
@@ -21119,12 +21119,12 @@
 "team":"SEA",
 "start":"2026-09-27T19:10:00Z",
 "p":0.7051,
-"pAdj":0.6826,
+"pAdj":0.6831,
 "dk":{
 "o":-161,
 "u":121
 },
-"ev":0.1066,
+"ev":0.1074,
 "result":null
 },
 {
@@ -21135,12 +21135,12 @@
 "team":"SF",
 "start":"2026-09-27T19:05:00Z",
 "p":0.6361,
-"pAdj":0.6136,
+"pAdj":0.6141,
 "dk":{
 "o":-127,
 "u":-105
 },
-"ev":0.0967,
+"ev":0.0976,
 "result":null
 },
 {
@@ -21150,13 +21150,13 @@
 "name":"Brandon Marsh",
 "team":"PHI",
 "start":"2026-09-27T19:05:00Z",
-"p":0.668,
-"pAdj":0.6455,
+"p":0.667,
+"pAdj":0.645,
 "dk":{
 "o":-149,
 "u":112
 },
-"ev":0.0787,
+"ev":0.0779,
 "result":null
 },
 {
@@ -21166,13 +21166,13 @@
 "name":"Liam Hicks",
 "team":"TB",
 "start":"2026-09-27T19:05:00Z",
-"p":0.6759,
-"pAdj":0.6534,
+"p":0.6746,
+"pAdj":0.6526,
 "dk":{
 "o":-151,
 "u":113
 },
-"ev":0.0861,
+"ev":0.0848,
 "result":null
 },
 {
@@ -21182,13 +21182,13 @@
 "name":"Ryan McMahon",
 "team":"NYY",
 "start":"2026-09-27T17:05:00Z",
-"p":0.5887,
-"pAdj":0.5662,
+"p":0.5914,
+"pAdj":0.5694,
 "dk":{
 "o":-112,
 "u":-118
 },
-"ev":0.0717,
+"ev":0.0778,
 "result":null
 },
 {
@@ -21198,13 +21198,13 @@
 "name":"Cooper Pratt",
 "team":"MIL",
 "start":"2026-09-27T19:10:00Z",
-"p":0.6486,
-"pAdj":0.6261,
+"p":0.647,
+"pAdj":0.625,
 "dk":{
 "o":-139,
 "u":105
 },
-"ev":0.0765,
+"ev":0.0746,
 "result":null
 },
 {
@@ -21215,12 +21215,12 @@
 "team":"KC",
 "start":"2026-09-27T19:10:00Z",
 "p":0.6061,
-"pAdj":0.5836,
+"pAdj":0.5841,
 "dk":{
 "o":-110,
 "u":-121
 },
-"ev":0.1141,
+"ev":0.1151,
 "result":null
 },
 {
@@ -21231,12 +21231,12 @@
 "team":"COL",
 "start":"2026-09-27T19:10:00Z",
 "p":0.7438,
-"pAdj":0.7213,
+"pAdj":0.7218,
 "dk":{
 "o":-192,
 "u":143
 },
-"ev":0.097,
+"ev":0.0977,
 "result":null
 },
 {
@@ -21247,12 +21247,12 @@
 "team":"CWS",
 "start":"2026-09-27T19:10:00Z",
 "p":0.6857,
-"pAdj":0.6632,
+"pAdj":0.6637,
 "dk":{
 "o":-158,
 "u":119
 },
-"ev":0.0829,
+"ev":0.0838,
 "result":null
 },
 {
@@ -21263,12 +21263,12 @@
 "team":"COL",
 "start":"2026-09-27T19:10:00Z",
 "p":0.7042,
-"pAdj":0.6817,
+"pAdj":0.6822,
 "dk":{
 "o":-174,
 "u":130
 },
-"ev":0.0735,
+"ev":0.0743,
 "result":null
 }
 ]

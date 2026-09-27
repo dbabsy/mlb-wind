@@ -12909,29 +12909,29 @@
 {
 "date":"2026-09-26",
 "gamePk":823083,
-"pid":677594,
-"name":"Julio Rodr\u00edguez",
+"pid":647304,
+"name":"Josh Naylor",
 "team":"SEA",
-"slot":3,
-"p":0.6906,
+"slot":5,
+"p":0.6783,
 "result":null,
 "dk":{
-"o":-222,
-"u":165
+"o":-223,
+"u":166
 }
 },
 {
 "date":"2026-09-26",
 "gamePk":823083,
-"pid":685133,
-"name":"Wade Meckler",
-"team":"LAA",
-"slot":3,
-"p":0.6995,
+"pid":668227,
+"name":"Randy Arozarena",
+"team":"SEA",
+"slot":2,
+"p":0.6666,
 "result":null,
 "dk":{
-"o":-176,
-"u":132
+"o":-193,
+"u":144
 }
 },
 {
@@ -12940,12 +12940,12 @@
 "pid":686527,
 "name":"Dominic Canzone",
 "team":"SEA",
-"slot":2,
-"p":0.7061,
+"slot":3,
+"p":0.6972,
 "result":null,
 "dk":{
-"o":-211,
-"u":157
+"o":-196,
+"u":146
 }
 },
 {
@@ -12956,7 +12956,7 @@
 "team":"LAD",
 "slot":6,
 "p":0.6969,
-"result":null,
+"result":true,
 "dk":{
 "o":-166,
 "u":125
@@ -12970,7 +12970,7 @@
 "team":"LAD",
 "slot":1,
 "p":0.713,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-26",
@@ -12980,7 +12980,7 @@
 "team":"LAD",
 "slot":2,
 "p":0.7082,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-26",
@@ -13154,7 +13154,7 @@
 "team":"ATL",
 "slot":1,
 "p":0.7397,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-26",
@@ -13164,7 +13164,7 @@
 "team":"MIA",
 "slot":1,
 "p":0.7556,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-26",
@@ -13174,7 +13174,7 @@
 "team":"MIA",
 "slot":4,
 "p":0.713,
-"result":null,
+"result":true,
 "dk":{
 "o":-255,
 "u":188
@@ -13301,7 +13301,7 @@
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
 "slot":1,
-"p":0.7485,
+"p":0.746,
 "result":null
 },
 {
@@ -13311,7 +13311,7 @@
 "name":"Yordan Alvarez",
 "team":"HOU",
 "slot":2,
-"p":0.7411,
+"p":0.7377,
 "result":null
 },
 {
@@ -13321,7 +13321,7 @@
 "name":"Yainer Diaz",
 "team":"HOU",
 "slot":5,
-"p":0.7302,
+"p":0.7276,
 "result":null
 }
 ],
@@ -18838,19 +18838,19 @@
 "gamePk":823083,
 "home":"SEA",
 "away":"LAA",
-"wpHome":0.5883,
-"rHome":4.87,
-"rAway":4.28,
+"wpHome":0.6046,
+"rHome":4.98,
+"rAway":4.22,
 "result":null,
 "dk":{
 "ml":{
-"away":134,
-"home":-162
+"away":130,
+"home":-157
 },
 "total":{
 "line":7.0,
-"o":-119,
-"u":-101
+"o":-120,
+"u":100
 }
 }
 },
@@ -18862,7 +18862,7 @@
 "wpHome":0.1661,
 "rHome":2.06,
 "rAway":5.43,
-"result":null,
+"result":false,
 "dk":{
 "ml":{
 "away":-292,
@@ -18873,7 +18873,9 @@
 "o":-125,
 "u":103
 }
-}
+},
+"sHome":3,
+"sAway":4
 },
 {
 "date":"2026-09-26",
@@ -18967,7 +18969,7 @@
 "wpHome":0.5498,
 "rHome":4.44,
 "rAway":4.24,
-"result":null,
+"result":false,
 "dk":{
 "ml":{
 "away":-117,
@@ -18978,7 +18980,9 @@
 "o":-112,
 "u":-107
 }
-}
+},
+"sHome":3,
+"sAway":8
 },
 {
 "date":"2026-09-26",
@@ -19050,19 +19054,19 @@
 "gamePk":824949,
 "home":"ATH",
 "away":"HOU",
-"wpHome":0.3008,
-"rHome":3.81,
-"rAway":6.24,
+"wpHome":0.289,
+"rHome":3.8,
+"rAway":6.39,
 "result":null,
 "dk":{
 "ml":{
-"away":-161,
-"home":133
+"away":-168,
+"home":139
 },
 "total":{
 "line":10.0,
-"o":-103,
-"u":-117
+"o":-105,
+"u":-115
 }
 }
 }
@@ -19985,17 +19989,81 @@
 {
 "date":"2026-09-26",
 "gamePk":823083,
+"pid":623168,
+"name":"Tyler Heineman",
+"team":"LAA",
+"start":"2026-09-27T01:40:00Z",
+"p":0.5993,
+"pAdj":0.5747,
+"dk":{
+"o":-107,
+"u":-124
+},
+"ev":0.1118,
+"result":null
+},
+{
+"date":"2026-09-26",
+"gamePk":823083,
+"pid":642350,
+"name":"Jose Siri",
+"team":"LAA",
+"start":"2026-09-27T01:40:00Z",
+"p":0.6499,
+"pAdj":0.6253,
+"dk":{
+"o":-143,
+"u":108
+},
+"ev":0.0626,
+"result":null
+},
+{
+"date":"2026-09-26",
+"gamePk":823083,
 "pid":669326,
 "name":"Bryce Teodosio",
 "team":"LAA",
 "start":"2026-09-27T01:40:00Z",
-"p":0.5316,
-"pAdj":0.5079,
+"p":0.5427,
+"pAdj":0.5181,
 "dk":{
 "o":111,
 "u":-148
 },
-"ev":0.0717,
+"ev":0.0932,
+"result":null
+},
+{
+"date":"2026-09-26",
+"gamePk":823083,
+"pid":685133,
+"name":"Wade Meckler",
+"team":"LAA",
+"start":"2026-09-27T01:40:00Z",
+"p":0.664,
+"pAdj":0.6394,
+"dk":{
+"o":-169,
+"u":127
+},
+"ev":0.0177,
+"result":null
+},
+{
+"date":"2026-09-26",
+"gamePk":823083,
+"pid":686527,
+"name":"Dominic Canzone",
+"team":"SEA",
+"start":"2026-09-27T01:40:00Z",
+"p":0.6972,
+"pAdj":0.6726,
+"dk":{
+"o":-196,
+"u":146
+},
+"ev":0.0158,
 "result":null
 },
 {
@@ -20012,7 +20080,7 @@
 "u":125
 },
 "ev":0.076,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-26",
@@ -20028,7 +20096,7 @@
 "u":-118
 },
 "ev":0.1297,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-26",

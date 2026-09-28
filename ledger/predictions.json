@@ -13404,7 +13404,7 @@
 "team":"SEA",
 "slot":6,
 "p":0.6966,
-"result":null,
+"result":true,
 "dk":{
 "o":-155,
 "u":117
@@ -13418,7 +13418,7 @@
 "team":"SEA",
 "slot":2,
 "p":0.7026,
-"result":null,
+"result":true,
 "dk":{
 "o":-203,
 "u":151
@@ -13432,7 +13432,7 @@
 "team":"LAA",
 "slot":2,
 "p":0.6989,
-"result":null,
+"result":false,
 "dk":{
 "o":-157,
 "u":118
@@ -19698,7 +19698,7 @@
 "wpHome":0.6707,
 "rHome":5.07,
 "rAway":3.67,
-"result":null,
+"result":true,
 "dk":{
 "ml":{
 "away":139,
@@ -19709,7 +19709,9 @@
 "o":-110,
 "u":-109
 }
-}
+},
+"sHome":7,
+"sAway":3
 },
 {
 "date":"2026-09-27",
@@ -21171,7 +21173,7 @@
 "u":117
 },
 "ev":0.1098,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-27",
@@ -21187,7 +21189,7 @@
 "u":-137
 },
 "ev":0.1474,
-"result":null
+"result":true
 },
 {
 "date":"2026-09-27",
@@ -21203,7 +21205,7 @@
 "u":118
 },
 "ev":0.108,
-"result":null
+"result":false
 },
 {
 "date":"2026-09-27",

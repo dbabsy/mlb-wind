@@ -200,8 +200,74 @@ re-recorded once the games have started.
 - Whether the xBA correction actually helps. Year-over-year evidence says yes
   (+0.030 r); a 10-day backtest could not resolve it. The ledger will settle it
   once it has a few thousand picks.
-- Hit picks backtested at 74%; through 2026-09-01 they are 68.8% against a
-  mean projection of 71.2% (n=282). The gap is 0.9 SE — nothing to act on yet.
+- **Hit picks run about 3.7 points hot, and this is now real.** Through
+  2026-09-20: 67.4% actual against 71.1% projected, n=1022 over 26 days,
+  z=-2.5 naive and **z=-2.3 after correcting for day clustering**. It is not
+  noise any more. It is also not yet diagnosed, and the two are different
+  things.
+- **Why it is not diagnosed, and do not paper over it.** `hits.py` builds
+  P(at least one hit) from a per-PA rate and a *fixed* PA per lineup slot
+  (`SLOT_PA`). Either input could be 9% high and produce exactly what we see:
+  the PA would have to be 4.04 instead of 4.48, or the per-PA rate 0.222
+  instead of 0.243. Four corrections were fitted on the first half of the
+  ledger and tested on the second — shrink PA, shrink the per-PA rate, shrink
+  the logit, subtract a constant. **All four scored identically** (+0.45%
+  Brier, test logL -312.4 against -313.6 unchanged; likelihood ratio 2.4 on
+  1 df, p=0.12). Over a 0.646-0.803 range every one-parameter correction
+  collapses to "subtract 4 points", so the outcome alone cannot identify the
+  cause and a fitted fudge factor would not be significant even on its own
+  terms. Hypotheses tested and rejected: it is not the home team skipping the
+  ninth (home -0.032 vs away -0.043, difference z=+0.38), and it does not
+  scale with the assumed PA the way a PA error would (slots 1-3 -0.033, slots
+  4-6 -0.047, the wrong way round).
+- **The ledger now records actual PA, hits and batting slot per pick**, which
+  is what separates the two. `score()` already read `plateAppearances` to
+  decide whether a pick could be graded and then discarded the number. The
+  accuracy page shows assumed against actual PA. If actual PA lands near 4.0
+  the PA table is the culprit; if it lands near 4.5 the per-PA rate is, and
+  the xBA blend is the first thing to re-measure.
+- **The whole live sample is one month of one season** (2026-08-26 onward).
+  September is not April: rosters expand, regulars are rested, starters are
+  pulled early. A correction fitted on this window could be fitting the
+  calendar. Wait for the PA readout, or for a sample that spans more of a
+  season, before changing a coefficient.
+- **DraftKings sits below the model on every priced hit pick.** 61 of 61 on
+  2026-09-23/24, by 7.1 points with `dk.no_vig` (proportional), 6.2 additive,
+  5.6 by the power method — the direction does not depend on how the margin is
+  stripped. Proportional de-vigging is known to understate heavy favourites,
+  and these props mostly price around -220, so the market figure is probably
+  a point or so low. Over 1,146 settled picks the model runs ~3 points hot,
+  so reality lands **between** model and market. That makes a blend of the two
+  the most promising accuracy lever there is: forecast combination is
+  well-established and the market carries lineup, injury and weather news the
+  model cannot see. It cannot be fitted yet — the prices start 2026-09-23.
+- **Be sceptical of the value list's claimed edges.** It ranks every priced
+  hitter by model-minus-market, which is the winner's curse at its most severe:
+  a large pool (~200 hitters, not 18 per game) selected directly on the
+  disagreement with a strong estimator, so the biggest "edges" are
+  disproportionately the model's biggest errors. Claimed expected return runs
+  2.9% to 29.5% (mean 13.3%) against a book with a 6.7% margin; professional
+  bettors are content with 2-3%. First 16 settled: 8 won against a 54%
+  breakeven, -5.4% a bet against +13.8% claimed. Sixteen bets prove nothing
+  on their own, but the size of the claimed edge is itself evidence. The 0.032
+  shade it applies was measured on top-three picks (p 0.66-0.78); value picks
+  average 0.639, outside that range. By contrast every top-three pick bet at
+  DraftKings' price went 25 of 36 (+0.9% a bet), roughly breaking even against
+  the margin — the model's confident picks hold up; its disagreements with the
+  market are where it goes wrong.
+- **An explanation that fits the size but not the fingerprints: selection.**
+  Picking the top 3 of ~18 noisy estimates overstates them even when the model
+  is unbiased; a simulation with estimation noise of sd 0.020 in the per-PA rate
+  (roughly the sampling error on one season's PA) reproduces the gap almost
+  exactly (+0.030). But the tell-tale patterns are absent or reversed: a
+  hitter's above-his-norm days and below-his-norm days run hot by the same
+  amount (-0.027 / -0.028), and the lowest-baseline hitters, not the highest,
+  are the worst (-0.047 / -0.008 / -0.030 by thirds). Every test run on the
+  outcomes alone has come back with an interval too wide to decide — measure
+  the inputs instead.
+- Day-level overdispersion has settled at **1.18** over 26 days (chi2 29.4 on
+  25 df), down from the 1.53 measured over the first 7. The effective sample
+  is ~85% of nominal, not the ~two-thirds the early reading suggested.
 - **Do not read a Brier skill score off the hit picks.** They are the top 3 of
   each game, so the projections span 0.656–0.784 (sd 0.024). Discrimination is
   capped at `var(p) / p(1-p)` = 0.3% no matter how good the model is, and noise
@@ -209,11 +275,8 @@ re-recorded once the games have started.
   number on that card worth reading. Matchup picks are not range-restricted the
   same way (sd 0.105, cap 4.5%) and are running at 6.0% — that card's skill
   score does mean something.
-- Hit outcomes are 1.5x overdispersed across days (chi2 9.2 on 6 df, p~.16), so
-  the effective sample may be ~2/3 of the nominal one. Seven days is too few to
-  say. If it holds up, every confidence interval on the hits card is too narrow.
-  Teammates within a game are *not* correlated (overdispersion 0.97), so if the
-  effect is real it is a slate-wide thing, not a lineup thing.
+- Teammates within a game are *not* correlated (overdispersion 0.97), so the
+  residual day-level clustering is a slate-wide thing, not a lineup thing.
 - Run projections were unmeasurable until 2026-09-02: the ledger kept who won
   and threw the final score away. It now stores `sHome`/`sAway` and the accuracy
   page grades bias and MAE on each side, the total, and the margin. The margin

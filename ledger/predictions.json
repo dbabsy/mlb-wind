@@ -20156,9 +20156,9 @@
 "gamePk":849843,
 "home":"SD",
 "away":"CHC",
-"wpHome":0.6086,
+"wpHome":0.6066,
 "rHome":5.12,
-"rAway":4.31,
+"rAway":4.33,
 "result":null,
 "dk":{
 "ml":{
@@ -21666,22 +21666,6 @@
 {
 "date":"2026-09-29",
 "gamePk":849843,
-"pid":624424,
-"name":"Michael Conforto",
-"team":"CHC",
-"start":"2026-09-30T02:00:00Z",
-"p":0.5981,
-"pAdj":0.5748,
-"dk":{
-"o":-118,
-"u":-112
-},
-"ev":0.0619,
-"result":null
-},
-{
-"date":"2026-09-29",
-"gamePk":849843,
 "pid":669392,
 "name":"Samad Taylor",
 "team":"SD",
@@ -21837,6 +21821,22 @@
 "u":105
 },
 "ev":0.0626,
+"result":null
+},
+{
+"date":"2026-09-29",
+"gamePk":849851,
+"pid":669224,
+"name":"Austin Wells",
+"team":"NYY",
+"start":"2026-09-30T00:00:00Z",
+"p":0.531,
+"pAdj":0.5077,
+"dk":{
+"o":108,
+"u":-143
+},
+"ev":0.056,
 "result":null
 },
 {

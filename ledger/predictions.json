@@ -13965,16 +13965,6 @@
 {
 "date":"2026-09-29",
 "gamePk":849849,
-"pid":545341,
-"name":"Randal Grichuk",
-"team":"CWS",
-"slot":1,
-"p":0.7389,
-"result":null
-},
-{
-"date":"2026-09-29",
-"gamePk":849849,
 "pid":665161,
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
@@ -13998,6 +13988,20 @@
 "dk":{
 "o":-258,
 "u":190
+}
+},
+{
+"date":"2026-09-29",
+"gamePk":849849,
+"pid":803011,
+"name":"Sam Antonacci",
+"team":"CWS",
+"slot":1,
+"p":0.7047,
+"result":null,
+"dk":{
+"o":-197,
+"u":147
 }
 },
 {
@@ -20190,9 +20194,9 @@
 "gamePk":849849,
 "home":"HOU",
 "away":"CWS",
-"wpHome":0.3841,
+"wpHome":0.3097,
 "rHome":2.8,
-"rAway":3.93,
+"rAway":4.68,
 "result":null,
 "dk":{
 "ml":{
@@ -21674,6 +21678,22 @@
 {
 "date":"2026-09-29",
 "gamePk":849843,
+"pid":630105,
+"name":"Jake Cronenworth",
+"team":"SD",
+"start":"2026-09-30T02:00:00Z",
+"p":0.6193,
+"pAdj":0.596,
+"dk":{
+"o":-133,
+"u":100
+},
+"ev":0.0441,
+"result":null
+},
+{
+"date":"2026-09-29",
+"gamePk":849843,
 "pid":669720,
 "name":"Austin Hays",
 "team":"SD",
@@ -21769,6 +21789,54 @@
 },
 {
 "date":"2026-09-29",
+"gamePk":849849,
+"pid":643217,
+"name":"Andrew Benintendi",
+"team":"CWS",
+"start":"2026-09-29T21:00:00Z",
+"p":0.6214,
+"pAdj":0.5981,
+"dk":{
+"o":-116,
+"u":-114
+},
+"ev":0.1137,
+"result":null
+},
+{
+"date":"2026-09-29",
+"gamePk":849851,
+"pid":641355,
+"name":"Cody Bellinger",
+"team":"NYY",
+"start":"2026-09-30T00:00:00Z",
+"p":0.7215,
+"pAdj":0.6982,
+"dk":{
+"o":-206,
+"u":153
+},
+"ev":0.0371,
+"result":null
+},
+{
+"date":"2026-09-29",
+"gamePk":849851,
+"pid":669224,
+"name":"Austin Wells",
+"team":"NYY",
+"start":"2026-09-30T00:00:00Z",
+"p":0.542,
+"pAdj":0.5187,
+"dk":{
+"o":104,
+"u":-139
+},
+"ev":0.0581,
+"result":null
+},
+{
+"date":"2026-09-29",
 "gamePk":849851,
 "pid":671218,
 "name":"Heliot Ramos",
@@ -21781,6 +21849,22 @@
 "u":108
 },
 "ev":0.0716,
+"result":null
+},
+{
+"date":"2026-09-29",
+"gamePk":849851,
+"pid":682987,
+"name":"Spencer Jones",
+"team":"NYY",
+"start":"2026-09-30T00:00:00Z",
+"p":0.6151,
+"pAdj":0.5918,
+"dk":{
+"o":-133,
+"u":100
+},
+"ev":0.0368,
 "result":null
 },
 {

@@ -14053,7 +14053,7 @@
 "name":"Mauricio Dub\u00f3n",
 "team":"ATL",
 "slot":5,
-"p":0.7279,
+"p":0.7281,
 "result":null,
 "dk":{
 "o":-246,
@@ -14067,7 +14067,7 @@
 "name":"Michael Harris II",
 "team":"ATL",
 "slot":7,
-"p":0.7264,
+"p":0.7265,
 "result":null,
 "dk":{
 "o":-212,
@@ -14081,7 +14081,7 @@
 "name":"Drake Baldwin",
 "team":"ATL",
 "slot":2,
-"p":0.7332,
+"p":0.7334,
 "result":null,
 "dk":{
 "o":-238,
@@ -20404,9 +20404,9 @@
 "gamePk":849841,
 "home":"ATL",
 "away":"PHI",
-"wpHome":0.4967,
-"rHome":3.88,
-"rAway":4.16,
+"wpHome":0.4977,
+"rHome":3.86,
+"rAway":4.13,
 "result":null,
 "dk":{
 "ml":{
@@ -22222,13 +22222,13 @@
 "name":"Justin Crawford",
 "team":"PHI",
 "start":"2026-09-30T18:00:00Z",
-"p":0.6559,
-"pAdj":0.6326,
+"p":0.6561,
+"pAdj":0.6328,
 "dk":{
 "o":-147,
 "u":111
 },
-"ev":0.0629,
+"ev":0.0633,
 "result":null
 },
 {

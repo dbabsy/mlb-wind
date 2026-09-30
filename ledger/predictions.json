@@ -20425,9 +20425,9 @@
 "gamePk":849842,
 "home":"SD",
 "away":"CHC",
-"wpHome":0.707,
+"wpHome":0.7049,
 "rHome":5.24,
-"rAway":3.47,
+"rAway":3.49,
 "result":null,
 "dk":{
 "ml":{
@@ -22266,22 +22266,6 @@
 {
 "date":"2026-09-30",
 "gamePk":849842,
-"pid":664023,
-"name":"Ian Happ",
-"team":"CHC",
-"start":"2026-10-01T02:00:00Z",
-"p":0.5673,
-"pAdj":0.544,
-"dk":{
-"o":-112,
-"u":-119
-},
-"ev":0.0297,
-"result":null
-},
-{
-"date":"2026-09-30",
-"gamePk":849842,
 "pid":687957,
 "name":"Dustin Harris",
 "team":"SD",
@@ -22293,22 +22277,6 @@
 "u":151
 },
 "ev":0.0576,
-"result":null
-},
-{
-"date":"2026-09-30",
-"gamePk":849842,
-"pid":699393,
-"name":"Pedro Ram\u00edrez",
-"team":"CHC",
-"start":"2026-10-01T02:00:00Z",
-"p":0.6496,
-"pAdj":0.6263,
-"dk":{
-"o":-134,
-"u":101
-},
-"ev":0.0937,
 "result":null
 },
 {
@@ -22346,6 +22314,22 @@
 {
 "date":"2026-09-30",
 "gamePk":849848,
+"pid":641355,
+"name":"Cody Bellinger",
+"team":"NYY",
+"start":"2026-10-01T00:00:00Z",
+"p":0.7157,
+"pAdj":0.6924,
+"dk":{
+"o":-216,
+"u":161
+},
+"ev":0.013,
+"result":null
+},
+{
+"date":"2026-09-30",
+"gamePk":849848,
 "pid":641857,
 "name":"Ryan McMahon",
 "team":"NYY",
@@ -22373,6 +22357,22 @@
 "u":-108
 },
 "ev":0.0871,
+"result":null
+},
+{
+"date":"2026-09-30",
+"gamePk":849848,
+"pid":663757,
+"name":"Trent Grisham",
+"team":"NYY",
+"start":"2026-10-01T00:00:00Z",
+"p":0.6114,
+"pAdj":0.5881,
+"dk":{
+"o":-138,
+"u":104
+},
+"ev":0.0143,
 "result":null
 },
 {

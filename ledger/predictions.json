@@ -14133,16 +14133,6 @@
 {
 "date":"2026-09-30",
 "gamePk":849846,
-"pid":545341,
-"name":"Randal Grichuk",
-"team":"CWS",
-"slot":1,
-"p":0.7345,
-"result":null
-},
-{
-"date":"2026-09-30",
-"gamePk":849846,
 "pid":665161,
 "name":"Jeremy Pe\u00f1a",
 "team":"HOU",
@@ -14166,6 +14156,20 @@
 "dk":{
 "o":-238,
 "u":172
+}
+},
+{
+"date":"2026-09-30",
+"gamePk":849846,
+"pid":803011,
+"name":"Sam Antonacci",
+"team":"CWS",
+"slot":1,
+"p":0.7019,
+"result":null,
+"dk":{
+"o":-194,
+"u":146
 }
 },
 {
@@ -20446,9 +20450,9 @@
 "gamePk":849846,
 "home":"HOU",
 "away":"CWS",
-"wpHome":0.6518,
+"wpHome":0.568,
 "rHome":4.99,
-"rAway":3.79,
+"rAway":4.59,
 "result":null,
 "dk":{
 "ml":{
@@ -22234,6 +22238,22 @@
 {
 "date":"2026-09-30",
 "gamePk":849842,
+"pid":608324,
+"name":"Alex Bregman",
+"team":"CHC",
+"start":"2026-10-01T02:00:00Z",
+"p":0.6741,
+"pAdj":0.6508,
+"dk":{
+"o":-170,
+"u":128
+},
+"ev":0.0336,
+"result":null
+},
+{
+"date":"2026-09-30",
+"gamePk":849842,
 "pid":630105,
 "name":"Jake Cronenworth",
 "team":"SD",
@@ -22293,6 +22313,38 @@
 "u":108
 },
 "ev":0.0674,
+"result":null
+},
+{
+"date":"2026-09-30",
+"gamePk":849846,
+"pid":643217,
+"name":"Andrew Benintendi",
+"team":"CWS",
+"start":"2026-09-30T21:00:00Z",
+"p":0.6101,
+"pAdj":0.5868,
+"dk":{
+"o":-125,
+"u":-107
+},
+"ev":0.0562,
+"result":null
+},
+{
+"date":"2026-09-30",
+"gamePk":849846,
+"pid":803011,
+"name":"Sam Antonacci",
+"team":"CWS",
+"start":"2026-09-30T21:00:00Z",
+"p":0.7019,
+"pAdj":0.6786,
+"dk":{
+"o":-194,
+"u":146
+},
+"ev":0.0284,
 "result":null
 },
 {

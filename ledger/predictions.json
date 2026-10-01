@@ -14213,21 +14213,11 @@
 {
 "date":"2026-10-01",
 "gamePk":849844,
-"pid":547180,
-"name":"Bryce Harper",
-"team":"PHI",
-"slot":3,
-"p":0.6845,
-"result":null
-},
-{
-"date":"2026-10-01",
-"gamePk":849844,
 "pid":621566,
 "name":"Matt Olson",
 "team":"ATL",
 "slot":3,
-"p":0.6848,
+"p":0.7,
 "result":null
 },
 {
@@ -14237,7 +14227,17 @@
 "name":"Mauricio Dub\u00f3n",
 "team":"ATL",
 "slot":1,
-"p":0.7337,
+"p":0.7383,
+"result":null
+},
+{
+"date":"2026-10-01",
+"gamePk":849844,
+"pid":664761,
+"name":"Alec Bohm",
+"team":"PHI",
+"slot":5,
+"p":0.6661,
 "result":null
 }
 ],
@@ -20518,9 +20518,9 @@
 "gamePk":849844,
 "home":"ATL",
 "away":"PHI",
-"wpHome":0.5404,
-"rHome":4.24,
-"rAway":4.13,
+"wpHome":0.6176,
+"rHome":4.91,
+"rAway":4.04,
 "result":null
 }
 ],

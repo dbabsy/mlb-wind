@@ -14213,43 +14213,43 @@
 {
 "date":"2026-10-01",
 "gamePk":849844,
-"pid":621566,
-"name":"Matt Olson",
+"pid":660670,
+"name":"Ronald Acu\u00f1a Jr.",
 "team":"ATL",
-"slot":3,
-"p":0.7,
+"slot":2,
+"p":0.7081,
 "result":null,
 "dk":{
-"o":-202,
-"u":150
+"o":-252,
+"u":186
 }
 },
 {
 "date":"2026-10-01",
 "gamePk":849844,
-"pid":643289,
-"name":"Mauricio Dub\u00f3n",
+"pid":671739,
+"name":"Michael Harris II",
+"team":"ATL",
+"slot":4,
+"p":0.7593,
+"result":null,
+"dk":{
+"o":-243,
+"u":179
+}
+},
+{
+"date":"2026-10-01",
+"gamePk":849844,
+"pid":686948,
+"name":"Drake Baldwin",
 "team":"ATL",
 "slot":1,
-"p":0.7383,
+"p":0.7369,
 "result":null,
 "dk":{
-"o":-216,
-"u":161
-}
-},
-{
-"date":"2026-10-01",
-"gamePk":849844,
-"pid":664761,
-"name":"Alec Bohm",
-"team":"PHI",
-"slot":5,
-"p":0.6661,
-"result":null,
-"dk":{
-"o":-248,
-"u":183
+"o":-250,
+"u":185
 }
 }
 ],
@@ -20530,9 +20530,9 @@
 "gamePk":849844,
 "home":"ATL",
 "away":"PHI",
-"wpHome":0.6176,
-"rHome":4.91,
-"rAway":4.04,
+"wpHome":0.6919,
+"rHome":5.95,
+"rAway":4.16,
 "result":null,
 "dk":{
 "ml":{
@@ -22573,13 +22573,13 @@
 "name":"Mike Yastrzemski",
 "team":"ATL",
 "start":"2026-10-02T00:00:00Z",
-"p":0.6483,
-"pAdj":0.625,
+"p":0.6394,
+"pAdj":0.6161,
 "dk":{
 "o":-121,
 "u":-110
 },
-"ev":0.1415,
+"ev":0.1253,
 "result":null
 },
 {
@@ -22601,65 +22601,33 @@
 {
 "date":"2026-10-01",
 "gamePk":849844,
-"pid":643289,
-"name":"Mauricio Dub\u00f3n",
-"team":"ATL",
-"start":"2026-10-02T00:00:00Z",
-"p":0.7383,
-"pAdj":0.715,
-"dk":{
-"o":-216,
-"u":161
-},
-"ev":0.046,
-"result":null
-},
-{
-"date":"2026-10-01",
-"gamePk":849844,
-"pid":663586,
-"name":"Austin Riley",
-"team":"ATL",
-"start":"2026-10-02T00:00:00Z",
-"p":0.6275,
-"pAdj":0.6042,
-"dk":{
-"o":-143,
-"u":108
-},
-"ev":0.0267,
-"result":null
-},
-{
-"date":"2026-10-01",
-"gamePk":849844,
-"pid":669016,
-"name":"Brandon Marsh",
+"pid":650559,
+"name":"Bryan De La Cruz",
 "team":"PHI",
 "start":"2026-10-02T00:00:00Z",
-"p":0.6265,
-"pAdj":0.6032,
+"p":0.6078,
+"pAdj":0.5845,
 "dk":{
-"o":-143,
-"u":108
+"o":-137,
+"u":103
 },
-"ev":0.025,
+"ev":0.0111,
 "result":null
 },
 {
 "date":"2026-10-01",
 "gamePk":849844,
-"pid":669221,
-"name":"Sean Murphy",
+"pid":671739,
+"name":"Michael Harris II",
 "team":"ATL",
 "start":"2026-10-02T00:00:00Z",
-"p":0.5497,
-"pAdj":0.5264,
+"p":0.7593,
+"pAdj":0.736,
 "dk":{
-"o":-108,
-"u":-123
+"o":-243,
+"u":179
 },
-"ev":0.0138,
+"ev":0.0389,
 "result":null
 },
 {
@@ -22669,13 +22637,13 @@
 "name":"Justin Crawford",
 "team":"PHI",
 "start":"2026-10-02T00:00:00Z",
-"p":0.641,
-"pAdj":0.6177,
+"p":0.6294,
+"pAdj":0.6061,
 "dk":{
 "o":-132,
 "u":-101
 },
-"ev":0.0857,
+"ev":0.0653,
 "result":null
 }
 ]

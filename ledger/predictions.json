@@ -14301,7 +14301,7 @@
 "name":"Randal Grichuk",
 "team":"CWS",
 "slot":2,
-"p":0.7187,
+"p":0.7178,
 "result":null,
 "dk":{
 "o":-193,
@@ -14315,7 +14315,7 @@
 "name":"Jos\u00e9 Ram\u00edrez",
 "team":"CLE",
 "slot":2,
-"p":0.7059,
+"p":0.7043,
 "result":null,
 "dk":{
 "o":-230,
@@ -14329,7 +14329,7 @@
 "name":"Angel Mart\u00ednez",
 "team":"CLE",
 "slot":5,
-"p":0.6938,
+"p":0.6928,
 "result":null,
 "dk":{
 "o":-206,
@@ -20736,9 +20736,9 @@
 "gamePk":849829,
 "home":"CLE",
 "away":"CWS",
-"wpHome":0.3812,
-"rHome":2.85,
-"rAway":4.02,
+"wpHome":0.3839,
+"rHome":2.83,
+"rAway":3.97,
 "result":null,
 "dk":{
 "ml":{
@@ -22901,13 +22901,13 @@
 "name":"Randal Grichuk",
 "team":"CWS",
 "start":"2026-10-03T17:00:00Z",
-"p":0.7187,
-"pAdj":0.6954,
+"p":0.7178,
+"pAdj":0.6945,
 "dk":{
 "o":-193,
 "u":144
 },
-"ev":0.0557,
+"ev":0.0543,
 "result":null
 },
 {
@@ -22917,13 +22917,13 @@
 "name":"Austin Hedges",
 "team":"CLE",
 "start":"2026-10-03T17:00:00Z",
-"p":0.5845,
-"pAdj":0.5612,
+"p":0.5829,
+"pAdj":0.5596,
 "dk":{
 "o":112,
 "u":-149
 },
-"ev":0.1897,
+"ev":0.1864,
 "result":null
 },
 {
@@ -22933,13 +22933,13 @@
 "name":"Braden Montgomery",
 "team":"CWS",
 "start":"2026-10-03T17:00:00Z",
-"p":0.5907,
-"pAdj":0.5674,
+"p":0.5871,
+"pAdj":0.5638,
 "dk":{
 "o":-117,
 "u":-114
 },
-"ev":0.0524,
+"ev":0.0457,
 "result":null
 },
 {

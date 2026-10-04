@@ -14457,15 +14457,15 @@
 {
 "date":"2026-10-04",
 "gamePk":849825,
-"pid":669003,
-"name":"Garrett Mitchell",
-"team":"MIL",
+"pid":665487,
+"name":"Fernando Tatis Jr.",
+"team":"SD",
 "slot":1,
-"p":0.6566,
+"p":0.7073,
 "result":null,
 "dk":{
-"o":-175,
-"u":131
+"o":-225,
+"u":167
 }
 },
 {
@@ -14474,8 +14474,8 @@
 "pid":687957,
 "name":"Dustin Harris",
 "team":"SD",
-"slot":1,
-"p":0.6983,
+"slot":2,
+"p":0.6874,
 "result":null,
 "dk":{
 "o":-141,
@@ -14488,8 +14488,8 @@
 "pid":694192,
 "name":"Jackson Chourio",
 "team":"MIL",
-"slot":3,
-"p":0.6747,
+"slot":1,
+"p":0.692,
 "result":null,
 "dk":{
 "o":-223,
@@ -20900,9 +20900,9 @@
 "gamePk":849825,
 "home":"MIL",
 "away":"SD",
-"wpHome":0.7059,
-"rHome":4.32,
-"rAway":2.8,
+"wpHome":0.607,
+"rHome":4.31,
+"rAway":3.61,
 "result":null,
 "dk":{
 "ml":{
@@ -23307,22 +23307,6 @@
 {
 "date":"2026-10-04",
 "gamePk":849823,
-"pid":645277,
-"name":"Ozzie Albies",
-"team":"ATL",
-"start":"2026-10-05T00:00:00Z",
-"p":0.6633,
-"pAdj":0.64,
-"dk":{
-"o":-164,
-"u":123
-},
-"ev":0.0302,
-"result":null
-},
-{
-"date":"2026-10-04",
-"gamePk":849823,
 "pid":663656,
 "name":"Kyle Tucker",
 "team":"LAD",
@@ -23371,17 +23355,33 @@
 {
 "date":"2026-10-04",
 "gamePk":849825,
+"pid":669134,
+"name":"Luis Campusano",
+"team":"SD",
+"start":"2026-10-04T20:00:00Z",
+"p":0.5804,
+"pAdj":0.5571,
+"dk":{
+"o":-106,
+"u":-126
+},
+"ev":0.0827,
+"result":null
+},
+{
+"date":"2026-10-04",
+"gamePk":849825,
 "pid":687957,
 "name":"Dustin Harris",
 "team":"SD",
 "start":"2026-10-04T20:00:00Z",
-"p":0.6983,
-"pAdj":0.675,
+"p":0.6874,
+"pAdj":0.6641,
 "dk":{
 "o":-141,
 "u":106
 },
-"ev":0.1537,
+"ev":0.1351,
 "result":null
 }
 ]

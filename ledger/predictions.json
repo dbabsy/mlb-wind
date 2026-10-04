@@ -14418,8 +14418,8 @@
 "pid":605141,
 "name":"Mookie Betts",
 "team":"LAD",
-"slot":2,
-"p":0.7015,
+"slot":1,
+"p":0.7103,
 "result":null,
 "dk":{
 "o":-217,
@@ -14429,29 +14429,29 @@
 {
 "date":"2026-10-04",
 "gamePk":849823,
-"pid":643289,
-"name":"Mauricio Dub\u00f3n",
-"team":"ATL",
-"slot":1,
-"p":0.7224,
+"pid":660271,
+"name":"Shohei Ohtani",
+"team":"LAD",
+"slot":2,
+"p":0.6985,
 "result":null,
 "dk":{
-"o":-178,
-"u":133
+"o":-212,
+"u":158
 }
 },
 {
 "date":"2026-10-04",
 "gamePk":849823,
-"pid":660271,
-"name":"Shohei Ohtani",
-"team":"LAD",
-"slot":1,
-"p":0.7073,
+"pid":671739,
+"name":"Michael Harris II",
+"team":"ATL",
+"slot":5,
+"p":0.698,
 "result":null,
 "dk":{
-"o":-212,
-"u":158
+"o":-155,
+"u":116
 }
 },
 {
@@ -20879,9 +20879,9 @@
 "gamePk":849823,
 "home":"LAD",
 "away":"ATL",
-"wpHome":0.8156,
-"rHome":4.91,
-"rAway":2.25,
+"wpHome":0.7706,
+"rHome":5.07,
+"rAway":2.76,
 "result":null,
 "dk":{
 "ml":{
@@ -23227,38 +23227,6 @@
 {
 "date":"2026-10-04",
 "gamePk":849823,
-"pid":518692,
-"name":"Freddie Freeman",
-"team":"LAD",
-"start":"2026-10-05T00:00:00Z",
-"p":0.686,
-"pAdj":0.6627,
-"dk":{
-"o":-188,
-"u":141
-},
-"ev":0.0152,
-"result":null
-},
-{
-"date":"2026-10-04",
-"gamePk":849823,
-"pid":571970,
-"name":"Max Muncy",
-"team":"LAD",
-"start":"2026-10-05T00:00:00Z",
-"p":0.6088,
-"pAdj":0.5855,
-"dk":{
-"o":-116,
-"u":-114
-},
-"ev":0.0902,
-"result":null
-},
-{
-"date":"2026-10-04",
-"gamePk":849823,
 "pid":621566,
 "name":"Matt Olson",
 "team":"ATL",
@@ -23279,29 +23247,77 @@
 "name":"Mauricio Dub\u00f3n",
 "team":"ATL",
 "start":"2026-10-05T00:00:00Z",
-"p":0.7224,
-"pAdj":0.6991,
+"p":0.6785,
+"pAdj":0.6552,
 "dk":{
 "o":-178,
 "u":133
 },
-"ev":0.0919,
+"ev":0.0233,
 "result":null
 },
 {
 "date":"2026-10-04",
 "gamePk":849823,
-"pid":645277,
-"name":"Ozzie Albies",
+"pid":657041,
+"name":"Lane Thomas",
 "team":"ATL",
 "start":"2026-10-05T00:00:00Z",
-"p":0.6633,
-"pAdj":0.64,
+"p":0.5483,
+"pAdj":0.525,
 "dk":{
-"o":-164,
-"u":123
+"o":118,
+"u":-157
 },
-"ev":0.0302,
+"ev":0.1445,
+"result":null
+},
+{
+"date":"2026-10-04",
+"gamePk":849823,
+"pid":660670,
+"name":"Ronald Acu\u00f1a Jr.",
+"team":"ATL",
+"start":"2026-10-05T00:00:00Z",
+"p":0.6311,
+"pAdj":0.6078,
+"dk":{
+"o":-150,
+"u":113
+},
+"ev":0.013,
+"result":null
+},
+{
+"date":"2026-10-04",
+"gamePk":849823,
+"pid":671739,
+"name":"Michael Harris II",
+"team":"ATL",
+"start":"2026-10-05T00:00:00Z",
+"p":0.698,
+"pAdj":0.6747,
+"dk":{
+"o":-155,
+"u":116
+},
+"ev":0.11,
+"result":null
+},
+{
+"date":"2026-10-04",
+"gamePk":849823,
+"pid":686948,
+"name":"Drake Baldwin",
+"team":"ATL",
+"start":"2026-10-05T00:00:00Z",
+"p":0.6897,
+"pAdj":0.6664,
+"dk":{
+"o":-176,
+"u":132
+},
+"ev":0.045,
 "result":null
 },
 {

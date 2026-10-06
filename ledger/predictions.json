@@ -14586,8 +14586,8 @@
 "pid":518692,
 "name":"Freddie Freeman",
 "team":"LAD",
-"slot":3,
-"p":0.6877,
+"slot":2,
+"p":0.6965,
 "result":null,
 "dk":{
 "o":-169,
@@ -14600,8 +14600,8 @@
 "pid":605141,
 "name":"Mookie Betts",
 "team":"LAD",
-"slot":2,
-"p":0.7087,
+"slot":1,
+"p":0.7175,
 "result":null,
 "dk":{
 "o":-191,
@@ -14611,15 +14611,15 @@
 {
 "date":"2026-10-06",
 "gamePk":849819,
-"pid":660271,
-"name":"Shohei Ohtani",
-"team":"LAD",
-"slot":1,
-"p":0.6939,
+"pid":671739,
+"name":"Michael Harris II",
+"team":"ATL",
+"slot":5,
+"p":0.6878,
 "result":null,
 "dk":{
-"o":-172,
-"u":129
+"o":-197,
+"u":147
 }
 },
 {
@@ -21131,9 +21131,9 @@
 "gamePk":849819,
 "home":"ATL",
 "away":"LAD",
-"wpHome":0.3858,
-"rHome":2.53,
-"rAway":3.57,
+"wpHome":0.4509,
+"rHome":3.04,
+"rAway":3.64,
 "result":null,
 "dk":{
 "ml":{
@@ -23883,45 +23883,13 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "start":"2026-10-06T22:00:00Z",
-"p":0.6877,
-"pAdj":0.6644,
+"p":0.6965,
+"pAdj":0.6732,
 "dk":{
 "o":-169,
 "u":127
 },
-"ev":0.0575,
-"result":null
-},
-{
-"date":"2026-10-06",
-"gamePk":849819,
-"pid":571970,
-"name":"Max Muncy",
-"team":"LAD",
-"start":"2026-10-06T22:00:00Z",
-"p":0.614,
-"pAdj":0.5907,
-"dk":{
-"o":-119,
-"u":-111
-},
-"ev":0.0871,
-"result":null
-},
-{
-"date":"2026-10-06",
-"gamePk":849819,
-"pid":573262,
-"name":"Mike Yastrzemski",
-"team":"ATL",
-"start":"2026-10-06T22:00:00Z",
-"p":0.5917,
-"pAdj":0.5684,
-"dk":{
-"o":-114,
-"u":-117
-},
-"ev":0.067,
+"ev":0.0715,
 "result":null
 },
 {
@@ -23931,13 +23899,13 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "start":"2026-10-06T22:00:00Z",
-"p":0.7087,
-"pAdj":0.6854,
+"p":0.7175,
+"pAdj":0.6942,
 "dk":{
 "o":-191,
 "u":143
 },
-"ev":0.0442,
+"ev":0.0577,
 "result":null
 },
 {
@@ -23947,45 +23915,29 @@
 "name":"Teoscar Hern\u00e1ndez",
 "team":"LAD",
 "start":"2026-10-06T22:00:00Z",
-"p":0.6353,
-"pAdj":0.612,
+"p":0.6532,
+"pAdj":0.6299,
 "dk":{
 "o":-145,
 "u":109
 },
-"ev":0.0341,
+"ev":0.0643,
 "result":null
 },
 {
 "date":"2026-10-06",
 "gamePk":849819,
-"pid":645277,
-"name":"Ozzie Albies",
-"team":"ATL",
-"start":"2026-10-06T22:00:00Z",
-"p":0.5965,
-"pAdj":0.5732,
-"dk":{
-"o":-125,
-"u":-106
-},
-"ev":0.0318,
-"result":null
-},
-{
-"date":"2026-10-06",
-"gamePk":849819,
-"pid":660271,
-"name":"Shohei Ohtani",
+"pid":669257,
+"name":"Will Smith",
 "team":"LAD",
 "start":"2026-10-06T22:00:00Z",
-"p":0.6939,
-"pAdj":0.6706,
+"p":0.6517,
+"pAdj":0.6284,
 "dk":{
-"o":-172,
-"u":129
+"o":-153,
+"u":115
 },
-"ev":0.0605,
+"ev":0.0391,
 "result":null
 },
 {
@@ -24002,6 +23954,22 @@
 "u":109
 },
 "ev":0.0623,
+"result":null
+},
+{
+"date":"2026-10-06",
+"gamePk":849826,
+"pid":630105,
+"name":"Jake Cronenworth",
+"team":"SD",
+"start":"2026-10-07T01:30:00Z",
+"p":0.6042,
+"pAdj":0.5809,
+"dk":{
+"o":-131,
+"u":-101
+},
+"ev":0.0243,
 "result":null
 },
 {
@@ -24034,6 +24002,22 @@
 "u":118
 },
 "ev":0.1572,
+"result":null
+},
+{
+"date":"2026-10-06",
+"gamePk":849826,
+"pid":806198,
+"name":"Cooper Pratt",
+"team":"MIL",
+"start":"2026-10-07T01:30:00Z",
+"p":0.6333,
+"pAdj":0.61,
+"dk":{
+"o":-150,
+"u":113
+},
+"ev":0.0167,
 "result":null
 }
 ]

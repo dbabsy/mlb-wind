@@ -14667,7 +14667,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":3,
-"p":0.7188,
+"p":0.7171,
 "result":null,
 "dk":{
 "o":-223,
@@ -14681,7 +14681,7 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":2,
-"p":0.7111,
+"p":0.7082,
 "result":null,
 "dk":{
 "o":-231,
@@ -14695,7 +14695,7 @@
 "name":"Shohei Ohtani",
 "team":"LAD",
 "slot":1,
-"p":0.7112,
+"p":0.7086,
 "result":null,
 "dk":{
 "o":-214,
@@ -14746,8 +14746,8 @@
 "pid":545341,
 "name":"Randal Grichuk",
 "team":"CWS",
-"slot":1,
-"p":0.7395,
+"slot":8,
+"p":0.6745,
 "result":null
 },
 {
@@ -14757,7 +14757,7 @@
 "name":"Angel Mart\u00ednez",
 "team":"CLE",
 "slot":1,
-"p":0.7208,
+"p":0.7197,
 "result":null,
 "dk":{
 "o":-182,
@@ -14770,8 +14770,8 @@
 "pid":803011,
 "name":"Sam Antonacci",
 "team":"CWS",
-"slot":5,
-"p":0.677,
+"slot":1,
+"p":0.7112,
 "result":null,
 "dk":{
 "o":-211,
@@ -21329,9 +21329,9 @@
 "gamePk":849822,
 "home":"ATL",
 "away":"LAD",
-"wpHome":0.2702,
-"rHome":2.68,
-"rAway":4.97,
+"wpHome":0.268,
+"rHome":2.58,
+"rAway":4.84,
 "result":null,
 "dk":{
 "ml":{
@@ -21371,8 +21371,8 @@
 "gamePk":849833,
 "home":"CWS",
 "away":"CLE",
-"wpHome":0.617,
-"rHome":3.9,
+"wpHome":0.6919,
+"rHome":4.66,
 "rAway":3.17,
 "result":null,
 "dk":{
@@ -24283,13 +24283,13 @@
 "name":"Max Muncy",
 "team":"LAD",
 "start":"2026-10-07T22:00:00Z",
-"p":0.6386,
-"pAdj":0.6153,
+"p":0.6353,
+"pAdj":0.612,
 "dk":{
 "o":-138,
 "u":105
 },
-"ev":0.0612,
+"ev":0.0555,
 "result":null
 },
 {
@@ -24299,13 +24299,13 @@
 "name":"Mike Yastrzemski",
 "team":"ATL",
 "start":"2026-10-07T22:00:00Z",
-"p":0.5809,
-"pAdj":0.5576,
+"p":0.5752,
+"pAdj":0.5519,
 "dk":{
 "o":-103,
 "u":-128
 },
-"ev":0.099,
+"ev":0.0877,
 "result":null
 },
 {
@@ -24315,13 +24315,13 @@
 "name":"Mauricio Dub\u00f3n",
 "team":"ATL",
 "start":"2026-10-07T22:00:00Z",
-"p":0.6948,
-"pAdj":0.6715,
+"p":0.6933,
+"pAdj":0.67,
 "dk":{
 "o":-163,
 "u":121
 },
-"ev":0.0835,
+"ev":0.081,
 "result":null
 },
 {
@@ -24331,13 +24331,13 @@
 "name":"Austin Riley",
 "team":"ATL",
 "start":"2026-10-07T22:00:00Z",
-"p":0.5624,
-"pAdj":0.5391,
+"p":0.5563,
+"pAdj":0.533,
 "dk":{
 "o":-104,
 "u":-128
 },
-"ev":0.0575,
+"ev":0.0455,
 "result":null
 },
 {
@@ -24347,13 +24347,13 @@
 "name":"Andy Pages",
 "team":"LAD",
 "start":"2026-10-07T22:00:00Z",
-"p":0.6621,
-"pAdj":0.6388,
+"p":0.6594,
+"pAdj":0.6361,
 "dk":{
 "o":-158,
 "u":119
 },
-"ev":0.0431,
+"ev":0.0387,
 "result":null
 },
 {
@@ -24379,13 +24379,13 @@
 "name":"Angel Mart\u00ednez",
 "team":"CLE",
 "start":"2026-10-07T20:00:00Z",
-"p":0.7208,
-"pAdj":0.6975,
+"p":0.7197,
+"pAdj":0.6964,
 "dk":{
 "o":-182,
 "u":134
 },
-"ev":0.0807,
+"ev":0.079,
 "result":null
 },
 {

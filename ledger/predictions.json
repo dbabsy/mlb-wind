@@ -15117,7 +15117,7 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "slot":3,
-"p":0.7185,
+"p":0.7193,
 "result":null,
 "dk":{
 "o":-219,
@@ -15131,7 +15131,7 @@
 "name":"Mookie Betts",
 "team":"LAD",
 "slot":2,
-"p":0.716,
+"p":0.7175,
 "result":null,
 "dk":{
 "o":-231,
@@ -15145,7 +15145,7 @@
 "name":"Shohei Ohtani",
 "team":"LAD",
 "slot":1,
-"p":0.7235,
+"p":0.7249,
 "result":null,
 "dk":{
 "o":-155,
@@ -21922,9 +21922,9 @@
 "gamePk":849810,
 "home":"LAD",
 "away":"MIL",
-"wpHome":0.5529,
-"rHome":4.72,
-"rAway":4.48,
+"wpHome":0.6625,
+"rHome":4.79,
+"rAway":3.53,
 "result":null,
 "dk":{
 "ml":{
@@ -25799,13 +25799,13 @@
 "name":"Freddie Freeman",
 "team":"LAD",
 "start":"2026-10-16T00:00:00Z",
-"p":0.7185,
-"pAdj":0.6952,
+"p":0.7193,
+"pAdj":0.696,
 "dk":{
 "o":-219,
 "u":163
 },
-"ev":0.0126,
+"ev":0.0138,
 "result":null
 },
 {
@@ -25815,13 +25815,29 @@
 "name":"Shohei Ohtani",
 "team":"LAD",
 "start":"2026-10-16T00:00:00Z",
-"p":0.7235,
-"pAdj":0.7002,
+"p":0.7249,
+"pAdj":0.7016,
 "dk":{
 "o":-155,
 "u":117
 },
-"ev":0.1519,
+"ev":0.1542,
+"result":null
+},
+{
+"date":"2026-10-15",
+"gamePk":849810,
+"pid":666152,
+"name":"David Hamilton",
+"team":"MIL",
+"start":"2026-10-16T00:00:00Z",
+"p":0.5365,
+"pAdj":0.5132,
+"dk":{
+"o":102,
+"u":-135
+},
+"ev":0.0367,
 "result":null
 },
 {
@@ -25831,13 +25847,13 @@
 "name":"Will Smith",
 "team":"LAD",
 "start":"2026-10-16T00:00:00Z",
-"p":0.6593,
-"pAdj":0.636,
+"p":0.6603,
+"pAdj":0.637,
 "dk":{
 "o":-164,
 "u":123
 },
-"ev":0.0238,
+"ev":0.0254,
 "result":null
 }
 ]

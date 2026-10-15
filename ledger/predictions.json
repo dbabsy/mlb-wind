@@ -15117,7 +15117,7 @@
 "name":"Yandy D\u00edaz",
 "team":"TB",
 "slot":1,
-"p":0.7287,
+"p":0.726,
 "result":null
 },
 {
@@ -15127,7 +15127,7 @@
 "name":"Steven Kwan",
 "team":"CLE",
 "slot":1,
-"p":0.71,
+"p":0.7064,
 "result":null
 },
 {
@@ -15137,7 +15137,7 @@
 "name":"Chase DeLauter",
 "team":"CLE",
 "slot":3,
-"p":0.7029,
+"p":0.7008,
 "result":null
 }
 ],
@@ -21901,9 +21901,9 @@
 "gamePk":849818,
 "home":"CLE",
 "away":"TB",
-"wpHome":0.4972,
-"rHome":4.37,
-"rAway":4.67,
+"wpHome":0.4954,
+"rHome":4.41,
+"rAway":4.73,
 "result":null
 }
 ],
